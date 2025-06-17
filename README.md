@@ -17,7 +17,7 @@ This documentation aims at a technical audience tasked with implementing the met
 
 With any further questions or comments please contact Health-RI via the Health-RI ServiceDesk or via servicedesk@health-ri.nl.
 
-## Previous Versions
+### Previous Versions
 This is version 2.0 of Health-RI core metadata schema. The previous published version (version 1.0.2) of the Health-RI core metadata schema is [available here](https://github.com/Health-RI/health-ri-metadata/releases/tag/v1.0.2).
 
 
