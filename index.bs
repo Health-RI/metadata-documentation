@@ -18,6 +18,10 @@ path: src/new/previous-published.md
 </pre>
 
 <pre class=include>
+path: src/new/purpose-and-audience.md
+</pre>
+
+<pre class=include>
 path: src/new/introduction.md
 </pre>
 
