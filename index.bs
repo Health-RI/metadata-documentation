@@ -40,13 +40,37 @@ Markup Shorthands: markdown yes, css no
   
 
 <pre class=include>
-path: src/new/status.md
+path: src/new/core specification.md
 </pre>
 
 <pre class=include>
-path: src/chapter2.md
+path: src/new/previous published.md
 </pre>
 
 <pre class=include>
-path: src/chapter3.md
+path: src/new/purpose and audience.md
+</pre>
+
+<pre class=include>
+path: src/new/introduction.md
+</pre>
+
+<pre class=include>
+path: src/new/permanent urls.md
+</pre>
+
+<pre class=include>
+path: src/new/main classes.md
+</pre>
+
+<pre class=include>
+path: src/new/supporting classes.md
+</pre>
+
+<pre class=include>
+path: src/new/main properties per class.md
+</pre>
+
+<pre class=include>
+path: src/new/further information.md
 </pre>
