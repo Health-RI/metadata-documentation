@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 275834c42, updated Wed Jun 11 14:18:15 2025 -0700" name="generator">
   <link href="https://reiniergr.github.io/metadata-vocabulary/" rel="canonical">
-  <meta content="24263cc9dba105b374fed68d0cc1c3a6fba2f68b" name="revision">
+  <meta content="d272c35a0ad308316db4e626217ee6e3ba5ef57a" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1960,12 +1960,22 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#notes-on-using-the-metadata-schema-mapping"><span class="secno">4.5</span> <span class="content">Notes on Using the Metadata Schema / Mapping</span></a>
      </ol>
     <li>
-     <a href="#further-information"><span class="secno">5</span> <span class="content">Further Information</span></a>
+     <a href="#main-classes"><span class="secno">5</span> <span class="content">Main Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#further-information①"><span class="secno">5.1</span> <span class="content">Further Information</span></a>
+       <a href="#main-classes①"><span class="secno">5.1</span> <span class="content">Main Classes</span></a>
        <ol class="toc">
-        <li><a href="#model-extension"><span class="secno">5.1.1</span> <span class="content">Model extension</span></a>
+        <li><a href="#mandatory-classes"><span class="secno">5.1.1</span> <span class="content">Mandatory Classes</span></a>
+        <li><a href="#recommended-classes"><span class="secno">5.1.2</span> <span class="content">Recommended Classes</span></a>
+       </ol>
+     </ol>
+    <li>
+     <a href="#further-information"><span class="secno">6</span> <span class="content">Further Information</span></a>
+     <ol class="toc">
+      <li>
+       <a href="#further-information①"><span class="secno">6.1</span> <span class="content">Further Information</span></a>
+       <ol class="toc">
+        <li><a href="#model-extension"><span class="secno">6.1.1</span> <span class="content">Model extension</span></a>
        </ol>
      </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content">
@@ -2117,9 +2127,22 @@ An overview of the metadata schema core is presented in the UML diagram below. T
     <li data-md>
      <p>Further information on the metadata schema and guidance on metadata mapping is available.</p>
    </ul>
-   <h2 class="heading settled" data-level="5" id="further-information"><span class="secno">5. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
-   <h3 class="heading settled" data-level="5.1" id="further-information①"><span class="secno">5.1. </span><span class="content">Further Information</span><a class="self-link" href="#further-information①"></a></h3>
-   <h4 class="heading settled" data-level="5.1.1" id="model-extension"><span class="secno">5.1.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h4>
+   <h2 class="heading settled" data-level="5" id="main-classes"><span class="secno">5. </span><span class="content">Main Classes</span><a class="self-link" href="#main-classes"></a></h2>
+   <h3 class="heading settled" data-level="5.1" id="main-classes①"><span class="secno">5.1. </span><span class="content">Main Classes</span><a class="self-link" href="#main-classes①"></a></h3>
+   <h4 class="heading settled" data-level="5.1.1" id="mandatory-classes"><span class="secno">5.1.1. </span><span class="content">Mandatory Classes</span><a class="self-link" href="#mandatory-classes"></a></h4>
+   <p>| <strong>Class name</strong> | <strong>HealthDCAT-AP Definition</strong> | <strong>Usage Note</strong> | <strong>URI</strong> |
+| --- | --- | --- | --- |
+| Catalog | A catalogue or repository that hosts the Datasets or Data Services being described. | A catalog that is listed in the National Health Data catalog and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection. | <code>dcat:Catalog</code> |
+| Dataset | A conceptual entity that represents the information published. | When focusing on health data, a dataset typically contains structured information gathered from a study or research project related to health topics. This might include clinical trial results, public health statistics, patient records, survey data, etc. <br> How the data in a dataset can be accessed is defined in the Distribution, which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset. | <code>dcat:Dataset</code> |</p>
+   <h4 class="heading settled" data-level="5.1.2" id="recommended-classes"><span class="secno">5.1.2. </span><span class="content">Recommended Classes</span><a class="self-link" href="#recommended-classes"></a></h4>
+   <p>| <strong>Class name</strong> | <strong>HealthDCAT-AP Definition</strong> | <strong>Usage Note</strong> | <strong>URI</strong> |
+| --- | --- | --- | --- |
+| Data Service | A collection of operations that provides access to one or more datasets or data processing functions. | A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the Distribution through a variety of potential actions. | <code>dcat:DataService</code> |
+| Dataset Series | A collection of datasets that are published separately, but share some characteristics that group them. | A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class. | <code>dcat:DatasetSeries</code> |
+| Distribution | A physical embodiment of the Dataset in a particular format. | Used to describe the different ways that a single dataset can be made available in. I.e., it can be downloaded or it can be accessed online in one or more distributions (e.g. one in a downloadable .csv file, another file with an access or query webpage). | <code>dcat:Distribution</code> |</p>
+   <h2 class="heading settled" data-level="6" id="further-information"><span class="secno">6. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
+   <h3 class="heading settled" data-level="6.1" id="further-information①"><span class="secno">6.1. </span><span class="content">Further Information</span><a class="self-link" href="#further-information①"></a></h3>
+   <h4 class="heading settled" data-level="6.1.1" id="model-extension"><span class="secno">6.1.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h4>
    <p>This is a Health-RI core metadata schema, which means it is designed to be “minimal” and cover the basic metadata elements of catalogue resources. If you come from a specific working group or domain and see some of the important elements from your domain should be represented in the metadata, you could build an extension (or so-called petal) of this model for your domain’s specific needs. For more information on this, please check out the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/545783826/Domain-specific+metadata+schema+development">process description for domain-specific metadata</a>.</p>
   </main>
   <div data-fill-with="conformance">
