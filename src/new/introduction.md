@@ -22,9 +22,6 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
   </thead> 
   <tbody> 
     <tr> 
-      <th colspan="2">Standard Prefixes</th> 
-    </tr> 
-    <tr> 
       <td>adms</td> 
       <td>http://www.w3.org/ns/adms#</td> 
     </tr> 
@@ -55,9 +52,6 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
     <tr> 
       <td>foaf</td> 
       <td>http://xmlns.com/foaf/0.1/</td> 
-    </tr> 
-    <tr> 
-      <th colspan="2">Additional Prefixes</th> 
     </tr> 
     <tr> 
       <td>owl</td> 
