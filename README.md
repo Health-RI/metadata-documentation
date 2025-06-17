@@ -9,6 +9,9 @@ This documentation aims at a technical audience tasked with implementing the met
 
 With any further questions or comments please contact Health-RI via the Health-RI ServiceDesk or via servicedesk@health-ri.nl.
 
+### Previous Versions
+This is version 2.0 of Health-RI core metadata schema. The previous published version (version 1.0.2) of the Health-RI core metadata schema is [available here](https://github.com/Health-RI/health-ri-metadata/releases/tag/v1.0.2).
+
 ## Current Development Status
 [![Project DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15395604.svg)](https://doi.org/10.5281/zenodo.15395604)
 [![Project Status - Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
@@ -19,7 +22,5 @@ With any further questions or comments please contact Health-RI via the Health-R
 ![GitHub Release Date](https://img.shields.io/github/release-date/Health-RI/health-ri-metadata)
 ![GitHub contributors](https://img.shields.io/github/contributors/Health-RI/health-ri-metadata)
 
-### Previous Versions
-This is version 2.0 of Health-RI core metadata schema. The previous published version (version 1.0.2) of the Health-RI core metadata schema is [available here](https://github.com/Health-RI/health-ri-metadata/releases/tag/v1.0.2).
 
 
