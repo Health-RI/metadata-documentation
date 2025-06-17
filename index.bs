@@ -30,6 +30,10 @@ path: src/new/main-classes.md
 </pre>
 
 <pre class=include>
+path: src/new/supporting-classes.md
+</pre>
+
+<pre class=include>
 path: src/new/further-information.md
 </pre>
 
