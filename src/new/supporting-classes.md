@@ -1,9 +1,10 @@
- 
- ## Supporting Classes
- 
- ### Mandatory Classes
+# Supporting Classes # {#Supporting-classes}
 
- ### Recommended Classes
+## Supporting Classes
+
+### Mandatory Classes
+
+### Recommended Classes
 
  <table> 
   <caption>Main Classes in HealthDCAT-AP</caption> 
