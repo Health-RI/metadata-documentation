@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 275834c42, updated Wed Jun 11 14:18:15 2025 -0700" name="generator">
   <link href="https://reiniergr.github.io/metadata-vocabulary/" rel="canonical">
-  <meta content="83bf7bd20d3b7e319edae475a3e4cda66eae9ade" name="revision">
+  <meta content="42d4f34b6a0d6bbb04df754b79f6645ae0b87228" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2140,6 +2140,45 @@ An overview of the metadata schema core is presented in the UML diagram below. T
 | Data Service | A collection of operations that provides access to one or more datasets or data processing functions. | A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the Distribution through a variety of potential actions. | <code>dcat:DataService</code> |
 | Dataset Series | A collection of datasets that are published separately, but share some characteristics that group them. | A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class. | <code>dcat:DatasetSeries</code> |
 | Distribution | A physical embodiment of the Dataset in a particular format. | Used to describe the different ways that a single dataset can be made available in. I.e., it can be downloaded or it can be accessed online in one or more distributions (e.g. one in a downloadable .csv file, another file with an access or query webpage). | <code>dcat:Distribution</code> |</p>
+   <table>
+    <caption>Main Classes in HealthDCAT-AP</caption>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
+     <tr>
+      <th colspan="4">Mandatory Classes
+     <tr>
+      <td>Catalog
+      <td>A catalogue or repository that hosts the Datasets or Data Services being described.
+      <td>A catalog that is listed in the National Health Data catalog and contains one or several datasets and/or data services.
+      <td>dcat:Catalog
+     <tr>
+      <td>Dataset
+      <td>A conceptual entity that represents the information published.
+      <td>When focusing on health data, a dataset typically contains structured information gathered from a study or research project related to health topics.
+      <td>dcat:Dataset
+     <tr>
+      <th colspan="4">Recommended Classes
+     <tr>
+      <td>Data Service
+      <td>A collection of operations that provides access to one or more datasets or data processing functions.
+      <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations.
+      <td>dcat:DataService
+     <tr>
+      <td>Dataset Series
+      <td>A collection of datasets that are published separately, but share some characteristics that group them.
+      <td>A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately.
+      <td>dcat:DatasetSeries
+     <tr>
+      <td>Distribution
+      <td>A physical embodiment of the Dataset in a particular format.
+      <td>Used to describe the different ways that a single dataset can be made available.
+      <td>dcat:Distribution
+   </table>
    <h2 class="heading settled" data-level="6" id="further-information"><span class="secno">6. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
    <h3 class="heading settled" data-level="6.1" id="further-information①"><span class="secno">6.1. </span><span class="content">Further Information</span><a class="self-link" href="#further-information①"></a></h3>
    <h4 class="heading settled" data-level="6.1.1" id="model-extension"><span class="secno">6.1.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h4>
