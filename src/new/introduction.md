@@ -12,27 +12,7 @@ To indicate the **nature of the data** (e.g., whole genome sequencing or questio
 Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/) and draft [HealthDCAT-AP](https://healthdcat-ap.github.io/) have been included but not further specified for Health-RI yet. This includes the **DataService** class, meaning that these classes can be used but are not yet tailored to specific dataholder needs for the National Health Data Catalogue.
   
 ## Used Prefixes
-| *Prefix*       | *Namespace IRI*                               |
-| -------------- | --------------------------------------------- |
-| `adms`         | `http://www.w3.org/ns/adms#`                  |
-| `dcat`         | `http://www.w3.org/ns/dcat#`                  |
-| `dcatap`       | `http://data.europa.eu/r5r/`                  |
-| `dct`          | `http://purl.org/dc/terms/`                   |
-| `dpv`          | `https://w3id.org/dpv#`                       |
-| `dqv`          | `https://www.w3.org/TR/vocab-dqv/`            |
-| `eli`          | `http://data.europa.eu/eli/ontology#`         |
-| `foaf`         | `http://xmlns.com/foaf/0.1/`                  |
-| `owl`          | `http://www.w3.org/2002/07/owl#`              |
-| `rdf`          | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` |
-| `rdfs`         | `http://www.w3.org/2000/01/rdf-schema#`       |
-| `skos`         | `http://www.w3.org/2004/02/skos/core#`        |
-| `spdx`         | `http://spdx.org/rdf/terms#`                  |
-| `time`         | `http://www.w3.org/2006/time#`                |
-| `vcard`        | `http://www.w3.org/2006/vcard/ns#`            |
-| `xsd`          | `http://www.w3.org/2001/XMLSchema#`           |
-| `healthdcatap` | TBD                                           |
-
-<table> <caption>Used Prefixes</caption> <thead> <tr> <th>Prefix</th> <th>Namespace IRI</th> </tr> </thead> <tbody> <tr> <td>adms</td> <td>http://www.w3.org/ns/adms#</td> </tr> <tr> <td>dcat</td> <td>http://www.w3.org/ns/dcat#</td> </tr> <tr> <td>dcatap</td> <td>http://data.europa.eu/r5r/</td> </tr> <tr> <td>dct</td> <td>http://purl.org/dc/terms/</td> </tr> <tr> <td>dpv</td> <td>https://w3id.org/dpv#</td> </tr> <tr> <td>dqv</td> <td>https://www.w3.org/TR/vocab-dqv/</td> </tr> <tr> <td>eli</td> <td>http://data.europa.eu/eli/ontology#</td> </tr> <tr> <td>foaf</td> <td>http://xmlns.com/foaf/0.1/</td> </tr> <tr> <td>owl</td> <td>http://www.w3.org/2002/07/owl#</td> </tr> <tr> <td>rdf</td> <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td> </tr> <tr> <td>rdfs</td> <td>http://www.w3.org/2000/01/rdf-schema#</td> </tr> <tr> <td>skos</td> <td>http://www.w3.org/2004/02/skos/core#</td> </tr> <tr> <td>spdx</td> <td>http://spdx.org/rdf/terms#</td> </tr> <tr> <td>time</td> <td>http://www.w3.org/2006/time#</td> </tr> <tr> <td>vcard</td> <td>http://www.w3.org/2006/vcard/ns#</td> </tr> <tr> <td>xsd</td> <td>http://www.w3.org/2001/XMLSchema#</td> </tr> <tr> <td>healthdcatap</td> <td>TBD</td> </tr> </tbody> </table>
+<table> <caption>**Used Prefixes**</caption> <thead> <tr> <th>Prefix</th> <th>Namespace IRI</th> </tr> </thead> <tbody> <tr> <td>adms</td> <td>http://www.w3.org/ns/adms#</td> </tr> <tr> <td>dcat</td> <td>http://www.w3.org/ns/dcat#</td> </tr> <tr> <td>dcatap</td> <td>http://data.europa.eu/r5r/</td> </tr> <tr> <td>dct</td> <td>http://purl.org/dc/terms/</td> </tr> <tr> <td>dpv</td> <td>https://w3id.org/dpv#</td> </tr> <tr> <td>dqv</td> <td>https://www.w3.org/TR/vocab-dqv/</td> </tr> <tr> <td>eli</td> <td>http://data.europa.eu/eli/ontology#</td> </tr> <tr> <td>foaf</td> <td>http://xmlns.com/foaf/0.1/</td> </tr> <tr> <td>owl</td> <td>http://www.w3.org/2002/07/owl#</td> </tr> <tr> <td>rdf</td> <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td> </tr> <tr> <td>rdfs</td> <td>http://www.w3.org/2000/01/rdf-schema#</td> </tr> <tr> <td>skos</td> <td>http://www.w3.org/2004/02/skos/core#</td> </tr> <tr> <td>spdx</td> <td>http://spdx.org/rdf/terms#</td> </tr> <tr> <td>time</td> <td>http://www.w3.org/2006/time#</td> </tr> <tr> <td>vcard</td> <td>http://www.w3.org/2006/vcard/ns#</td> </tr> <tr> <td>xsd</td> <td>http://www.w3.org/2001/XMLSchema#</td> </tr> <tr> <td>healthdcatap</td> <td>TBD</td> </tr> </tbody> </table>
 
 ## Overview and Diagram
 An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
@@ -46,7 +26,7 @@ Properties derived from draft [HealthDCAT-AP](https://healthdcat-ap.github.io/) 
 A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found [here](Documents/Metadata_CoreGenericHealth_v2.xlsx). This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).
 
 ## UML of the Health-RI Core Metadata Schema (Version 2)
-![UML diagram](images/HRI_metadata_p2.png)
+[UML diagram](images/HRI_metadata_p2.png)
 
 
 ## Notes on Using the Metadata Schema / Mapping
