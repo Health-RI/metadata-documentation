@@ -7,14 +7,14 @@ This lets you write your specs in markdown, or technically [bikeshed](https://gi
 
 1. Select "Use this template" and choose your repository
 
-![Select template image](images/select-template.png)
+![Select template image]()
 
 2. Go to Settings > Github Pages, and select `gh-pages` branch.
 
-![Select gh-pages branch image](images/gh-pages.png)
+![Select gh-pages branch image] ()
 
 ## Write your spec
 
 Start editing your spec (note .bs file extension). The github action runs on commit to automatically convert to respec/html, via bikeshed. 
 
-[Learn more about bikeshed](https://w3c-ccg.github.io/bikeshed_instructions.html)
+[Learn more about bikeshed]()
