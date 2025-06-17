@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 275834c42, updated Wed Jun 11 14:18:15 2025 -0700" name="generator">
   <link href="https://reiniergr.github.io/metadata-vocabulary/" rel="canonical">
-  <meta content="a63d3748658bcc3b6302eebeee78fac6c3aefd2a" name="revision">
+  <meta content="8f156cc49de28403b333185321764d98aa7d92eb" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1956,8 +1956,8 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#scope-and-current-state-of-the-health-ri-core-metadata-schema"><span class="secno">4.1</span> <span class="content">Scope and Current State of the Health-RI Core Metadata Schema</span></a>
       <li><a href="#used-prefixes"><span class="secno">4.2</span> <span class="content">Used Prefixes</span></a>
       <li><a href="#overview-and-diagram"><span class="secno">4.3</span> <span class="content">Overview and Diagram</span></a>
-      <li><a href="#notes-on-using-the-metadata-schema-mapping"><span class="secno">4.4</span> <span class="content">Notes on Using the Metadata Schema / Mapping</span></a>
-      <li><a href="#uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">4.5</span> <span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span></a>
+      <li><a href="#uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">4.4</span> <span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span></a>
+      <li><a href="#notes-on-using-the-metadata-schema-mapping"><span class="secno">4.5</span> <span class="content">Notes on Using the Metadata Schema / Mapping</span></a>
      </ol>
     <li>
      <a href="#further-information"><span class="secno">5</span> <span class="content">Further Information</span></a>
@@ -2048,6 +2048,8 @@ Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/ma
 | <code>healthdcatap</code> | TBD                                           |
 
 
+
+
    <h3 class="heading settled" data-level="4.3" id="overview-and-diagram"><span class="secno">4.3. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
    
 An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as <code>rdfs:label</code> and <code>rdfs:comment</code>. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
@@ -2057,7 +2059,13 @@ An overview of the metadata schema core is presented in the UML diagram below. T
    <p>The UML diagram separates <strong>main classes</strong> from <strong>supporting classes</strong>. While relationships between main classes are indicated by arrows, supporting class relationships are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.</p>
    <p>Properties derived from draft <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
    <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="Documents/Metadata_CoreGenericHealth_v2.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
-   <h3 class="heading settled" data-level="4.4" id="notes-on-using-the-metadata-schema-mapping"><span class="secno">4.4. </span><span class="content">Notes on Using the Metadata Schema / Mapping</span><a class="self-link" href="#notes-on-using-the-metadata-schema-mapping"></a></h3>
+   <h3 class="heading settled" data-level="4.4" id="uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">4.4. </span><span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span><a class="self-link" href="#uml-of-the-health-ri-core-metadata-schema-version-2"></a></h3>
+   
+!<a href="images/HRI_metadata_p2.png">UML diagram</a>
+
+
+
+   <h3 class="heading settled" data-level="4.5" id="notes-on-using-the-metadata-schema-mapping"><span class="secno">4.5. </span><span class="content">Notes on Using the Metadata Schema / Mapping</span><a class="self-link" href="#notes-on-using-the-metadata-schema-mapping"></a></h3>
    <ul>
     <li data-md>
      <p>Main classes include: <strong>Catalog</strong>, <strong>Dataset</strong>, <strong>Data Service</strong>, <strong>Dataset Series</strong>, <strong>Distribution</strong>.</p>
@@ -2074,15 +2082,6 @@ An overview of the metadata schema core is presented in the UML diagram below. T
     <li data-md>
      <p>Further information on the metadata schema and guidance on metadata mapping is available.</p>
    </ul>
-   <h3 class="heading settled" data-level="4.5" id="uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">4.5. </span><span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span><a class="self-link" href="#uml-of-the-health-ri-core-metadata-schema-version-2"></a></h3>
-   
-!<a href="../../images/HRI_metadata_p2.png">UML diagram</a>
-
-
-
-
-
-
    <h2 class="heading settled" data-level="5" id="further-information"><span class="secno">5. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
    <h3 class="heading settled" data-level="5.1" id="further-information①"><span class="secno">5.1. </span><span class="content">Further Information</span><a class="self-link" href="#further-information①"></a></h3>
    <h4 class="heading settled" data-level="5.1.1" id="model-extension"><span class="secno">5.1.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h4>
