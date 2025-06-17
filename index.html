@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 275834c42, updated Wed Jun 11 14:18:15 2025 -0700" name="generator">
   <link href="https://reiniergr.github.io/metadata-vocabulary/" rel="canonical">
-  <meta content="f50a686888eb797f78cb61fd60a9367986d1f2b1" name="revision">
+  <meta content="53d58af8022f2f86c21dc329e48c96bb014bc6d9" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1970,12 +1970,22 @@ Parts of this work may be from another specification document.  If so, those par
        </ol>
      </ol>
     <li>
-     <a href="#further-information"><span class="secno">6</span> <span class="content">Further Information</span></a>
+     <a href="#Supporting-classes"><span class="secno">6</span> <span class="content">Supporting Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#further-information①"><span class="secno">6.1</span> <span class="content">Further Information</span></a>
+       <a href="#supporting-classes"><span class="secno">6.1</span> <span class="content">Supporting Classes</span></a>
        <ol class="toc">
-        <li><a href="#model-extension"><span class="secno">6.1.1</span> <span class="content">Model extension</span></a>
+        <li><a href="#mandatory-classes①"><span class="secno">6.1.1</span> <span class="content">Mandatory Classes</span></a>
+        <li><a href="#recommended-classes①"><span class="secno">6.1.2</span> <span class="content">Recommended Classes</span></a>
+       </ol>
+     </ol>
+    <li>
+     <a href="#further-information"><span class="secno">7</span> <span class="content">Further Information</span></a>
+     <ol class="toc">
+      <li>
+       <a href="#further-information①"><span class="secno">7.1</span> <span class="content">Further Information</span></a>
+       <ol class="toc">
+        <li><a href="#model-extension"><span class="secno">7.1.1</span> <span class="content">Model extension</span></a>
        </ol>
      </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content">
@@ -2171,9 +2181,67 @@ An overview of the metadata schema core is presented in the UML diagram below. T
       <td>Used to describe the different ways that a single dataset can be made available. I.e., it can be downloaded or it can be accessed online in one or more distributions (e.g. one in a downloadable .csv file, another file with an access or query webpage).
       <td>dcat:Distribution
    </table>
-   <h2 class="heading settled" data-level="6" id="further-information"><span class="secno">6. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
-   <h3 class="heading settled" data-level="6.1" id="further-information①"><span class="secno">6.1. </span><span class="content">Further Information</span><a class="self-link" href="#further-information①"></a></h3>
-   <h4 class="heading settled" data-level="6.1.1" id="model-extension"><span class="secno">6.1.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h4>
+   <h2 class="heading settled" data-level="6" id="Supporting-classes"><span class="secno">6. </span><span class="content">Supporting Classes</span><a class="self-link" href="#Supporting-classes"></a></h2>
+   <h3 class="heading settled" data-level="6.1" id="supporting-classes"><span class="secno">6.1. </span><span class="content">Supporting Classes</span><a class="self-link" href="#supporting-classes"></a></h3>
+   <h4 class="heading settled" data-level="6.1.1" id="mandatory-classes①"><span class="secno">6.1.1. </span><span class="content">Mandatory Classes</span><a class="self-link" href="#mandatory-classes①"></a></h4>
+   <h4 class="heading settled" data-level="6.1.2" id="recommended-classes①"><span class="secno">6.1.2. </span><span class="content">Recommended Classes</span><a class="self-link" href="#recommended-classes①"></a></h4>
+   <table>
+    <caption>Main Classes in HealthDCAT-AP</caption>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
+     <tr>
+      <th colspan="4">Mandatory Classes
+     <tr>
+      <td>Agent
+      <td>Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Data Services and Distributions.
+      <td>A person or organisation that is associated with the catalogue or dataset. This class is instantiated in these classes whenever the range is <code>foaf:Agent</code>.
+      <td>foaf:Agent
+     <tr>
+      <td>Kind
+      <td>A description following the vCard specification.
+      <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is <code>vcard:Kind</code>.
+      <td>vcard:Kind
+     <tr>
+      <th colspan="4">Recommended Classes
+     <tr>
+      <td>Attribution
+      <td>Attribution is the ascribing of an entity to an agent.
+      <td>This class is instantiated by the property "qualified attribution" (<code>prov:qualifiedAttribution</code>) in other classes. Use this class to describe any Agent (other than publisher or creator) that has some form of responsibility for the resource. Within the class, this Agent is described with an instance of <code>foaf:Agent</code>, and the role is chosen from a controlled vocabulary. This class can be used to indicate the funding agent that provided funding for the dataset.
+      <td>prov:Attribution
+     <tr>
+      <td>Checksum
+      <td>A value that allows the contents of a file to be authenticated.
+      <td>This class is instantiated by properties in other classes that have the range <code>spdx:Checksum</code>.
+      <td>spdx:Checksum
+     <tr>
+      <td>Identifier
+      <td>An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme.
+      <td>This class is instantiated by the property "other identifier" (<code>adms:identifier</code>) in other classes. Use this class to provide any additional identifier to the resource or dataset that is not the primary identifier provided in <code>dct:identifier</code>.
+      <td>adms:Identifier
+     <tr>
+      <td>Period of Time
+      <td>An interval of time that is named or defined by its start and end dates.
+      <td>This class is instantiated by properties in other classes that have the range <code>dct:PeriodOfTime</code>.
+      <td>dct:PeriodOfTime
+     <tr>
+      <td>Relationship
+      <td>An association class for attaching additional information to a relationship between DCAT Resources.
+      <td>This class is instantiated by the property "qualified relation" (<code>dcat:qualifiedRelation</code>) in other classes. Use this class to describe a relationship with another resource or dataset. Within the class, that resource is indicated, as well as the role this resource has in relation to the described one. The role is indicated based on a controlled vocabulary.
+      <td>dcat:Relationship
+     <tr>
+      <td>Quality Certificate
+      <td>An annotation that associates a resource (especially, a dataset or a distribution) to another resource (for example, a document) that certifies the resource’s quality according to a set of quality assessment rules.
+      <td>This class is instantiated by the property "quality annotation" (<code>dqv:hasQualityAnnotation</code>) in other classes. Use this class to provide a link between the resource or dataset and an associated quality annotation.
+      <td>dqv:QualityCertificate
+   </table>
+   <h2 class="heading settled" data-level="7" id="further-information"><span class="secno">7. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
+   <h3 class="heading settled" data-level="7.1" id="further-information①"><span class="secno">7.1. </span><span class="content">Further Information</span><a class="self-link" href="#further-information①"></a></h3>
+   <h4 class="heading settled" data-level="7.1.1" id="model-extension"><span class="secno">7.1.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h4>
    <p>This is a Health-RI core metadata schema, which means it is designed to be “minimal” and cover the basic metadata elements of catalogue resources. If you come from a specific working group or domain and see some of the important elements from your domain should be represented in the metadata, you could build an extension (or so-called petal) of this model for your domain’s specific needs. For more information on this, please check out the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/545783826/Domain-specific+metadata+schema+development">process description for domain-specific metadata</a>.</p>
   </main>
   <div data-fill-with="conformance">
