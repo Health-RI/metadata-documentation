@@ -18,3 +18,54 @@
 | Distribution | A physical embodiment of the Dataset in a particular format. | Used to describe the different ways that a single dataset can be made available in. I.e., it can be downloaded or it can be accessed online in one or more distributions (e.g. one in a downloadable .csv file, another file with an access or query webpage). | `dcat:Distribution` |
 
  
+
+
+<table> 
+  <caption>Main Classes in HealthDCAT-AP</caption> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
+    <tr> 
+      <th colspan="4">Mandatory Classes</th> 
+    </tr> 
+    <tr> 
+      <td>Catalog</td> 
+      <td>A catalogue or repository that hosts the Datasets or Data Services being described.</td> 
+      <td>A catalog that is listed in the National Health Data catalog and contains one or several datasets and/or data services.</td> 
+      <td>dcat:Catalog</td> 
+    </tr> 
+    <tr> 
+      <td>Dataset</td> 
+      <td>A conceptual entity that represents the information published.</td> 
+      <td>When focusing on health data, a dataset typically contains structured information gathered from a study or research project related to health topics.</td> 
+      <td>dcat:Dataset</td> 
+    </tr> 
+    <tr> 
+      <th colspan="4">Recommended Classes</th> 
+    </tr> 
+    <tr> 
+      <td>Data Service</td> 
+      <td>A collection of operations that provides access to one or more datasets or data processing functions.</td> 
+      <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations.</td> 
+      <td>dcat:DataService</td> 
+    </tr> 
+    <tr> 
+      <td>Dataset Series</td> 
+      <td>A collection of datasets that are published separately, but share some characteristics that group them.</td> 
+      <td>A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately.</td> 
+      <td>dcat:DatasetSeries</td> 
+    </tr> 
+    <tr> 
+      <td>Distribution</td> 
+      <td>A physical embodiment of the Dataset in a particular format.</td> 
+      <td>Used to describe the different ways that a single dataset can be made available.</td> 
+      <td>dcat:Distribution</td> 
+    </tr> 
+  </tbody> 
+</table>
