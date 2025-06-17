@@ -32,6 +32,8 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
 | `xsd`          | `http://www.w3.org/2001/XMLSchema#`           |
 | `healthdcatap` | TBD                                           |
 
+
+
 ## Overview and Diagram
 An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
 
@@ -43,6 +45,10 @@ Properties derived from draft [HealthDCAT-AP](https://healthdcat-ap.github.io/) 
 
 A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found [here](Documents/Metadata_CoreGenericHealth_v2.xlsx). This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).
 
+## UML of the Health-RI Core Metadata Schema (Version 2)
+![UML diagram](images/HRI_metadata_p2.png)
+
+
 ## Notes on Using the Metadata Schema / Mapping
 - Main classes include: **Catalog**, **Dataset**, **Data Service**, **Dataset Series**, **Distribution**.
 - Supporting classes include: **Agent**, **Kind**, **Attribution**, **Checksum**, **Identifier**, **Period of time**, **Relationship**, **Quality certificate**.
@@ -52,8 +58,6 @@ A tabular overview of all classes and properties—including their range, cardin
 - Mapping examples from various data sources have been collected for reference.
 - Further information on the metadata schema and guidance on metadata mapping is available.
 
-## UML of the Health-RI Core Metadata Schema (Version 2)
-![UML diagram](../../images/HRI_metadata_p2.png)
 
 
 
