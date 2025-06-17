@@ -3,6 +3,9 @@
 ## Main Classes
 
 ### Mandatory Classes
+
+### Recommended Classes
+
 <table> 
   <caption>Main Classes in HealthDCAT-AP</caption> 
   <thead> 
@@ -31,8 +34,6 @@
       <td>dcat:Dataset</td> 
     </tr> 
     <tr> 
-
-### Recommended Classes
       <th colspan="4">Recommended Classes</th> 
     </tr> 
     <tr> 
