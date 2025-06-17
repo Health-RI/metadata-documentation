@@ -2,7 +2,7 @@
 Title: Health-RI Metadata Model
 Shortname: your-spec
 Level: 1
-Status: LS-COMMIT
+Status: LS-PR
 URL: https://reiniergr.github.io/metadata-vocabulary/
 Editor: NAME here, email here
 Abstract: A short description of your spec, one or two sentences.
