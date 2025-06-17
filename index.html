@@ -1489,8 +1489,8 @@ Possible extra rowspan handling
 	}
 </style>
   <meta content="Bikeshed version 275834c42, updated Wed Jun 11 14:18:15 2025 -0700" name="generator">
-  <link href="https://healthri.github.io/spec/v2" rel="canonical">
-  <meta content="bc23b928b7765198c4efc60783c3ef0ff5ccde34" name="revision">
+  <link href="https://reiniergr.github.io/metadata-vocabulary/" rel="canonical">
+  <meta content="88e2fcfab0dba2dbe0ed8e75b4ddb232f1093e66" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1821,45 +1821,6 @@ a[href].issue-return {
     text-decoration: none;
 }
 </style>
-<style>/* Boilerplate: style-line-numbers */
-:root {
-    --highlight-hover-bg: rgba(0, 0, 0, .05);
-}
-.line-numbered {
-    display: grid !important;
-    grid-template-columns: min-content 1fr;
-    grid-auto-flow: row;
-}
-.line-numbered > *,
-.line-numbered::before,
-.line-numbered::after {
-    grid-column: 1/-1;
-}
-.line-no {
-    grid-column: 1;
-    color: gray;
-}
-.line {
-    grid-column: 2;
-}
-.line:hover {
-    background: var(--highlight-hover-bg);
-}
-.line-no[data-line]::before {
-    padding: 0 .5em 0 .1em;
-    content: attr(data-line);
-}
-.line-no[data-line-end]::after {
-    padding: 0 .5em 0 .1em;
-    content: attr(data-line-end);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --highlight-hover-bg: rgba(255, 255, 255, .05);
-    }
-}
-</style>
 <style>/* Boilerplate: style-md-lists */
 /* This is a weird hack for me not yet following the commonmark spec
    regarding paragraph and lists. */
@@ -1929,143 +1890,20 @@ a.self-link::before            { content: "¶"; }
 .heading > a.self-link::before { content: "§"; }
 dfn > a.self-link::before      { content: "#"; }
 </style>
-<style>/* Boilerplate: style-syntax-highlighting */
-code.highlight { padding: .1em; border-radius: .3em; }
-pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
-
-.highlight:not(.idl) { background: rgba(0, 0, 0, .03); }
-c-[a] { color: #990055 } /* Keyword.Declaration */
-c-[b] { color: #990055 } /* Keyword.Type */
-c-[c] { color: #708090 } /* Comment */
-c-[d] { color: #708090 } /* Comment.Multiline */
-c-[e] { color: #0077aa } /* Name.Attribute */
-c-[f] { color: #669900 } /* Name.Tag */
-c-[g] { color: #222222 } /* Name.Variable */
-c-[k] { color: #990055 } /* Keyword */
-c-[l] { color: #000000 } /* Literal */
-c-[m] { color: #000000 } /* Literal.Number */
-c-[n] { color: #0077aa } /* Name */
-c-[o] { color: #999999 } /* Operator */
-c-[p] { color: #999999 } /* Punctuation */
-c-[s] { color: #a67f59 } /* Literal.String */
-c-[t] { color: #a67f59 } /* Literal.String.Single */
-c-[u] { color: #a67f59 } /* Literal.String.Double */
-c-[cp] { color: #708090 } /* Comment.Preproc */
-c-[c1] { color: #708090 } /* Comment.Single */
-c-[cs] { color: #708090 } /* Comment.Special */
-c-[kc] { color: #990055 } /* Keyword.Constant */
-c-[kn] { color: #990055 } /* Keyword.Namespace */
-c-[kp] { color: #990055 } /* Keyword.Pseudo */
-c-[kr] { color: #990055 } /* Keyword.Reserved */
-c-[ld] { color: #000000 } /* Literal.Date */
-c-[nc] { color: #0077aa } /* Name.Class */
-c-[no] { color: #0077aa } /* Name.Constant */
-c-[nd] { color: #0077aa } /* Name.Decorator */
-c-[ni] { color: #0077aa } /* Name.Entity */
-c-[ne] { color: #0077aa } /* Name.Exception */
-c-[nf] { color: #0077aa } /* Name.Function */
-c-[nl] { color: #0077aa } /* Name.Label */
-c-[nn] { color: #0077aa } /* Name.Namespace */
-c-[py] { color: #0077aa } /* Name.Property */
-c-[ow] { color: #999999 } /* Operator.Word */
-c-[mb] { color: #000000 } /* Literal.Number.Bin */
-c-[mf] { color: #000000 } /* Literal.Number.Float */
-c-[mh] { color: #000000 } /* Literal.Number.Hex */
-c-[mi] { color: #000000 } /* Literal.Number.Integer */
-c-[mo] { color: #000000 } /* Literal.Number.Oct */
-c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
-c-[sc] { color: #a67f59 } /* Literal.String.Char */
-c-[sd] { color: #a67f59 } /* Literal.String.Doc */
-c-[se] { color: #a67f59 } /* Literal.String.Escape */
-c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
-c-[si] { color: #a67f59 } /* Literal.String.Interpol */
-c-[sx] { color: #a67f59 } /* Literal.String.Other */
-c-[sr] { color: #a67f59 } /* Literal.String.Regex */
-c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
-c-[vc] { color: #0077aa } /* Name.Variable.Class */
-c-[vg] { color: #0077aa } /* Name.Variable.Global */
-c-[vi] { color: #0077aa } /* Name.Variable.Instance */
-c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
-
-@media (prefers-color-scheme: dark) {
-    .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
-
-    c-[a] { color: #d33682 } /* Keyword.Declaration */
-    c-[b] { color: #d33682 } /* Keyword.Type */
-    c-[c] { color: #2aa198 } /* Comment */
-    c-[d] { color: #2aa198 } /* Comment.Multiline */
-    c-[e] { color: #268bd2 } /* Name.Attribute */
-    c-[f] { color: #b58900 } /* Name.Tag */
-    c-[g] { color: #cb4b16 } /* Name.Variable */
-    c-[k] { color: #d33682 } /* Keyword */
-    c-[l] { color: #657b83 } /* Literal */
-    c-[m] { color: #657b83 } /* Literal.Number */
-    c-[n] { color: #268bd2 } /* Name */
-    c-[o] { color: #657b83 } /* Operator */
-    c-[p] { color: #657b83 } /* Punctuation */
-    c-[s] { color: #6c71c4 } /* Literal.String */
-    c-[t] { color: #6c71c4 } /* Literal.String.Single */
-    c-[u] { color: #6c71c4 } /* Literal.String.Double */
-    c-[ch] { color: #2aa198 } /* Comment.Hashbang */
-    c-[cp] { color: #2aa198 } /* Comment.Preproc */
-    c-[cpf] { color: #2aa198 } /* Comment.PreprocFile */
-    c-[c1] { color: #2aa198 } /* Comment.Single */
-    c-[cs] { color: #2aa198 } /* Comment.Special */
-    c-[kc] { color: #d33682 } /* Keyword.Constant */
-    c-[kn] { color: #d33682 } /* Keyword.Namespace */
-    c-[kp] { color: #d33682 } /* Keyword.Pseudo */
-    c-[kr] { color: #d33682 } /* Keyword.Reserved */
-    c-[ld] { color: #657b83 } /* Literal.Date */
-    c-[nc] { color: #268bd2 } /* Name.Class */
-    c-[no] { color: #268bd2 } /* Name.Constant */
-    c-[nd] { color: #268bd2 } /* Name.Decorator */
-    c-[ni] { color: #268bd2 } /* Name.Entity */
-    c-[ne] { color: #268bd2 } /* Name.Exception */
-    c-[nf] { color: #268bd2 } /* Name.Function */
-    c-[nl] { color: #268bd2 } /* Name.Label */
-    c-[nn] { color: #268bd2 } /* Name.Namespace */
-    c-[py] { color: #268bd2 } /* Name.Property */
-    c-[ow] { color: #657b83 } /* Operator.Word */
-    c-[mb] { color: #657b83 } /* Literal.Number.Bin */
-    c-[mf] { color: #657b83 } /* Literal.Number.Float */
-    c-[mh] { color: #657b83 } /* Literal.Number.Hex */
-    c-[mi] { color: #657b83 } /* Literal.Number.Integer */
-    c-[mo] { color: #657b83 } /* Literal.Number.Oct */
-    c-[sa] { color: #6c71c4 } /* Literal.String.Affix */
-    c-[sb] { color: #6c71c4 } /* Literal.String.Backtick */
-    c-[sc] { color: #6c71c4 } /* Literal.String.Char */
-    c-[dl] { color: #6c71c4 } /* Literal.String.Delimiter */
-    c-[sd] { color: #6c71c4 } /* Literal.String.Doc */
-    c-[se] { color: #6c71c4 } /* Literal.String.Escape */
-    c-[sh] { color: #6c71c4 } /* Literal.String.Heredoc */
-    c-[si] { color: #6c71c4 } /* Literal.String.Interpol */
-    c-[sx] { color: #6c71c4 } /* Literal.String.Other */
-    c-[sr] { color: #6c71c4 } /* Literal.String.Regex */
-    c-[ss] { color: #6c71c4 } /* Literal.String.Symbol */
-    c-[fm] { color: #268bd2 } /* Name.Function.Magic */
-    c-[vc] { color: #cb4b16 } /* Name.Variable.Class */
-    c-[vg] { color: #cb4b16 } /* Name.Variable.Global */
-    c-[vi] { color: #cb4b16 } /* Name.Variable.Instance */
-    c-[vm] { color: #cb4b16 } /* Name.Variable.Magic */
-    c-[il] { color: #657b83 } /* Literal.Number.Integer.Long */
-}
-</style>
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Health-RI Metadata Model</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">PR Preview,
     <time class="dt-updated" datetime="2025-06-17">17 June 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://healthri.github.io/spec/v2">https://healthri.github.io/spec/v2</a>
+     <dd><a class="u-url" href="https://reiniergr.github.io/metadata-vocabulary/">https://reiniergr.github.io/metadata-vocabulary/</a>
      <dt>Issue Tracking:
-     <dd><a href="https://github.com/health-ri/health-ri-metadata/issues/">GitHub</a>
-     <dt class="editor">Editors:
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="http://example.com/your-personal-website">Your Name</a> (<a class="p-org org" href="http://example.com/your-company">Your Company</a>) <a class="u-email email" href="mailto:your-email@example.com">your-email@example.com</a>
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:hannah.neikes@health-ri.nl">Hannah Neikes</a> (<a class="p-org org" href="https://www.health-ri.nl/">Health-RI</a>)
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:ana.konrad@health-ri.nl">Ana Konrad</a> (<a class="p-org org" href="https://www.health-ri.nl/">Health-RI</a>)
+     <dd><a href="https://github.com/ReinierGr/metadata-vocabulary/issues/">GitHub</a>
+     <dt class="editor">Editor:
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">NAME here</span> (<span class="p-org org">email here</span>)
     </dl>
    </div>
    <div data-fill-with="warning"></div>
@@ -2082,23 +1920,24 @@ Parts of this work may be from another specification document.  If so, those par
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>A short description of your spec, one or two sentences.
-A short description of your spec, one or two sentences.</p>
+   <p>A short description of your spec, one or two sentences.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
-    <li><a href="#intro"><span class="secno">1</span> <span class="content">Introduction</span></a>
     <li>
-     <a href="#chapter2"><span class="secno">2</span> <span class="content">Chapter 2</span></a>
+     <a href="#introduction"><span class="secno">1</span> <span class="content">Introduction</span></a>
      <ol class="toc">
-      <li><a href="#shacl-example"><span class="secno">2.1</span> <span class="content">SHACL example</span></a>
-     </ol>
-    <li>
-     <a href="#chapter-3"><span class="secno">3</span> <span class="content">Chapter 3</span></a>
-     <ol class="toc">
-      <li><a href="#example-table"><span class="secno">3.1</span> <span class="content">An example table</span></a>
+      <li><a href="#scope-and-current-state-of-the-health-ri-core-metadata-schema"><span class="secno">1.1</span> <span class="content">Scope and Current State of the Health-RI Core Metadata Schema</span></a>
+      <li><a href="#used-prefixes"><span class="secno">1.2</span> <span class="content">Used Prefixes</span></a>
+      <li>
+       <a href="#overview-and-diagram"><span class="secno">1.3</span> <span class="content">Overview and Diagram</span></a>
+       <ol class="toc">
+        <li><a href="#uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">1.3.1</span> <span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span></a>
+       </ol>
+      <li><a href="#notes-on-using-the-metadata-schema-mapping"><span class="secno">1.4</span> <span class="content">Notes on Using the Metadata Schema / Mapping</span></a>
+      <li><a href="#notes-on-using-the-metadata-schema-mapping①"><span class="secno">1.5</span> <span class="content">Notes on Using the Metadata Schema / Mapping</span></a>
      </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content">
     Conformance</span></a>
@@ -2106,61 +1945,66 @@ A short description of your spec, one or two sentences.</p>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
       <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
-      <li><a href="#informative"><span class="secno"></span> <span class="content">Informative References</span></a>
      </ol>
    </ol>
   </nav>
   <main>
-   <h2 class="heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#intro"></a></h2>
-   <p>Introduction here.
-test
-tes
-testttt
-more tesstts
-trsrgsfdhgkjf 
-dsfssdfasdf
-sgdsgfgd
-sfgsfg
-sdfsfdfa</p>
-   <p><a href="https://doi.org/10.5281/zenodo.15395604">!</a><a href="https://zenodo.org/badge/DOI/10.5281/zenodo.15395604.svg">Project DOI</a></p>
-   <p><a href="https://www.repostatus.org/#active">!</a><a href="https://www.repostatus.org/badges/latest/active.svg">Project Status - Active</a></p>
-   <p>!<a href="https://img.shields.io/github/last-commit/Health-RI/health-ri-metadata">GitHub last commit</a></p>
-   <p>!<a href="https://img.shields.io/github/created-at/Health-RI/health-ri-metadata">GitHub Created At</a></p>
-   <p>!<a href="https://img.shields.io/github/v/release/Health-RI/health-ri-metadata">GitHub Release</a></p>
-   <p>!<a href="https://img.shields.io/github/release-date/Health-RI/health-ri-metadata">GitHub Release Date</a></p>
-   <p>!<a href="https://img.shields.io/github/commits-since/Health-RI/health-ri-metadata/latest">GitHub commits since latest release</a></p>
-   <p>!<a href="https://img.shields.io/github/contributors/Health-RI/health-ri-metadata">GitHub contributors</a></p>
-   <h2 class="heading settled" data-level="2" id="chapter2"><span class="secno">2. </span><span class="content">Chapter 2</span><a class="self-link" href="#chapter2"></a></h2>
+   <h2 class="heading settled" data-level="1" id="introduction"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h3 class="heading settled" data-level="1.1" id="scope-and-current-state-of-the-health-ri-core-metadata-schema"><span class="secno">1.1. </span><span class="content">Scope and Current State of the Health-RI Core Metadata Schema</span><a class="self-link" href="#scope-and-current-state-of-the-health-ri-core-metadata-schema"></a></h3>
+   <p>Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/master">1st version of the metadata schema</a>, version 2 aims to incorporate both <a href="https://geonovum.github.io/DCAT-AP-NL30/">DCAT-AP NL</a> and the (yet-to-be-finalized) <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a>, along with Health-RI-specific requirements for the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It introduces several health-related properties (marked in blue in the UML diagram below), with suggested or required controlled vocabularies where applicable.</p>
+   <p><strong>Important Note:</strong> HealthDCAT-AP has not yet been officially finalized and remains subject to change. Once its official release is published, Health-RI will reevaluate compatibility with HealthDCAT-AP. This version is based on the draft dated <em>16-12-2024</em>. In that draft, the cardinalities of HealthDCAT-AP vary depending on different access rights (public, restricted, non-public). For now, compliance is ensured with the <a href="https://healthdcat-ap.github.io/OPEN%20DATA%20HealthDCAT-AP%203.0.0.drawio.png">open version</a>, using its UML diagram for reference.</p>
+   <p>Additionally, several <strong>ELSI</strong>-related metadata fields, as <a href="https://health-ri.atlassian.net/wiki/spaces/HA/pages/469893133/Metadata+rondom+gebruiksvoorwaarden+en+authenticatie+autorisatie+en+ELSI+aspecten#Catalogus">gathered</a> by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.</p>
+   <p>To indicate the <strong>nature of the data</strong> (e.g., whole genome sequencing or questionnaire data), we propose using <code>healthdcatap:healthTheme</code>. For <strong>synthetic data</strong>, use <code>dct:type</code> with the required controlled vocabulary in the <code>dcat:Dataset</code> class.</p>
+   <p>Several classes from <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and draft <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a> have been included but not further specified for Health-RI yet. This includes the <strong>DataService</strong> class, meaning that these classes can be used but are not yet tailored to specific dataholder needs for the National Health Data Catalogue.</p>
+   <h3 class="heading settled" data-level="1.2" id="used-prefixes"><span class="secno">1.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
+   <p>| <strong>Prefix</strong>     | <strong>Namespace IRI</strong>                             |
+| -------------- | --------------------------------------------- |
+| <code>adms</code>         | <code>http://www.w3.org/ns/adms#</code>                  |
+| <code>dcat</code>         | <code>http://www.w3.org/ns/dcat#</code>                  |
+| <code>dcatap</code>       | <code>http://data.europa.eu/r5r/</code>                  |
+| <code>dct</code>          | <code>http://purl.org/dc/terms/</code>                   |
+| <code>dpv</code>          | <code>https://w3id.org/dpv#</code>                       |
+| <code>dqv</code>          | <code>https://www.w3.org/TR/vocab-dqv/</code>            |
+| <code>eli</code>          | <code>http://data.europa.eu/eli/ontology#</code>         |
+| <code>foaf</code>         | <code>http://xmlns.com/foaf/0.1/</code>                  |
+| <code>owl</code>          | <code>http://www.w3.org/2002/07/owl#</code>              |
+| <code>rdf</code>          | <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code> |
+| <code>rdfs</code>         | <code>http://www.w3.org/2000/01/rdf-schema#</code>       |
+| <code>skos</code>         | <code>http://www.w3.org/2004/02/skos/core#</code>        |
+| <code>spdx</code>         | <code>http://spdx.org/rdf/terms#</code>                  |
+| <code>time</code>         | <code>http://www.w3.org/2006/time#</code>                |
+| <code>vcard</code>        | <code>http://www.w3.org/2006/vcard/ns#</code>            |
+| <code>xsd</code>          | <code>http://www.w3.org/2001/XMLSchema#</code>           |
+| <code>healthdcatap</code> | TBD                                           |</p>
+   <h3 class="heading settled" data-level="1.3" id="overview-and-diagram"><span class="secno">1.3. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
+   <p>An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as <code>rdfs:label</code> and <code>rdfs:comment</code>. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.</p>
+   <p>If a class is linked to another class with a closed arrow, it inherits all properties from the other class (e.g., <code>dcat:Dataset</code> inherits from <code>dcat:Resource</code>). Other arrows represent relationships, including their types (e.g., <code>dcat:Dataset</code> connects to a <code>dcat:DatasetSeries</code> via <code>dcat:inSeries</code>), along with cardinalities (e.g., <code>dcat:Dataset</code> connects to zero or more <code>dcat:DatasetSeries</code>). <strong>Mandatory relationships</strong> are marked with dark labels, while <strong>recommended relationships</strong> use a lighter color.</p>
+   <p>The UML diagram separates <strong>main classes</strong> from <strong>supporting classes</strong>. While relationships between main classes are indicated by arrows, supporting class relationships are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.</p>
+   <p>Properties derived from draft <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
+   <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="Documents/Metadata_CoreGenericHealth_v2.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
+   <h4 class="heading settled" data-level="1.3.1" id="uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">1.3.1. </span><span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span><a class="self-link" href="#uml-of-the-health-ri-core-metadata-schema-version-2"></a></h4>
    
-In this chapter we’ll include some <a data-link-type="biblio" href="#biblio-shacl" title="Shapes Constraint Language (SHACL)">[SHACL]</a> files.
+!<a href="Images/2.0_plateau2/HRI_metadata_p2.png">diagram</a>
 
 
-   <p>Another example: <a data-link-type="biblio" href="#biblio-rdf11-new" title="What’s New in RDF 1.1">[RDF11-NEW]</a>. Or <a data-link-type="biblio" href="#biblio-vocab-dcat-3" title="Data Catalog Vocabulary (DCAT) - Version 3">[vocab-dcat-3]</a>.</p>
-   <h3 class="heading settled" data-level="2.1" id="shacl-example"><span class="secno">2.1. </span><span class="content">SHACL example</span><a class="self-link" href="#shacl-example"></a></h3>
-<pre class="include-code highlight line-numbered"><span class="line-no" data-line="1"></span><span class="line"><c- k>@prefix</c-> <c- nn>sh:</c-> <c- g>&lt;http://www.w3.org/ns/shacl#></c-> <c- p>.</c-></span><span class="line-no" data-line="2"></span><span class="line"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c-></span><span class="line-no" data-line="3"></span><span class="line"><c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c-></span><span class="line-no" data-line="4"></span><span class="line"><c- k>@prefix</c-> <c- nn>rdf:</c-> <c- g>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#></c-> <c- p>.</c-></span><span class="line-no" data-line="5"></span><span class="line"><c- k>@prefix</c-> <c- nn>ex:</c-> <c- g>&lt;http://example.com/></c-> <c- p>.</c-></span><span class="line-no" data-line="6"></span><span class="line"></span><span class="line-no" data-line="7"></span><span class="line"><c- nn>ex</c-><c- p>:</c-><c- f>ExampleShape</c-> <c- b>a</c-> <c- nn>sh</c-><c- p>:</c-><c- f>NodeShape</c-> <c- p>;</c-></span><span class="line-no" data-line="8"></span><span class="line">    <c- nn>sh</c-><c- p>:</c-><c- f>targetClass</c-> <c- nn>ex</c-><c- p>:</c-><c- f>Example</c-> <c- p>;</c-></span><span class="line-no" data-line="9"></span><span class="line">    <c- nn>sh</c-><c- p>:</c-><c- f>property</c-> <c- p>[</c-></span><span class="line-no" data-line="10"></span><span class="line">        <c- nn>sh</c-><c- p>:</c-><c- f>path</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- p>;</c-></span><span class="line-no" data-line="11"></span><span class="line">        <c- nn>sh</c-><c- p>:</c-><c- f>datatype</c-> <c- nn>rdf</c-><c- p>:</c-><c- f>langString</c-> <c- p>;</c-></span><span class="line-no" data-line="12"></span><span class="line">        <c- nn>sh</c-><c- p>:</c-><c- f>minCount</c-> <c- mi>1</c-> <c- p>;</c-></span><span class="line-no" data-line="13"></span><span class="line">        <c- nn>sh</c-><c- p>:</c-><c- f>uniqueLang</c-> <c- l>true</c-> <c- p>;</c-></span><span class="line-no" data-line="14"></span><span class="line">    <c- p>]</c-> <c- p>.</c-></span></pre>
-   <h2 class="heading settled" data-level="3" id="chapter-3"><span class="secno">3. </span><span class="content">Chapter 3</span><a class="self-link" href="#chapter-3"></a></h2>
-   
-We’ll introduce more complex constructs like tables.
-
-
-   <h3 class="heading settled" data-level="3.1" id="example-table"><span class="secno">3.1. </span><span class="content">An example table</span><a class="self-link" href="#example-table"></a></h3>
-   <table>
-    <caption>An example table</caption>
-    <thead>
-     <tr>
-      <th>id
-      <th>name
-      <th>comment
-    <tbody>
-     <tr>
-      <td>1
-      <td>foo
-      <td>bar
-     <tr>
-      <td>2
-      <td>bar
-      <td>baz
-   </table>
+   <h3 class="heading settled" data-level="1.4" id="notes-on-using-the-metadata-schema-mapping"><span class="secno">1.4. </span><span class="content">Notes on Using the Metadata Schema / Mapping</span><a class="self-link" href="#notes-on-using-the-metadata-schema-mapping"></a></h3>
+   <h3 class="heading settled" data-level="1.5" id="notes-on-using-the-metadata-schema-mapping①"><span class="secno">1.5. </span><span class="content">Notes on Using the Metadata Schema / Mapping</span><a class="self-link" href="#notes-on-using-the-metadata-schema-mapping①"></a></h3>
+   <ul>
+    <li data-md>
+     <p>Main classes include: <strong>Catalog</strong>, <strong>Dataset</strong>, <strong>Data Service</strong>, <strong>Dataset Series</strong>, <strong>Distribution</strong>.</p>
+    <li data-md>
+     <p>Supporting classes include: <strong>Agent</strong>, <strong>Kind</strong>, <strong>Attribution</strong>, <strong>Checksum</strong>, <strong>Identifier</strong>, <strong>Period of time</strong>, <strong>Relationship</strong>, <strong>Quality certificate</strong>.</p>
+    <li data-md>
+     <p>Certain properties (e.g., <code>dct:publisher</code>, <code>dct:creator</code>, <code>dct:contactPoint</code>) refer to supporting classes (e.g., <code>foaf:Agent</code>, <code>vcard:Kind</code>). These properties instantiate new instances each time they are used.</p>
+    <li data-md>
+     <p>Not all metadata schema classes may be necessary for describing your dataset. For example, <strong>DataService</strong> or <strong>DatasetSeries</strong> might not apply to every dataset in the National Health Data Catalogue.</p>
+    <li data-md>
+     <p>DCAT’s flexibility enables data holders to structure their metadata according to their needs.</p>
+    <li data-md>
+     <p>Mapping examples from various data sources have been collected for reference.</p>
+    <li data-md>
+     <p>Further information on the metadata schema and guidance on metadata mapping is available.</p>
+   </ul>
   </main>
   <div data-fill-with="conformance">
    <h2 class="no-ref no-num heading settled" id="conformance"><span class="content">
@@ -2329,13 +2173,4 @@ We’ll introduce more complex constructs like tables.
   <dl>
    <dt id="biblio-rfc2119">[RFC2119]
    <dd>S. Bradner. <a href="https://datatracker.ietf.org/doc/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://datatracker.ietf.org/doc/html/rfc2119">https://datatracker.ietf.org/doc/html/rfc2119</a>
-  </dl>
-  <h3 class="no-num no-ref heading settled" id="informative"><span class="content">Informative References</span><a class="self-link" href="#informative"></a></h3>
-  <dl>
-   <dt id="biblio-rdf11-new">[RDF11-NEW]
-   <dd>David Wood. <a href="https://www.w3.org/TR/rdf11-new/"><cite>What’s New in RDF 1.1</cite></a>. 25 February 2014. NOTE. URL: <a href="https://www.w3.org/TR/rdf11-new/">https://www.w3.org/TR/rdf11-new/</a>
-   <dt id="biblio-shacl">[SHACL]
-   <dd>Holger Knublauch; Dimitris Kontokostas. <a href="https://w3c.github.io/data-shapes/shacl/"><cite>Shapes Constraint Language (SHACL)</cite></a>. URL: <a href="https://w3c.github.io/data-shapes/shacl/">https://w3c.github.io/data-shapes/shacl/</a>
-   <dt id="biblio-vocab-dcat-3">[VOCAB-DCAT-3]
-   <dd>Simon Cox; et al. <a href="https://w3c.github.io/dxwg/dcat/"><cite>Data Catalog Vocabulary (DCAT) - Version 3</cite></a>. URL: <a href="https://w3c.github.io/dxwg/dcat/">https://w3c.github.io/dxwg/dcat/</a>
   </dl>
