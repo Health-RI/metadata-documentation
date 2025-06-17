@@ -1,4 +1,5 @@
-## Repository Status
+# Health-RI Metadata
+## Development Status
 [![Project DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15395604.svg)](https://doi.org/10.5281/zenodo.15395604)
 
 [![Project Status - Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
@@ -15,7 +16,7 @@
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Health-RI/health-ri-metadata)
 
-## Health-RI Metadata Catalogue Schema
+##  Catalogue Schema
 This branch contains the 2nd version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and entities involved and offering usage notes for developers. It addresses the schema's design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described here). Please also visit Confluence for general information about the metadata schema and metadata mapping. Please note that we are currently still working on the implementation of the new schema into the frontend of the National Health Data Catalogue.
 
 This documentation aims at a technical audience tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the core metadata schema. With any further questions or comments please contact Health-RI via the Health-RI ServiceDesk or via servicedesk@health-ri.nl.
