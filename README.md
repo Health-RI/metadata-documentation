@@ -18,7 +18,7 @@ With any further questions or comments please contact Health-RI via the Health-R
 ![GitHub Release Date](https://img.shields.io/github/release-date/Health-RI/health-ri-metadata)
 ![GitHub contributors](https://img.shields.io/github/contributors/Health-RI/health-ri-metadata)
 
-### Previous Versions
+### Versions
 The previous published version (version 1.0.2) of the Health-RI core metadata schema is [available here](https://github.com/Health-RI/health-ri-metadata/releases/tag/v1.0.2).
 
 
