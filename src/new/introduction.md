@@ -1,4 +1,4 @@
-# Introduction
+# Introduction # {#introduction}
 
 ## Scope and Current State of the Health-RI Core Metadata Schema
 
