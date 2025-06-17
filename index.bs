@@ -9,6 +9,11 @@ Abstract: A short description of your spec, one or two sentences.
 Markup Shorthands: markdown yes, css no
 </pre>
 
+
+<pre class=include>
+path: src/new/permanent urls.md
+</pre>
+
 <pre class=include>
 path: src/new/introduction.md
 </pre>
