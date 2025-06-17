@@ -15,10 +15,4 @@ Introduction {#intro}
 Introduction here.
 test
 tes
-tes
-<h1>test<h1>
-
-test
-tes
-tes
-<h1>test<h1>
+testttt
