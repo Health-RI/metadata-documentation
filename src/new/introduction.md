@@ -51,10 +51,14 @@ A tabular overview of all classes and properties—including their range, cardin
 
 ## Notes on Using the Metadata Schema / Mapping
 
-- Main classes include: [Catalog](#catalog), [Dataset](#dataset), [Data Service](#data-service), [Dataset Series](#dataset-series), [Distribution](#distribution).
-- Supporting classes include: [Agent](#agent), [Kind](#kind), [Attribution](#attribution), [Checksum](#checksum), [Identifier](#identifier), [Period of time](#period-of-time), [Relationship](#relationship), [Quality certificate](#quality-certificate).
-- Certain properties (e.g., `dct:publisher`, `dct:creator`, `dct:contactPoint`) refer to supporting classes (e.g., [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). These properties instantiate new instances each time they are used.
-- Not all metadata schema classes may be necessary for describing your dataset. For example, [DataService](#data-service) or [DatasetSeries](#dataset-series) might not apply to every dataset in the National Health Data Catalogue.
+## Notes on Using the Metadata Schema / Mapping
+
+- Main classes include: **Catalog**, **Dataset**, **Data Service**, **Dataset Series**, **Distribution**.
+- Supporting classes include: **Agent**, **Kind**, **Attribution**, **Checksum**, **Identifier**, **Period of time**, **Relationship**, **Quality certificate**.
+- Certain properties (e.g., `dct:publisher`, `dct:creator`, `dct:contactPoint`) refer to supporting classes (e.g., `foaf:Agent`, `vcard:Kind`). These properties instantiate new instances each time they are used.
+- Not all metadata schema classes may be necessary for describing your dataset. For example, **DataService** or **DatasetSeries** might not apply to every dataset in the National Health Data Catalogue.
 - DCAT's flexibility enables data holders to structure their metadata according to their needs.
-- Mapping examples from various data sources can be found [here](https://health-ri.atlassian.net/wiki/spaces/FSD/folder/736985095) (currently only containing v1 mappings).
-- Further information on the metadata schema is available on [Confluence](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping) and mapping guidance is documented [here](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial).
+- Mapping examples from various data sources have been collected for reference.
+- Further information on the metadata schema and guidance on metadata mapping is available.
+
+
