@@ -6,13 +6,6 @@
 [![Project Status - Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Health-RI/health-ri-metadata)
-
-
-
 ![GitHub Release](https://img.shields.io/github/v/release/Health-RI/health-ri-metadata)
-
 ![GitHub Release Date](https://img.shields.io/github/release-date/Health-RI/health-ri-metadata)
-
-
-
 ![GitHub contributors](https://img.shields.io/github/contributors/Health-RI/health-ri-metadata)
