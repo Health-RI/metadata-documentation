@@ -10,5 +10,5 @@ Markup Shorthands: markdown yes, css no
 </pre>
 
 <pre class=include>
-path: src/new/core specification.md
+path: src/new/introduction.md
 </pre>
