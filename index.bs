@@ -25,5 +25,8 @@ path: src/new/purpose-and-audience.md
 path: src/new/introduction.md
 </pre>
 
+<pre class=include>
+path: src/new/further-information.md
+</pre>
 
 
