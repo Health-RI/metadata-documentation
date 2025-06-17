@@ -1,76 +1,14 @@
 <pre class='metadata'>
-Title: Your Spec Title
-Shortname: your-spec
-Level: 1
-Status: w3c/CG-DRAFT
-URL: Your spec url
-Editor: Your Name, Your Company http://example.com/your-company, your-email@example.com, http://example.com/your-personal-website
-Abstract: A short description of your spec, one or two sentences.
-</pre>
-
-Introduction {#intro}
-=====================
-
-Introduction here.
-test
-tes
-testttt
-more tesstts
-trsrgsfdhgkjf 
-dsfssdfasdf
-sgdsgfgd
-sfgsfg
-sdfsfdfa
-
-
-
-<pre class='metadata'>
 Title: Health-RI Metadata Model
 Shortname: your-spec
 Level: 1
-Status: LD
-Repository: health-ri/health-ri-metadata
-URL: https://healthri.github.io/spec/v2
-Editor: Hannah Neikes, Health-RI https://www.health-ri.nl/, hannah.neikes@health-ri.nl
-Editor: Ana Konrad, Health-RI https://www.health-ri.nl/, ana.konrad@health-ri.nl
+Status: LS-PR
+URL: https://reiniergr.github.io/metadata-vocabulary/
+Editor: NAME here, email here
 Abstract: A short description of your spec, one or two sentences.
-Complain About: accidental-2119 yes, missing-example-ids yes
 Markup Shorthands: markdown yes, css no
 </pre>
-  
 
 <pre class=include>
 path: src/new/core specification.md
-</pre>
-
-<pre class=include>
-path: src/new/previous published.md
-</pre>
-
-<pre class=include>
-path: src/new/purpose and audience.md
-</pre>
-
-<pre class=include>
-path: src/new/introduction.md
-</pre>
-
-<pre class=include>
-path: src/new/permanent urls.md
-</pre>
-
-<pre class=include>
-path: src/new/main classes.md
-</pre>
-
-<pre class=include>
-path: src/new/supporting classes.md
-</pre>
-
-<pre class=include>
-path: src/new/main properties per class.md
-</pre>
-
-<pre class=include>
-path: src/new/further information.md
 </pre>
