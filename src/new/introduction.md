@@ -14,7 +14,7 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
   
 ## Used Prefixes
 
-| **Prefix**     | **Namespace IRI**                             |
+| *Prefix*       | *Namespace IRI*                               |
 | -------------- | --------------------------------------------- |
 | `adms`         | `http://www.w3.org/ns/adms#`                  |
 | `dcat`         | `http://www.w3.org/ns/dcat#`                  |
