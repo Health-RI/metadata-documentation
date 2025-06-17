@@ -11,7 +11,7 @@ Markup Shorthands: markdown yes, css no
 
 
 <pre class=include>
-path: src/new/permanent urls.md
+path: src/new/permanent-urls.md
 </pre>
 
 <pre class=include>
