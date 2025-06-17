@@ -21,3 +21,32 @@ dsfssdfasdf
 sgdsgfgd
 sfgsfg
 sdfsfdfa
+
+
+
+<pre class='metadata'>
+Title: Health-RI Metadata Model
+Shortname: your-spec
+Level: 1
+Status: LD
+Repository: health-ri/health-ri-metadata
+URL: https://healthri.github.io/spec/v2
+Editor: Hannah Neikes, Health-RI https://www.health-ri.nl/, hannah.neikes@health-ri.nl
+Editor: Ana Konrad, Health-RI https://www.health-ri.nl/, ana.konrad@health-ri.nl
+Abstract: A short description of your spec, one or two sentences.
+Complain About: accidental-2119 yes, missing-example-ids yes
+Markup Shorthands: markdown yes, css no
+</pre>
+
+
+<pre class=include>
+path: src/chapter1.md
+</pre>
+
+<pre class=include>
+path: src/chapter2.md
+</pre>
+
+<pre class=include>
+path: src/chapter3.md
+</pre>
