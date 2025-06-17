@@ -40,7 +40,7 @@ Markup Shorthands: markdown yes, css no
   
 
 <pre class=include>
-path: src/chapter1.md
+path: src/new/status.md
 </pre>
 
 <pre class=include>
