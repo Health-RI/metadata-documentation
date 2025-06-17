@@ -47,7 +47,7 @@ Properties derived from draft [HealthDCAT-AP](https://healthdcat-ap.github.io/) 
 A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found [here](Documents/Metadata_CoreGenericHealth_v2.xlsx). This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).
 
 ## UML of the Health-RI Core Metadata Schema (Version 2)
-![diagram](Images/2.0_plateau2/HRI_metadata_p2.png)
+![diagram](Images/HRI_metadata_p2.png)
 
 ## Notes on Using the Metadata Schema / Mapping
 
