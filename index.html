@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 275834c42, updated Wed Jun 11 14:18:15 2025 -0700" name="generator">
   <link href="https://reiniergr.github.io/metadata-vocabulary/" rel="canonical">
-  <meta content="48a1d20308db3f05ce2f86972e6001c7868b669e" name="revision">
+  <meta content="06ab20ff2a92f2909a50b0e1e493d64348c6fcf4" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -1946,13 +1946,18 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#previous-published-version"><span class="secno">2.1</span> <span class="content">Previous published version</span></a>
      </ol>
     <li>
-     <a href="#introduction"><span class="secno">3</span> <span class="content">Introduction</span></a>
+     <a href="#purpose-and-audience"><span class="secno">3</span> <span class="content">Audience Documentation</span></a>
      <ol class="toc">
-      <li><a href="#scope-and-current-state-of-the-health-ri-core-metadata-schema"><span class="secno">3.1</span> <span class="content">Scope and Current State of the Health-RI Core Metadata Schema</span></a>
-      <li><a href="#used-prefixes"><span class="secno">3.2</span> <span class="content">Used Prefixes</span></a>
-      <li><a href="#overview-and-diagram"><span class="secno">3.3</span> <span class="content">Overview and Diagram</span></a>
-      <li><a href="#uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">3.4</span> <span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span></a>
-      <li><a href="#notes-on-using-the-metadata-schema-mapping"><span class="secno">3.5</span> <span class="content">Notes on Using the Metadata Schema / Mapping</span></a>
+      <li><a href="#purpose-and-audience①"><span class="secno">3.1</span> <span class="content">Purpose and audience</span></a>
+     </ol>
+    <li>
+     <a href="#introduction"><span class="secno">4</span> <span class="content">Introduction</span></a>
+     <ol class="toc">
+      <li><a href="#scope-and-current-state-of-the-health-ri-core-metadata-schema"><span class="secno">4.1</span> <span class="content">Scope and Current State of the Health-RI Core Metadata Schema</span></a>
+      <li><a href="#used-prefixes"><span class="secno">4.2</span> <span class="content">Used Prefixes</span></a>
+      <li><a href="#overview-and-diagram"><span class="secno">4.3</span> <span class="content">Overview and Diagram</span></a>
+      <li><a href="#uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">4.4</span> <span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span></a>
+      <li><a href="#notes-on-using-the-metadata-schema-mapping"><span class="secno">4.5</span> <span class="content">Notes on Using the Metadata Schema / Mapping</span></a>
      </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content">
     Conformance</span></a>
@@ -1997,14 +2002,18 @@ The following <strong>W3ID redirects</strong> are available for Health-RI metada
    <h2 class="heading settled" data-level="2" id="previous-published"><span class="secno">2. </span><span class="content">Previous Published</span><a class="self-link" href="#previous-published"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="previous-published-version"><span class="secno">2.1. </span><span class="content">Previous published version</span><a class="self-link" href="#previous-published-version"></a></h3>
    <p>The previous published version (version 1.0.2) of the Health-RI core metadata schema is <a href="https://github.com/Health-RI/health-ri-metadata/releases/tag/v1.0.2">available here</a>.</p>
-   <h2 class="heading settled" data-level="3" id="introduction"><span class="secno">3. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
-   <h3 class="heading settled" data-level="3.1" id="scope-and-current-state-of-the-health-ri-core-metadata-schema"><span class="secno">3.1. </span><span class="content">Scope and Current State of the Health-RI Core Metadata Schema</span><a class="self-link" href="#scope-and-current-state-of-the-health-ri-core-metadata-schema"></a></h3>
+   <h2 class="heading settled" data-level="3" id="purpose-and-audience"><span class="secno">3. </span><span class="content">Audience Documentation</span><a class="self-link" href="#purpose-and-audience"></a></h2>
+   <h3 class="heading settled" data-level="3.1" id="purpose-and-audience①"><span class="secno">3.1. </span><span class="content">Purpose and audience</span><a class="self-link" href="#purpose-and-audience①"></a></h3>
+   <p>This branch contains the 2nd version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and entities involved and offering usage notes for developers. It addresses the schema’s design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue">here</a>). Please also visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>. <strong>Please note that we are currently still working on the implementation of the new schema into the frontend of the National Health Data Catalogue.</strong></p>
+   <p>This documentation aims at a <strong>technical audience</strong> tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the core metadata schema. With any further questions or comments please contact Health-RI via the <a href="https://www.health-ri.nl/health-ri-servicedesk">Health-RI ServiceDesk</a> or via <a href="mailto:servicedesk@health-ri.nl">servicedesk@health-ri.nl</a>.</p>
+   <h2 class="heading settled" data-level="4" id="introduction"><span class="secno">4. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h3 class="heading settled" data-level="4.1" id="scope-and-current-state-of-the-health-ri-core-metadata-schema"><span class="secno">4.1. </span><span class="content">Scope and Current State of the Health-RI Core Metadata Schema</span><a class="self-link" href="#scope-and-current-state-of-the-health-ri-core-metadata-schema"></a></h3>
    <p>Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/master">1st version of the metadata schema</a>, version 2 aims to incorporate both <a href="https://geonovum.github.io/DCAT-AP-NL30/">DCAT-AP NL</a> and the (yet-to-be-finalized) <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a>, along with Health-RI-specific requirements for the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It introduces several health-related properties (marked in blue in the UML diagram below), with suggested or required controlled vocabularies where applicable.</p>
    <p><strong>Important Note:</strong> HealthDCAT-AP has not yet been officially finalized and remains subject to change. Once its official release is published, Health-RI will reevaluate compatibility with HealthDCAT-AP. This version is based on the draft dated <em>16-12-2024</em>. In that draft, the cardinalities of HealthDCAT-AP vary depending on different access rights (public, restricted, non-public). For now, compliance is ensured with the <a href="https://healthdcat-ap.github.io/OPEN%20DATA%20HealthDCAT-AP%203.0.0.drawio.png">open version</a>, using its UML diagram for reference.</p>
    <p>Additionally, several <strong>ELSI</strong>-related metadata fields, as <a href="https://health-ri.atlassian.net/wiki/spaces/HA/pages/469893133/Metadata+rondom+gebruiksvoorwaarden+en+authenticatie+autorisatie+en+ELSI+aspecten#Catalogus">gathered</a> by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.</p>
    <p>To indicate the <strong>nature of the data</strong> (e.g., whole genome sequencing or questionnaire data), we propose using <code>healthdcatap:healthTheme</code>. For <strong>synthetic data</strong>, use <code>dct:type</code> with the required controlled vocabulary in the <code>dcat:Dataset</code> class.</p>
    <p>Several classes from <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and draft <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a> have been included but not further specified for Health-RI yet. This includes the <strong>DataService</strong> class, meaning that these classes can be used but are not yet tailored to specific dataholder needs for the National Health Data Catalogue.</p>
-   <h3 class="heading settled" data-level="3.2" id="used-prefixes"><span class="secno">3.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
+   <h3 class="heading settled" data-level="4.2" id="used-prefixes"><span class="secno">4.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
    <p>| <strong>Prefix</strong>     | <strong>Namespace IRI</strong>                             |
 | -------------- | --------------------------------------------- |
 | <code>adms</code>         | <code>http://www.w3.org/ns/adms#</code>                  |
@@ -2024,18 +2033,18 @@ The following <strong>W3ID redirects</strong> are available for Health-RI metada
 | <code>vcard</code>        | <code>http://www.w3.org/2006/vcard/ns#</code>            |
 | <code>xsd</code>          | <code>http://www.w3.org/2001/XMLSchema#</code>           |
 | <code>healthdcatap</code> | TBD                                           |</p>
-   <h3 class="heading settled" data-level="3.3" id="overview-and-diagram"><span class="secno">3.3. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
+   <h3 class="heading settled" data-level="4.3" id="overview-and-diagram"><span class="secno">4.3. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h3>
    <p>An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as <code>rdfs:label</code> and <code>rdfs:comment</code>. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.</p>
    <p>If a class is linked to another class with a closed arrow, it inherits all properties from the other class (e.g., <code>dcat:Dataset</code> inherits from <code>dcat:Resource</code>). Other arrows represent relationships, including their types (e.g., <code>dcat:Dataset</code> connects to a <code>dcat:DatasetSeries</code> via <code>dcat:inSeries</code>), along with cardinalities (e.g., <code>dcat:Dataset</code> connects to zero or more <code>dcat:DatasetSeries</code>). <strong>Mandatory relationships</strong> are marked with dark labels, while <strong>recommended relationships</strong> use a lighter color.</p>
    <p>The UML diagram separates <strong>main classes</strong> from <strong>supporting classes</strong>. While relationships between main classes are indicated by arrows, supporting class relationships are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.</p>
    <p>Properties derived from draft <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
    <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="Documents/Metadata_CoreGenericHealth_v2.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
-   <h3 class="heading settled" data-level="3.4" id="uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">3.4. </span><span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span><a class="self-link" href="#uml-of-the-health-ri-core-metadata-schema-version-2"></a></h3>
+   <h3 class="heading settled" data-level="4.4" id="uml-of-the-health-ri-core-metadata-schema-version-2"><span class="secno">4.4. </span><span class="content">UML of the Health-RI Core Metadata Schema (Version 2)</span><a class="self-link" href="#uml-of-the-health-ri-core-metadata-schema-version-2"></a></h3>
    
 !<a href="Images/2.0_plateau2/HRI_metadata_p2.png">diagram</a>
 
 
-   <h3 class="heading settled" data-level="3.5" id="notes-on-using-the-metadata-schema-mapping"><span class="secno">3.5. </span><span class="content">Notes on Using the Metadata Schema / Mapping</span><a class="self-link" href="#notes-on-using-the-metadata-schema-mapping"></a></h3>
+   <h3 class="heading settled" data-level="4.5" id="notes-on-using-the-metadata-schema-mapping"><span class="secno">4.5. </span><span class="content">Notes on Using the Metadata Schema / Mapping</span><a class="self-link" href="#notes-on-using-the-metadata-schema-mapping"></a></h3>
    <ul>
     <li data-md>
      <p>Main classes include: <strong>Catalog</strong>, <strong>Dataset</strong>, <strong>Data Service</strong>, <strong>Dataset Series</strong>, <strong>Distribution</strong>.</p>
