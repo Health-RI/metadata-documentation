@@ -14,5 +14,8 @@ path: src/new/introduction.md
 </pre>
 
 
+<pre class=include>
+path: src/new/purpose and audience.md
+</pre>
 
 
