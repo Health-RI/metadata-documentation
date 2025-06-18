@@ -8,7 +8,7 @@ For whom needs more introuction you can also visit Confluence for general inform
 
 With any further questions or comments please contact Health-RI via the Health-RI ServiceDesk or via servicedesk@health-ri.nl.
 
-### Latest 
+### Current Status
 [![Project DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15395604.svg)](https://doi.org/10.5281/zenodo.15395604)
 [![Project Status - Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 ![GitHub commits since latest release](https://img.shields.io/github/commits-since/Health-RI/health-ri-metadata/latest)
