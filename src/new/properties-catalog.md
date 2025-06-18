@@ -1,20 +1,19 @@
-
-### [Catalog](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog)
+## [Catalog](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog)
 
 A catalogue or repository that hosts the Datasets or Data Services being described. <br><br>
 `Usage note`: A catalog that is listed in the [National Health Data catalog](https://catalogus.healthdata.nl/) and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.
 
-#### Mandatory Properties
+### Mandatory Properties
 
 | **Property label** | **Definition** | **URI** | **Controlled Vocabulary** | **rdfs:Range** | **Usage Note** | **Cardinality** | **Example** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [contact point](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point) | Relevant contact information for the cataloged resource. | `dcat:contactPoint` | NA | `vcard:Kind` | This property points to a contact point (department or person) that can answer questions about the catalogue. Details on how to describe these are provided under class `vcard:Kind`. <br> Whenever possible, use **general contact information** (for example from a department) instead of contact information of an individual. | 1 | TBD |
 | [dataset](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_dataset) | A dataset that is listed in the catalog. | `dcat:dataset` | NA | `dcat:Dataset` | Each catalog contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue. | 1..\* | TBD |
 | [description](http://purl.org/dc/terms/description) | An account of the resource. | `dct:description` | NA |`rdfs:Literal` | Briefly describe the catalog and what it contains. You can repeat this in multiple languages. | 1..\* | This catalogue describes the core metadata of AUMC Inflammatory Bowel Disease datasets. <br> This catalogue describes breast cancer imaging, clinical and omics datasets. |
-| [publisher](http://purl.org/dc/terms/publisher) | An entity responsible for making the resource available. | `dct:publisher` | NA | `foaf:Agent` | The organisation or individual that is the holder of the intellectual property rights of a dataset. For more details about the publisher, see the class [Agent](#agent). | 1 | name: Radboud University Medical Center <br> identifier: `https://ror.org/05wg1m734` <br> (see class foaf: Agent) |
+| [publisher](http://purl.org/dc/terms/publisher) | An entity responsible for making the resource available. | `dct:publisher` | NA | `foaf:Agent` | The organisation or individual that is the holder of the intellectual property rights of a dataset. For more details about the publisher, see the class [Agent]linkto:agent). | 1 | name: Radboud University Medical Center <br> identifier: `https://ror.org/05wg1m734` <br> (see class foaf: Agent) |
 | [title](http://purl.org/dc/terms/title) | A name given to the resource. | `dct:title` | NA | `rdfs:Literal` | Provide a unique title for your catalog, which can be repeated in multiple languages. | 1..\* | Healthy Brain Study |
 
-#### Recommended Properties
+### Recommended Properties
 
 | **Property name** | **Definition** | **URI** | **Controlled Vocabulary** | **rdfs:Range** | **Usage Note** | **Cardinality** |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -32,3 +31,5 @@ A catalogue or repository that hosts the Datasets or Data Services being describ
 | [service](https://www.w3.org/TR/vocab-dcat-3/#Property:catalog_service) | A service that is listed in the catalog. | `dcat:service` | NA | `dcat:DataService` | Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalog and the Data Service via this property. While crucial for interoperability, this property is not relevant for end-users to collect. | 0..\* |
 | [temporal coverage](http://purl.org/dc/terms/temporal) | Temporal characteristics of the resource. | `dct:temporal` |NA | `dct:PeriodOfTime` | Use this property, if applicable to the catalogue, to indicate a time period the catalogue spans. | 0..\* |
 | [themes](https://www.w3.org/ns/dcat#themeTaxonomy) | A main category of the resource. A resource can have multiple themes. | `dcat:themeTaxonomy` | NA | `skos:ConceptScheme` | This property refers to a knowledge organisation system used to classify the Catalogue's Datasets. It must have at least the value `NAL:data-theme` as this is the mandatory controlled vocabulary for `dcat:theme`. | 0..\* |
+
+

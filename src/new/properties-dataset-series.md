@@ -1,0 +1,26 @@
+### [Dataset Series](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)
+
+A collection of datasets that are published separately, but share some characteristics that group them. <br><br>
+`Usage note`: A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class.
+
+#### Mandatory Properties
+
+<!-- TODO: This table misses an example column. -->
+| **Property name** | **Definition** | **URI** | **Controlled Vocabulary** | **rdfs:Range** | **Usage Note** | **Cardinality** |
+| --- | --- | --- | --- | --- | --- | --- |
+| [contact point](https://www.w3.org/TR/vocab-dcat-3/#Property:resource_contact_point) | Relevant contact information for the cataloged resource. | `dcat:contactPoint` | NA | `vcard:Kind` | This property points to a contact point (department or person) that can answer questions about the dataset series. Details on how to describe these are provided under class `vcard:Kind`. <br> Whenever possible, use **general contact information** (for example from a department) instead of contact information of an individual. | 1..\* |
+| [description](http://purl.org/dc/terms/description) | An account of the resource. | `dct:description` | NA | `rdfs:Literal` | Provide a brief description of the dataset series in the catalog. You can repeat this in multiple languages. | 1..\* |
+| [title](http://purl.org/dc/terms/title) | A name given to the resource. | `dct:title` | NA |  `rdfs:Literal` | Provide a unique title for your Dataset Series. It can be provided in multiple languages. | 1..\* |
+
+#### Recommended Properties
+
+<!-- TODO: This table misses an example column. -->
+| **Property name** | **Definition** | **URI** | **Controlled Vocabulary** | **rdfs:Range** | **Usage Note** | **Cardinality** |
+| --- | --- | --- | --- | --- | --- | --- |
+| [applicable legislation](http://data.europa.eu/r5r/applicableLegislation) | The legislation that is applicable to this resource. | `dcatap:applicableLegislation` | NA | `eli:LegalResource` | The legislation that mandates the creation or management of the Dataset Series. | 0..\* |
+| [frequency](http://purl.org/dc/terms/accrualPeriodicity) | The frequency with which items are added to a collection. | `dct:accrualPeriodicity` | [EU Vocabularies Frequency Authority List](http://publications.europa.eu/resource/authority/frequency) | `skos:Concept` | The frequency of a dataset series is not equal to the frequency of the dataset in the collection. | 0..1 |
+| [geographical coverage](http://purl.org/dc/terms/spatial) | Spatial characteristics of the resource. | `dct:spatial` | EU Vocabularies Lists: <br> [Continents](http://publications.europa.eu/resource/authority/continent/) <br> [Countries](http://publications.europa.eu/resource/authority/country) <br> [Places](http://publications.europa.eu/resource/authority/place/) <br> OR <br>[Geonames](http://sws.geonames.org/) OR <br>[CBS Classificaties en begrippen](https://vocabs.cbs.nl/nl/) | `dct:Location` | The EU Vocabularies Name Authority Lists must be used for [continents](https://publications.europa.eu/resource/authority/continent/), [countries](https://publications.europa.eu/resource/authority/country), and [places](https://publications.europa.eu/resource/authority/place/) that are in those lists. If a particular location is not in one of the mentioned Named Authority Lists, [Geonames URIs](https://sws.geonames.org/) must be used. For districts or neighbourhoods in NL, the [Dutch vocab](https://vocabs.cbs.nl/nl/) can be used. However, it might in many cases be desirable to keep the geographical coverage broader (e.g., indicating that NL is covered) to avoid exposing detailed information about the subjects' locations. | 0..\* |
+| [modification date](http://purl.org/dc/terms/modified) | Date on which the resource was changed. | `dct:modified` | NA | `xsd:dateTime` | This does not correspond to the most recently modified dataset in the collection of the dataset series. | 0..1 |
+| [publisher](http://purl.org/dc/terms/publisher) | An entity responsible for making the resource available. | `dct:publisher` | NA | `foaf:Agent` | The publisher of the dataset series may not be the publisher of all datasets. E.g., a digital archive could take over the publishing of older datasets in the series. | 0..1 |
+| [release date](http://purl.org/dc/terms/issued) | Date of formal issuance of the resource. | `dct:issued` | NA | `xsd:dateTime` | This refers to the moment when the dataset series was established as a managed resource. This is not equal to the release date of the oldest dataset in the collection of the dataset series. | 0..1 |
+| [temporal coverage](http://purl.org/dc/terms/temporal) | Temporal characteristics of the resource. | `dct:temporal` | NA | `dct:PeriodOfTime` | When temporal coverage is a dimension in the dataset series, then the temporal coverage of each dataset in the collection should be part of the temporal coverage. In that case, an open-ended value is recommended, e.g., after 2012. | 0..\* |

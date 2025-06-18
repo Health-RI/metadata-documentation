@@ -34,11 +34,61 @@ path: src/new/supporting-classes.md
 </pre>
 
 <pre class=include>
-path: src/new/further-information.md
+path: src/new/properties-classtext.md
 </pre>
 
 <pre class=include>
-path: src/new/main-properties-class-catalog.md
+path: src/new/properties-catalog.md
 </pre>
 
-  
+<pre class=include>
+path: src/new/properties-dataset.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-data-service.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-dataset-series.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-distribution.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-agent.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-kind.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-attribution.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-checksum.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-identifier.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-period-of-time.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-relationship.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-quality-certificate.md
+</pre>
+
+<pre class=include>
+path: src/new/further-information.md
+</pre>
