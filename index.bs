@@ -37,4 +37,8 @@ path: src/new/supporting-classes.md
 path: src/new/further-information.md
 </pre>
 
+<pre class=include>
+path: src/new/main-properties-class-catalog.md
+</pre>
+
   
