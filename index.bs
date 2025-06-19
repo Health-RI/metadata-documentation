@@ -1,10 +1,22 @@
 <pre class='metadata'>
 Title: Health-RI Metadata Model
 Shortname: your-spec
-Level: 1
-Status: LD
-URL: https://reiniergr.github.io/metadata-vocabulary/
+org: w3c
+level:none
+Status: UD
+TR: http://www.w3.org/TR/css-variables/ latest version
+URL: https://reiniergr.github.io/metadata-vocabulary/ most current draft
+Previous Version: previous version
+Status Text: status text
+Repository:username/repo
 Editor: NAME here, email here
+Editor: NAME here, email here
+Editor: NAME here, email here
+Warning: not ready
+Logo: logo url
+Favicon: favicon url
+Canonical URL: canonical url
+Former Editor: former editor
 Abstract: A short description of your spec, one or two sentences.
 Markup Shorthands: markdown yes, css no
 </pre>
