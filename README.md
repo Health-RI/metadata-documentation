@@ -20,7 +20,6 @@ With any further questions or comments please contact Health-RI via the Health-R
 
 
 
-  
-
+  ![TEST](src/new/images/HRI_Logo.png)
 
 
