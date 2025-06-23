@@ -1,19 +1,18 @@
 <pre class='metadata'>
 Title: Health-RI Metadata Model
 Shortname: your-spec
-org: w3c
-level:none
-Status: UD
-TR: http://www.w3.org/TR/css-variables/ latest version
-URL: https://reiniergr.github.io/metadata-vocabulary/ most current draft
-Previous Version: previous version
+status: LD
+level: none
+TR: w3id.org/health-ri/metadata/releases/latest
+URL: https://reiniergr.github.io/metadata-vocabulary/ 
+Previous Version: w3id.org/health-ri/metadata/releases
 Status Text: status text
-Repository:username/repo
+Repository: w3id.org/health-ri/metadata/git
 Editor: NAME here, email here
 Editor: NAME here, email here
 Editor: NAME here, email here
 Warning: not ready
-Logo: logo url
+Logo: src/new/images/HRI_Logo.png
 Favicon: favicon url
 Canonical URL: canonical url
 Former Editor: former editor
