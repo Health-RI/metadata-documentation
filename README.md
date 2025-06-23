@@ -1,8 +1,10 @@
-<img src="src/new/images/HRI_Logo.png" alt="" width="" height="" title="">
+
 
 # Core Metadata Schema
 
 This branch contains the 2nd version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and entities involved and offering usage notes for developers.
+
+<img src="src/new/images/HRI_Logo.png" alt="" width="" height="" title="">
 
 ##  Catalogue Schema and Specification
 The documentation aims at a technical audience tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the core metadata schema. This specification of version 2.0 of Health-RI core metadata schema is found at [**technical details**](https://reiniergr.github.io/metadata-vocabulary/). It addresses the schema's design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (which are described [here](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue)). 
