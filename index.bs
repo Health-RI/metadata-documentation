@@ -12,11 +12,11 @@ Editor: NAME here, email here
 Editor: NAME here, email here
 Editor: NAME here, email here
 Warning: not ready
-Logo: src/new/images/HRI_Logo.png
+Logo: health-ri logo
 Favicon: favicon url
 Canonical URL: canonical url
 Former Editor: former editor
-Abstract: A short description of your spec, one or two sentences.
+Abstract: <img alt="LOGO" src="src/new/images/HRI_Logo.png">A short description of your spec, one or two sentences.
 Markup Shorthands: markdown yes, css no
 </pre>
 
