@@ -50,7 +50,7 @@ A collection of datasets that are published separately, but share some character
   </tbody>
 </table>
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 <table>
   <thead>

@@ -42,6 +42,6 @@ A value that allows the contents of a file to be authenticated. <br><br>
 </table>
 
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 There are currently no recommended properties for this class.

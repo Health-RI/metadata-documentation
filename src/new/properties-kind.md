@@ -42,7 +42,7 @@ A description following the vCard specification. <br><br>
 </table>
 
 
- ### Recommended  Attributes
+ ### Recommended Attributes 
 
 <table>
   <thead>

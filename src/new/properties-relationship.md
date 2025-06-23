@@ -5,7 +5,7 @@ An association class for attaching additional information to a relationship betw
 
  
 
-### Mandatory Attributes
+### Mandatory Attributes 
 
 <table>
   <thead>
@@ -44,6 +44,6 @@ An association class for attaching additional information to a relationship betw
   </tbody>
 </table>
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 There are currently no recommended properties for this class.

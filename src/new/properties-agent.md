@@ -59,7 +59,7 @@ Any entity carrying out actions with respect to the (Core) entities Catalogue, D
   </tbody>
 </table>
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 <table>
   <thead>

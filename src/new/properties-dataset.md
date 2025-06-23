@@ -125,7 +125,7 @@ A conceptual entity that represents the information published. <br><br>
 </table>
 
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 <table>
   <thead>

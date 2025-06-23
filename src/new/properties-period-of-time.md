@@ -9,7 +9,7 @@ An interval of time that is named or defined by its start and end dates. <br><br
 
 There are currently no mandatory properties for this class.
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 <table>
   <thead>

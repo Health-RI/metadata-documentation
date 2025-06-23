@@ -9,7 +9,7 @@ An annotation that associates a resource (especially a dataset or a distribution
 
 There are currently no mandatory properties for this class.
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 <table>
   <thead>

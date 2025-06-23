@@ -74,7 +74,7 @@ A physical embodiment of the Dataset in a particular format. <br><br>
   </tbody>
 </table>
 
-### Recommended  Attributes
+### Recommended Attributes 
 
 <table>
   <thead>
