@@ -1,4 +1,5 @@
 # Health-RI Core Metadata Schema
+<img src="src/new/images/HRI_Logo.png" alt="" width="" height="" title="">
 This branch contains the 2nd version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and entities involved and offering usage notes for developers.
 
 ##  Catalogue Schema and Specification
@@ -19,5 +20,5 @@ With any further questions or comments please contact Health-RI via the Health-R
 ![GitHub contributors](https://img.shields.io/github/contributors/Health-RI/health-ri-metadata)
 
 
-<img src="src/new/images/HRI_Logo.png" alt="" width=800 height=1100 title="">
+
 
