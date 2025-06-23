@@ -19,5 +19,5 @@ With any further questions or comments please contact Health-RI via the Health-R
 ![GitHub contributors](https://img.shields.io/github/contributors/Health-RI/health-ri-metadata)
 
 
-<img src="src/new/images/HRI_Logo.png" alt="">
+<img src="src/new/images/HRI_Logo.png" alt="" width=800 height=1100 title="">
 
