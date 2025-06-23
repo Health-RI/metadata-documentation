@@ -1,5 +1,7 @@
-# Health-RI Core Metadata Schema
 <img src="src/new/images/HRI_Logo.png" alt="" width="" height="" title="">
+
+# Core Metadata Schema
+
 This branch contains the 2nd version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and entities involved and offering usage notes for developers.
 
 ##  Catalogue Schema and Specification
