@@ -16,7 +16,7 @@ Logo: health-ri logo
 Favicon: favicon url
 Canonical URL: canonical url
 Former Editor: former editor
-Abstract: This <img alt="" src="src/new/images/HRI_Logo.png"> <br/> The National Health Data Catalogue currently uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. The Health-RI core metadata schema is based on widely used metadata standards such as DCAT-AP, DCAT-AP NL and HealthDCAT-AP. Here For specific details on the Health-RI core metadata schema, please visit the Github specifications dedicated for data experts or data stewards: Currently, we are transferring to a new version of the Health-RI core metadata schema: v2, available on Github here. Specifications from the official v1 release are available here.A short description of your spec, one or two sentences.
+Abstract: <img alt="" src="src/new/images/HRI_Logo.png"> <br/> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.
 Markup Shorthands: markdown yes, css no
 </pre>
 
