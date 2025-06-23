@@ -7,7 +7,7 @@ The following **W3ID redirects** are available for Health-RI metadata:
 ### Health-RI Metadata
 - **Git repository:** [w3id.org/health-ri/metadata/git](https://w3id.org/health-ri/metadata/git)
 
-#### Versioning & Releases
+### Versioning & Releases
 - **Latest release:** [w3id.org/health-ri/metadata/releases/latest](https://w3id.org/health-ri/metadata/releases/latest)
 - **All releases:** [w3id.org/health-ri/metadata/releases](https://w3id.org/health-ri/metadata/releases)
 - **Specific release:**
