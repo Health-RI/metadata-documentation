@@ -19,11 +19,11 @@ Favicon: favicon url
 Canonical URL: canonical url
 Former Editor: Niek van Ulzen.
 Former Editor: Former editor? Please send your name and email to Reinier.
-Abstract: The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.
+Abstract: <img src="https://raw.githubusercontent.com/ReinierGr/metadata-vocabulary/main/src/new/images/HRI_Logo.png" alt="" title=""> <br/> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.
 Markup Shorthands: markdown yes, css no
 </pre>
 
-<img src="https://raw.githubusercontent.com/ReinierGr/metadata-vocabulary/main/src/new/images/HRI_Logo.png" alt="" title=""> <br/> 
+
 
 <pre class=include>
 path: src/new/style-tables.md
