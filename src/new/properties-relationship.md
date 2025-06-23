@@ -3,9 +3,9 @@
 An association class for attaching additional information to a relationship between DCAT Resources. <br><br>
 `Usage note`: This class is instantiated by the property "qualified relation" (`dcat:qualifiedRelation`) in other classes. Use this class to describe a relationship with another resource or dataset. Within the class, that resource is indicated, as well as the role this resource has in relation to the described one. The role is indicated based on a controlled vocabulary.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 <table>
   <thead>
@@ -44,6 +44,6 @@ An association class for attaching additional information to a relationship betw
   </tbody>
 </table>
 
-#### Recommended 
+### Recommended  Attributes
 
 There are currently no recommended properties for this class.

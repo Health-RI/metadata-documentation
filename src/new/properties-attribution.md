@@ -3,13 +3,13 @@
 Attribution is the ascribing of an entity to an agent. <br><br>
 `Usage note`: This class is instantiated by the property "qualified attribution".
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 There are currently no mandatory properties for this class.
 
-#### Recommended 
+### Recommended  Attributes
 
 <table>
   <thead>

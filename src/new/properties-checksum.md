@@ -1,12 +1,11 @@
-
 ## [Checksum](https://spdx.org/rdf/terms/#d4e2091)
 
 A value that allows the contents of a file to be authenticated. <br><br>
 `Usage note`: This class is instantiated by properties in other classes that have the range `spdx:Checksum`.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 <table>
   <thead>
@@ -43,6 +42,6 @@ A value that allows the contents of a file to be authenticated. <br><br>
 </table>
 
 
-#### Recommended 
+### Recommended  Attributes
 
 There are currently no recommended properties for this class.

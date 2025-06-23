@@ -1,16 +1,15 @@
-
 ## [Quality certificate](https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate)
 
 An annotation that associates a resource (especially a dataset or a distribution) to another resource (for example, a document) that certifies the resource's quality according to a set of quality assessment rules. <br><br>
 `Usage note`: This class is instantiated by the property "quality annotation" (`dqv:hasQualityAnnotation`) in other classes. Use this class to provide a link between the resource or dataset and an associated quality annotation.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 There are currently no mandatory properties for this class.
 
-#### Recommended 
+### Recommended  Attributes
 
 <table>
   <thead>

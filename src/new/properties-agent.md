@@ -3,9 +3,9 @@
 Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Data Services and Distributions. <br><br>
 `Usage note`: A person or organisation that is associated with the catalogue or dataset. This class is instantiated in these classes whenever the range is `foaf:Agent`.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 <table>
   <thead>
@@ -59,7 +59,7 @@ Any entity carrying out actions with respect to the (Core) entities Catalogue, D
   </tbody>
 </table>
 
-#### Recommended 
+### Recommended  Attributes
 
 <table>
   <thead>

@@ -3,9 +3,9 @@
 A description following the vCard specification. <br><br>
 `Usage note`: Used to describe contact information for [Dataset](linkto:dataset) and [Dataset Series](linkto:dataset-series). This class is instantiated in these classes whenever the range is `vcard:Kind`.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 <table>
   <thead>
@@ -42,7 +42,7 @@ A description following the vCard specification. <br><br>
 </table>
 
 
- #### Recommended 
+ ### Recommended  Attributes
 
 <table>
   <thead>

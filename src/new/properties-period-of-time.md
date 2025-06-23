@@ -3,13 +3,13 @@
 An interval of time that is named or defined by its start and end dates. <br><br>
 `Usage note`: This class is instantiated by properties in other classes that have the range `dct:PeriodOfTime`.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 There are currently no mandatory properties for this class.
 
-#### Recommended 
+### Recommended  Attributes
 
 <table>
   <thead>

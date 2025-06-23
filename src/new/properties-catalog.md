@@ -3,9 +3,9 @@
 A catalogue or repository that hosts the Datasets or Data Services being described. <br><br>
 `Usage note`: A catalog that is listed in the [National Health Data catalog](https://catalogus.healthdata.nl/) and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 <table> 
   <thead> 
@@ -75,7 +75,7 @@ A catalogue or repository that hosts the Datasets or Data Services being describ
 </table>
 
 
-#### Recommended 
+### Recommended  Attributes
 
 <table> 
   <thead> 

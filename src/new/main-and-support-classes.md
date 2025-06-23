@@ -1,8 +1,6 @@
-# Terms # {#main-classes}
+# Classes # {#main-classes}
 
-## Classes 
-
-### Mandatory 
+## Mandatory Terms
 <table> 
   <thead> 
     <tr> 
@@ -42,7 +40,7 @@
   </tbody> 
 </table>
 
-### Recommended
+## Recommended Terms
 <table> 
   <thead> 
     <tr> 

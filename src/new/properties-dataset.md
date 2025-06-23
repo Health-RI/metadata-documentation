@@ -3,9 +3,9 @@
 A conceptual entity that represents the information published. <br><br>
 `Usage note`: When focusing on health data, a dataset typically contains structured information gathered from a study or research project related to health topics. This might include clinical trial results, public health statistics, patient records, survey data, etc. <br> How the data in a dataset can be accessed is defined in the [Distribution](linkto:distribution), which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.
 
-### Properties
+ 
 
-#### Mandatory 
+### Mandatory Attributes
 
 <table> 
   <thead> 
@@ -125,7 +125,7 @@ A conceptual entity that represents the information published. <br><br>
 </table>
 
 
-#### Recommended 
+### Recommended  Attributes
 
 <table>
   <thead>
