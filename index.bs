@@ -3,9 +3,9 @@ Title: Health-RI Metadata Model
 Shortname: your-spec
 status: LD
 level: none
-TR: w3id.org/health-ri/metadata/releases/latest
+TR: https://w3id.org/health-ri/metadata/releases/latest
 URL: https://reiniergr.github.io/metadata-vocabulary/ 
-Previous Version: w3id.org/health-ri/metadata/releases
+Previous Version: https://w3id.org/health-ri/metadata/releases
 Status Text: status text
 Repository: w3id.org/health-ri/metadata/git
 Editor: NAME here, email here
@@ -16,7 +16,7 @@ Logo: health-ri logo
 Favicon: favicon url
 Canonical URL: canonical url
 Former Editor: former editor
-Abstract: <img alt="LOGO" src="src/new/images/HRI_Logo.png">A short description of your spec, one or two sentences.
+Abstract: This <img alt="LOGO" src="src/new/images/HRI_Logo.png"> A short description of your spec, one or two sentences.
 Markup Shorthands: markdown yes, css no
 </pre>
 
