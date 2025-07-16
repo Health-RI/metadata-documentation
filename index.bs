@@ -4,7 +4,7 @@ Shortname: your-spec
 status: LD
 level: none
 TR: https://w3id.org/health-ri/metadata/releases/latest
-URL: https://reiniergr.github.io/metadata-vocabulary/ 
+URL: https://health-ri.github.io/metadata-documentation/
 Previous Version: https://w3id.org/health-ri/metadata/releases
 Status Text: status text
 Repository: w3id.org/health-ri/metadata/git
