@@ -2,7 +2,7 @@
 
 ### Mandatory Classes
 
-#### Catalog {#class-catalog}
+#### Catalog 
 <table> 
   <thead> 
     <tr> 
@@ -22,7 +22,7 @@
   </tbody> 
 </table>
 
-#### Dataset {#class-dataset}
+#### Dataset 
 <table> 
   <thead> 
     <tr> 
@@ -45,7 +45,7 @@
 
 ### Recommended Classes
 
-#### Data Service {#class-dataservice}
+#### Data Service 
 <table> 
   <thead> 
     <tr> 
@@ -65,7 +65,7 @@
   </tbody> 
 </table>
 
-#### Dataset Series {#class-datasetseries}
+#### Dataset Series 
 <table> 
   <thead> 
     <tr> 
@@ -85,7 +85,7 @@
   </tbody> 
 </table>
 
-#### Distribution {#class-distribution}
+#### Distribution 
 <table> 
   <thead> 
     <tr> 

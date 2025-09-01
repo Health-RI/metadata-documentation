@@ -2,7 +2,7 @@
 
 ### Mandatory Classes
 
-#### Agent {#class-agent}
+#### Agent 
 <table> 
   <thead> 
     <tr> 
@@ -22,7 +22,7 @@
   </tbody> 
 </table>
 
-#### Kind {#class-kind}
+#### Kind 
 <table> 
   <thead> 
     <tr> 
@@ -44,7 +44,7 @@
 
 ### Recommended Classes
 
-#### Attribution {#class-attribution}
+#### Attribution 
 <table> 
   <thead> 
     <tr> 
@@ -64,7 +64,7 @@
   </tbody> 
 </table>
 
-#### Checksum {#class-checksum}
+#### Checksum 
 <table> 
   <thead> 
     <tr> 
@@ -84,7 +84,7 @@
   </tbody> 
 </table>
 
-#### Identifier {#class-identifier}
+#### Identifier 
 <table> 
   <thead> 
     <tr> 
@@ -104,7 +104,7 @@
   </tbody> 
 </table>
 
-#### Period of Time {#class-periodoftime}
+#### Period of Time 
 <table> 
   <thead> 
     <tr> 
@@ -124,7 +124,7 @@
   </tbody> 
 </table>
 
-#### Quality Certificate {#class-qualitycertificate}
+#### Quality Certificate 
 <table> 
   <thead> 
     <tr> 
@@ -144,7 +144,7 @@
   </tbody> 
 </table>
 
-#### Relationship {#class-relationship}
+#### Relationship 
 <table> 
   <thead> 
     <tr> 
