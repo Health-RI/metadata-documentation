@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="4745e68a2d31077be667ea39dd2da011899b4862" name="revision">
+  <meta content="626d6ebc10561ebbd88f1237ecd2c000b92033ad" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2327,16 +2327,11 @@ An overview of the metadata schema core is presented in the UML diagram below. T
    </ul>
    <h2 class="heading settled" data-level="5" id="classes-classtext"><span class="secno">5. </span><span class="content">Classes</span><a class="self-link" href="#classes-classtext"></a></h2>
    
-Health-RI’s schema is designed to support FAIR data principles in biomedical research. Its <strong>main classes</strong> focus on the core entities that describe and deliver data, while <strong>supporting classes</strong> enrich those entities with context, provenance, and technical details.
+Health-RI’s schema is designed to support FAIR data principles—making health data Findable, Accessible, Interoperable, and Reusable. To achieve this, the schema organizes its structure around two types of classes: Main Classes and Supportive Classes.
 
 
-   <ul>
-    <li data-md>
-     <p><strong>Main classes</strong> define the core entities that describe the data and how it is delivered. Think: what the data is and who allows users access it.</p>
-    <li data-md>
-     <p><strong>Supporting classes</strong> provide contextual, technical, and provenance-related information. Think: who created it, how it’s validated, and how it’s linked to other resources.</p>
-   </ul>
-   <p>This separation helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services.</p>
+   <p>Main Classes represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.</p>
+   <p>Supportive Classes provide additional context and metadata that enrich and clarify the main entities. These include elements like Agent, Identifier, Period of Time, Checksum, and Quality Certificate. While not always mandatory, they enhance discoverability, traceability, and trustworthiness of the data.</p>
    <h3 class="heading settled" data-level="5.1" id="classes-main"><span class="secno">5.1. </span><span class="content">Main</span><a class="self-link" href="#classes-main"></a></h3>
    <h4 class="heading settled" data-level="5.1.1" id="mandatory-classes"><span class="secno">5.1.1. </span><span class="content">Mandatory Classes</span><a class="self-link" href="#mandatory-classes"></a></h4>
    <table>
