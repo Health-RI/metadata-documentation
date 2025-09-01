@@ -105,7 +105,7 @@ Properties derived from draft [HealthDCAT-AP](https://healthdcat-ap.github.io/) 
 A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found [here](Documents/Metadata_CoreGenericHealth_v2.xlsx). This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).
 
 ## UML of the Profile (Version 2)
-<img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" alt="Health-RI Metadata Diagram" width="1645" height="2218" style="width:70%; height:auto;">
+<img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" alt="Health-RI Metadata Diagram" width="1645" height="2218" style="width:100%; height:auto;">
 
 For usage notes regarding this profile please refer to the next section.
 
