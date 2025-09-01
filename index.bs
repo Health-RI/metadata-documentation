@@ -44,11 +44,7 @@ path: src/new/introduction.md
 </pre>
 
 <pre class=include>
-path: src/new/classes-classtext.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-classtext.md
+path: src/new/classtext.md
 </pre>
 
 <pre class=include>

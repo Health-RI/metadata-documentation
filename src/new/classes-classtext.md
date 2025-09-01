@@ -1,16 +1,8 @@
-## Classes # {#classes-classtext} 
-The Health-RI metadata schema is based on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply and interoperable across catalogues, the schema distinguishes between: To achieve this, the schema organizes its structure around two types of classes: **Main Classes** and **Supportive Classes**.
-
-The Health‑RI metadata schema builds on [DCAT‑AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/), a European application profile for describing datasets, services, and related resources. To make the model easier to apply and to ensure interoperability across catalogues, the schema organises its structure around two complementary types of classes:
+## Class Structure ## {#classtext} 
+The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply (and interoperable) across catalogues, the schema organizes its structure around two types of classes: **Main Classes** and **Supportive Classes**.
 
 - **Main Classes** – the core entities that form the core of the catalogue.
 - **Supportive Classes** – contextual entities that provide detail to the main classes.
-
-## Usage Notes on Schema / Mapping
-This application profile follows DCAT-AP 3.0 and it separates classes into main and supportive groups to keep the model interoperable. Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity.]
-
-Main classes are the core entities in the catalogue. They are divided into those with mandatory properties for conformance and those that are recommended for richer metadata. This is how to use those classes:
-
 
 Main classes in this profile:
 - **Catalog**
@@ -18,9 +10,6 @@ Main classes in this profile:
 - **Data Service**
 - **Dataset Series**
 - **Distribution**.
-
-- The main classes are [Catalog](#catalog), [Dataset](#dataset), [Data Service](#data-service), [Dataset Series](#dataset-series), [Distribution](#distribution)
-
 
 Supportive classes in this profile:
 - **Agent**
@@ -32,9 +21,10 @@ Supportive classes in this profile:
 - **Relationship**
 - **Quality certificate**
 
-- The supporting classes are [Agent](#agent), [Kind](#kind), [Attribution](#attribution), [Checksum](#checksum), [Identifier](#identifier), [Period of time](#period-of-time), [Relationship](#relationship), [Quality certificate](#quality-certificate)
+## Usage Notes on Schema / Mapping
+Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into  mandatory properties for conformance and recommended properties for richer metadata. This is how to use those classes:
 
-This separation helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services.
+The separation from above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. To apply it:
 - Start with main classes – Identify the datasets, services, and distributions you need to describe.
 - Link supportive classes – Use them wherever the profile specifies a property range (e.g., publisher → Agent).
 - Always fill mandatory properties – This ensures your metadata is valid and interoperable.
@@ -44,9 +34,7 @@ This separation helps modularize metadata and makes it easier to reuse supportin
 The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.
 
 
-
-**Notes on the metadata schema / mapping**:
-- We discriminate between main and supporting classes, and within each group between mandatory and recommended classes.
+**Please take into consideration**:
 - Certain properties (e.g. `dct:publisher`, `dct:creator`, `dct:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties will instantiate new instances of the specific supporting classes for each usage. This means that, for example, the `dct:publisher` and `dct:creator` can instantiate [`foaf:Agent`](#agent) at two separate times with different content (organisation vs. person).
 - It is possible that not all main classes of the metadata schema are necessary to describe your data or the structure of your data. For example, [DataService](#data-service) or [DatasetSeries](#dataset-series) might not apply to all datasets described/onboarded in the National Health Data Catalogue.
 - The power of [DCAT](https://www.w3.org/TR/vocab-dcat-3/) is that it is flexible in use, giving a data holder the ability to reflect the structure of their data by using the different classes.
@@ -54,5 +42,4 @@ The following sections describe each class in detail, including its role in the 
 - Please visit Confluence for general information about the [metadata schema](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping) and [metadata mapping](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial).
 
 
-## Class Properties ## {#properties-classtext} 
-The main classes and supportive classes together form the Health-RI data catalogue Application Profile. The properties and their associated constraints that apply in the context of this profile, and the range of properties are listed below.
+The main classes and supportive classes together form the Health-RI data catalogue Application Profile. The properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.
