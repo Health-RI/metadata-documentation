@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="2002eb8bcf1fd8eb157d8dcdf4a5dcba1a36e164" name="revision">
+  <meta content="540b3147d9def3c0556b4490853346f1ee730827" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2070,20 +2070,28 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#used-prefixes"><span class="secno">4.2</span> <span class="content">Used Prefixes</span></a>
       <li><a href="#overview-and-diagram"><span class="secno">4.3</span> <span class="content">Overview and Diagram</span></a>
       <li><a href="#uml-of-the-core-schema-version-2"><span class="secno">4.4</span> <span class="content">UML of the Core Schema (Version 2)</span></a>
-      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.5</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
+      <li><a href="#classes-classtext"><span class="secno">4.5</span> <span class="content">Classes # {#classes-classtext}</span></a>
+      <li><a href="#understanding-the-schema"><span class="secno">4.6</span> <span class="content">Understanding the schema</span></a>
+      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.7</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
      </ol>
-    <li><a href="#classes-classtext"><span class="secno">5</span> <span class="content">Classes</span></a>
+    <li>
+     <a href="#classes-classtext①"><span class="secno">5</span> <span class="content">Classes</span></a>
+     <ol class="toc">
+      <li><a href="#usage-notes-on-schema-mapping①"><span class="secno">5.1</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
+      <li><a href="#understanding-the-schema①"><span class="secno">5.2</span> <span class="content">Understanding the schema</span></a>
+      <li><a href="#practical-guidance"><span class="secno">5.3</span> <span class="content">Practical guidance</span></a>
+     </ol>
     <li>
      <a href="#classes-main"><span class="secno">6</span> <span class="content">Main Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#mandatory"><span class="secno">6.1</span> <span class="content">Mandatory</span></a>
+       <a href="#mandatory-entities"><span class="secno">6.1</span> <span class="content">Mandatory Entities</span></a>
        <ol class="toc">
         <li><a href="#catalog"><span class="secno">6.1.1</span> <span class="content">Catalog</span></a>
         <li><a href="#dataset"><span class="secno">6.1.2</span> <span class="content">Dataset</span></a>
        </ol>
       <li>
-       <a href="#recommended"><span class="secno">6.2</span> <span class="content">Recommended</span></a>
+       <a href="#recommended-entities"><span class="secno">6.2</span> <span class="content">Recommended Entities</span></a>
        <ol class="toc">
         <li><a href="#data-service"><span class="secno">6.2.1</span> <span class="content">Data Service</span></a>
         <li><a href="#dataset-series"><span class="secno">6.2.2</span> <span class="content">Dataset Series</span></a>
@@ -2091,16 +2099,16 @@ Parts of this work may be from another specification document.  If so, those par
        </ol>
      </ol>
     <li>
-     <a href="#classes-supportive"><span class="secno">7</span> <span class="content">Supportive</span></a>
+     <a href="#classes-supportive"><span class="secno">7</span> <span class="content">Supportive Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#mandatory-classes"><span class="secno">7.1</span> <span class="content">Mandatory Classes</span></a>
+       <a href="#mandatory-entities①"><span class="secno">7.1</span> <span class="content">Mandatory Entities</span></a>
        <ol class="toc">
         <li><a href="#agent"><span class="secno">7.1.1</span> <span class="content">Agent</span></a>
         <li><a href="#kind"><span class="secno">7.1.2</span> <span class="content">Kind</span></a>
        </ol>
       <li>
-       <a href="#recommended①"><span class="secno">7.2</span> <span class="content">Recommended</span></a>
+       <a href="#recommended-entities①"><span class="secno">7.2</span> <span class="content">Recommended Entities</span></a>
        <ol class="toc">
         <li><a href="#attribution"><span class="secno">7.2.1</span> <span class="content">Attribution</span></a>
         <li><a href="#checksum"><span class="secno">7.2.2</span> <span class="content">Checksum</span></a>
@@ -2334,7 +2342,21 @@ An overview of the metadata schema core is presented in the UML diagram below. T
 
 
 
-   <h3 class="heading settled" data-level="4.5" id="usage-notes-on-schema-mapping"><span class="secno">4.5. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
+
+
+
+
+   <h3 class="heading settled" data-level="4.5" id="classes-classtext"><span class="secno">4.5. </span><span class="content">Classes # {#classes-classtext}</span><a class="self-link" href="#classes-classtext"></a></h3>
+   
+The Health-RI metadata schema is based on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply and interoperable across catalogues, the schema distinguishes between: To achieve this, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.
+
+
+   <h3 class="heading settled" data-level="4.6" id="understanding-the-schema"><span class="secno">4.6. </span><span class="content">Understanding the schema</span><a class="self-link" href="#understanding-the-schema"></a></h3>
+   
+This application profile follows DCAT-AP 3.0 to describe data catalogues, datasets, dataset series, data services, and their distributions. It separates classes into main and supportive groups to keep the model interoperable. Supportive classes are included because they form the range (value type) of properties used by the main classes [additional requirements to properties for this entity.]. This section explains how to use those classes.
+
+
+   <h3 class="heading settled" data-level="4.7" id="usage-notes-on-schema-mapping"><span class="secno">4.7. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
    <ul>
     <li data-md>
      <p>Main classes include: <strong>Catalog</strong>, <strong>Dataset</strong>, <strong>Data Service</strong>, <strong>Dataset Series</strong>, <strong>Distribution</strong>.</p>
@@ -2351,15 +2373,98 @@ An overview of the metadata schema core is presented in the UML diagram below. T
     <li data-md>
      <p>Further information on the metadata schema and guidance on metadata mapping is available.</p>
    </ul>
-   <h2 class="heading settled" data-level="5" id="classes-classtext"><span class="secno">5. </span><span class="content">Classes</span><a class="self-link" href="#classes-classtext"></a></h2>
-   
-Health-RI’s schema is designed to support FAIR data principles—making health data Findable, Accessible, Interoperable, and Reusable. To achieve this, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.
-
-
-   <p><strong>Main Classes</strong> represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.</p>
-   <p><strong>Supportive Classes</strong> provide additional context and metadata that enrich and clarify the main entities. These include elements like Agent, Identifier, Period of Time, Checksum, and Quality Certificate. They enhance discoverability, traceability, and trustworthiness of the data.</p>
+   <h2 class="heading settled" data-level="5" id="classes-classtext①"><span class="secno">5. </span><span class="content">Classes</span><a class="self-link" href="#classes-classtext①"></a></h2>
+   <p>The Health‑RI metadata schema builds on <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT‑AP 3.0</a>, a European application profile for describing datasets, services, and related resources. To make the model easier to apply and to ensure interoperability across catalogues, the schema organises its structure around two complementary types of classes:</p>
+   <ul>
+    <li data-md>
+     <p><strong>Main Classes</strong> – the core entities that form the core of the catalogue.</p>
+    <li data-md>
+     <p><strong>Supportive Classes</strong> – contextual entities that provide detail to the main classes.</p>
+   </ul>
+   <h3 class="heading settled" data-level="5.1" id="usage-notes-on-schema-mapping①"><span class="secno">5.1. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping①"></a></h3>
+   <p><strong>Main classes in this profile:</strong></p>
+   <ul>
+    <li data-md>
+     <p><code>Catalog</code></p>
+    <li data-md>
+     <p><code>Dataset</code></p>
+    <li data-md>
+     <p><code>Dataset Series</code></p>
+    <li data-md>
+     <p><code>Data Service</code></p>
+    <li data-md>
+     <p><code>Distribution</code></p>
+   </ul>
+   <p><strong>Supportive classes in this profile:</strong></p>
+   <ul>
+    <li data-md>
+     <p><code>Agent</code></p>
+    <li data-md>
+     <p><code>Kind</code></p>
+    <li data-md>
+     <p><code>Attribution</code></p>
+    <li data-md>
+     <p><code>Checksum</code></p>
+    <li data-md>
+     <p><code>Identifier</code></p>
+    <li data-md>
+     <p><code>Period of time</code></p>
+    <li data-md>
+     <p><code>Relationship</code></p>
+    <li data-md>
+     <p><code>Quality certificate</code></p>
+   </ul>
+   <p><strong>Key points for implementers:</strong></p>
+   <ul>
+    <li data-md>
+     <p>Certain properties (e.g., <code>dct:publisher</code>, <code>dct:creator</code>, <code>dct:contactPoint</code>) have values that are instances of supportive classes (e.g., <code>foaf:Agent</code>, <code>vcard:Kind</code>).</p>
+    <li data-md>
+     <p>Not all classes will apply in every case — for example, <code>Dataset Series</code> or <code>Data Service</code> may not be relevant for all datasets.</p>
+    <li data-md>
+     <p>DCAT‑AP is intentionally flexible: you can model metadata to fit your needs while still meeting the profile’s conformance requirements.</p>
+    <li data-md>
+     <p>Where DCAT‑AP specifies <strong>mandatory</strong> properties, these <strong>must</strong> be provided for conformance. <strong>Recommended</strong> properties should be provided when available to improve discovery and reuse.</p>
+    <li data-md>
+     <p>Controlled vocabularies listed in DCAT‑AP section 10.2 <strong>must</strong> be used for the relevant properties; additional domain‑specific vocabularies may be used to add value.</p>
+   </ul>
+   <h3 class="heading settled" data-level="5.2" id="understanding-the-schema①"><span class="secno">5.2. </span><span class="content">Understanding the schema</span><a class="self-link" href="#understanding-the-schema①"></a></h3>
+   <p>This application profile uses DCAT‑AP 3.0’s core concepts to describe:</p>
+   <ul>
+    <li data-md>
+     <p>Data catalogues (<code>Catalog</code>)</p>
+    <li data-md>
+     <p>Datasets (<code>Dataset</code>)</p>
+    <li data-md>
+     <p>Dataset series (<code>Dataset Series</code>)</p>
+    <li data-md>
+     <p>Data services (<code>Data Service</code>)</p>
+    <li data-md>
+     <p>Distributions of datasets (<code>Distribution</code>)</p>
+   </ul>
+   <p>These are the <strong>main classes</strong> — the primary records that users search for and interact with.</p>
+   <p><strong>Supportive classes</strong> are included because they form the <em>range</em> (value type) of certain properties in the main classes. For example, a dataset’s <code>dct:publisher</code> property points to an <code>Agent</code>, and a distribution’s <code>spdx:checksum</code> property points to a <code>Checksum</code>. By defining these supportive classes explicitly, the profile ensures that such linked details are described consistently and can be reused across records.</p>
+   <hr>
+   <h3 class="heading settled" data-level="5.3" id="practical-guidance"><span class="secno">5.3. </span><span class="content">Practical guidance</span><a class="self-link" href="#practical-guidance"></a></h3>
+   <ul>
+    <li data-md>
+     <p><strong>Start with main classes</strong> – Identify the datasets, services, and distributions you need to describe.</p>
+    <li data-md>
+     <p><strong>Link supportive classes</strong> – Use them wherever the profile specifies a property range (e.g., publisher → Agent).</p>
+    <li data-md>
+     <p><strong>Always fill mandatory properties</strong> – This ensures your metadata is valid and interoperable.</p>
+    <li data-md>
+     <p><strong>Add recommended properties when possible</strong> – This improves FAIRness and user experience.</p>
+    <li data-md>
+     <p><strong>Reuse supportive entities</strong> – If the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.</p>
+   </ul>
+   <hr>
+   <p>The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.</p>
    <h2 class="heading settled" data-level="6" id="classes-main"><span class="secno">6. </span><span class="content">Main Classes</span><a class="self-link" href="#classes-main"></a></h2>
-   <h3 class="heading settled" data-level="6.1" id="mandatory"><span class="secno">6.1. </span><span class="content">Mandatory</span><a class="self-link" href="#mandatory"></a></h3>
+   
+<strong>Main Classes</strong> represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.
+
+
+   <h3 class="heading settled" data-level="6.1" id="mandatory-entities"><span class="secno">6.1. </span><span class="content">Mandatory Entities</span><a class="self-link" href="#mandatory-entities"></a></h3>
    <h4 class="heading settled" data-level="6.1.1" id="catalog"><span class="secno">6.1.1. </span><span class="content">Catalog</span><a class="self-link" href="#catalog"></a></h4>
    <table>
     <thead>
@@ -2391,7 +2496,7 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       How the data in a dataset can be accessed is defined in the Distribution, which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.
       <td>dcat:Dataset
    </table>
-   <h3 class="heading settled" data-level="6.2" id="recommended"><span class="secno">6.2. </span><span class="content">Recommended</span><a class="self-link" href="#recommended"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="recommended-entities"><span class="secno">6.2. </span><span class="content">Recommended Entities</span><a class="self-link" href="#recommended-entities"></a></h3>
    <h4 class="heading settled" data-level="6.2.1" id="data-service"><span class="secno">6.2.1. </span><span class="content">Data Service</span><a class="self-link" href="#data-service"></a></h4>
    <table>
     <thead>
@@ -2437,8 +2542,12 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>Used to describe the different ways that a single dataset can be made available. I.e., it can be downloaded or it can be accessed online in one or more distributions (e.g. one in a downloadable .csv file, another file with an access or query webpage).
       <td>dcat:Distribution
    </table>
-   <h2 class="heading settled" data-level="7" id="classes-supportive"><span class="secno">7. </span><span class="content">Supportive</span><a class="self-link" href="#classes-supportive"></a></h2>
-   <h3 class="heading settled" data-level="7.1" id="mandatory-classes"><span class="secno">7.1. </span><span class="content">Mandatory Classes</span><a class="self-link" href="#mandatory-classes"></a></h3>
+   <h2 class="heading settled" data-level="7" id="classes-supportive"><span class="secno">7. </span><span class="content">Supportive Classes</span><a class="self-link" href="#classes-supportive"></a></h2>
+   
+<strong>Supportive Classes</strong> provide additional context and metadata that enrich and clarify the main entities. These include elements like Agent, Identifier, Period of Time, Checksum, and Quality Certificate. They enhance discoverability, traceability, and trustworthiness of the data.
+
+
+   <h3 class="heading settled" data-level="7.1" id="mandatory-entities①"><span class="secno">7.1. </span><span class="content">Mandatory Entities</span><a class="self-link" href="#mandatory-entities①"></a></h3>
    <h4 class="heading settled" data-level="7.1.1" id="agent"><span class="secno">7.1.1. </span><span class="content">Agent</span><a class="self-link" href="#agent"></a></h4>
    <table>
     <thead>
@@ -2469,7 +2578,7 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is <code>vcard:Kind</code>.
       <td>vcard:Kind
    </table>
-   <h3 class="heading settled" data-level="7.2" id="recommended①"><span class="secno">7.2. </span><span class="content">Recommended</span><a class="self-link" href="#recommended①"></a></h3>
+   <h3 class="heading settled" data-level="7.2" id="recommended-entities①"><span class="secno">7.2. </span><span class="content">Recommended Entities</span><a class="self-link" href="#recommended-entities①"></a></h3>
    <h4 class="heading settled" data-level="7.2.1" id="attribution"><span class="secno">7.2.1. </span><span class="content">Attribution</span><a class="self-link" href="#attribution"></a></h4>
    <table>
     <thead>
