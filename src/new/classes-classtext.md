@@ -47,8 +47,7 @@ The following sections describe each class in detail, including its role in the 
 
 **Notes on the metadata schema / mapping**:
 - We discriminate between main and supporting classes, and within each group between mandatory and recommended classes.
-- Certain properties (e.g. `dct:publisher`, `dct:creator`, `dct:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties will instantiate new instances of the specific supporting classes for each usage.
-This means that, for example, the `dct:publisher` and `dct:creator` can instantiate [`foaf:Agent`](#agent) at two separate times with different content (organisation vs. person).
+- Certain properties (e.g. `dct:publisher`, `dct:creator`, `dct:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties will instantiate new instances of the specific supporting classes for each usage. This means that, for example, the `dct:publisher` and `dct:creator` can instantiate [`foaf:Agent`](#agent) at two separate times with different content (organisation vs. person).
 - It is possible that not all main classes of the metadata schema are necessary to describe your data or the structure of your data. For example, [DataService](#data-service) or [DatasetSeries](#dataset-series) might not apply to all datasets described/onboarded in the National Health Data Catalogue.
 - The power of [DCAT](https://www.w3.org/TR/vocab-dcat-3/) is that it is flexible in use, giving a data holder the ability to reflect the structure of their data by using the different classes.
 - We aim to collect mapping examples from different data sources [here](https://health-ri.atlassian.net/wiki/spaces/FSD/folder/736985095). Currently, this collection only holds mapping examples to v1 though.
