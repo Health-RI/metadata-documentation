@@ -1,7 +1,7 @@
 
 <style>
   table {
-    table-layout: auto;
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     font-family: 'Segoe UI', sans-serif;
@@ -31,3 +31,4 @@
     background-color: #ffffff;
   }
 </style>
+

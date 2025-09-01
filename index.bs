@@ -24,6 +24,10 @@ Markup Shorthands: markdown yes, css no
 </pre>
 
 <pre class=include>
+path: src/new/style-tables1.md
+</pre>
+
+<pre class=include>
 path: src/new/permanent-urls.md
 </pre>
 
@@ -44,18 +48,16 @@ path: src/new/classes-classtext.md
 </pre>
 
 <pre class=include>
-path: src/new/style-tables.md
+path: src/new/style-tables2.md
 </pre>
 
 <pre class=include>
-path: src/new/classes-agent.md
+path: src/new/classes-main.md
 </pre>
 
-
-
-
-
-
+<pre class=include>
+path: src/new/classes-supportive.md
+</pre>
 
 
 
@@ -66,7 +68,7 @@ path: src/new/properties-classtext.md
 </pre>
 
 <pre class=include>
-path: src/new/style-tables2.md
+path: src/new/style-tables3.md
 </pre>
 
 <pre class=include>
