@@ -109,6 +109,7 @@ A tabular overview of all classes and properties—including their range, cardin
   <img 
     src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" 
     alt="Health-RI Metadata Diagram"
-    style="max-width: 100%; height: auto; display: block; margin: 0 auto;"
+    style="width: 800px; height: auto; image-rendering: auto; display: block; margin: 0 auto;"
   >
 </a>
+
