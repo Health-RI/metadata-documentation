@@ -1,7 +1,8 @@
 # Classes # {#classes-classtext} 
-Health-RI’s schema is designed to support FAIR data principles in biomedical research. Its **main classes** focus on the core entities that describe and deliver data, while **supporting classes** enrich those entities with context, provenance, and technical details.
+Health-RI’s schema is designed to support FAIR data principles—making health data Findable, Accessible, Interoperable, and Reusable. To achieve this, the schema organizes its structure around two types of classes: Main Classes and Supportive Classes.
 
-- **Main classes** define the core entities that describe the data and how it is delivered. Think: what the data is and who allows users access it.
-- **Supporting classes** provide contextual, technical, and provenance-related information. Think: who created it, how it's validated, and how it's linked to other resources.
+Main Classes represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.
 
-This separation helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services.
+Supportive Classes provide additional context and metadata that enrich and clarify the main entities. These include elements like Agent, Identifier, Period of Time, Checksum, and Quality Certificate. While not always mandatory, they enhance discoverability, traceability, and trustworthiness of the data.
+
+
