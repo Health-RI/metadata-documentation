@@ -1,4 +1,4 @@
-### Mandatory Properties
+#### Mandatory Properties
 
 <table>
   <thead>
@@ -52,7 +52,7 @@
   </tbody>
 </table>
 
-### Recommended Properties 
+#### Recommended Properties 
 
 <table>
   <thead>

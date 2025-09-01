@@ -60,7 +60,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-dataset.md
 </pre>
 
-## Recommended Main
+## Recommended 
 
 ### [Data Service](http://www.w3.org/ns/dcat#DataService)
 <table> 

@@ -1,8 +1,8 @@
-### Mandatory Properties
+#### Mandatory Properties
 
 There are currently no mandatory properties for this class.
 
-### Recommended Properties 
+#### Recommended Properties 
 
 <table>
   <thead>

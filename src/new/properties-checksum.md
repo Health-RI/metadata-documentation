@@ -1,4 +1,4 @@
-### Mandatory Properties
+#### Mandatory Properties
 
 <table>
   <thead>
@@ -35,6 +35,6 @@
 </table>
 
 
-### Recommended Properties 
+#### Recommended Properties 
 
 There are currently no recommended properties for this class.
