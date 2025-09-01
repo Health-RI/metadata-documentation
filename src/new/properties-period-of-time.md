@@ -5,11 +5,11 @@ An interval of time that is named or defined by its start and end dates. <br><br
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 There are currently no mandatory properties for this class.
 
-### Recommended Attributes 
+### Recommended Class Properties 
 
 <table>
   <thead>

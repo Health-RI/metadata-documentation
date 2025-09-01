@@ -5,7 +5,7 @@ A physical embodiment of the Dataset in a particular format. <br><br>
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 <table>
   <thead>
@@ -74,7 +74,7 @@ A physical embodiment of the Dataset in a particular format. <br><br>
   </tbody>
 </table>
 
-### Recommended Attributes 
+### Recommended Class Properties 
 
 <table>
   <thead>

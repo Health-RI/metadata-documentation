@@ -5,7 +5,7 @@ A value that allows the contents of a file to be authenticated. <br><br>
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 <table>
   <thead>
@@ -42,6 +42,6 @@ A value that allows the contents of a file to be authenticated. <br><br>
 </table>
 
 
-### Recommended Attributes 
+### Recommended Class Properties 
 
 There are currently no recommended properties for this class.

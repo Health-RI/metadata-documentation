@@ -5,7 +5,7 @@ A conceptual entity that represents the information published. <br><br>
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 <table> 
   <thead> 
@@ -125,7 +125,7 @@ A conceptual entity that represents the information published. <br><br>
 </table>
 
 
-### Recommended Attributes 
+### Recommended Class Properties 
 
 <table>
   <thead>

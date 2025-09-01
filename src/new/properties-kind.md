@@ -5,7 +5,7 @@ A description following the vCard specification. <br><br>
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 <table>
   <thead>
@@ -42,7 +42,7 @@ A description following the vCard specification. <br><br>
 </table>
 
 
- ### Recommended Attributes 
+ ### Recommended Class Properties 
 
 <table>
   <thead>

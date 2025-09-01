@@ -5,7 +5,7 @@ A collection of datasets that are published separately, but share some character
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 <table>
   <thead>
@@ -50,7 +50,7 @@ A collection of datasets that are published separately, but share some character
   </tbody>
 </table>
 
-### Recommended Attributes 
+### Recommended Class Properties 
 
 <table>
   <thead>

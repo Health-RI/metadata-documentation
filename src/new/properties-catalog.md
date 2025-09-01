@@ -5,7 +5,7 @@ A catalogue or repository that hosts the Datasets or Data Services being describ
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 <table> 
   <thead> 
@@ -74,7 +74,7 @@ A catalogue or repository that hosts the Datasets or Data Services being describ
   </tbody> 
 </table>
 
-### Recommended Attributes 
+### Recommended Class Properties 
 
 <table> 
   <thead> 

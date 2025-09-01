@@ -5,7 +5,7 @@ A collection of operations that provides access to one or more datasets or data 
 
  
 
-### Mandatory Attributes
+### Mandatory Class Properties
 
 <table>
   <thead>
@@ -125,7 +125,7 @@ A collection of operations that provides access to one or more datasets or data 
 </table>
 
 
-### Recommended Attributes 
+### Recommended Class Properties 
 
 <table>
   <thead>
