@@ -63,6 +63,8 @@ path: src/new/classes-supportive.md
 path: src/new/further-information.md
 </pre>
 
-<pre class="metadata">
-Acknowledgements: This specification was originally set up and configured by Reinier. If you have issues pushing and pulling commits, please contact him.
+<pre class=include>
+path: src/new/spec-configure.md
 </pre>
+
+
