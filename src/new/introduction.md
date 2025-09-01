@@ -107,9 +107,8 @@ A tabular overview of all classes and properties—including their range, cardin
 ## UML of the Profile (Version 2)
 <a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
   <img 
-    src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" 
+    src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2_Small.png" 
     alt="Health-RI Metadata Diagram"
-    style="width: 800px; height: auto; image-rendering: auto; display: block; margin: 0 auto;"
   >
 </a>
 
