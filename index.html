@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="e9a30a891f58e902d69cc23a2208bf7e442a8af5" name="revision">
+  <meta content="54fbd08cceb3b2e076d07306dd577a120c025f7e" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2441,44 +2441,24 @@ Parts of this work may be from another specification document.  If so, those par
        <a href="#mandatory"><span class="secno">7.1</span> <span class="content">Mandatory</span></a>
        <ol class="toc">
         <li><a href="#catalog"><span class="secno">7.1.1</span> <span class="content"><span>Catalog</span></span></a>
+        <li><a href="#mandatory-properties"><span class="secno">7.1.2</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties"><span class="secno">7.1.3</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#dataset"><span class="secno">7.1.4</span> <span class="content"><span>Dataset</span></span></a>
+        <li><a href="#mandatory-properties①"><span class="secno">7.1.5</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties①"><span class="secno">7.1.6</span> <span class="content">Recommended Properties</span></a>
        </ol>
       <li>
-       <a href="#catalog①"><span class="secno">7.2</span> <span class="content"><span>Catalog</span></span></a>
+       <a href="#recommended-main"><span class="secno">7.2</span> <span class="content">Recommended Main</span></a>
        <ol class="toc">
-        <li><a href="#mandatory-properties"><span class="secno">7.2.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties"><span class="secno">7.2.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#dataset"><span class="secno">7.2.3</span> <span class="content"><span>Dataset</span></span></a>
-       </ol>
-      <li>
-       <a href="#dataset①"><span class="secno">7.3</span> <span class="content"><span>Dataset</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties①"><span class="secno">7.3.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties①"><span class="secno">7.3.2</span> <span class="content">Recommended Properties</span></a>
-       </ol>
-      <li>
-       <a href="#recommended-main"><span class="secno">7.4</span> <span class="content">Recommended Main</span></a>
-       <ol class="toc">
-        <li><a href="#data-service"><span class="secno">7.4.1</span> <span class="content"><span>Data Service</span></span></a>
-       </ol>
-      <li>
-       <a href="#data-service①"><span class="secno">7.5</span> <span class="content"><span>Data Service</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties②"><span class="secno">7.5.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties②"><span class="secno">7.5.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#dataset-series"><span class="secno">7.5.3</span> <span class="content"><span>Dataset Series</span></span></a>
-       </ol>
-      <li>
-       <a href="#dataset-series①"><span class="secno">7.6</span> <span class="content"><span>Dataset Series</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties③"><span class="secno">7.6.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties③"><span class="secno">7.6.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#distribution"><span class="secno">7.6.3</span> <span class="content"><span>Distribution</span></span></a>
-       </ol>
-      <li>
-       <a href="#distribution①"><span class="secno">7.7</span> <span class="content"><span>Distribution</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties④"><span class="secno">7.7.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties④"><span class="secno">7.7.2</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#data-service"><span class="secno">7.2.1</span> <span class="content"><span>Data Service</span></span></a>
+        <li><a href="#mandatory-properties②"><span class="secno">7.2.2</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties②"><span class="secno">7.2.3</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#dataset-series"><span class="secno">7.2.4</span> <span class="content"><span>Dataset Series</span></span></a>
+        <li><a href="#mandatory-properties③"><span class="secno">7.2.5</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties③"><span class="secno">7.2.6</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#distribution"><span class="secno">7.2.7</span> <span class="content"><span>Distribution</span></span></a>
+        <li><a href="#mandatory-properties④"><span class="secno">7.2.8</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties④"><span class="secno">7.2.9</span> <span class="content">Recommended Properties</span></a>
        </ol>
      </ol>
     <li>
@@ -2487,66 +2467,34 @@ Parts of this work may be from another specification document.  If so, those par
       <li>
        <a href="#supportive-mandatory"><span class="secno">8.1</span> <span class="content">Supportive Mandatory</span></a>
        <ol class="toc">
-        <li><a href="#agent"><span class="secno">8.1.1</span> <span class="content">Agent</span></a>
+        <li><a href="#agent"><span class="secno">8.1.1</span> <span class="content"><span>Agent</span></span></a>
+        <li><a href="#mandatory-properties⑤"><span class="secno">8.1.2</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties⑤"><span class="secno">8.1.3</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#kind"><span class="secno">8.1.4</span> <span class="content"><span>Kind</span></span></a>
+        <li><a href="#mandatory-properties⑥"><span class="secno">8.1.5</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties⑥"><span class="secno">8.1.6</span> <span class="content">Recommended Properties</span></a>
        </ol>
       <li>
-       <a href="#agent①"><span class="secno">8.2</span> <span class="content"><span>Agent</span></span></a>
+       <a href="#supportive-recommended"><span class="secno">8.2</span> <span class="content">Supportive Recommended</span></a>
        <ol class="toc">
-        <li><a href="#mandatory-properties⑤"><span class="secno">8.2.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties⑤"><span class="secno">8.2.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#kind"><span class="secno">8.2.3</span> <span class="content">Kind</span></a>
-       </ol>
-      <li>
-       <a href="#kind①"><span class="secno">8.3</span> <span class="content"><span>Kind</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties⑥"><span class="secno">8.3.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties⑥"><span class="secno">8.3.2</span> <span class="content">Recommended Properties</span></a>
-       </ol>
-      <li>
-       <a href="#supportive-recommended"><span class="secno">8.4</span> <span class="content">Supportive Recommended</span></a>
-       <ol class="toc">
-        <li><a href="#attribution"><span class="secno">8.4.1</span> <span class="content">Attribution</span></a>
-       </ol>
-      <li>
-       <a href="#attribution①"><span class="secno">8.5</span> <span class="content"><span>Attribution</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties⑦"><span class="secno">8.5.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties⑦"><span class="secno">8.5.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#checksum"><span class="secno">8.5.3</span> <span class="content">Checksum</span></a>
-       </ol>
-      <li>
-       <a href="#checksum①"><span class="secno">8.6</span> <span class="content"><span>Checksum</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties⑧"><span class="secno">8.6.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties⑧"><span class="secno">8.6.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#identifier"><span class="secno">8.6.3</span> <span class="content">Identifier</span></a>
-       </ol>
-      <li>
-       <a href="#identifier①"><span class="secno">8.7</span> <span class="content"><span>Identifier</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties⑨"><span class="secno">8.7.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties⑨"><span class="secno">8.7.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#period-of-time"><span class="secno">8.7.3</span> <span class="content">Period of Time</span></a>
-       </ol>
-      <li>
-       <a href="#period-of-time①"><span class="secno">8.8</span> <span class="content"><span>Period of time</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties①⓪"><span class="secno">8.8.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties①⓪"><span class="secno">8.8.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#quality-certificate"><span class="secno">8.8.3</span> <span class="content">Quality Certificate</span></a>
-       </ol>
-      <li>
-       <a href="#quality-certificate①"><span class="secno">8.9</span> <span class="content"><span>Quality certificate</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties①①"><span class="secno">8.9.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties①①"><span class="secno">8.9.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#relationship"><span class="secno">8.9.3</span> <span class="content">Relationship</span></a>
-       </ol>
-      <li>
-       <a href="#relationship①"><span class="secno">8.10</span> <span class="content"><span>Relationship</span></span></a>
-       <ol class="toc">
-        <li><a href="#mandatory-properties①②"><span class="secno">8.10.1</span> <span class="content">Mandatory Properties</span></a>
-        <li><a href="#recommended-properties①②"><span class="secno">8.10.2</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#attribution"><span class="secno">8.2.1</span> <span class="content"><span>Attribution</span></span></a>
+        <li><a href="#mandatory-properties⑦"><span class="secno">8.2.2</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties⑦"><span class="secno">8.2.3</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#checksum"><span class="secno">8.2.4</span> <span class="content"><span>Checksum</span></span></a>
+        <li><a href="#mandatory-properties⑧"><span class="secno">8.2.5</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties⑧"><span class="secno">8.2.6</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#identifier"><span class="secno">8.2.7</span> <span class="content"><span>Identifier</span></span></a>
+        <li><a href="#mandatory-properties⑨"><span class="secno">8.2.8</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties⑨"><span class="secno">8.2.9</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#period-of-time"><span class="secno">8.2.10</span> <span class="content"><span>Period of time</span></span></a>
+        <li><a href="#mandatory-properties①⓪"><span class="secno">8.2.11</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties①⓪"><span class="secno">8.2.12</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#quality-certificate"><span class="secno">8.2.13</span> <span class="content"><span>Quality certificate</span></span></a>
+        <li><a href="#mandatory-properties①①"><span class="secno">8.2.14</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties①①"><span class="secno">8.2.15</span> <span class="content">Recommended Properties</span></a>
+        <li><a href="#relationship"><span class="secno">8.2.16</span> <span class="content"><span>Relationship</span></span></a>
+        <li><a href="#mandatory-properties①②"><span class="secno">8.2.17</span> <span class="content">Mandatory Properties</span></a>
+        <li><a href="#recommended-properties①②"><span class="secno">8.2.18</span> <span class="content">Recommended Properties</span></a>
        </ol>
      </ol>
     <li>
@@ -2838,13 +2786,10 @@ The main classes and supportive classes together form the Health-RI data catalog
      <tr>
       <td>Catalog
       <td>A catalogue or repository that hosts the Datasets or Data Services being described.
-      <td>A catalog that is listed in the National Health Data catalog and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.
+      <td>A catalog that is listed in the <a href="https://catalogus.healthdata.nl/">National Health Data catalog</a> and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.
       <td>dcat:Catalog
    </table>
-   <h3 class="heading settled" data-level="7.2" id="catalog①"><span class="secno">7.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Catalog</a></span><a class="self-link" href="#catalog①"></a></h3>
-   <p>A catalogue or repository that hosts the Datasets or Data Services being described. <br><br>
-<code>Usage note</code>: A catalog that is listed in the <a href="https://catalogus.healthdata.nl/">National Health Data catalog</a> and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.</p>
-   <h4 class="heading settled" data-level="7.2.1" id="mandatory-properties"><span class="secno">7.2.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties"></a></h4>
+   <h4 class="heading settled" data-level="7.1.2" id="mandatory-properties"><span class="secno">7.1.2. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties"></a></h4>
    <table>
     <thead>
      <tr>
@@ -2903,7 +2848,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>1..*
       <td>Healthy Brain Study
    </table>
-   <h4 class="heading settled" data-level="7.2.2" id="recommended-properties"><span class="secno">7.2.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties"></a></h4>
+   <h4 class="heading settled" data-level="7.1.3" id="recommended-properties"><span class="secno">7.1.3. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3035,7 +2980,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This property refers to a knowledge organisation system used to classify the Catalogue’s Datasets. It must have at least the value <code>NAL:data-theme</code> as this is the mandatory controlled vocabulary for <code>dcat:theme</code>.
       <td>0..*
    </table>
-   <h4 class="heading settled" data-level="7.2.3" id="dataset"><span class="secno">7.2.3. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset"></a></h4>
+   <h4 class="heading settled" data-level="7.1.4" id="dataset"><span class="secno">7.1.4. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3048,13 +2993,10 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>Dataset
       <td>A conceptual entity that represents the information published.
       <td>When focusing on health data, a dataset typically contains structured information gathered from a study or research project related to health topics. This might include clinical trial results, public health statistics, patient records, survey data, etc. <br> 
-      How the data in a dataset can be accessed is defined in the Distribution, which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.
+      How the data in a dataset can be accessed is defined in the <a href="linkto:distribution">Distribution</a>, which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.
       <td>dcat:Dataset
    </table>
-   <h3 class="heading settled" data-level="7.3" id="dataset①"><span class="secno">7.3. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset①"></a></h3>
-   <p>A conceptual entity that represents the information published. <br><br>
-<code>Usage note</code>: When focusing on health data, a dataset typically contains structured information gathered from a study or research project related to health topics. This might include clinical trial results, public health statistics, patient records, survey data, etc. <br> How the data in a dataset can be accessed is defined in the <a href="linkto:distribution">Distribution</a>, which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.</p>
-   <h4 class="heading settled" data-level="7.3.1" id="mandatory-properties①"><span class="secno">7.3.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①"></a></h4>
+   <h4 class="heading settled" data-level="7.1.5" id="mandatory-properties①"><span class="secno">7.1.5. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3158,7 +3100,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>1..*
       <td>Healthy Brain Study - Physiological Data
    </table>
-   <h4 class="heading settled" data-level="7.3.2" id="recommended-properties①"><span class="secno">7.3.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①"></a></h4>
+   <h4 class="heading settled" data-level="7.1.6" id="recommended-properties①"><span class="secno">7.1.6. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3513,8 +3455,8 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>0..*
       <td>NA
    </table>
-   <h3 class="heading settled" data-level="7.4" id="recommended-main"><span class="secno">7.4. </span><span class="content">Recommended Main</span><a class="self-link" href="#recommended-main"></a></h3>
-   <h4 class="heading settled" data-level="7.4.1" id="data-service"><span class="secno">7.4.1. </span><span class="content"><a href="http://www.w3.org/ns/dcat#DataService">Data Service</a></span><a class="self-link" href="#data-service"></a></h4>
+   <h3 class="heading settled" data-level="7.2" id="recommended-main"><span class="secno">7.2. </span><span class="content">Recommended Main</span><a class="self-link" href="#recommended-main"></a></h3>
+   <h4 class="heading settled" data-level="7.2.1" id="data-service"><span class="secno">7.2.1. </span><span class="content"><a href="http://www.w3.org/ns/dcat#DataService">Data Service</a></span><a class="self-link" href="#data-service"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3526,13 +3468,10 @@ The main classes and supportive classes together form the Health-RI data catalog
      <tr>
       <td>Data Service
       <td>A collection of operations that provides access to one or more datasets or data processing functions.
-      <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the Distribution through a variety of potential actions.
+      <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the <a href="linkto:distribution">Distribution</a> through a variety of potential actions. An example of a Data Service is a <a href="https://docs.genomebeacons.org/">Beacon API</a> to query genomics data.
       <td>dcat:DataService
    </table>
-   <h3 class="heading settled" data-level="7.5" id="data-service①"><span class="secno">7.5. </span><span class="content"><a href="http://www.w3.org/ns/dcat#DataService">Data Service</a></span><a class="self-link" href="#data-service①"></a></h3>
-   <p>A collection of operations that provides access to one or more datasets or data processing functions. <br><br>
-<code>Usage note</code>: A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the <a href="linkto:distribution">Distribution</a> through a variety of potential actions. An example of a Data Service is a <a href="https://docs.genomebeacons.org/">Beacon API</a> to query genomics data.</p>
-   <h4 class="heading settled" data-level="7.5.1" id="mandatory-properties②"><span class="secno">7.5.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties②"></a></h4>
+   <h4 class="heading settled" data-level="7.2.2" id="mandatory-properties②"><span class="secno">7.2.2. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties②"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3636,7 +3575,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>1..*
       <td>NA
    </table>
-   <h4 class="heading settled" data-level="7.5.2" id="recommended-properties②"><span class="secno">7.5.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties②"></a></h4>
+   <h4 class="heading settled" data-level="7.2.3" id="recommended-properties②"><span class="secno">7.2.3. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties②"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3745,7 +3684,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This property connects the Data Service class to its corresponding dataset(s), ensuring every data service links to at least one <code>dcat:Dataset</code>. While essential for metadata implementation teams on each node, it’s less relevant for researchers to collect.
       <td>0..*
    </table>
-   <h4 class="heading settled" data-level="7.5.3" id="dataset-series"><span class="secno">7.5.3. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series"></a></h4>
+   <h4 class="heading settled" data-level="7.2.4" id="dataset-series"><span class="secno">7.2.4. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3760,10 +3699,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class.
       <td>dcat:DatasetSeries
    </table>
-   <h3 class="heading settled" data-level="7.6" id="dataset-series①"><span class="secno">7.6. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series①"></a></h3>
-   <p>A collection of datasets that are published separately, but share some characteristics that group them. <br><br>
-<code>Usage note</code>: A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class.</p>
-   <h4 class="heading settled" data-level="7.6.1" id="mandatory-properties③"><span class="secno">7.6.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties③"></a></h4>
+   <h4 class="heading settled" data-level="7.2.5" id="mandatory-properties③"><span class="secno">7.2.5. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties③"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3800,7 +3736,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>Provide a unique title for your Dataset Series. It can be provided in multiple languages.
       <td>1..*
    </table>
-   <h4 class="heading settled" data-level="7.6.2" id="recommended-properties③"><span class="secno">7.6.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties③"></a></h4>
+   <h4 class="heading settled" data-level="7.2.6" id="recommended-properties③"><span class="secno">7.2.6. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties③"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3877,7 +3813,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>When temporal coverage is a dimension in the dataset series, then the temporal coverage of each dataset in the collection should be part of the temporal coverage. In that case, an open-ended value is recommended, e.g., after 2012.
       <td>0..*
    </table>
-   <h4 class="heading settled" data-level="7.6.3" id="distribution"><span class="secno">7.6.3. </span><span class="content"><a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a></span><a class="self-link" href="#distribution"></a></h4>
+   <h4 class="heading settled" data-level="7.2.7" id="distribution"><span class="secno">7.2.7. </span><span class="content"><a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a></span><a class="self-link" href="#distribution"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3892,10 +3828,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>Used to describe the different ways that a single dataset can be made available. I.e., it can be downloaded or it can be accessed online in one or more distributions (e.g. one in a downloadable .csv file, another file with an access or query webpage).
       <td>dcat:Distribution
    </table>
-   <h3 class="heading settled" data-level="7.7" id="distribution①"><span class="secno">7.7. </span><span class="content"><a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a></span><a class="self-link" href="#distribution①"></a></h3>
-   <p>A physical embodiment of the Dataset in a particular format. <br><br>
-<code>Usage note</code>: Used to describe the different ways that a single dataset can be made available in. I.e., it can be downloaded, or it can be accessed online in one or more distributions (e.g. one in a downloadable <code>.csv</code> file, another file with an access or query webpage)</p>
-   <h4 class="heading settled" data-level="7.7.1" id="mandatory-properties④"><span class="secno">7.7.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties④"></a></h4>
+   <h4 class="heading settled" data-level="7.2.8" id="mandatory-properties④"><span class="secno">7.2.8. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties④"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3954,7 +3887,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>1
       <td>NA
    </table>
-   <h4 class="heading settled" data-level="7.7.2" id="recommended-properties④"><span class="secno">7.7.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties④"></a></h4>
+   <h4 class="heading settled" data-level="7.2.9" id="recommended-properties④"><span class="secno">7.2.9. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties④"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4127,7 +4060,7 @@ The main classes and supportive classes together form the Health-RI data catalog
 
 
    <h3 class="heading settled" data-level="8.1" id="supportive-mandatory"><span class="secno">8.1. </span><span class="content">Supportive Mandatory</span><a class="self-link" href="#supportive-mandatory"></a></h3>
-   <h4 class="heading settled" data-level="8.1.1" id="agent"><span class="secno">8.1.1. </span><span class="content">Agent</span><a class="self-link" href="#agent"></a></h4>
+   <h4 class="heading settled" data-level="8.1.1" id="agent"><span class="secno">8.1.1. </span><span class="content"><a href="http://xmlns.com/foaf/spec/#term_Agent">Agent</a></span><a class="self-link" href="#agent"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4142,10 +4075,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>A person or organisation that is associated with the catalogue or dataset. This class is instantiated in these classes whenever the range is <code>foaf:Agent</code>.
       <td>foaf:Agent
    </table>
-   <h3 class="heading settled" data-level="8.2" id="agent①"><span class="secno">8.2. </span><span class="content"><a href="http://xmlns.com/foaf/spec/#term_Agent">Agent</a></span><a class="self-link" href="#agent①"></a></h3>
-   <p>Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Data Services and Distributions. <br><br>
-<code>Usage note</code>: A person or organisation that is associated with the catalogue or dataset. This class is instantiated in these classes whenever the range is <code>foaf:Agent</code>.</p>
-   <h4 class="heading settled" data-level="8.2.1" id="mandatory-properties⑤"><span class="secno">8.2.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑤"></a></h4>
+   <h4 class="heading settled" data-level="8.1.2" id="mandatory-properties⑤"><span class="secno">8.1.2. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑤"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4190,7 +4120,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>Provide the URL of the page containing contact information, such as a contact form or details for reaching out. If a specific contact page is unavailable, the main website of the Agent is sufficient.
       <td>1
    </table>
-   <h4 class="heading settled" data-level="8.2.2" id="recommended-properties⑤"><span class="secno">8.2.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑤"></a></h4>
+   <h4 class="heading settled" data-level="8.1.3" id="recommended-properties⑤"><span class="secno">8.1.3. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑤"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4235,7 +4165,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>NA
       <td>0..1
    </table>
-   <h4 class="heading settled" data-level="8.2.3" id="kind"><span class="secno">8.2.3. </span><span class="content">Kind</span><a class="self-link" href="#kind"></a></h4>
+   <h4 class="heading settled" data-level="8.1.4" id="kind"><span class="secno">8.1.4. </span><span class="content"><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819">Kind</a></span><a class="self-link" href="#kind"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4250,10 +4180,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is <code>vcard:Kind</code>.
       <td>vcard:Kind
    </table>
-   <h3 class="heading settled" data-level="8.3" id="kind①"><span class="secno">8.3. </span><span class="content"><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819">Kind</a></span><a class="self-link" href="#kind①"></a></h3>
-   <p>A description following the vCard specification. <br><br>
-<code>Usage note</code>: Used to describe contact information for <a href="linkto:dataset">Dataset</a> and <a href="linkto:dataset-series">Dataset Series</a>. This class is instantiated in these classes whenever the range is <code>vcard:Kind</code>.</p>
-   <h4 class="heading settled" data-level="8.3.1" id="mandatory-properties⑥"><span class="secno">8.3.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑥"></a></h4>
+   <h4 class="heading settled" data-level="8.1.5" id="mandatory-properties⑥"><span class="secno">8.1.5. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑥"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4282,7 +4209,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>When naming a contact point, this information needs to be further specified with additional information, i.e., an email address. This email address does not need to be a direct contact to the person responsible for the management of the data, it could be a generic information email. The email address has to be provided starting with <code>mailto:</code> prefix. <br> For example: <code>mailto:info@example.com</code> / <code>mailto:jane.doe@example.com</code>
       <td>1
    </table>
-   <h4 class="heading settled" data-level="8.3.2" id="recommended-properties⑥"><span class="secno">8.3.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑥"></a></h4>
+   <h4 class="heading settled" data-level="8.1.6" id="recommended-properties⑥"><span class="secno">8.1.6. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑥"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4303,8 +4230,8 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.
       <td>0..*
    </table>
-   <h3 class="heading settled" data-level="8.4" id="supportive-recommended"><span class="secno">8.4. </span><span class="content">Supportive Recommended</span><a class="self-link" href="#supportive-recommended"></a></h3>
-   <h4 class="heading settled" data-level="8.4.1" id="attribution"><span class="secno">8.4.1. </span><span class="content">Attribution</span><a class="self-link" href="#attribution"></a></h4>
+   <h3 class="heading settled" data-level="8.2" id="supportive-recommended"><span class="secno">8.2. </span><span class="content">Supportive Recommended</span><a class="self-link" href="#supportive-recommended"></a></h3>
+   <h4 class="heading settled" data-level="8.2.1" id="attribution"><span class="secno">8.2.1. </span><span class="content"><a href="https://www.w3.org/ns/prov#Attribution">Attribution</a></span><a class="self-link" href="#attribution"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4319,12 +4246,9 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This class is instantiated by the property "qualified attribution" (<code>prov:qualifiedAttribution</code>) in other classes. Use this class to describe any Agent (other than publisher or creator) that has some form of responsibility for the resource. Within the class, this Agent is described with an instance of <code>foaf:Agent</code>, and the role is chosen from a controlled vocabulary. This class can be used to indicate the funding agent that provided funding for the dataset.
       <td>prov:Attribution
    </table>
-   <h3 class="heading settled" data-level="8.5" id="attribution①"><span class="secno">8.5. </span><span class="content"><a href="https://www.w3.org/ns/prov#Attribution">Attribution</a></span><a class="self-link" href="#attribution①"></a></h3>
-   <p>Attribution is the ascribing of an entity to an agent. <br><br>
-<code>Usage note</code>: This class is instantiated by the property "qualified attribution".</p>
-   <h4 class="heading settled" data-level="8.5.1" id="mandatory-properties⑦"><span class="secno">8.5.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑦"></a></h4>
+   <h4 class="heading settled" data-level="8.2.2" id="mandatory-properties⑦"><span class="secno">8.2.2. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑦"></a></h4>
    <p>There are currently no mandatory properties for this class.</p>
-   <h4 class="heading settled" data-level="8.5.2" id="recommended-properties⑦"><span class="secno">8.5.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑦"></a></h4>
+   <h4 class="heading settled" data-level="8.2.3" id="recommended-properties⑦"><span class="secno">8.2.3. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑦"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4353,7 +4277,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future. <br> Example: <code>https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor</code>
       <td>0..1
    </table>
-   <h4 class="heading settled" data-level="8.5.3" id="checksum"><span class="secno">8.5.3. </span><span class="content">Checksum</span><a class="self-link" href="#checksum"></a></h4>
+   <h4 class="heading settled" data-level="8.2.4" id="checksum"><span class="secno">8.2.4. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4368,10 +4292,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This class is instantiated by properties in other classes that have the range <code>spdx:Checksum</code>.
       <td>spdx:Checksum
    </table>
-   <h3 class="heading settled" data-level="8.6" id="checksum①"><span class="secno">8.6. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum①"></a></h3>
-   <p>A value that allows the contents of a file to be authenticated. <br><br>
-<code>Usage note</code>: This class is instantiated by properties in other classes that have the range <code>spdx:Checksum</code>.</p>
-   <h4 class="heading settled" data-level="8.6.1" id="mandatory-properties⑧"><span class="secno">8.6.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑧"></a></h4>
+   <h4 class="heading settled" data-level="8.2.5" id="mandatory-properties⑧"><span class="secno">8.2.5. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑧"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4400,9 +4321,9 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>NA
       <td>1
    </table>
-   <h4 class="heading settled" data-level="8.6.2" id="recommended-properties⑧"><span class="secno">8.6.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑧"></a></h4>
+   <h4 class="heading settled" data-level="8.2.6" id="recommended-properties⑧"><span class="secno">8.2.6. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑧"></a></h4>
    <p>There are currently no recommended properties for this class.</p>
-   <h4 class="heading settled" data-level="8.6.3" id="identifier"><span class="secno">8.6.3. </span><span class="content">Identifier</span><a class="self-link" href="#identifier"></a></h4>
+   <h4 class="heading settled" data-level="8.2.7" id="identifier"><span class="secno">8.2.7. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier">Identifier</a></span><a class="self-link" href="#identifier"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4417,10 +4338,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This class is instantiated by the property "other identifier" (<code>adms:identifier</code>) in other classes. Use this class to provide any additional identifier to the resource or dataset that is not the primary identifier provided in <code>dct:identifier</code>.
       <td>adms:Identifier
    </table>
-   <h3 class="heading settled" data-level="8.7" id="identifier①"><span class="secno">8.7. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier">Identifier</a></span><a class="self-link" href="#identifier①"></a></h3>
-   <p>An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme. <br><br>
-<code>Usage note</code>: This class is instantiated by the property "other identifier".</p>
-   <h4 class="heading settled" data-level="8.7.1" id="mandatory-properties⑨"><span class="secno">8.7.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑨"></a></h4>
+   <h4 class="heading settled" data-level="8.2.8" id="mandatory-properties⑨"><span class="secno">8.2.8. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties⑨"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4441,7 +4359,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>The value of this property is the alternative identifier of the dataset, next to the one indicated in the dct:identifier property.
       <td>1
    </table>
-   <h4 class="heading settled" data-level="8.7.2" id="recommended-properties⑨"><span class="secno">8.7.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑨"></a></h4>
+   <h4 class="heading settled" data-level="8.2.9" id="recommended-properties⑨"><span class="secno">8.2.9. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑨"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4462,7 +4380,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>NA
       <td>0..1
    </table>
-   <h4 class="heading settled" data-level="8.7.3" id="period-of-time"><span class="secno">8.7.3. </span><span class="content">Period of Time</span><a class="self-link" href="#period-of-time"></a></h4>
+   <h4 class="heading settled" data-level="8.2.10" id="period-of-time"><span class="secno">8.2.10. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime">Period of time</a></span><a class="self-link" href="#period-of-time"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4477,12 +4395,9 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This class is instantiated by properties in other classes that have the range <code>dct:PeriodOfTime</code>.
       <td>dct:PeriodOfTime
    </table>
-   <h3 class="heading settled" data-level="8.8" id="period-of-time①"><span class="secno">8.8. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime">Period of time</a></span><a class="self-link" href="#period-of-time①"></a></h3>
-   <p>An interval of time that is named or defined by its start and end dates. <br><br>
-<code>Usage note</code>: This class is instantiated by properties in other classes that have the range <code>dct:PeriodOfTime</code>.</p>
-   <h4 class="heading settled" data-level="8.8.1" id="mandatory-properties①⓪"><span class="secno">8.8.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①⓪"></a></h4>
+   <h4 class="heading settled" data-level="8.2.11" id="mandatory-properties①⓪"><span class="secno">8.2.11. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①⓪"></a></h4>
    <p>There are currently no mandatory properties for this class.</p>
-   <h4 class="heading settled" data-level="8.8.2" id="recommended-properties①⓪"><span class="secno">8.8.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①⓪"></a></h4>
+   <h4 class="heading settled" data-level="8.2.12" id="recommended-properties①⓪"><span class="secno">8.2.12. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①⓪"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4511,7 +4426,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>NA
       <td>0..1
    </table>
-   <h4 class="heading settled" data-level="8.8.3" id="quality-certificate"><span class="secno">8.8.3. </span><span class="content">Quality Certificate</span><a class="self-link" href="#quality-certificate"></a></h4>
+   <h4 class="heading settled" data-level="8.2.13" id="quality-certificate"><span class="secno">8.2.13. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">Quality certificate</a></span><a class="self-link" href="#quality-certificate"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4526,12 +4441,9 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This class is instantiated by the property "quality annotation" (<code>dqv:hasQualityAnnotation</code>) in other classes. Use this class to provide a link between the resource or dataset and an associated quality annotation.
       <td>dqv:QualityCertificate
    </table>
-   <h3 class="heading settled" data-level="8.9" id="quality-certificate①"><span class="secno">8.9. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">Quality certificate</a></span><a class="self-link" href="#quality-certificate①"></a></h3>
-   <p>An annotation that associates a resource (especially a dataset or a distribution) to another resource (for example, a document) that certifies the resource’s quality according to a set of quality assessment rules. <br><br>
-<code>Usage note</code>: This class is instantiated by the property "quality annotation" (<code>dqv:hasQualityAnnotation</code>) in other classes. Use this class to provide a link between the resource or dataset and an associated quality annotation.</p>
-   <h4 class="heading settled" data-level="8.9.1" id="mandatory-properties①①"><span class="secno">8.9.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①①"></a></h4>
+   <h4 class="heading settled" data-level="8.2.14" id="mandatory-properties①①"><span class="secno">8.2.14. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①①"></a></h4>
    <p>There are currently no mandatory properties for this class.</p>
-   <h4 class="heading settled" data-level="8.9.2" id="recommended-properties①①"><span class="secno">8.9.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①①"></a></h4>
+   <h4 class="heading settled" data-level="8.2.15" id="recommended-properties①①"><span class="secno">8.2.15. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①①"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4560,7 +4472,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>IRI pointing to the location where the quality certificate can be found.
       <td>0..1
    </table>
-   <h4 class="heading settled" data-level="8.9.3" id="relationship"><span class="secno">8.9.3. </span><span class="content">Relationship</span><a class="self-link" href="#relationship"></a></h4>
+   <h4 class="heading settled" data-level="8.2.16" id="relationship"><span class="secno">8.2.16. </span><span class="content"><a href="https://w3c.github.io/dxwg/dcat/#Class:Relationship">Relationship</a></span><a class="self-link" href="#relationship"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4575,10 +4487,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This class is instantiated by the property "qualified relation" (<code>dcat:qualifiedRelation</code>) in other classes. Use this class to describe a relationship with another resource or dataset. Within the class, that resource is indicated, as well as the role this resource has in relation to the described one. The role is indicated based on a controlled vocabulary.
       <td>dcat:Relationship
    </table>
-   <h3 class="heading settled" data-level="8.10" id="relationship①"><span class="secno">8.10. </span><span class="content"><a href="https://w3c.github.io/dxwg/dcat/#Class:Relationship">Relationship</a></span><a class="self-link" href="#relationship①"></a></h3>
-   <p>An association class for attaching additional information to a relationship between DCAT Resources. <br><br>
-<code>Usage note</code>: This class is instantiated by the property "qualified relation" (<code>dcat:qualifiedRelation</code>) in other classes. Use this class to describe a relationship with another resource or dataset. Within the class, that resource is indicated, as well as the role this resource has in relation to the described one. The role is indicated based on a controlled vocabulary.</p>
-   <h4 class="heading settled" data-level="8.10.1" id="mandatory-properties①②"><span class="secno">8.10.1. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①②"></a></h4>
+   <h4 class="heading settled" data-level="8.2.17" id="mandatory-properties①②"><span class="secno">8.2.17. </span><span class="content">Mandatory Properties</span><a class="self-link" href="#mandatory-properties①②"></a></h4>
    <table>
     <thead>
      <tr>
@@ -4610,7 +4519,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This property establishes the link between the described and the related resources. The value of this property is the IRI of the related resource.
       <td>1..*
    </table>
-   <h4 class="heading settled" data-level="8.10.2" id="recommended-properties①②"><span class="secno">8.10.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①②"></a></h4>
+   <h4 class="heading settled" data-level="8.2.18" id="recommended-properties①②"><span class="secno">8.2.18. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties①②"></a></h4>
    <p>There are currently no recommended properties for this class.</p>
    <h2 class="heading settled" data-level="9" id="further-information"><span class="secno">9. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
    <h3 class="heading settled" data-level="9.1" id="model-extension"><span class="secno">9.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h3>
