@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="bae9baebe1c7a2c9fc3334824549218940c2f47b" name="revision">
+  <meta content="86271ffe76d88f7ad01b6a33be2706d79d9e0d6c" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2085,13 +2085,13 @@ Parts of this work may be from another specification document.  If so, those par
      <a href="#classes-main"><span class="secno">6</span> <span class="content">Main Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#main-mandatory"><span class="secno">6.1</span> <span class="content">Main Mandatory</span></a>
+       <a href="#mandatory-main"><span class="secno">6.1</span> <span class="content">Mandatory Main</span></a>
        <ol class="toc">
         <li><a href="#catalog"><span class="secno">6.1.1</span> <span class="content">Catalog</span></a>
         <li><a href="#dataset"><span class="secno">6.1.2</span> <span class="content">Dataset</span></a>
        </ol>
       <li>
-       <a href="#main-recommended"><span class="secno">6.2</span> <span class="content">Main Recommended</span></a>
+       <a href="#recommended-main"><span class="secno">6.2</span> <span class="content">Recommended Main</span></a>
        <ol class="toc">
         <li><a href="#data-service"><span class="secno">6.2.1</span> <span class="content">Data Service</span></a>
         <li><a href="#dataset-series"><span class="secno">6.2.2</span> <span class="content">Dataset Series</span></a>
@@ -2102,13 +2102,13 @@ Parts of this work may be from another specification document.  If so, those par
      <a href="#classes-supportive"><span class="secno">7</span> <span class="content">Supportive Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#mandatory-supportive"><span class="secno">7.1</span> <span class="content">Mandatory Supportive</span></a>
+       <a href="#supportive-mandatory"><span class="secno">7.1</span> <span class="content">Supportive Mandatory</span></a>
        <ol class="toc">
         <li><a href="#agent"><span class="secno">7.1.1</span> <span class="content">Agent</span></a>
         <li><a href="#kind"><span class="secno">7.1.2</span> <span class="content">Kind</span></a>
        </ol>
       <li>
-       <a href="#recommended-supportive"><span class="secno">7.2</span> <span class="content">Recommended Supportive</span></a>
+       <a href="#supportive-recommended"><span class="secno">7.2</span> <span class="content">Supportive Recommended</span></a>
        <ol class="toc">
         <li><a href="#attribution"><span class="secno">7.2.1</span> <span class="content">Attribution</span></a>
         <li><a href="#checksum"><span class="secno">7.2.2</span> <span class="content">Checksum</span></a>
@@ -2119,7 +2119,7 @@ Parts of this work may be from another specification document.  If so, those par
        </ol>
      </ol>
     <li>
-     <a href="#properties-classtext"><span class="secno">8</span> <span class="content">Properties</span></a>
+     <a href="#properties-classtext"><span class="secno">8</span> <span class="content">Class Properties</span></a>
      <ol class="toc">
       <li>
        <a href="#agent①"><span class="secno">8.1</span> <span class="content"><span>Agent</span></span></a>
@@ -2462,7 +2462,7 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
 <strong>Main Classes</strong> represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.
 
 
-   <h3 class="heading settled" data-level="6.1" id="main-mandatory"><span class="secno">6.1. </span><span class="content">Main Mandatory</span><a class="self-link" href="#main-mandatory"></a></h3>
+   <h3 class="heading settled" data-level="6.1" id="mandatory-main"><span class="secno">6.1. </span><span class="content">Mandatory Main</span><a class="self-link" href="#mandatory-main"></a></h3>
    <h4 class="heading settled" data-level="6.1.1" id="catalog"><span class="secno">6.1.1. </span><span class="content">Catalog</span><a class="self-link" href="#catalog"></a></h4>
    <table>
     <thead>
@@ -2494,7 +2494,7 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
       How the data in a dataset can be accessed is defined in the Distribution, which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.
       <td>dcat:Dataset
    </table>
-   <h3 class="heading settled" data-level="6.2" id="main-recommended"><span class="secno">6.2. </span><span class="content">Main Recommended</span><a class="self-link" href="#main-recommended"></a></h3>
+   <h3 class="heading settled" data-level="6.2" id="recommended-main"><span class="secno">6.2. </span><span class="content">Recommended Main</span><a class="self-link" href="#recommended-main"></a></h3>
    <h4 class="heading settled" data-level="6.2.1" id="data-service"><span class="secno">6.2.1. </span><span class="content">Data Service</span><a class="self-link" href="#data-service"></a></h4>
    <table>
     <thead>
@@ -2545,7 +2545,7 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
 <strong>Supportive Classes</strong> provide additional context and metadata that enrich and clarify the main entities. These include elements like Agent, Identifier, Period of Time, Checksum, and Quality Certificate. They enhance discoverability, traceability, and trustworthiness of the data.
 
 
-   <h3 class="heading settled" data-level="7.1" id="mandatory-supportive"><span class="secno">7.1. </span><span class="content">Mandatory Supportive</span><a class="self-link" href="#mandatory-supportive"></a></h3>
+   <h3 class="heading settled" data-level="7.1" id="supportive-mandatory"><span class="secno">7.1. </span><span class="content">Supportive Mandatory</span><a class="self-link" href="#supportive-mandatory"></a></h3>
    <h4 class="heading settled" data-level="7.1.1" id="agent"><span class="secno">7.1.1. </span><span class="content">Agent</span><a class="self-link" href="#agent"></a></h4>
    <table>
     <thead>
@@ -2576,7 +2576,7 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
       <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is <code>vcard:Kind</code>.
       <td>vcard:Kind
    </table>
-   <h3 class="heading settled" data-level="7.2" id="recommended-supportive"><span class="secno">7.2. </span><span class="content">Recommended Supportive</span><a class="self-link" href="#recommended-supportive"></a></h3>
+   <h3 class="heading settled" data-level="7.2" id="supportive-recommended"><span class="secno">7.2. </span><span class="content">Supportive Recommended</span><a class="self-link" href="#supportive-recommended"></a></h3>
    <h4 class="heading settled" data-level="7.2.1" id="attribution"><span class="secno">7.2.1. </span><span class="content">Attribution</span><a class="self-link" href="#attribution"></a></h4>
    <table>
     <thead>
@@ -2667,7 +2667,7 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
       <td>This class is instantiated by the property "qualified relation" (<code>dcat:qualifiedRelation</code>) in other classes. Use this class to describe a relationship with another resource or dataset. Within the class, that resource is indicated, as well as the role this resource has in relation to the described one. The role is indicated based on a controlled vocabulary.
       <td>dcat:Relationship
    </table>
-   <h2 class="heading settled" data-level="8" id="properties-classtext"><span class="secno">8. </span><span class="content">Properties</span><a class="self-link" href="#properties-classtext"></a></h2>
+   <h2 class="heading settled" data-level="8" id="properties-classtext"><span class="secno">8. </span><span class="content">Class Properties</span><a class="self-link" href="#properties-classtext"></a></h2>
    
 The main classes and supportive classes together form the Health-RI data catalogue Application Profile. The properties and their associated constraints that apply in the context of this profile, and the range of properties are listed below.
 
