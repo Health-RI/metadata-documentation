@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="0b2a0270c2f491672aabca0c09403d637a1607f3" name="revision">
+  <meta content="1777730e135813fd8df7bdbcbd7a77211f5f5cfd" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2422,12 +2422,9 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#used-prefixes"><span class="secno">4.2</span> <span class="content">Used Prefixes</span></a>
       <li><a href="#overview-and-diagram"><span class="secno">4.3</span> <span class="content">Overview and Diagram</span></a>
       <li><a href="#uml-of-the-profile-version-2"><span class="secno">4.4</span> <span class="content">UML of the Profile (Version 2)</span></a>
-      <li>
-       <a href="#usage-notes-on-schema-mapping"><span class="secno">4.5</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
-       <ol class="toc">
-        <li><a href="#classes-classtext"><span class="secno">4.5.1</span> <span class="content">Classes # {#classes-classtext}</span></a>
-        <li><a href="#properties-classtext"><span class="secno">4.5.2</span> <span class="content">Class Properties ## {#properties-classtext}</span></a>
-       </ol>
+      <li><a href="#classes-classtext"><span class="secno">4.5</span> <span class="content">Classes # {#classes-classtext}</span></a>
+      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.6</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
+      <li><a href="#properties-classtext"><span class="secno">4.7</span> <span class="content">Class Properties</span></a>
      </ol>
     <li><a href="#properties-classtext①"><span class="secno">5</span> <span class="content">Class Properties</span></a>
     <li>
@@ -2672,7 +2669,13 @@ An overview of the metadata schema core is presented in the UML diagram below. T
 </a>
 
 
-   <p>For usage notes regarding this profile please refer to the next section.</p>
+
+
+   <h3 class="heading settled" data-level="4.5" id="classes-classtext"><span class="secno">4.5. </span><span class="content">Classes # {#classes-classtext}</span><a class="self-link" href="#classes-classtext"></a></h3>
+   
+The Health-RI metadata schema is based on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply and interoperable across catalogues, the schema distinguishes between: To achieve this, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.
+
+
    <p>The Health‑RI metadata schema builds on <a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/">DCAT‑AP 3.0</a>, a European application profile for describing datasets, services, and related resources. To make the model easier to apply and to ensure interoperability across catalogues, the schema organises its structure around two complementary types of classes:</p>
    <ul>
     <li data-md>
@@ -2680,13 +2683,12 @@ An overview of the metadata schema core is presented in the UML diagram below. T
     <li data-md>
      <p><strong>Supportive Classes</strong> – contextual entities that provide detail to the main classes.</p>
    </ul>
-   <p>This separation helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services.</p>
-   <h3 class="heading settled" data-level="4.5" id="usage-notes-on-schema-mapping"><span class="secno">4.5. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
+   <h3 class="heading settled" data-level="4.6" id="usage-notes-on-schema-mapping"><span class="secno">4.6. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
    
-This application profile follows DCAT-AP 3.0 to describe data catalogues, datasets, dataset series, data services, and their distributions. It separates classes into main and supportive groups to keep the model interoperable. Supportive classes are included because they form the range (value type) of properties used by the main classes [additional requirements to properties for this entity.]
+This application profile follows DCAT-AP 3.0 and it separates classes into main and supportive groups to keep the model interoperable. Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity.]
 
 
-   <p>Main classes are the core entities in the catalogue. They are divided into those with mandatory properties for conformance and those that are recommended for richer metadata. This section explains how to use those classes.</p>
+   <p>Main classes are the core entities in the catalogue. They are divided into those with mandatory properties for conformance and those that are recommended for richer metadata. This is how to use those classes:</p>
    <p>Main classes in this profile:</p>
    <ul>
     <li data-md>
@@ -2699,6 +2701,8 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
      <p><strong>Dataset Series</strong></p>
     <li data-md>
      <p><strong>Distribution</strong>.</p>
+    <li data-md>
+     <p>The main classes are <a href="#catalog">Catalog</a>, <a href="#dataset">Dataset</a>, <a href="#data-service">Data Service</a>, <a href="#dataset-series">Dataset Series</a>, <a href="#distribution">Distribution</a></p>
    </ul>
    <p>Supportive classes in this profile:</p>
    <ul>
@@ -2719,6 +2723,11 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
     <li data-md>
      <p><strong>Quality certificate</strong></p>
     <li data-md>
+     <p>The supporting classes are <a href="#agent">Agent</a>, <a href="#kind">Kind</a>, <a href="#attribution">Attribution</a>, <a href="#checksum">Checksum</a>, <a href="#identifier">Identifier</a>, <a href="#period-of-time">Period of time</a>, <a href="#relationship">Relationship</a>, <a href="#quality-certificate">Quality certificate</a></p>
+   </ul>
+   <p>This separation helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services.</p>
+   <ul>
+    <li data-md>
      <p>Start with main classes – Identify the datasets, services, and distributions you need to describe.</p>
     <li data-md>
      <p>Link supportive classes – Use them wherever the profile specifies a property range (e.g., publisher → Agent).</p>
@@ -2730,12 +2739,22 @@ This application profile follows DCAT-AP 3.0 to describe data catalogues, datase
      <p>Reuse supportive entities – If the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.</p>
    </ul>
    <p>The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.</p>
-   <h4 class="heading settled" data-level="4.5.1" id="classes-classtext"><span class="secno">4.5.1. </span><span class="content">Classes # {#classes-classtext}</span><a class="self-link" href="#classes-classtext"></a></h4>
-   
-The Health-RI metadata schema is based on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply and interoperable across catalogues, the schema distinguishes between: To achieve this, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.
-
-
-   <h4 class="heading settled" data-level="4.5.2" id="properties-classtext"><span class="secno">4.5.2. </span><span class="content">Class Properties ## {#properties-classtext}</span><a class="self-link" href="#properties-classtext"></a></h4>
+   <p><strong>Notes on the metadata schema / mapping</strong>:</p>
+   <ul>
+    <li data-md>
+     <p>We discriminate between main and supporting classes, and within each group between mandatory and recommended classes.</p>
+    <li data-md>
+     <p>Certain properties (e.g. <code>dct:publisher</code>, <code>dct:creator</code>, <code>dct:contactPoint</code>) in several of the main classes refer to the supporting classes (e.g. <a href="#agent"><code>foaf:Agent</code></a>, <a href="#kind"><code>vcard:Kind</code></a>). When used, these properties will instantiate new instances of the specific supporting classes for each usage. This means that, for example, the <code>dct:publisher</code> and <code>dct:creator</code> can instantiate <a href="#agent"><code>foaf:Agent</code></a> at two separate times with different content (organisation vs. person).</p>
+    <li data-md>
+     <p>It is possible that not all main classes of the metadata schema are necessary to describe your data or the structure of your data. For example, <a href="#data-service">DataService</a> or <a href="#dataset-series">DatasetSeries</a> might not apply to all datasets described/onboarded in the National Health Data Catalogue.</p>
+    <li data-md>
+     <p>The power of <a href="https://www.w3.org/TR/vocab-dcat-3/">DCAT</a> is that it is flexible in use, giving a data holder the ability to reflect the structure of their data by using the different classes.</p>
+    <li data-md>
+     <p>We aim to collect mapping examples from different data sources <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/folder/736985095">here</a>. Currently, this collection only holds mapping examples to v1 though.</p>
+    <li data-md>
+     <p>Please visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>.</p>
+   </ul>
+   <h3 class="heading settled" data-level="4.7" id="properties-classtext"><span class="secno">4.7. </span><span class="content">Class Properties</span><a class="self-link" href="#properties-classtext"></a></h3>
    
 The main classes and supportive classes together form the Health-RI data catalogue Application Profile. The properties and their associated constraints that apply in the context of this profile, and the range of properties are listed below.
 
