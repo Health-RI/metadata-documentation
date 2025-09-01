@@ -23,12 +23,6 @@ Abstract: <img src="https://raw.githubusercontent.com/ReinierGr/metadata-vocabul
 Markup Shorthands: markdown yes, css no
 </pre>
 
-
-
-<pre class=include>
-path: src/new/style-tables.md
-</pre>
-
 <pre class=include>
 path: src/new/permanent-urls.md
 </pre>
@@ -46,8 +40,26 @@ path: src/new/introduction.md
 </pre>
 
 <pre class=include>
-path: src/new/main-and-support-classes.md
+path: src/new/classes-classtext.md
 </pre>
+
+<pre class=include>
+path: src/new/style-tables.md
+</pre>
+
+<pre class=include>
+path: src/new/classes-agent.md
+</pre>
+
+
+
+
+
+
+
+
+
+
 
 <pre class=include>
 path: src/new/properties-classtext.md
