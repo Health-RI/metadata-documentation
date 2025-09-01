@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="eeca9ee9cc260814b5c3ad0b2b1082c52b16648b" name="revision">
+  <meta content="5c13d32645abec193e3856f0cc09ffc99f558c9c" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2354,14 +2354,24 @@ dfn > a.self-link::before      { content: "#"; }
      <dt>Previous Versions:
      <dd><a href="https://w3id.org/health-ri/metadata/releases" rel="prev">https://w3id.org/health-ri/metadata/releases</a>
      <dt class="editor">Editors:
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:hannah.neikes@health-ri.nl">Hannah Neikes</a>
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:ana.konrad@health-ri.nl">Ana Konrad</a>
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:Pedro.Barcelos@health-ri.nl">Pedro Paulo Favato Barcelos</a>
-     <dd class="editor p-author h-card vcard"><a class="p-name fn u-email email" href="mailto:Reinier.Groeneveld@health-ri.nl">Reinier Groeneveld</a>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Also Editor? Please send your name and email to Reinier.</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Bruna dos Santos Vieira</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Inês de Oliveira Coelho Henriques</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">César Bernabé</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Kees Burger</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Patrick Dekker</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Joost Daams</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Anna Niehues</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Milou de Jong</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Ana Konrad</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Hannah Neikes</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Reinier Groeneveld</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">(Former) editor? Please send your name and email to Reinier.</span>
      <dt class="editor">Former Editors:
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Niek van Ulzen.</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Former editor? Please send your name and email to Reinier.</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Dena Tahvildari</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Xiaofeng Liao</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Mark Janse</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Junda Huang</span>
+     <dd class="editor p-author h-card vcard"><span class="p-name fn">Luiz Bonino</span>
     </dl>
    </div>
    <div data-fill-with="warning">
@@ -2667,8 +2677,7 @@ An overview of the metadata schema core is presented in the UML diagram below. T
 </a>
 
 
-
-
+   <p>Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.</p>
    <h3 class="heading settled" data-level="4.5" id="classtext"><span class="secno">4.5. </span><span class="content">Class Structure</span><a class="self-link" href="#classtext"></a></h3>
    
 The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply (and interoperable) across catalogues, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.
@@ -2712,6 +2721,7 @@ The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of c
     <li data-md>
      <p><strong>Quality certificate</strong></p>
    </ul>
+   <p>The main classes and supportive classes together form the Health-RI data catalogue Application Profile. The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.</p>
    <h3 class="heading settled" data-level="4.6" id="usage-notes-on-schema-mapping"><span class="secno">4.6. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
    
 Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into  mandatory properties for conformance and recommended properties for richer metadata. This is how to use those classes:
@@ -2730,7 +2740,6 @@ Supportive classes are included because they form the range of properties used b
     <li data-md>
      <p>Reuse supportive entities – If the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.</p>
    </ul>
-   <p>The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.</p>
    <p><strong>Please take into consideration</strong>:</p>
    <ul>
     <li data-md>
@@ -2744,7 +2753,6 @@ Supportive classes are included because they form the range of properties used b
     <li data-md>
      <p>Please visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>.</p>
    </ul>
-   <p>The main classes and supportive classes together form the Health-RI data catalogue Application Profile. The properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.</p>
    <h2 class="heading settled" data-level="5" id="classes-main"><span class="secno">5. </span><span class="content">Main Classes</span><a class="self-link" href="#classes-main"></a></h2>
    
 <strong>Main Classes</strong> represent the core entities of the data catalog. They define essential components.
@@ -4501,8 +4509,6 @@ Supportive classes are included because they form the range of properties used b
    <h2 class="heading settled" data-level="7" id="further-information"><span class="secno">7. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
    <h3 class="heading settled" data-level="7.1" id="model-extension"><span class="secno">7.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h3>
    <p>This is a Health-RI core metadata schema, which means it is designed to be “minimal” and cover the basic metadata elements of catalogue resources. If you come from a specific working group or domain and see some of the important elements from your domain should be represented in the metadata, you could build an extension (or so-called petal) of this model for your domain’s specific needs. For more information on this, please check out the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/545783826/Domain-specific+metadata+schema+development">process description for domain-specific metadata</a>.</p>
-   <p>TESTEST</p>
-   <p>test</p>
    <p>Acknowledgements: This specification was originally set up and configured by Reinier. If you have issues pushing and pulling commits, please contact him.</p>
   </main>
   <div data-fill-with="conformance">
