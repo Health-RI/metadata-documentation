@@ -12,7 +12,7 @@ Editor: Hannah Neikes, hannah.neikes@health-ri.nl
 Editor: Ana Konrad, ana.konrad@health-ri.nl
 Editor: Pedro Paulo Favato Barcelos, Pedro.Barcelos@health-ri.nl
 Editor: Reinier Groeneveld, Reinier.Groeneveld@health-ri.nl
-Editor Term: Lead Editor
+Editor Term: Lead Editor.
 Editor: Also Editor? Please send your name and email to Reinier.
 Warning: not ready
 Logo: health-ri logo
