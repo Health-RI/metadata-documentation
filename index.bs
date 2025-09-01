@@ -59,10 +59,6 @@ path: src/new/classes-main.md
 path: src/new/classes-supportive.md
 </pre>
 
-
-
-
-
 <pre class=include>
 path: src/new/properties-classtext.md
 </pre>
