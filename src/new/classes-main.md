@@ -1,7 +1,7 @@
 # Main Classes # {#classes-main}
 **Main Classes** represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.
 
-## Mandatory Entities
+## Main Mandatory 
 
 ### Catalog 
 <table> 
@@ -44,7 +44,7 @@
   </tbody> 
 </table>
 
-## Recommended Entities
+## Main Recommended 
 
 ### Data Service 
 <table> 
