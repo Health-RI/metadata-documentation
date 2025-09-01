@@ -1,10 +1,3 @@
-## [Distribution](http://www.w3.org/ns/dcat#Distribution)
-
-A physical embodiment of the Dataset in a particular format. <br><br>
-`Usage note`: Used to describe the different ways that a single dataset can be made available in. I.e., it can be downloaded, or it can be accessed online in one or more distributions (e.g. one in a downloadable `.csv` file, another file with an access or query webpage)
-
- 
-
 ### Mandatory Properties
 
 <table>

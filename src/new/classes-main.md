@@ -17,7 +17,7 @@
     <tr> 
       <td>Catalog</td> 
       <td>A catalogue or repository that hosts the Datasets or Data Services being described.</td> 
-      <td>A catalog that is listed in the National Health Data catalog and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.</td> 
+      <td>A catalog that is listed in the [National Health Data catalog](https://catalogus.healthdata.nl/) and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.</td> 
       <td>dcat:Catalog</td> 
     </tr> 
   </tbody> 
@@ -46,7 +46,7 @@ path: src/new/properties-catalog.md
       <td>Dataset</td> 
       <td>A conceptual entity that represents the information published.</td> 
       <td>When focusing on health data, a dataset typically contains structured information gathered from a study or research project related to health topics. This might include clinical trial results, public health statistics, patient records, survey data, etc. <br> 
-      How the data in a dataset can be accessed is defined in the Distribution, which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.</td> 
+      How the data in a dataset can be accessed is defined in the [Distribution](linkto:distribution), which usually points to the actual data files available for access or download. Datasets are often included in a catalog, which organizes and provides metadata about multiple datasets, making them easier to find and use. The term 'agent' refers to any entity responsible for creating, maintaining, or distributing the dataset.</td> 
       <td>dcat:Dataset</td> 
     </tr>  
   </tbody> 
@@ -76,7 +76,7 @@ path: src/new/properties-dataset.md
     <tr> 
       <td>Data Service</td> 
       <td>A collection of operations that provides access to one or more datasets or data processing functions.</td> 
-      <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the Distribution through a variety of potential actions.</td> 
+      <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the [Distribution](linkto:distribution) through a variety of potential actions. An example of a Data Service is a [Beacon API](https://docs.genomebeacons.org/) to query genomics data.</td> 
       <td>dcat:DataService</td> 
     </tr> 
   </tbody> 
@@ -117,7 +117,6 @@ path: src/new/style-tables2.md
 <pre class=include>
 path: src/new/properties-dataset-series.md
 </pre>
-
 
 ### [Distribution](http://www.w3.org/ns/dcat#Distribution)
 <table> 

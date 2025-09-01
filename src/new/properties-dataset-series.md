@@ -1,10 +1,3 @@
-## [Dataset Series](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)
-
-A collection of datasets that are published separately, but share some characteristics that group them. <br><br>
-`Usage note`: A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class.
-
- 
-
 ### Mandatory Properties
 
 <table>

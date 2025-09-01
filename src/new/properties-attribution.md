@@ -1,10 +1,3 @@
-## [Attribution](https://www.w3.org/ns/prov#Attribution)
-
-Attribution is the ascribing of an entity to an agent. <br><br>
-`Usage note`: This class is instantiated by the property "qualified attribution".
-
- 
-
 ### Mandatory Properties
 
 There are currently no mandatory properties for this class.

@@ -1,10 +1,3 @@
-## [Period of time](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime)
-
-An interval of time that is named or defined by its start and end dates. <br><br>
-`Usage note`: This class is instantiated by properties in other classes that have the range `dct:PeriodOfTime`.
-
- 
-
 ### Mandatory Properties
 
 There are currently no mandatory properties for this class.

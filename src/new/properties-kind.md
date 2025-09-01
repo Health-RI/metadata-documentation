@@ -1,10 +1,3 @@
-## [Kind](https://www.w3.org/TR/vcard-rdf/#d4e1819)
-
-A description following the vCard specification. <br><br>
-`Usage note`: Used to describe contact information for [Dataset](linkto:dataset) and [Dataset Series](linkto:dataset-series). This class is instantiated in these classes whenever the range is `vcard:Kind`.
-
- 
-
 ### Mandatory Properties
 
 <table>

@@ -1,10 +1,3 @@
-## [Identifier](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier)
-
-An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme. <br><br>
-`Usage note`: This class is instantiated by the property "other identifier".
-
- 
-
 ### Mandatory Properties
 
 <table>

@@ -3,7 +3,7 @@
 
 ## Supportive Mandatory
 
-### Agent 
+### [Agent](http://xmlns.com/foaf/spec/#term_Agent)
 <table> 
   <thead> 
     <tr> 
@@ -31,8 +31,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-agent.md
 </pre>
 
-
-### Kind 
+### [Kind](https://www.w3.org/TR/vcard-rdf/#d4e1819)
 <table> 
   <thead> 
     <tr> 
@@ -60,11 +59,9 @@ path: src/new/style-tables2.md
 path: src/new/properties-kind.md
 </pre>
 
-
-
 ## Supportive Recommended 
 
-### Attribution 
+### [Attribution](https://www.w3.org/ns/prov#Attribution) 
 <table> 
   <thead> 
     <tr> 
@@ -92,7 +89,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-attribution.md
 </pre>
 
-### Checksum 
+### [Checksum](https://spdx.org/rdf/terms/#d4e2091)
 <table> 
   <thead> 
     <tr> 
@@ -120,7 +117,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-checksum.md
 </pre>
 
-### Identifier 
+### [Identifier](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier)
 <table> 
   <thead> 
     <tr> 
@@ -148,7 +145,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-identifier.md
 </pre>
 
-### Period of Time 
+### [Period of time](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime) 
 <table> 
   <thead> 
     <tr> 
@@ -176,7 +173,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-period-of-time.md
 </pre>
 
-### Quality Certificate 
+### [Quality certificate](https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate)
 <table> 
   <thead> 
     <tr> 
@@ -205,7 +202,7 @@ path: src/new/properties-quality-certificate.md
 </pre>
 
 
-### Relationship 
+### [Relationship](https://w3c.github.io/dxwg/dcat/#Class:Relationship)
 <table> 
   <thead> 
     <tr> 
