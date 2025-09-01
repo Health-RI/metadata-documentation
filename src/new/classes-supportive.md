@@ -23,6 +23,15 @@
   </tbody> 
 </table>
 
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-agent.md
+</pre>
+
+
 ### Kind 
 <table> 
   <thead> 
@@ -42,6 +51,16 @@
     </tr> 
   </tbody> 
 </table>
+
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-kind.md
+</pre>
+
+
 
 ## Supportive Recommended 
 
@@ -65,6 +84,14 @@
   </tbody> 
 </table>
 
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-attribution.md
+</pre>
+
 ### Checksum 
 <table> 
   <thead> 
@@ -84,6 +111,14 @@
     </tr> 
   </tbody> 
 </table>
+
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-checksum.md
+</pre>
 
 ### Identifier 
 <table> 
@@ -105,6 +140,14 @@
   </tbody> 
 </table>
 
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-identifier.md
+</pre>
+
 ### Period of Time 
 <table> 
   <thead> 
@@ -124,6 +167,14 @@
     </tr> 
   </tbody> 
 </table>
+
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-period-of-time.md
+</pre>
 
 ### Quality Certificate 
 <table> 
@@ -145,6 +196,15 @@
   </tbody> 
 </table>
 
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-quality-certificate.md
+</pre>
+
+
 ### Relationship 
 <table> 
   <thead> 
@@ -164,3 +224,11 @@
     </tr> 
   </tbody> 
 </table>
+
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-relationship.md
+</pre>

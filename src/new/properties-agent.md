@@ -5,7 +5,7 @@ Any entity carrying out actions with respect to the (Core) entities Catalogue, D
 
  
 
-### Mandatory Class Properties
+### Mandatory Properties
 
 <table>
   <thead>
@@ -59,7 +59,7 @@ Any entity carrying out actions with respect to the (Core) entities Catalogue, D
   </tbody>
 </table>
 
-### Recommended Class Properties 
+### Recommended Properties 
 
 <table>
   <thead>

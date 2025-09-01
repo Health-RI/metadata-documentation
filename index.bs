@@ -48,10 +48,8 @@ path: src/new/classes-classtext.md
 </pre>
 
 <pre class=include>
-path: src/new/style-tables2.md
+path: src/new/properties-classtext.md
 </pre>
-
-
 
 <pre class=include>
 path: src/new/classes-main.md
@@ -59,60 +57,6 @@ path: src/new/classes-main.md
 
 <pre class=include>
 path: src/new/classes-supportive.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-classtext.md
-</pre>
-
-<pre class=include>
-path: src/new/style-tables3.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-agent.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-attribution.md
-</pre>
-
-
-<pre class=include>
-path: src/new/properties-checksum.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-data-service.md
-</pre>
-
-
-<pre class=include>
-path: src/new/properties-dataset-series.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-distribution.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-identifier.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-kind.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-period-of-time.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-quality-certificate.md
-</pre>
-
-<pre class=include>
-path: src/new/properties-relationship.md
 </pre>
 
 <pre class=include>

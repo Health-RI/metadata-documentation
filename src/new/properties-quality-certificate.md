@@ -5,11 +5,11 @@ An annotation that associates a resource (especially a dataset or a distribution
 
  
 
-### Mandatory Class Properties
+### Mandatory Properties
 
 There are currently no mandatory properties for this class.
 
-### Recommended Class Properties 
+### Recommended Properties 
 
 <table>
   <thead>

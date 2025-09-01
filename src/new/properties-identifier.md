@@ -5,7 +5,7 @@ An identifier in a particular context, consisting of the string that is the iden
 
  
 
-### Mandatory Class Properties
+### Mandatory Properties
 
 <table>
   <thead>
@@ -33,7 +33,7 @@ An identifier in a particular context, consisting of the string that is the iden
 </table>
 
 
-### Recommended Class Properties 
+### Recommended Properties 
 
 <table>
   <thead>

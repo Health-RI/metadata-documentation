@@ -82,6 +82,14 @@ path: src/new/properties-dataset.md
   </tbody> 
 </table>
 
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-data-service.md
+</pre>
+
 ### Dataset Series 
 <table> 
   <thead> 
@@ -102,6 +110,15 @@ path: src/new/properties-dataset.md
   </tbody> 
 </table>
 
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-dataset-series.md
+</pre>
+
+
 ### Distribution 
 <table> 
   <thead> 
@@ -121,3 +138,11 @@ path: src/new/properties-dataset.md
     </tr> 
   </tbody> 
 </table>
+
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-distribution.md
+</pre>

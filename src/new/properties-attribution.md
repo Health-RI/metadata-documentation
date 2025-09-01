@@ -5,11 +5,11 @@ Attribution is the ascribing of an entity to an agent. <br><br>
 
  
 
-### Mandatory Class Properties
+### Mandatory Properties
 
 There are currently no mandatory properties for this class.
 
-### Recommended Class Properties 
+### Recommended Properties 
 
 <table>
   <thead>
