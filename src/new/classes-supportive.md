@@ -1,6 +1,6 @@
-## Supportive Classes ## {#classes-supportive}
+## Supportive ## {#classes-supportive}
 
-### Mandatory Elements
+### Mandatory Classes
 <table> 
   <thead> 
     <tr> 
@@ -27,7 +27,7 @@
   </tbody> 
 </table>
 
-### Recommended Elements
+### Recommended Classes
 <table> 
   <thead> 
     <tr> 

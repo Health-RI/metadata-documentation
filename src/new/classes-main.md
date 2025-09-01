@@ -1,6 +1,6 @@
-## Main Classes ## {#classes-main}
+## Main ## {#classes-main}
 
-### Mandatory Elements
+### Mandatory Classes
 <table> 
   <thead> 
     <tr> 
@@ -27,7 +27,7 @@
   </tbody> 
 </table>
 
-### Recommended Elements
+### Recommended Classes
 <table> 
   <thead> 
     <tr> 
