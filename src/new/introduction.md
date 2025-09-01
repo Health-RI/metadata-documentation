@@ -93,7 +93,7 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
   </tbody> 
 </table>
 
-## Overview and Diagram
+# Overview and Diagram
 An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
 
 If a class is linked to another class with a closed arrow, it inherits all properties from the other class (e.g., `dcat:Dataset` inherits from `dcat:Resource`). Other arrows represent relationships, including their types (e.g., `dcat:Dataset` connects to a `dcat:DatasetSeries` via `dcat:inSeries`), along with cardinalities (e.g., `dcat:Dataset` connects to zero or more `dcat:DatasetSeries`). **Mandatory relationships** are marked with dark labels, while **recommended relationships** use a lighter color.
@@ -107,7 +107,7 @@ A tabular overview of all classes and properties—including their range, cardin
 ## UML of the Profile (Version 2)
 <a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
   <img 
-    src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2_Small.png" 
+    src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" 
     alt="Health-RI Metadata Diagram"
   >
 </a>

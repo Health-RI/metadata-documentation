@@ -21,20 +21,7 @@ Supportive classes in this profile:
 - **Relationship**
 - **Quality certificate**
 
-
-The main classes and supportive classes together form the Health-RI data catalogue Application Profile. The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.
-
-
-## Usage Notes on Schema / Mapping
-Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into  mandatory properties for conformance and recommended properties for richer metadata. This is how to use those classes:
-
-The separation from above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. To apply it:
-- Start with main classes – Identify the datasets, services, and distributions you need to describe.
-- Link supportive classes – Use them wherever the profile specifies a property range (e.g., publisher → Agent).
-- Always fill mandatory properties – This ensures your metadata is valid and interoperable.
-- Add recommended properties when possible – This improves FAIRness and user experience, and increases the overall maturity of your metadata.
-- Reuse supportive entities – If the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.
-
+The main classes and supportive classes together form the Health-RI data catalogue Application Profile. 
 
 **Please take into consideration**:
 - Certain properties (e.g. `dct:publisher`, `dct:creator`, `dct:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties will instantiate new instances of the specific supporting classes for each usage. This means that, for example, the `dct:publisher` and `dct:creator` can instantiate [`foaf:Agent`](#agent) at two separate times with different content (organisation vs. person).
@@ -48,3 +35,15 @@ The separation from above helps modularize metadata and makes it easier to reuse
 - Please visit Confluence for general information about the [metadata schema](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping) and [metadata mapping](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial).
 
 
+## Usage Notes on Schema / Mapping
+Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into  mandatory properties for conformance and recommended properties for richer metadata. This is how to use those classes:
+
+The separation from above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. To apply it:
+- Start with main classes – Identify the datasets, services, and distributions you need to describe.
+- Link supportive classes – Use them wherever the profile specifies a property range (e.g., publisher → Agent).
+- Always fill mandatory properties – This ensures your metadata is valid and interoperable.
+- Add recommended properties when possible – This improves FAIRness and user experience, and increases the overall maturity of your metadata.
+- Reuse supportive entities – If the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.
+
+
+The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.
