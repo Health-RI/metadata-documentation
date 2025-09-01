@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="718c994c2e202c5108128d2620419a869029b13c" name="revision">
+  <meta content="e9a30a891f58e902d69cc23a2208bf7e442a8af5" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2438,16 +2438,16 @@ Parts of this work may be from another specification document.  If so, those par
      <a href="#classes-main"><span class="secno">7</span> <span class="content">Main Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#mandatory-main"><span class="secno">7.1</span> <span class="content">Mandatory Main</span></a>
+       <a href="#mandatory"><span class="secno">7.1</span> <span class="content">Mandatory</span></a>
        <ol class="toc">
-        <li><a href="#catalog"><span class="secno">7.1.1</span> <span class="content">Catalog</span></a>
+        <li><a href="#catalog"><span class="secno">7.1.1</span> <span class="content"><span>Catalog</span></span></a>
        </ol>
       <li>
        <a href="#catalog①"><span class="secno">7.2</span> <span class="content"><span>Catalog</span></span></a>
        <ol class="toc">
         <li><a href="#mandatory-properties"><span class="secno">7.2.1</span> <span class="content">Mandatory Properties</span></a>
         <li><a href="#recommended-properties"><span class="secno">7.2.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#dataset"><span class="secno">7.2.3</span> <span class="content">Dataset</span></a>
+        <li><a href="#dataset"><span class="secno">7.2.3</span> <span class="content"><span>Dataset</span></span></a>
        </ol>
       <li>
        <a href="#dataset①"><span class="secno">7.3</span> <span class="content"><span>Dataset</span></span></a>
@@ -2458,21 +2458,21 @@ Parts of this work may be from another specification document.  If so, those par
       <li>
        <a href="#recommended-main"><span class="secno">7.4</span> <span class="content">Recommended Main</span></a>
        <ol class="toc">
-        <li><a href="#data-service"><span class="secno">7.4.1</span> <span class="content">Data Service</span></a>
+        <li><a href="#data-service"><span class="secno">7.4.1</span> <span class="content"><span>Data Service</span></span></a>
        </ol>
       <li>
        <a href="#data-service①"><span class="secno">7.5</span> <span class="content"><span>Data Service</span></span></a>
        <ol class="toc">
         <li><a href="#mandatory-properties②"><span class="secno">7.5.1</span> <span class="content">Mandatory Properties</span></a>
         <li><a href="#recommended-properties②"><span class="secno">7.5.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#dataset-series"><span class="secno">7.5.3</span> <span class="content">Dataset Series</span></a>
+        <li><a href="#dataset-series"><span class="secno">7.5.3</span> <span class="content"><span>Dataset Series</span></span></a>
        </ol>
       <li>
        <a href="#dataset-series①"><span class="secno">7.6</span> <span class="content"><span>Dataset Series</span></span></a>
        <ol class="toc">
         <li><a href="#mandatory-properties③"><span class="secno">7.6.1</span> <span class="content">Mandatory Properties</span></a>
         <li><a href="#recommended-properties③"><span class="secno">7.6.2</span> <span class="content">Recommended Properties</span></a>
-        <li><a href="#distribution"><span class="secno">7.6.3</span> <span class="content">Distribution</span></a>
+        <li><a href="#distribution"><span class="secno">7.6.3</span> <span class="content"><span>Distribution</span></span></a>
        </ol>
       <li>
        <a href="#distribution①"><span class="secno">7.7</span> <span class="content"><span>Distribution</span></span></a>
@@ -2825,8 +2825,8 @@ The main classes and supportive classes together form the Health-RI data catalog
 <strong>Main Classes</strong> represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.
 
 
-   <h3 class="heading settled" data-level="7.1" id="mandatory-main"><span class="secno">7.1. </span><span class="content">Mandatory Main</span><a class="self-link" href="#mandatory-main"></a></h3>
-   <h4 class="heading settled" data-level="7.1.1" id="catalog"><span class="secno">7.1.1. </span><span class="content">Catalog</span><a class="self-link" href="#catalog"></a></h4>
+   <h3 class="heading settled" data-level="7.1" id="mandatory"><span class="secno">7.1. </span><span class="content">Mandatory</span><a class="self-link" href="#mandatory"></a></h3>
+   <h4 class="heading settled" data-level="7.1.1" id="catalog"><span class="secno">7.1.1. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Catalog</a></span><a class="self-link" href="#catalog"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3035,7 +3035,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This property refers to a knowledge organisation system used to classify the Catalogue’s Datasets. It must have at least the value <code>NAL:data-theme</code> as this is the mandatory controlled vocabulary for <code>dcat:theme</code>.
       <td>0..*
    </table>
-   <h4 class="heading settled" data-level="7.2.3" id="dataset"><span class="secno">7.2.3. </span><span class="content">Dataset</span><a class="self-link" href="#dataset"></a></h4>
+   <h4 class="heading settled" data-level="7.2.3" id="dataset"><span class="secno">7.2.3. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3514,7 +3514,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>NA
    </table>
    <h3 class="heading settled" data-level="7.4" id="recommended-main"><span class="secno">7.4. </span><span class="content">Recommended Main</span><a class="self-link" href="#recommended-main"></a></h3>
-   <h4 class="heading settled" data-level="7.4.1" id="data-service"><span class="secno">7.4.1. </span><span class="content">Data Service</span><a class="self-link" href="#data-service"></a></h4>
+   <h4 class="heading settled" data-level="7.4.1" id="data-service"><span class="secno">7.4.1. </span><span class="content"><a href="http://www.w3.org/ns/dcat#DataService">Data Service</a></span><a class="self-link" href="#data-service"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3745,7 +3745,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>This property connects the Data Service class to its corresponding dataset(s), ensuring every data service links to at least one <code>dcat:Dataset</code>. While essential for metadata implementation teams on each node, it’s less relevant for researchers to collect.
       <td>0..*
    </table>
-   <h4 class="heading settled" data-level="7.5.3" id="dataset-series"><span class="secno">7.5.3. </span><span class="content">Dataset Series</span><a class="self-link" href="#dataset-series"></a></h4>
+   <h4 class="heading settled" data-level="7.5.3" id="dataset-series"><span class="secno">7.5.3. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series"></a></h4>
    <table>
     <thead>
      <tr>
@@ -3877,7 +3877,7 @@ The main classes and supportive classes together form the Health-RI data catalog
       <td>When temporal coverage is a dimension in the dataset series, then the temporal coverage of each dataset in the collection should be part of the temporal coverage. In that case, an open-ended value is recommended, e.g., after 2012.
       <td>0..*
    </table>
-   <h4 class="heading settled" data-level="7.6.3" id="distribution"><span class="secno">7.6.3. </span><span class="content">Distribution</span><a class="self-link" href="#distribution"></a></h4>
+   <h4 class="heading settled" data-level="7.6.3" id="distribution"><span class="secno">7.6.3. </span><span class="content"><a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a></span><a class="self-link" href="#distribution"></a></h4>
    <table>
     <thead>
      <tr>
