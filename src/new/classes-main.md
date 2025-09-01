@@ -1,6 +1,8 @@
-## Main ## {#classes-main}
+## Main {#classes-main}
 
 ### Mandatory Classes
+
+#### Catalog {#class-catalog}
 <table> 
   <thead> 
     <tr> 
@@ -17,6 +19,20 @@
       <td>A catalog that is listed in the National Health Data catalog and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.</td> 
       <td>dcat:Catalog</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Dataset {#class-dataset}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Dataset</td> 
       <td>A conceptual entity that represents the information published.</td> 
@@ -28,6 +44,8 @@
 </table>
 
 ### Recommended Classes
+
+#### Data Service {#class-dataservice}
 <table> 
   <thead> 
     <tr> 
@@ -44,12 +62,40 @@
       <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the Distribution through a variety of potential actions.</td> 
       <td>dcat:DataService</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Dataset Series {#class-datasetseries}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Dataset Series</td> 
       <td>A collection of datasets that are published separately, but share some characteristics that group them.</td> 
       <td>A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class.</td> 
       <td>dcat:DatasetSeries</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Distribution {#class-distribution}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Distribution</td> 
       <td>A physical embodiment of the Dataset in a particular format.</td> 
@@ -58,6 +104,3 @@
     </tr> 
   </tbody> 
 </table>
-
-
-
