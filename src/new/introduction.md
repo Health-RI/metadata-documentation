@@ -111,15 +111,5 @@ A tabular overview of all classes and properties—including their range, cardin
 
 
 
-## Usage Notes on Schema / Mapping
-- Main classes include: **Catalog**, **Dataset**, **Data Service**, **Dataset Series**, **Distribution**.
-- Supporting classes include: **Agent**, **Kind**, **Attribution**, **Checksum**, **Identifier**, **Period of time**, **Relationship**, **Quality certificate**.
-- Certain properties (e.g., `dct:publisher`, `dct:creator`, `dct:contactPoint`) refer to supporting classes (e.g., `foaf:Agent`, `vcard:Kind`). These properties instantiate new instances each time they are used.
-- Not all metadata schema classes may be necessary for describing your dataset. For example, **DataService** or **DatasetSeries** might not apply to every dataset in the National Health Data Catalogue.
-- DCAT's flexibility enables data holders to structure their metadata according to their needs.
-- Mapping examples from various data sources have been collected for reference.
-- Further information on the metadata schema and guidance on metadata mapping is available.
-
-
 
 
