@@ -1,17 +1,7 @@
 ## Classes # {#classes-classtext} 
 The Health-RI metadata schema is based on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply and interoperable across catalogues, the schema distinguishes between: To achieve this, the schema organizes its structure around two types of classes: **Main Classes** and **Supportive Classes**.
 
-## Understanding the schema
-This application profile follows DCAT-AP 3.0 to describe data catalogues, datasets, dataset series, data services, and their distributions. It separates classes into main and supportive groups to keep the model interoperable. Supportive classes are included because they form the range (value type) of properties used by the main classes [additional requirements to properties for this entity.]. This section explains how to use those classes.
 
-## Usage Notes on Schema / Mapping
-- Main classes include: **Catalog**, **Dataset**, **Data Service**, **Dataset Series**, **Distribution**.
-- Supporting classes include: **Agent**, **Kind**, **Attribution**, **Checksum**, **Identifier**, **Period of time**, **Relationship**, **Quality certificate**.
-- Certain properties (e.g., `dct:publisher`, `dct:creator`, `dct:contactPoint`) refer to supporting classes (e.g., `foaf:Agent`, `vcard:Kind`). These properties instantiate new instances each time they are used.
-- Not all metadata schema classes may be necessary for describing your dataset. For example, **DataService** or **DatasetSeries** might not apply to every dataset in the National Health Data Catalogue.
-- DCAT's flexibility enables data holders to structure their metadata according to their needs.
-- Mapping examples from various data sources have been collected for reference.
-- Further information on the metadata schema and guidance on metadata mapping is available.
 
 # Classes # {#classes-classtext}
 
@@ -60,7 +50,10 @@ These are the **main classes** — the primary records that users search for and
 
 **Supportive classes** are included because they form the *range* (value type) of certain properties in the main classes. For example, a dataset’s `dct:publisher` property points to an `Agent`, and a distribution’s `spdx:checksum` property points to a `Checksum`. By defining these supportive classes explicitly, the profile ensures that such linked details are described consistently and can be reused across records.
 
----
+## Understanding the schema
+This application profile follows DCAT-AP 3.0 to describe data catalogues, datasets, dataset series, data services, and their distributions. It separates classes into main and supportive groups to keep the model interoperable. Supportive classes are included because they form the range (value type) of properties used by the main classes [additional requirements to properties for this entity.]. This section explains how to use those classes.
+
+
 
 ## Practical guidance
 
@@ -73,3 +66,15 @@ These are the **main classes** — the primary records that users search for and
 ---
 
 The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.
+
+
+
+
+## Usage Notes on Schema / Mapping
+- Main classes include: **Catalog**, **Dataset**, **Data Service**, **Dataset Series**, **Distribution**.
+- Supporting classes include: **Agent**, **Kind**, **Attribution**, **Checksum**, **Identifier**, **Period of time**, **Relationship**, **Quality certificate**.
+- Certain properties (e.g., `dct:publisher`, `dct:creator`, `dct:contactPoint`) refer to supporting classes (e.g., `foaf:Agent`, `vcard:Kind`). These properties instantiate new instances each time they are used.
+- Not all metadata schema classes may be necessary for describing your dataset. For example, **DataService** or **DatasetSeries** might not apply to every dataset in the National Health Data Catalogue.
+- DCAT's flexibility enables data holders to structure their metadata according to their needs.
+- Mapping examples from various data sources have been collected for reference.
+- Further information on the metadata schema and guidance on metadata mapping is available.
