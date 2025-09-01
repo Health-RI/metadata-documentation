@@ -1,6 +1,8 @@
-## Supportive ## {#classes-supportive}
+## Supportive {#classes-supportive}
 
 ### Mandatory Classes
+
+#### Agent {#class-agent}
 <table> 
   <thead> 
     <tr> 
@@ -17,17 +19,32 @@
       <td>A person or organisation that is associated with the catalogue or dataset. This class is instantiated in these classes whenever the range is `foaf:Agent`.</td> 
       <td>foaf:Agent</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Kind {#class-kind}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Kind</td> 
       <td>A description following the vCard specification.</td> 
       <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is `vcard:Kind`.</td> 
       <td>vcard:Kind</td> 
     </tr> 
-    <tr> 
   </tbody> 
 </table>
 
 ### Recommended Classes
+
+#### Attribution {#class-attribution}
 <table> 
   <thead> 
     <tr> 
@@ -44,30 +61,100 @@
       <td>This class is instantiated by the property "qualified attribution" (`prov:qualifiedAttribution`) in other classes. Use this class to describe any Agent (other than publisher or creator) that has some form of responsibility for the resource. Within the class, this Agent is described with an instance of `foaf:Agent`, and the role is chosen from a controlled vocabulary. This class can be used to indicate the funding agent that provided funding for the dataset.</td> 
       <td>prov:Attribution</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Checksum {#class-checksum}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Checksum</td> 
       <td>A value that allows the contents of a file to be authenticated.</td> 
       <td>This class is instantiated by properties in other classes that have the range `spdx:Checksum`.</td> 
       <td>spdx:Checksum</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Identifier {#class-identifier}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Identifier</td> 
       <td>An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme.</td> 
       <td>This class is instantiated by the property "other identifier" (`adms:identifier`) in other classes. Use this class to provide any additional identifier to the resource or dataset that is not the primary identifier provided in `dct:identifier`.</td> 
       <td>adms:Identifier</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Period of Time {#class-periodoftime}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Period of Time</td> 
       <td>An interval of time that is named or defined by its start and end dates.</td> 
       <td>This class is instantiated by properties in other classes that have the range `dct:PeriodOfTime`.</td> 
       <td>dct:PeriodOfTime</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Quality Certificate {#class-qualitycertificate}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Quality Certificate</td> 
       <td>An annotation that associates a resource (especially, a dataset or a distribution) to another resource (for example, a document) that certifies the resource's quality according to a set of quality assessment rules.</td> 
       <td>This class is instantiated by the property "quality annotation" (`dqv:hasQualityAnnotation`) in other classes. Use this class to provide a link between the resource or dataset and an associated quality annotation.</td> 
       <td>dqv:QualityCertificate</td> 
     </tr> 
+  </tbody> 
+</table>
+
+#### Relationship {#class-relationship}
+<table> 
+  <thead> 
+    <tr> 
+      <th>Class name</th> 
+      <th>HealthDCAT-AP Definition</th> 
+      <th>Usage Note</th> 
+      <th>URI</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
     <tr> 
       <td>Relationship</td> 
       <td>An association class for attaching additional information to a relationship between DCAT Resources.</td> 
@@ -76,6 +163,3 @@
     </tr> 
   </tbody> 
 </table>
-
-
-
