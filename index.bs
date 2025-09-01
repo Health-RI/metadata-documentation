@@ -51,6 +51,8 @@ path: src/new/classes-classtext.md
 path: src/new/style-tables2.md
 </pre>
 
+
+
 <pre class=include>
 path: src/new/classes-main.md
 </pre>
@@ -75,9 +77,6 @@ path: src/new/properties-agent.md
 path: src/new/properties-attribution.md
 </pre>
 
-<pre class=include>
-path: src/new/properties-catalog.md
-</pre>
 
 <pre class=include>
 path: src/new/properties-checksum.md
@@ -87,9 +86,6 @@ path: src/new/properties-checksum.md
 path: src/new/properties-data-service.md
 </pre>
 
-<pre class=include>
-path: src/new/properties-dataset.md
-</pre>
 
 <pre class=include>
 path: src/new/properties-dataset-series.md

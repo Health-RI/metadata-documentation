@@ -23,6 +23,14 @@
   </tbody> 
 </table>
 
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-catalog.md
+</pre>
+
 ### Dataset 
 <table> 
   <thead> 
@@ -43,6 +51,14 @@
     </tr>  
   </tbody> 
 </table>
+
+<pre class=include>
+path: src/new/style-tables2.md
+</pre>
+
+<pre class=include>
+path: src/new/properties-dataset.md
+</pre>
 
 ## Recommended Main
 
