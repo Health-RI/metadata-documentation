@@ -106,12 +106,10 @@ A tabular overview of all classes and properties—including their range, cardin
 
 ## UML of the Profile (Version 2)
 <a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
-  <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" alt="Health-RI Metadata Diagram" style="width: 100%; height: auto;">
+  <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" alt="Health-RI Metadata Diagram"">
 </a>
 
 For usage notes regarding this profile please refer to the next section.
-
-
 
 The Health‑RI metadata schema builds on [DCAT‑AP 3.0](https://semiceu.github.io/DCAT-AP/releases/3.0.0/), a European application profile for describing datasets, services, and related resources. To make the model easier to apply and to ensure interoperability across catalogues, the schema organises its structure around two complementary types of classes:
 
