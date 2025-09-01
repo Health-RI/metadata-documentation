@@ -1,9 +1,9 @@
 # Main Classes # {#classes-main}
 **Main Classes** represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.
 
-## Mandatory Main
+## Mandatory 
 
-### Catalog 
+### [Catalog](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog)
 <table> 
   <thead> 
     <tr> 
@@ -31,7 +31,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-catalog.md
 </pre>
 
-### Dataset 
+### [Dataset](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset)
 <table> 
   <thead> 
     <tr> 
@@ -62,7 +62,7 @@ path: src/new/properties-dataset.md
 
 ## Recommended Main
 
-### Data Service 
+### [Data Service](http://www.w3.org/ns/dcat#DataService)
 <table> 
   <thead> 
     <tr> 
@@ -90,7 +90,7 @@ path: src/new/style-tables2.md
 path: src/new/properties-data-service.md
 </pre>
 
-### Dataset Series 
+### [Dataset Series](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)
 <table> 
   <thead> 
     <tr> 
@@ -119,7 +119,7 @@ path: src/new/properties-dataset-series.md
 </pre>
 
 
-### Distribution 
+### [Distribution](http://www.w3.org/ns/dcat#Distribution)
 <table> 
   <thead> 
     <tr> 
