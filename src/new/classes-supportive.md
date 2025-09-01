@@ -1,8 +1,8 @@
-## Supportive ## {#classes-supportive}
+# Supportive # {#classes-supportive}
 
-### Mandatory Classes
+## Mandatory Classes
 
-#### Agent 
+### Agent 
 <table> 
   <thead> 
     <tr> 
@@ -22,7 +22,7 @@
   </tbody> 
 </table>
 
-#### Kind 
+### Kind 
 <table> 
   <thead> 
     <tr> 
@@ -42,9 +42,9 @@
   </tbody> 
 </table>
 
-### Recommended Classes
+## Recommended 
 
-#### Attribution 
+### Attribution 
 <table> 
   <thead> 
     <tr> 
@@ -64,7 +64,7 @@
   </tbody> 
 </table>
 
-#### Checksum 
+### Checksum 
 <table> 
   <thead> 
     <tr> 
@@ -84,7 +84,7 @@
   </tbody> 
 </table>
 
-#### Identifier 
+### Identifier 
 <table> 
   <thead> 
     <tr> 
@@ -104,7 +104,7 @@
   </tbody> 
 </table>
 
-#### Period of Time 
+### Period of Time 
 <table> 
   <thead> 
     <tr> 
@@ -124,7 +124,7 @@
   </tbody> 
 </table>
 
-#### Quality Certificate 
+### Quality Certificate 
 <table> 
   <thead> 
     <tr> 
@@ -144,7 +144,7 @@
   </tbody> 
 </table>
 
-#### Relationship 
+### Relationship 
 <table> 
   <thead> 
     <tr> 
