@@ -112,3 +112,4 @@ A tabular overview of all classes and properties—including their range, cardin
   >
 </a>
 
+Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.
