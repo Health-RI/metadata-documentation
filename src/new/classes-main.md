@@ -1,4 +1,4 @@
-## Main # {#classes-main}
+## Main ## {#classes-main}
 
 ### Mandatory Classes
 
