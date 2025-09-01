@@ -1,5 +1,5 @@
 # Supportive # {#classes-supportive}
-
+**Supportive Classes** provide additional context and metadata that enrich and clarify the main entities. These include elements like Agent, Identifier, Period of Time, Checksum, and Quality Certificate. They enhance discoverability, traceability, and trustworthiness of the data.
 ## Mandatory Classes
 
 ### Agent 
