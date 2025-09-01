@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="6bfe2d3f337d45584bea183344e19ecba45f57ff" name="revision">
+  <meta content="7fdd290da9e9e39de4486e855afef55360d875a2" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2093,10 +2093,24 @@ Parts of this work may be from another specification document.  If so, those par
          </ol>
        </ol>
       <li>
-       <a href="#classes-supportive"><span class="secno">5.2</span> <span class="content">Supportive</span></a>
+       <a href="#classes-supportive"><span class="secno">5.2</span> <span class="content">Supportive {#classes-supportive}</span></a>
        <ol class="toc">
-        <li><a href="#mandatory-classes①"><span class="secno">5.2.1</span> <span class="content">Mandatory Classes</span></a>
-        <li><a href="#recommended-classes①"><span class="secno">5.2.2</span> <span class="content">Recommended Classes</span></a>
+        <li>
+         <a href="#mandatory-classes①"><span class="secno">5.2.1</span> <span class="content">Mandatory Classes</span></a>
+         <ol class="toc">
+          <li><a href="#class-agent"><span class="secno">5.2.1.1</span> <span class="content">Agent {#class-agent}</span></a>
+          <li><a href="#class-kind"><span class="secno">5.2.1.2</span> <span class="content">Kind {#class-kind}</span></a>
+         </ol>
+        <li>
+         <a href="#recommended-classes①"><span class="secno">5.2.2</span> <span class="content">Recommended Classes</span></a>
+         <ol class="toc">
+          <li><a href="#class-attribution"><span class="secno">5.2.2.1</span> <span class="content">Attribution {#class-attribution}</span></a>
+          <li><a href="#class-checksum"><span class="secno">5.2.2.2</span> <span class="content">Checksum {#class-checksum}</span></a>
+          <li><a href="#class-identifier"><span class="secno">5.2.2.3</span> <span class="content">Identifier {#class-identifier}</span></a>
+          <li><a href="#class-periodoftime"><span class="secno">5.2.2.4</span> <span class="content">Period of Time {#class-periodoftime}</span></a>
+          <li><a href="#class-qualitycertificate"><span class="secno">5.2.2.5</span> <span class="content">Quality Certificate {#class-qualitycertificate}</span></a>
+          <li><a href="#class-relationship"><span class="secno">5.2.2.6</span> <span class="content">Relationship {#class-relationship}</span></a>
+         </ol>
        </ol>
      </ol>
     <li>
@@ -2426,8 +2440,9 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>Used to describe the different ways that a single dataset can be made available. I.e., it can be downloaded or it can be accessed online in one or more distributions (e.g. one in a downloadable .csv file, another file with an access or query webpage).
       <td>dcat:Distribution
    </table>
-   <h3 class="heading settled" data-level="5.2" id="classes-supportive"><span class="secno">5.2. </span><span class="content">Supportive</span><a class="self-link" href="#classes-supportive"></a></h3>
+   <h3 class="heading settled" data-level="5.2" id="classes-supportive"><span class="secno">5.2. </span><span class="content">Supportive {#classes-supportive}</span><a class="self-link" href="#classes-supportive"></a></h3>
    <h4 class="heading settled" data-level="5.2.1" id="mandatory-classes①"><span class="secno">5.2.1. </span><span class="content">Mandatory Classes</span><a class="self-link" href="#mandatory-classes①"></a></h4>
+   <h5 class="heading settled" data-level="5.2.1.1" id="class-agent"><span class="secno">5.2.1.1. </span><span class="content">Agent {#class-agent}</span><a class="self-link" href="#class-agent"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2441,14 +2456,24 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Data Services and Distributions.
       <td>A person or organisation that is associated with the catalogue or dataset. This class is instantiated in these classes whenever the range is <code>foaf:Agent</code>.
       <td>foaf:Agent
+   </table>
+   <h5 class="heading settled" data-level="5.2.1.2" id="class-kind"><span class="secno">5.2.1.2. </span><span class="content">Kind {#class-kind}</span><a class="self-link" href="#class-kind"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Kind
       <td>A description following the vCard specification.
       <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is <code>vcard:Kind</code>.
       <td>vcard:Kind
-     <tr>
    </table>
    <h4 class="heading settled" data-level="5.2.2" id="recommended-classes①"><span class="secno">5.2.2. </span><span class="content">Recommended Classes</span><a class="self-link" href="#recommended-classes①"></a></h4>
+   <h5 class="heading settled" data-level="5.2.2.1" id="class-attribution"><span class="secno">5.2.2.1. </span><span class="content">Attribution {#class-attribution}</span><a class="self-link" href="#class-attribution"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2462,26 +2487,76 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>Attribution is the ascribing of an entity to an agent.
       <td>This class is instantiated by the property "qualified attribution" (<code>prov:qualifiedAttribution</code>) in other classes. Use this class to describe any Agent (other than publisher or creator) that has some form of responsibility for the resource. Within the class, this Agent is described with an instance of <code>foaf:Agent</code>, and the role is chosen from a controlled vocabulary. This class can be used to indicate the funding agent that provided funding for the dataset.
       <td>prov:Attribution
+   </table>
+   <h5 class="heading settled" data-level="5.2.2.2" id="class-checksum"><span class="secno">5.2.2.2. </span><span class="content">Checksum {#class-checksum}</span><a class="self-link" href="#class-checksum"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Checksum
       <td>A value that allows the contents of a file to be authenticated.
       <td>This class is instantiated by properties in other classes that have the range <code>spdx:Checksum</code>.
       <td>spdx:Checksum
+   </table>
+   <h5 class="heading settled" data-level="5.2.2.3" id="class-identifier"><span class="secno">5.2.2.3. </span><span class="content">Identifier {#class-identifier}</span><a class="self-link" href="#class-identifier"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Identifier
       <td>An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme.
       <td>This class is instantiated by the property "other identifier" (<code>adms:identifier</code>) in other classes. Use this class to provide any additional identifier to the resource or dataset that is not the primary identifier provided in <code>dct:identifier</code>.
       <td>adms:Identifier
+   </table>
+   <h5 class="heading settled" data-level="5.2.2.4" id="class-periodoftime"><span class="secno">5.2.2.4. </span><span class="content">Period of Time {#class-periodoftime}</span><a class="self-link" href="#class-periodoftime"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Period of Time
       <td>An interval of time that is named or defined by its start and end dates.
       <td>This class is instantiated by properties in other classes that have the range <code>dct:PeriodOfTime</code>.
       <td>dct:PeriodOfTime
+   </table>
+   <h5 class="heading settled" data-level="5.2.2.5" id="class-qualitycertificate"><span class="secno">5.2.2.5. </span><span class="content">Quality Certificate {#class-qualitycertificate}</span><a class="self-link" href="#class-qualitycertificate"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Quality Certificate
       <td>An annotation that associates a resource (especially, a dataset or a distribution) to another resource (for example, a document) that certifies the resource’s quality according to a set of quality assessment rules.
       <td>This class is instantiated by the property "quality annotation" (<code>dqv:hasQualityAnnotation</code>) in other classes. Use this class to provide a link between the resource or dataset and an associated quality annotation.
       <td>dqv:QualityCertificate
+   </table>
+   <h5 class="heading settled" data-level="5.2.2.6" id="class-relationship"><span class="secno">5.2.2.6. </span><span class="content">Relationship {#class-relationship}</span><a class="self-link" href="#class-relationship"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Relationship
       <td>An association class for attaching additional information to a relationship between DCAT Resources.
