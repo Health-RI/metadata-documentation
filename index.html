@@ -1491,7 +1491,7 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 3f621ba99, updated Mon Jul 28 15:38:36 2025 -0700" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="397e156f4bbd8c9855a931936924388f74663f29" name="revision">
+  <meta content="6bfe2d3f337d45584bea183344e19ecba45f57ff" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
   table {
@@ -2076,10 +2076,21 @@ Parts of this work may be from another specification document.  If so, those par
      <a href="#classes-classtext"><span class="secno">5</span> <span class="content">Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#classes-main"><span class="secno">5.1</span> <span class="content">Main</span></a>
+       <a href="#classes-main"><span class="secno">5.1</span> <span class="content">Main {#classes-main}</span></a>
        <ol class="toc">
-        <li><a href="#mandatory-classes"><span class="secno">5.1.1</span> <span class="content">Mandatory Classes</span></a>
-        <li><a href="#recommended-classes"><span class="secno">5.1.2</span> <span class="content">Recommended Classes</span></a>
+        <li>
+         <a href="#mandatory-classes"><span class="secno">5.1.1</span> <span class="content">Mandatory Classes</span></a>
+         <ol class="toc">
+          <li><a href="#class-catalog"><span class="secno">5.1.1.1</span> <span class="content">Catalog {#class-catalog}</span></a>
+          <li><a href="#class-dataset"><span class="secno">5.1.1.2</span> <span class="content">Dataset {#class-dataset}</span></a>
+         </ol>
+        <li>
+         <a href="#recommended-classes"><span class="secno">5.1.2</span> <span class="content">Recommended Classes</span></a>
+         <ol class="toc">
+          <li><a href="#class-dataservice"><span class="secno">5.1.2.1</span> <span class="content">Data Service {#class-dataservice}</span></a>
+          <li><a href="#class-datasetseries"><span class="secno">5.1.2.2</span> <span class="content">Dataset Series {#class-datasetseries}</span></a>
+          <li><a href="#class-distribution"><span class="secno">5.1.2.3</span> <span class="content">Distribution {#class-distribution}</span></a>
+         </ol>
        </ol>
       <li>
        <a href="#classes-supportive"><span class="secno">5.2</span> <span class="content">Supportive</span></a>
@@ -2336,8 +2347,9 @@ Health-RI’s schema is designed to support FAIR data principles—making health
 
    <p><strong>Main Classes</strong> represent the core entities of the data catalog. These include the Catalog, Dataset, Data Service, Dataset Series, and Distribution. They define the essential components of the data: what data exists, how it’s grouped, and how it can be accessed.</p>
    <p><strong>Supportive Classes</strong> provide additional context and metadata that enrich and clarify the main entities. These include elements like Agent, Identifier, Period of Time, Checksum, and Quality Certificate. They enhance discoverability, traceability, and trustworthiness of the data.</p>
-   <h3 class="heading settled" data-level="5.1" id="classes-main"><span class="secno">5.1. </span><span class="content">Main</span><a class="self-link" href="#classes-main"></a></h3>
+   <h3 class="heading settled" data-level="5.1" id="classes-main"><span class="secno">5.1. </span><span class="content">Main {#classes-main}</span><a class="self-link" href="#classes-main"></a></h3>
    <h4 class="heading settled" data-level="5.1.1" id="mandatory-classes"><span class="secno">5.1.1. </span><span class="content">Mandatory Classes</span><a class="self-link" href="#mandatory-classes"></a></h4>
+   <h5 class="heading settled" data-level="5.1.1.1" id="class-catalog"><span class="secno">5.1.1.1. </span><span class="content">Catalog {#class-catalog}</span><a class="self-link" href="#class-catalog"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2351,6 +2363,16 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>A catalogue or repository that hosts the Datasets or Data Services being described.
       <td>A catalog that is listed in the National Health Data catalog and contains one or several datasets and/or data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.
       <td>dcat:Catalog
+   </table>
+   <h5 class="heading settled" data-level="5.1.1.2" id="class-dataset"><span class="secno">5.1.1.2. </span><span class="content">Dataset {#class-dataset}</span><a class="self-link" href="#class-dataset"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Dataset
       <td>A conceptual entity that represents the information published.
@@ -2359,6 +2381,7 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>dcat:Dataset
    </table>
    <h4 class="heading settled" data-level="5.1.2" id="recommended-classes"><span class="secno">5.1.2. </span><span class="content">Recommended Classes</span><a class="self-link" href="#recommended-classes"></a></h4>
+   <h5 class="heading settled" data-level="5.1.2.1" id="class-dataservice"><span class="secno">5.1.2.1. </span><span class="content">Data Service {#class-dataservice}</span><a class="self-link" href="#class-dataservice"></a></h5>
    <table>
     <thead>
      <tr>
@@ -2372,11 +2395,31 @@ Health-RI’s schema is designed to support FAIR data principles—making health
       <td>A collection of operations that provides access to one or more datasets or data processing functions.
       <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the Distribution through a variety of potential actions.
       <td>dcat:DataService
+   </table>
+   <h5 class="heading settled" data-level="5.1.2.2" id="class-datasetseries"><span class="secno">5.1.2.2. </span><span class="content">Dataset Series {#class-datasetseries}</span><a class="self-link" href="#class-datasetseries"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Dataset Series
       <td>A collection of datasets that are published separately, but share some characteristics that group them.
       <td>A Dataset Series is a collection of similar datasets that are somehow interrelated but published separately. An example is consecutive datasets split by year and/or datasets separated by location. Instead of being made available in a single dataset, the individual (e.g. yearly) datasets are linked together with the Dataset Series class.
       <td>dcat:DatasetSeries
+   </table>
+   <h5 class="heading settled" data-level="5.1.2.3" id="class-distribution"><span class="secno">5.1.2.3. </span><span class="content">Distribution {#class-distribution}</span><a class="self-link" href="#class-distribution"></a></h5>
+   <table>
+    <thead>
+     <tr>
+      <th>Class name
+      <th>HealthDCAT-AP Definition
+      <th>Usage Note
+      <th>URI
+    <tbody>
      <tr>
       <td>Distribution
       <td>A physical embodiment of the Dataset in a particular format.
