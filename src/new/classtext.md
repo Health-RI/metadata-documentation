@@ -4,14 +4,14 @@ The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of c
 - **Main Classes** – the core entities that form the core of the catalogue.
 - **Supportive Classes** – contextual entities that provide detail to the main classes.
 
-Main classes in this profile:
+Main classes in this structure:
 - **Catalog**
 - **Dataset**
 - **Data Service**
 - **Dataset Series**
 - **Distribution**.
 
-Supportive classes in this profile:
+Supportive classes in this structure:
 - **Agent**
 - **Kind**
 - **Attribution**
@@ -21,7 +21,7 @@ Supportive classes in this profile:
 - **Relationship**
 - **Quality certificate**
 
-The main classes and supportive classes together form the Health-RI data catalogue Application Profile. 
+The main classes and supportive classes together form the Health-RI data catalogue schema. 
 
 **Please take into consideration**:
 - Certain properties (e.g. `dct:publisher`, `dct:creator`, `dct:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties will instantiate new instances of the specific supporting classes for each usage. This means that, for example, the `dct:publisher` and `dct:creator` can instantiate [`foaf:Agent`](#agent) at two separate times with different content (organisation vs. person).
@@ -40,7 +40,7 @@ Supportive classes are included because they form the range of properties used b
 
 The separation from above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. It helps users to easier use those classes. To apply it:
 - Start with main classes -> Identify the datasets, services, and distributions you need to describe.
-- Link supportive classes –> Use them wherever the profile specifies a property range (e.g., publisher → Agent).
+- Link supportive classes –> Use them wherever the schema specifies a property range (e.g., publisher → Agent).
 - Always fill mandatory properties –> Ensure your metadata is valid and interoperable.
 - Add recommended properties where possible –> Improve FAIRness and increases the overall maturity of your metadata.
 - Reuse supportive entities –> E.g. if the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.
