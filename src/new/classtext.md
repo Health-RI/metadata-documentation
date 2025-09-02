@@ -36,14 +36,13 @@ The main classes and supportive classes together form the Health-RI data catalog
 
 
 ## Usage Notes on Schema / Mapping
-Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into  mandatory properties for conformance and recommended properties for richer metadata. This is how to use those classes:
+Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into **mandatory properties** for conformance and **recommended properties** for richer metadata. 
 
-The separation from above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. To apply it:
-- Start with main classes – Identify the datasets, services, and distributions you need to describe.
-- Link supportive classes – Use them wherever the profile specifies a property range (e.g., publisher → Agent).
-- Always fill mandatory properties – This ensures your metadata is valid and interoperable.
-- Add recommended properties when possible – This improves FAIRness and user experience, and increases the overall maturity of your metadata.
-- Reuse supportive entities – If the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.
-
+The separation from above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. It helps users to easier use those classes. To apply it:
+- Start with main classes -> Identify the datasets, services, and distributions you need to describe.
+- Link supportive classes –> Use them wherever the profile specifies a property range (e.g., publisher → Agent).
+- Always fill mandatory properties –> Ensure your metadata is valid and interoperable.
+- Add recommended properties where possible –> Improve FAIRness and increases the overall maturity of your metadata.
+- Reuse supportive entities –> E.g. if the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.
 
 The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.
