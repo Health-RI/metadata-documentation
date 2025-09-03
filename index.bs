@@ -8,13 +8,15 @@ URL: https://health-ri.github.io/metadata-documentation/
 Previous Version: https://w3id.org/health-ri/metadata/releases
 Status Text: status text
 Repository: w3id.org/health-ri/metadata/git
-Editor: Editor
+Editor: Hannah Neikes <hannah.neikes@health-ri.nl> 
+Editor: Ana Konrad <ana.konrad@health-ri.nl>
+Editor: Kees Burger <kees.burger@health-ri.nl>
+Editor: Reinier Groeneveld <Reinier.Groeneveld@health-ri.nl>
 Warning: not ready
 Logo: health-ri logo
 Favicon: favicon url
 Canonical URL: canonical url
-Former Editor: Former Editor
-Editor: Editor (Former)? Please send your name and email to Reinier.
+Editor: Editor (Former)? Please send your name and email to Health-Ri metadata team.
 Abstract: <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_Logo.png" alt="" title=""> <br/> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.
 Markup Shorthands: markdown yes, css no
 </pre>
