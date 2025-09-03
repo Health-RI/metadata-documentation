@@ -24,8 +24,9 @@ Former Editor: Xiaofeng Liao
 Former Editor: Mark Janse
 Former Editor: Junda Huang
 Former Editor: Luiz Bonino
-Feedback: 
-Warning: not ready
+Feedback: Report a bug: https://github.com/Health-RI/health-ri-metadata/blob/develop/CONTRIBUTING.md#i-want-to-report-a-bug
+Feedback: Open new issues: https://github.com/Health-RI/health-ri-metadata/issues/new
+Feedback: Status reported issues: https://github.com/Health-RI/health-ri-metadata/issues
 Logo: health-ri logo
 Favicon: favicon url
 Canonical URL: canonical url
