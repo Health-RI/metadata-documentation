@@ -25,8 +25,8 @@ Former Editor: Mark Janse
 Former Editor: Junda Huang
 Former Editor: Luiz Bonino
 Issue Tracking: Report a bug: https://github.com/Health-RI/health-ri-metadata/blob/develop/CONTRIBUTING.md#i-want-to-report-a-bug
-Issue Tracking: : Open new issues: https://github.com/Health-RI/health-ri-metadata/issues/new
-Issue Tracking: : Status reported issues: https://github.com/Health-RI/health-ri-metadata/issues
+Issue Tracking: Open new issues: https://github.com/Health-RI/health-ri-metadata/issues/new
+Issue Tracking: Status reported issues: https://github.com/Health-RI/health-ri-metadata/issues
 Logo: health-ri logo
 Favicon: favicon url
 Canonical URL: canonical url
