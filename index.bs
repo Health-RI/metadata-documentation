@@ -8,10 +8,23 @@ URL: https://health-ri.github.io/metadata-documentation/
 Previous Version: https://w3id.org/health-ri/metadata/releases
 Status Text: status text
 Repository: w3id.org/health-ri/metadata/git
-Editor: Hannah Neikes        <hannah.neikes@health-ri.nl> 
-Editor: Ana Konrad           <ana.konrad@health-ri.nl>
-Editor: Kees Burger          <kees.burger@health-ri.nl>
-Editor: Reinier Groeneveld   <reinier.groeneveld@health-ri.nl>
+Editor: Bruna dos Santos Vieira
+Editor: Inês de Oliveira Coelho Henriques
+Editor: César Bernabé
+Editor: Kees Burger
+Editor: Patrick Dekker
+Editor: Joost Daams
+Editor: Anna Niehues
+Editor: Milou de Jong
+Editor: Ana Konrad
+Editor: Hannah Neikes
+Editor: ⁠Reinier Groeneveld
+Former Editor: Dena Tahvildari
+Former Editor: Xiaofeng Liao
+Former Editor: Mark Janse
+Former Editor: Junda Huang
+Former Editor: Luiz Bonino
+Feedback: 
 Warning: not ready
 Logo: health-ri logo
 Favicon: favicon url
