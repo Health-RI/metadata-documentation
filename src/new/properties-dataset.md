@@ -210,9 +210,9 @@
       <td><code>dct:spatial</code></td>
       <td>
         EU Vocabularies Lists: <br>
-        <a href="http://publications.europa.eu/resource/authority/continent/">Continents</a> <br>
+        <a href="http://publications.europa.eu/resource/authority/continent">Continents</a> <br>
         <a href="http://publications.europa.eu/resource/authority/country">Countries</a> <br>
-        <a href="http://publications.europa.eu/resource/authority/place/">Places</a> <br>
+        <a href="http://publications.europa.eu/resource/authority/place">Places</a> <br>
         OR <br>
         <a href="http://sws.geonames.org/">Geonames</a> OR <br>
         <a href="https://vocabs.cbs.nl/nl/">CBS Classificaties en begrippen</a>
