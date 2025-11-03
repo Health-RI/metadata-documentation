@@ -35,43 +35,43 @@ Markup Shorthands: markdown yes, css no
 </pre>
 
 <pre class=include>
-path: src/new/style-tables1.md
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
-path: src/new/permanent-urls.md
+path: src/new/chapter/1-permanent-urls.md
 </pre>
 
 <pre class=include>
-path: src/new/previous-published.md
+path: src/new/chapter/2-previous-published.md
 </pre>
 
 <pre class=include>
-path: src/new/purpose-and-audience.md
+path: src/new/chapter/3-purpose-and-audience.md
 </pre>
 
 <pre class=include>
-path: src/new/introduction.md
+path: src/new/chapter/4-introduction.md
 </pre>
 
 <pre class=include>
-path: src/new/classtext.md
+path: src/new/chapter/5-classtext.md
 </pre>
 
 <pre class=include>
-path: src/new/classes-main.md
+path: src/new/chapter/6-classes-main.md
 </pre>
 
 <pre class=include>
-path: src/new/classes-supportive.md
+path: src/new/chapter/7-classes-supportive.md
 </pre>
 
 <pre class=include>
-path: src/new/further-information.md
+path: src/new/chapter/8-further-information.md
 </pre>
 
 <pre class=include>
-path: src/new/spec-configure.md
+path: src/new/chapter/9-spec-configure.md
 </pre>
 
 

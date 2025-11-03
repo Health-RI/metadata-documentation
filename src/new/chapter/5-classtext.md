@@ -9,7 +9,7 @@ Main classes in this structure:
 - **Dataset**
 - **Data Service**
 - **Dataset Series**
-- **Distribution**.
+- **Distribution**
 
 Supportive classes in this structure:
 - **Agent**
