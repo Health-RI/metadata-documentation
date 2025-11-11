@@ -54,6 +54,7 @@
 
 #### Recommended Properties 
 
+
 <table>
   <thead>
     <tr>
@@ -73,7 +74,12 @@
       <td><code>dct:spatial</code></td>
       <td><a href="https://publications.europa.eu/resource/authority/country">EU Vocabularies Country Authority List</a></td>
       <td><code>dct:Location</code></td>
-      <td>Use the appropriate term from the EU authority table. Example for the Netherlands: <code>http://publications.europa.eu/resource/authority/country/NLD</code></td>
+      <td>
+        <details>
+          <summary>Usage Note</summary>
+          Use the appropriate term from the EU authority table. Example for the Netherlands: <code>http://publications.europa.eu/resource/authority/country/NLD</code>
+        </details>
+      </td>
       <td>0..*</td>
     </tr>
     <tr>
@@ -82,7 +88,12 @@
       <td><code>healthdcatap:publisherNote</code></td>
       <td>NA</td>
       <td><code>rdfs:Literal</code></td>
-      <td>This property can be repeated for parallel language versions of the publisher's notes. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en</td>
+      <td>
+        <details>
+          <summary>Usage Note</summary>
+          This property can be repeated for parallel language versions of the publisher's notes. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en
+        </details>
+      </td>
       <td>0..1</td>
     </tr>
     <tr>
@@ -91,7 +102,12 @@
       <td><code>healthdcatap:publisherType</code></td>
       <td>NA</td>
       <td><code>skos:Concept</code></td>
-      <td>A <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">controlled vocabulary</a> is provided, denoting commonly recognised health publishers. <em>Current status</em>: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL format: <em><code>http://purl.org/adms/publishertype/[type]</code></em>.</td>
+      <td>
+        <details>
+          <summary>Usage Note</summary>
+          A <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">controlled vocabulary</a> is provided, denoting commonly recognised health publishers. <em>Current status</em>: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL format: <em><code>http://purl.org/adms/publishertype/[type]</code></em>.
+        </details>
+      </td>
       <td>0..1</td>
     </tr>
     <tr>
@@ -100,9 +116,13 @@
       <td><code>dct:type</code></td>
       <td><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">ADMS Agent Type</a></td>
       <td><code>skos:Concept</code></td>
-      <td>NA</td>
+      <td>
+        <details>
+          <summary>Usage Note</summary>
+          NA
+        </details>
+      </td>
       <td>0..1</td>
     </tr>
   </tbody>
 </table>
-
