@@ -1491,454 +1491,860 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 7b3ff057a, updated Sun Nov 9 18:39:50 2025 -0800" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="962eca48a778093e2673dda5695dacde87f4ff88" name="revision">
+  <meta content="9ec38a9fd0dd2eee973a85245c8fb126265f1bf1" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>
+  :root {
+    --table-font: 'Segoe UI', sans-serif;
+    --table-font-size: 15px;
+    --table-border: 1px solid #d0d0d0;
+    --table-header-bg: #e8f0fe;
+    --table-header-color: #2d3e50;
+    --table-row-even: #f5faff;
+    --table-row-odd: #ffffff;
+    --table-padding: 14px;
+    --table-col-width: 200px;
+  }
+
   table {
-    table-layout: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 15px;
+    font-family: var(--table-font);
+    font-size: var(--table-font-size);
   }
 
   th, td {
-    padding: 14px;
+    padding: var(--table-padding);
     text-align: left;
-    border: 1px solid #d0d0d0;
+    border: var(--table-border);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+    width: var(--table-col-width);
   }
 
   th {
-    background-color: #e8f0fe;
-    color: #2d3e50;
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
     font-weight: 600;
   }
 
   tr:nth-child(even) {
-    background-color: #f5faff;
+    background-color: var(--table-row-even);
   }
 
   tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--table-row-odd);
+  }
+
+  /* Dark mode overrides */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --table-border: 1px solid #444;
+      --table-header-bg: #2a2a2a;
+      --table-header-color: #f0f0f0;
+      --table-row-even: #1e1e1e;
+      --table-row-odd: #121212;
+    }
+
+    body {
+      background-color: #000;
+      color: #ccc;
+    }
   }
 </style>
 <style>/* Boilerplate: style-autolinks */
@@ -4117,7 +4523,13 @@ Supportive classes are included because they form the range of properties used b
       <td><code>dct:spatial</code>
       <td><a href="https://publications.europa.eu/resource/authority/country">EU Vocabularies Country Authority List</a>
       <td><code>dct:Location</code>
-      <td>Use the appropriate term from the EU authority table. Example for the Netherlands: <code>http://publications.europa.eu/resource/authority/country/NLD</code>
+      <td>
+       <details>
+        <summary>Usage Note</summary>
+        
+          Use the appropriate term from the EU authority table. Example for the Netherlands: <code>http://publications.europa.eu/resource/authority/country/NLD</code>
+        
+       </details>
       <td>0..*
      <tr>
       <td><a href="https://healthdcat-ap.github.io/#Dataset.publishernote">publisher note</a>
@@ -4125,7 +4537,13 @@ Supportive classes are included because they form the range of properties used b
       <td><code>healthdcatap:publisherNote</code>
       <td>NA
       <td><code>rdfs:Literal</code>
-      <td>This property can be repeated for parallel language versions of the publisher’s notes. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en
+      <td>
+       <details>
+        <summary>Usage Note</summary>
+        
+          This property can be repeated for parallel language versions of the publisher’s notes. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en
+        
+       </details>
       <td>0..1
      <tr>
       <td><a href="https://healthdcat-ap.github.io/#Dataset.publishertype">publisher type</a>
@@ -4133,7 +4551,13 @@ Supportive classes are included because they form the range of properties used b
       <td><code>healthdcatap:publisherType</code>
       <td>NA
       <td><code>skos:Concept</code>
-      <td>A <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">controlled vocabulary</a> is provided, denoting commonly recognised health publishers. <em>Current status</em>: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL format: <em><code>http://purl.org/adms/publishertype/[type]</code></em>.
+      <td>
+       <details>
+        <summary>Usage Note</summary>
+        
+          A <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">controlled vocabulary</a> is provided, denoting commonly recognised health publishers. <em>Current status</em>: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL format: <em><code>http://purl.org/adms/publishertype/[type]</code></em>.
+        
+       </details>
       <td>0..1
      <tr>
       <td><a href="http://purl.org/dc/terms/type">type</a>
@@ -4141,7 +4565,13 @@ Supportive classes are included because they form the range of properties used b
       <td><code>dct:type</code>
       <td><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">ADMS Agent Type</a>
       <td><code>skos:Concept</code>
-      <td>NA
+      <td>
+       <details>
+        <summary>Usage Note</summary>
+        
+          NA
+        
+       </details>
       <td>0..1
    </table>
    <h4 class="heading settled" data-level="7.1.2" id="kind"><span class="secno">7.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819">Kind</a></span><a class="self-link" href="#kind"></a></h4>
