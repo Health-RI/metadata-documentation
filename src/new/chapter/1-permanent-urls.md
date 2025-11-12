@@ -17,5 +17,5 @@ The following **W3ID redirects** are available for Health-RI metadata:
   - Use the following pattern to reference a specific versioned release: `https://w3id.org/health-ri/metadata/releases/{version}`.
   - For example: [w3id.org/health-ri/metadata/releases/v1.0.1](https://w3id.org/health-ri/metadata/releases/v1.0.1)
 
-
- 
+## License
+CC-BY-4.0 license
