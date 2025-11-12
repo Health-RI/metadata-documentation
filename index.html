@@ -1490,581 +1490,721 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 7b3ff057a, updated Sun Nov 9 18:39:50 2025 -0800" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="b482d3bbdead1410e169857b450417247f6d7b76" name="revision">
+  <meta content="79f91b6df1dcbb75bb658f36164f38a1b02824ab" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  margin: 20px 0;
-}
-
+/* Simple, small table with dark mode */
 table {
-  width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* Equal column widths */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 11px;       /* one point larger */
+  line-height: 1.2;
 }
 
 th, td {
-  padding: 12px;
-  text-align: left;
   border: 1px solid #ccc;
-  white-space: normal;
-  word-wrap: break-word;
+  padding: 2px 4px;      /* compact spacing */
+  text-align: left;
+  vertical-align: top;
 }
 
 th {
-  background-color: #fdf3e7; /* Warm beige header */
-  color: #1565c0; /* Blue accent for text */
-  font-weight: 600;
+  background: #d9edf7;   /* softer blue header for contrast */
+  font-weight: bold;
 }
 
-tr:nth-child(even) td {
-  background-color: #f9fcff; /* Light blue tint for alternating rows */
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
-  table { background-color: #1a1a1a; color: #e0e0e0; }
-  th { background-color: #333; color: #cce4ff; }
-  td { border-color: #444; }
-  tr:nth-child(even) td { background-color: #222; }
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466; /* deep blue header in dark mode */
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
 }
+
 </style>
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2501,7 +2641,7 @@ dfn > a.self-link::before      { content: "#"; }
      <dd class="editor h-card p-author vcard"><span class="fn p-name">Junda Huang</span>
      <dd class="editor h-card p-author vcard"><span class="fn p-name">Luiz Bonino</span>
      <dt>License:
-     <dd>other
+     <dd>CC-BY-4.0
     </dl>
    </div>
    <div data-fill-with="warning"></div>
@@ -2531,7 +2671,6 @@ Parts of this work may be from another specification document.  If so, those par
       <li><a href="#health-ri-metadata"><span class="secno">1.2</span> <span class="content">Health-RI Metadata</span></a>
       <li><a href="#metadata-resources"><span class="secno">1.3</span> <span class="content">Metadata Resources</span></a>
       <li><a href="#versioning--releases"><span class="secno">1.4</span> <span class="content">Versioning &amp; Releases</span></a>
-      <li><a href="#license"><span class="secno">1.5</span> <span class="content">License</span></a>
      </ol>
     <li>
      <a href="#previous-published"><span class="secno">2</span> <span class="content">Previous Published</span></a>
@@ -2703,12 +2842,6 @@ The following <strong>W3ID redirects</strong> are available for Health-RI metada
     <li data-md>
      <p>For example: <a href="https://w3id.org/health-ri/metadata/releases/v1.0.1">w3id.org/health-ri/metadata/releases/v1.0.1</a></p>
    </ul>
-   <h3 class="heading settled" data-level="1.5" id="license"><span class="secno">1.5. </span><span class="content">License</span><a class="self-link" href="#license"></a></h3>
-   
-CC-BY-4.0 license
-
-
-
    <h2 class="heading settled" data-level="2" id="previous-published"><span class="secno">2. </span><span class="content">Previous Published</span><a class="self-link" href="#previous-published"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="previous-versions"><span class="secno">2.1. </span><span class="content">Previous versions</span><a class="self-link" href="#previous-versions"></a></h3>
    <p>The previous published version (version 1.0.2) of the Health-RI core metadata schema is <a href="https://github.com/Health-RI/health-ri-metadata/releases/tag/v1.0.2">available here</a>.</p>
