@@ -54,7 +54,7 @@
 
 #### Recommended Properties 
 
-
+<div class="table-wrapper">
 <table>
   <thead>
     <tr>
@@ -76,7 +76,7 @@
       <td><code>dct:Location</code></td>
       <td>
         <details>
-          <summary>Usage Note</summary>
+          <summary>Show details</summary>
           Use the appropriate term from the EU authority table. Example for the Netherlands: <code>http://publications.europa.eu/resource/authority/country/NLD</code>
         </details>
       </td>
@@ -90,7 +90,7 @@
       <td><code>rdfs:Literal</code></td>
       <td>
         <details>
-          <summary>Usage Note</summary>
+          <summary>Show details</summary>
           This property can be repeated for parallel language versions of the publisher's notes. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en
         </details>
       </td>
@@ -104,7 +104,7 @@
       <td><code>skos:Concept</code></td>
       <td>
         <details>
-          <summary>Usage Note</summary>
+          <summary>Show details</summary>
           A <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">controlled vocabulary</a> is provided, denoting commonly recognised health publishers. <em>Current status</em>: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL format: <em><code>http://purl.org/adms/publishertype/[type]</code></em>.
         </details>
       </td>
@@ -118,7 +118,7 @@
       <td><code>skos:Concept</code></td>
       <td>
         <details>
-          <summary>Usage Note</summary>
+          <summary>Show details</summary>
           NA
         </details>
       </td>
@@ -126,3 +126,4 @@
     </tr>
   </tbody>
 </table>
+</div>

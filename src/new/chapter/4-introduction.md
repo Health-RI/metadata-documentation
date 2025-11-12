@@ -93,6 +93,7 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
   </tbody> 
 </table>
 
+
 # Overview and Diagram
 An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
 
@@ -104,12 +105,11 @@ Properties derived from draft [HealthDCAT-AP](https://healthdcat-ap.github.io/) 
 
 A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found [here](Documents/Metadata_CoreGenericHealth_v2.xlsx). This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).
 
+
 ## UML of the Profile (Version 2)
+
 <a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
-  <img 
-    src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" 
-    alt="Health-RI Metadata Diagram"
-  >
+  <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" alt="Health-RI Metadata Diagram" style="display:block; margin:0 auto; max-width:80%; height:auto;">
 </a>
 
 Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.
