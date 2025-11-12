@@ -1491,861 +1491,581 @@ Possible extra rowspan handling
   <meta content="Bikeshed version 7b3ff057a, updated Sun Nov 9 18:39:50 2025 -0800" name="generator">
   <link href="canonical url" rel="canonical">
   <link href="favicon url" rel="icon">
-  <meta content="c1c415bc4d863a2a91d25e7f41e434a27fe4b9a1" name="revision">
+  <meta content="fc80bd66d7bf204153db15420cf87d2e711a8dae" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>
-  :root {
-    --table-font: 'Segoe UI', sans-serif;
-    --table-font-size: 15px;
-    --table-border: 1px solid #d0d0d0;
-    --table-header-bg: #e8f0fe;
-    --table-header-color: #2d3e50;
-    --table-row-even: #f5faff;
-    --table-row-odd: #ffffff;
-    --table-padding: 14px;
-    --table-col-width: 200px;
-  }
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
 
-  table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    font-family: var(--table-font);
-    font-size: var(--table-font-size);
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Equal column widths */
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+}
 
-  th, td {
-    padding: var(--table-padding);
-    text-align: left;
-    border: var(--table-border);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-    width: var(--table-col-width);
-  }
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
-  th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-color);
-    font-weight: 600;
-  }
+th {
+  background-color: #fdf3e7; /* Warm beige header */
+  color: #1565c0; /* Blue accent for text */
+  font-weight: 600;
+}
 
-  tr:nth-child(even) {
-    background-color: var(--table-row-even);
-  }
+tr:nth-child(even) td {
+  background-color: #f9fcff; /* Light blue tint for alternating rows */
+}
 
-  tr:nth-child(odd) {
-    background-color: var(--table-row-odd);
-  }
-
-  /* Dark mode overrides */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --table-border: 1px solid #444;
-      --table-header-bg: #2a2a2a;
-      --table-header-color: #f0f0f0;
-      --table-row-even: #1e1e1e;
-      --table-row-odd: #121212;
-    }
-
-    body {
-      background-color: #000;
-      color: #ccc;
-    }
-  }
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table { background-color: #1a1a1a; color: #e0e0e0; }
+  th { background-color: #333; color: #cce4ff; }
+  td { border-color: #444; }
+  tr:nth-child(even) td { background-color: #222; }
+}
 </style>
 <style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
@@ -2797,7 +2517,7 @@ Parts of this work may be from another specification document.  If so, those par
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p><img alt src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_Logo.png" title> <br> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.</p>
+   <p><img alt="Health-RI Logo" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_Logo.png" style="max-width:480px; height:auto;" title="Health-RI Logo"> <br> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema. CC-BY-4.0 license.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -3070,12 +2790,9 @@ An overview of the metadata schema core is presented in the UML diagram below. T
    <p>Properties derived from draft <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
    <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="Documents/Metadata_CoreGenericHealth_v2.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
    <h3 class="heading settled" data-level="5.1" id="uml-of-the-profile-version-2"><span class="secno">5.1. </span><span class="content">UML of the Profile (Version 2)</span><a class="self-link" href="#uml-of-the-profile-version-2"></a></h3>
-   
-<a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
-  <img alt="Health-RI Metadata Diagram" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png">
-</a>
-
-
+   <p><a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
+  <img alt="Health-RI Metadata Diagram" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" style="display:block; margin:0 auto; max-width:80%; height:auto;">
+</a></p>
    <p>Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.</p>
    <h3 class="heading settled" data-level="5.2" id="classtext"><span class="secno">5.2. </span><span class="content">Class Structure</span><a class="self-link" href="#classtext"></a></h3>
    
@@ -4506,74 +4223,76 @@ Supportive classes are included because they form the range of properties used b
       <td>1
    </table>
    <h5 class="heading settled" data-level="7.1.1.2" id="recommended-properties⑤"><span class="secno">7.1.1.2. </span><span class="content">Recommended Properties</span><a class="self-link" href="#recommended-properties⑤"></a></h5>
-   <table>
-    <thead>
-     <tr>
-      <th>Property name
-      <th>Definition
-      <th>URI
-      <th>Controlled Vocabulary
-      <th>rdfs:Range
-      <th>Usage Note
-      <th>Cardinality
-    <tbody>
-     <tr>
-      <td><a href="http://purl.org/dc/terms/spatial">country</a>
-      <td>Country of the agent.
-      <td><code>dct:spatial</code>
-      <td><a href="https://publications.europa.eu/resource/authority/country">EU Vocabularies Country Authority List</a>
-      <td><code>dct:Location</code>
-      <td>
-       <details>
-        <summary>Usage Note</summary>
-        
+   <div class="table-wrapper">
+    <table>
+     <thead>
+      <tr>
+       <th>Property name
+       <th>Definition
+       <th>URI
+       <th>Controlled Vocabulary
+       <th>rdfs:Range
+       <th>Usage Note
+       <th>Cardinality
+     <tbody>
+      <tr>
+       <td><a href="http://purl.org/dc/terms/spatial">country</a>
+       <td>Country of the agent.
+       <td><code>dct:spatial</code>
+       <td><a href="https://publications.europa.eu/resource/authority/country">EU Vocabularies Country Authority List</a>
+       <td><code>dct:Location</code>
+       <td>
+        <details>
+         <summary>Show details</summary>
+         
           Use the appropriate term from the EU authority table. Example for the Netherlands: <code>http://publications.europa.eu/resource/authority/country/NLD</code>
         
-       </details>
-      <td>0..*
-     <tr>
-      <td><a href="https://healthdcat-ap.github.io/#Dataset.publishernote">publisher note</a>
-      <td>A property used to provide additional context about a publisher.
-      <td><code>healthdcatap:publisherNote</code>
-      <td>NA
-      <td><code>rdfs:Literal</code>
-      <td>
-       <details>
-        <summary>Usage Note</summary>
-        
+        </details>
+       <td>0..*
+      <tr>
+       <td><a href="https://healthdcat-ap.github.io/#Dataset.publishernote">publisher note</a>
+       <td>A property used to provide additional context about a publisher.
+       <td><code>healthdcatap:publisherNote</code>
+       <td>NA
+       <td><code>rdfs:Literal</code>
+       <td>
+        <details>
+         <summary>Show details</summary>
+         
           This property can be repeated for parallel language versions of the publisher’s notes. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en
         
-       </details>
-      <td>0..1
-     <tr>
-      <td><a href="https://healthdcat-ap.github.io/#Dataset.publishertype">publisher type</a>
-      <td>A category (type) of organisation that makes the Dataset available
-      <td><code>healthdcatap:publisherType</code>
-      <td>NA
-      <td><code>skos:Concept</code>
-      <td>
-       <details>
-        <summary>Usage Note</summary>
-        
+        </details>
+       <td>0..1
+      <tr>
+       <td><a href="https://healthdcat-ap.github.io/#Dataset.publishertype">publisher type</a>
+       <td>A category (type) of organisation that makes the Dataset available
+       <td><code>healthdcatap:publisherType</code>
+       <td>NA
+       <td><code>skos:Concept</code>
+       <td>
+        <details>
+         <summary>Show details</summary>
+         
           A <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">controlled vocabulary</a> is provided, denoting commonly recognised health publishers. <em>Current status</em>: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL format: <em><code>http://purl.org/adms/publishertype/[type]</code></em>.
         
-       </details>
-      <td>0..1
-     <tr>
-      <td><a href="http://purl.org/dc/terms/type">type</a>
-      <td>A type of the agent that makes the Catalogue or Dataset available.
-      <td><code>dct:type</code>
-      <td><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">ADMS Agent Type</a>
-      <td><code>skos:Concept</code>
-      <td>
-       <details>
-        <summary>Usage Note</summary>
-        
+        </details>
+       <td>0..1
+      <tr>
+       <td><a href="http://purl.org/dc/terms/type">type</a>
+       <td>A type of the agent that makes the Catalogue or Dataset available.
+       <td><code>dct:type</code>
+       <td><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">ADMS Agent Type</a>
+       <td><code>skos:Concept</code>
+       <td>
+        <details>
+         <summary>Show details</summary>
+         
           NA
         
-       </details>
-      <td>0..1
-   </table>
+        </details>
+       <td>0..1
+    </table>
+   </div>
    <h4 class="heading settled" data-level="7.1.2" id="kind"><span class="secno">7.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819">Kind</a></span><a class="self-link" href="#kind"></a></h4>
    <table>
     <thead>
