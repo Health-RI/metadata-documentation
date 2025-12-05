@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 7b3ff057a, updated Sun Nov 9 18:39:50 2025 -0800" name="generator">
+  <meta content="Bikeshed version d1be30331, updated Wed Dec 3 00:19:09 2025 +0000" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="5c012c2a816423a056c2223089571be11e86533e" name="revision">
+  <meta content="005ebeaf4303ffb5cde0056194397a21a3630f46" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* Simple, small table with dark mode */
@@ -2609,7 +2609,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">Health-RI Metadata Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2025-11-12">12 November 2025</time></span></h2>
+    <time class="dt-updated" datetime="2025-12-05">5 December 2025</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2648,7 +2648,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" height="15" src="https://licensebuttons.net/p/zero/1.0/80x15.png" width="80"></a>
 To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 12 November 2025,
+In addition, as of 5 December 2025,
 the editors have made this specification available under the
 <a href="https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at https://www.openwebfoundation.org/the-agreements/the-owf-1-0-agreements-granted-claims/owfa-1-0.
@@ -2663,7 +2663,7 @@ Parts of this work may be from another specification document.  If so, those par
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
-   <ol class="toc" role="directory">
+   <ol class="toc">
     <li>
      <a href="#permanent-urls"><span class="secno">1</span> <span class="content">Permanent Urls</span></a>
      <ol class="toc">
@@ -2860,8 +2860,6 @@ Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/ma
    <p>To indicate the <strong>nature of the data</strong> (e.g., whole genome sequencing or questionnaire data), we propose using <code>healthdcatap:healthTheme</code>. For <strong>synthetic data</strong>, use <code>dct:type</code> with the required controlled vocabulary in the <code>dcat:Dataset</code> class.</p>
    <p>Several classes from <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and draft <a href="https://healthdcat-ap.github.io/">HealthDCAT-AP</a> have been included but not further specified for Health-RI yet. This includes the <strong>DataService</strong> class, meaning that these classes can be used but are not yet tailored to specific dataholder needs for the National Health Data Catalogue.</p>
    <h3 class="heading settled" data-level="4.2" id="used-prefixes"><span class="secno">4.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
-   
-<br>
    <table>
     <caption></caption>
     <thead>
@@ -2917,6 +2915,8 @@ Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/ma
      <tr>
       <td>xsd
       <td>http://www.w3.org/2001/XMLSchema#
+       <br>
+    
      <tr>
       <td>healthdcatap
       <td>To Be Determined 
@@ -3125,7 +3125,7 @@ Supportive classes are included because they form the range of properties used b
       <td><code>dct:creator</code>
       <td>NA
       <td><code>foaf:Agent</code>
-      <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.
+      <td>The creator is the entity responsible for making the resource. According to <a href="https://wetten.overheid.nl/BWBR0010591/2021-06-07">Dutch databank</a> and <a href="https://wetten.overheid.nl/BWBR0001886/2025-07-01/0">copyright law</a>, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the <code>dct:publisher</code>, being the organisation (not a department or subdivision of the organisation) where the datresource was created. <br> In case there are multiple (collaborating) organisation involved, all of them can be stated as <code>dct:creator</code>, as the model allows more than one creator. <br> Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1.
       <td>0..*
      <tr>
       <td><a href="http://purl.org/dc/terms/spatial">geographical coverage</a>
@@ -3172,7 +3172,7 @@ Supportive classes are included because they form the range of properties used b
       <td><code>dct:license</code>
       <td><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">Geonovum licence list</a>
       <td><code>dct:LicenseDocument</code>
-      <td>The licence under which the catalogue (with resource description) is made available. In the description of distributions and data services, the licences of that resources are taken up.
+      <td>The licence under which the catalogue (with resource description) is made available. <br> The licences for Distributions and Data Services are not specified here. They are specified in the licence properties of their respective classes.
       <td>0..1
      <tr>
       <td><a href="http://purl.org/dc/terms/modified">modification date</a>
