@@ -106,7 +106,7 @@
       <td><code>dct:creator</code></td> 
       <td>NA</td> 
       <td><code>foaf:Agent</code></td> 
-      <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.</td> 
+      <td>The creator is the entity responsible for making the resource. According to <a href="https://wetten.overheid.nl/BWBR0010591/2021-06-07">Dutch databank</a> and <a href="https://wetten.overheid.nl/BWBR0001886/2025-07-01/0">copyright law</a>, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the `dct:publisher`, being the organisation (not a department or subdivision of the organisation) where the datresource was created. <br> In case there are multiple (collaborating) organisation involved, all of them can be stated as `dct:creator`, as the model allows more than one creator. <br> Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1.</td> 
       <td>0..*</td> 
     </tr> 
     <tr> 
@@ -158,7 +158,7 @@
       <td><code>dct:license</code></td> 
       <td><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">Geonovum licence list</a></td> 
       <td><code>dct:LicenseDocument</code></td> 
-      <td>The licence under which the catalogue (with resource description) is made available. In the description of distributions and data services, the licences of that resources are taken up.</td> 
+      <td>The licence under which the catalogue (with resource description) is made available. <br> The licences for Distributions and Data Services are not specified here. They are specified in the licence properties of their respective classes.</td> 
       <td>0..1</td> 
     </tr> 
     <tr> 
