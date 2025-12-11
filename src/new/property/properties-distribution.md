@@ -40,7 +40,7 @@
       <td><code>dct:format</code></td>
       <td><a href="http://publications.europa.eu/resource/authority/file-type">EU Vocabularies File Type Authority List</a></td>
       <td><code>dct:MediaType or Extent</code></td>
-      <td>This property can be used to describe a media format in more detail than <code>media type</code> (using IANA media type) when needed. Instances of this property should use a URL, e.g., from the <a href="https://publications.europa.eu/resource/authority/file-type">File Type vocabulary</a>. For instance, for mzML files, the value of this property could be: <code>http://edamontology.org/format_3244</code></td>
+      <td>This property can be used to describe a media format in more detail than <code>media type</code> (using IANA media type) when needed. Instances of this property should use a URL from the <a href="https://publications.europa.eu/resource/authority/file-type">File Type vocabulary</a>. </code></td>
       <td>1</td>
       <td><code>http://publications.europa.eu/resource/authority/file-type/TSV</code></td>
     </tr>
