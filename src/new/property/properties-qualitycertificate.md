@@ -1,0 +1,30 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Property label</th>
+      <th>Definition</th>
+      <th>Property URI</th>
+      <th>Range</th>
+      <th>Cardinality</th>
+      <th>Usage note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>target</td>
+      <td>The relationship between an Annotation and its Target.</td>
+      <td>oa:hasTarget</td>
+      <td>rdfs:Resource (IRI)</td>
+      <td>0..1</td>
+      <td>This property has to be filled with the same value as the dct:identifier of the dataset described, in order to link the quality certificate to that dataset.\nSee also example in HealthDCAT-AP: https://healthdcat-ap.github.io/#dqvhasqualityannotation</td>
+    </tr>
+    <tr>
+      <td>body</td>
+      <td>The object of the relationship is a resource that is a body of the Annotation.</td>
+      <td>oa:hasBody</td>
+      <td>rdfs:Resource (IRI)</td>
+      <td>0..1</td>
+      <td>IRI pointing to the location where the quality certificate can be found.</td>
+    </tr>
+  </tbody>
+</table>

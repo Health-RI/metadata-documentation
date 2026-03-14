@@ -4,6 +4,10 @@
 ## Mandatory 
 
 <pre class=include>
+path: src/new/table/style-tables-general.md
+</pre>
+
+<pre class=include>
 path: src/new/class/class-catalog.md
 </pre>
 
@@ -12,7 +16,11 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-catalog.md
+path: src/new/property/properties-catalogue.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
@@ -30,6 +38,10 @@ path: src/new/property/properties-dataset.md
 ## Recommended 
 
 <pre class=include>
+path: src/new/table/style-tables-general.md
+</pre>
+
+<pre class=include>
 path: src/new/class/class-data-service.md
 </pre>
 
@@ -38,7 +50,11 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-data-service.md
+path: src/new/property/properties-dataservice.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
@@ -50,7 +66,11 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-dataset-series.md
+path: src/new/property/properties-datasetseries.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
@@ -64,3 +84,5 @@ path: src/new/table/style-tables-2.md
 <pre class=include>
 path: src/new/property/properties-distribution.md
 </pre>
+
+

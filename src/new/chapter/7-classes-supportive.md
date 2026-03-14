@@ -4,6 +4,10 @@
 ## Mandatory
 
 <pre class=include>
+path: src/new/table/style-tables-general.md
+</pre>
+
+<pre class=include>
 path: src/new/class/class-agent.md
 </pre>
 
@@ -13,6 +17,10 @@ path: src/new/table/style-tables-2.md
 
 <pre class=include>
 path: src/new/property/properties-agent.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
@@ -30,6 +38,10 @@ path: src/new/property/properties-kind.md
 ## Recommended 
 
 <pre class=include>
+path: src/new/table/style-tables-general.md
+</pre>
+
+<pre class=include>
 path: src/new/class/class-attribution.md
 </pre>
 
@@ -39,6 +51,10 @@ path: src/new/table/style-tables-2.md
 
 <pre class=include>
 path: src/new/property/properties-attribution.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
@@ -54,6 +70,10 @@ path: src/new/property/properties-checksum.md
 </pre>
 
 <pre class=include>
+path: src/new/table/style-tables-general.md
+</pre>
+
+<pre class=include>
 path: src/new/class/class-identifier.md
 </pre>
 
@@ -62,7 +82,11 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-identifier.md
+path: src/new/property/properties-adms_identifier.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
@@ -74,7 +98,11 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-period-of-time.md
+path: src/new/property/properties-periodoftime.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
@@ -86,7 +114,11 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-quality-certificate.md
+path: src/new/property/properties-qualitycertificate.md
+</pre>
+
+<pre class=include>
+path: src/new/table/style-tables-general.md
 </pre>
 
 <pre class=include>
