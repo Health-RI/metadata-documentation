@@ -16,16 +16,9 @@ For whom needs more introduction and general instructions you can also visit Con
 
 [metadata mapping](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial),  
 
-and visual aid for 
-
-[elements of the metadata schema](https://health-ri.atlassian.net/wiki/spaces/FSD/
-pages/279281676/4A+Metadata+mapping#%F0%9F%A7%A9-What-are-the-elements-of-the-Health-RI-core-metadata-schema%3F)
-
-or 
+[elements of the metadata schema](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping#%F0%9F%A7%A9-What-are-the-elements-of-the-Health-RI-core-metadata-schema%3F)
 
 [relations between classes](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping#Overview-of-all-core-Health-RI-classes-and-relations-between-classes). 
-
-
 
 With any further questions or comments please contact Health-RI via the Health-RI ServiceDesk or via servicedesk@health-ri.nl.
 
