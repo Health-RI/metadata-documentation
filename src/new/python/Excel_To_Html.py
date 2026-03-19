@@ -11,8 +11,8 @@ import pandas as pd
 
 # Configuration
 # EXCEL_FILE_PATH = "./inputs/filename.xlsx"
-EXCEL_FILE_PATH = "../excel/Metadata_CoreGenericHealth_v2_Harm.xlsx"
-FOLDER_NAME = "test-property"
+EXCEL_FILE_PATH = "../excel/Metadata_CoreGenericHealth_v2_Extended.xlsx"
+FOLDER_NAME = "property"
 OUTPUT_PATH = Path("../") / FOLDER_NAME
 
 def main():

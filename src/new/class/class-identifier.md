@@ -1,5 +1,5 @@
 ### [Identifier](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

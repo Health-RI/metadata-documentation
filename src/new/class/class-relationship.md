@@ -1,5 +1,5 @@
 ### [Relationship](https://w3c.github.io/dxwg/dcat/#Class:Relationship)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+
