@@ -1490,26 +1490,26 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 0ef803fdf, updated Tue Jan 6 11:59:39 2026 -0800" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="abb37383c34e82d38712c571d19225b1a413908e" name="revision">
+  <meta content="0339a3a1d487c15e0135b8d4681a08cd2dd37ebb" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -1528,7 +1528,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -1542,6 +1542,107 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+</style>
+<style>
+/* ===== Global table style (unchanged) ===== */
+table {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 2px 4px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #d9edf7;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #e6f2ff;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  table {
+    background-color: #111;
+    color: #eee;
+  }
+  th {
+    background-color: #004466;
+    color: #fff;
+  }
+  td {
+    border: 1px solid #444;
+  }
+  tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  tr:hover {
+    background-color: #333366;
+  }
+}
+
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -1595,23 +1696,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -1630,7 +1731,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -1644,6 +1745,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -1697,23 +1823,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -1732,7 +1858,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -1746,6 +1872,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -1799,23 +1950,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -1834,7 +1985,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -1848,6 +1999,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -1901,23 +2077,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -1936,7 +2112,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -1950,6 +2126,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2003,23 +2204,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2038,7 +2239,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2052,6 +2253,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2105,23 +2331,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2140,7 +2366,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2154,6 +2380,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2207,23 +2458,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2242,7 +2493,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2256,6 +2507,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2309,23 +2585,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2344,7 +2620,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2358,6 +2634,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2411,23 +2712,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2446,7 +2747,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2460,6 +2761,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2513,23 +2839,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2548,7 +2874,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2562,6 +2888,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2615,23 +2966,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2650,7 +3001,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2664,6 +3015,31 @@ tr:hover {
   }
 }
 
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
+}
+
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
+}
+
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
+
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
+}
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -2717,23 +3093,23 @@ tr:hover {
 
 </style>
 <style>
-/* Simple, small table with dark mode */
+/* ===== Global table style (unchanged) ===== */
 table {
   border-collapse: collapse;
   font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
+  font-size: 11px;
   line-height: 1.2;
 }
 
 th, td {
   border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
+  padding: 2px 4px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  background: #d9edf7;   /* softer blue header for contrast */
+  background: #d9edf7;
   font-weight: bold;
 }
 
@@ -2752,7 +3128,7 @@ tr:hover {
     color: #eee;
   }
   th {
-    background-color: #004466; /* deep blue header in dark mode */
+    background-color: #004466;
     color: #fff;
   }
   td {
@@ -2766,57 +3142,31 @@ tr:hover {
   }
 }
 
-</style>
-<style>
-/* Simple, small table with dark mode */
-table {
-  border-collapse: collapse;
-  font-family: sans-serif;
-  font-size: 11px;       /* one point larger */
-  line-height: 1.2;
+/* ===== OVERRIDE ONLY THIS TABLE ===== */
+table.no-style,
+table.no-style th,
+table.no-style td {
+  border: none !important;
+  background: none !important;
+  font-size: 12.5px !important;    /* larger text */
+  line-height: 1.4 !important;   /* better readability */
+  margin-bottom: 1.5em;          /* space after table */
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 2px 4px;      /* compact spacing */
-  text-align: left;
-  vertical-align: top;
+table.no-style th,
+table.no-style td {
+  padding: 0.2em 0.8em 0.4em 0 !important;  /* extra padding for spacing */
 }
 
-th {
-  background: #d9edf7;   /* softer blue header for contrast */
-  font-weight: bold;
+/* Top line for header */
+table.no-style thead th {
+  border-bottom: 1px solid #aaaaaa00 !important;
 }
 
-tr:nth-child(even) {
-  background: #f9f9f9;
+/* Bottom line under last row */
+table.no-style tr:last-child td {
+  border-bottom: 1px solid #aaaaaa00 !important;
 }
-
-tr:hover {
-  background: #e6f2ff;
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  table {
-    background-color: #111;
-    color: #eee;
-  }
-  th {
-    background-color: #004466; /* deep blue header in dark mode */
-    color: #fff;
-  }
-  td {
-    border: 1px solid #444;
-  }
-  tr:nth-child(even) {
-    background-color: #1a1a1a;
-  }
-  tr:hover {
-    background-color: #333366;
-  }
-}
-
 </style>
 <style>
 /* Simple, small table with dark mode */
@@ -3272,7 +3622,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">Health-RI Metadata Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-03-14">14 March 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-03-19">19 March 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -3607,7 +3957,7 @@ Supportive classes are included because they form the range of properties used b
 
    <h3 class="heading settled" data-level="6.1" id="mandatory"><span class="secno">6.1. </span><span class="content">Mandatory</span><a class="self-link" href="#mandatory"></a></h3>
    <h4 class="heading settled" data-level="6.1.1" id="catalog"><span class="secno">6.1.1. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Catalog</a></span><a class="self-link" href="#catalog"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -3680,34 +4030,6 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:Location (IRI)
       <td>0..n
       <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used.
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
      <tr>
       <td>has part
       <td>A related resource that is included either physically or logically in the described resource.
@@ -3792,212 +4114,9 @@ Supportive classes are included because they form the range of properties used b
       <td>rdfs:Literal
       <td>1..n
       <td>Provide a unique title for your catalog, which can be repeated in multiple languages. Example: Healthy Brain Study.
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
    </table>
    <h4 class="heading settled" data-level="6.1.2" id="dataset"><span class="secno">6.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -4113,34 +4232,6 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:Location (IRI)
       <td>0..n
       <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (eg. indicating that NL is covered), to not expose detailed information of subject’s locations.
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
      <tr>
       <td>has version
       <td>This resource has a more specific, versioned resource.
@@ -4382,7 +4473,7 @@ Supportive classes are included because they form the range of properties used b
    </table>
    <h3 class="heading settled" data-level="6.2" id="recommended"><span class="secno">6.2. </span><span class="content">Recommended</span><a class="self-link" href="#recommended"></a></h3>
    <h4 class="heading settled" data-level="6.2.1" id="data-service"><span class="secno">6.2.1. </span><span class="content"><a href="http://www.w3.org/ns/dcat#DataService">Data Service</a></span><a class="self-link" href="#data-service"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -4562,7 +4653,7 @@ Supportive classes are included because they form the range of properties used b
       <td>Provide a unique title for your data service, which can be repeated in multiple languages. Example: Patient counts per available diagnosis
    </table>
    <h4 class="heading settled" data-level="6.2.2" id="dataset-series"><span class="secno">6.2.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -4622,34 +4713,6 @@ Supportive classes are included because they form the range of properties used b
       <td>0..n
       <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (eg. indicating that NL is covered), to not expose detailed information of subject’s locations.
      <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-      <td>NaN
-     <tr>
       <td>modification date
       <td>Date on which the resource was changed.
       <td>dct:modified
@@ -4686,7 +4749,7 @@ Supportive classes are included because they form the range of properties used b
       <td>Provide a unique title for your Dataset Series, which can be repeated in multiple languages.
    </table>
    <h4 class="heading settled" data-level="6.2.3" id="distribution"><span class="secno">6.2.3. </span><span class="content"><a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a></span><a class="self-link" href="#distribution"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -4872,7 +4935,7 @@ Supportive classes are included because they form the range of properties used b
 
    <h3 class="heading settled" data-level="7.1" id="mandatory①"><span class="secno">7.1. </span><span class="content">Mandatory</span><a class="self-link" href="#mandatory①"></a></h3>
    <h4 class="heading settled" data-level="7.1.1" id="agent"><span class="secno">7.1.1. </span><span class="content"><a href="http://xmlns.com/foaf/spec/#term_Agent">Agent</a></span><a class="self-link" href="#agent"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -4954,7 +5017,7 @@ Supportive classes are included because they form the range of properties used b
       <td>Provide the URL of the page containing contact information, such as a contact form or details for reaching out. If a specific contact page is unavailable, the main website of the Agent is sufficient.
    </table>
    <h4 class="heading settled" data-level="7.1.2" id="kind"><span class="secno">7.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819">Kind</a></span><a class="self-link" href="#kind"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -5002,7 +5065,7 @@ Supportive classes are included because they form the range of properties used b
    </table>
    <h3 class="heading settled" data-level="7.2" id="recommended①"><span class="secno">7.2. </span><span class="content">Recommended</span><a class="self-link" href="#recommended①"></a></h3>
    <h4 class="heading settled" data-level="7.2.1" id="attribution"><span class="secno">7.2.1. </span><span class="content"><a href="https://www.w3.org/ns/prov#Attribution">Attribution</a></span><a class="self-link" href="#attribution"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -5042,7 +5105,7 @@ Supportive classes are included because they form the range of properties used b
       <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.\nExample: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor
    </table>
    <h4 class="heading settled" data-level="7.2.2" id="checksum"><span class="secno">7.2.2. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -5082,7 +5145,7 @@ Supportive classes are included because they form the range of properties used b
       <td>NaN
    </table>
    <h4 class="heading settled" data-level="7.2.3" id="identifier"><span class="secno">7.2.3. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier">Identifier</a></span><a class="self-link" href="#identifier"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -5122,7 +5185,7 @@ Supportive classes are included because they form the range of properties used b
       <td>NaN
    </table>
    <h4 class="heading settled" data-level="7.2.4" id="period-of-time"><span class="secno">7.2.4. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime">Period of time</a></span><a class="self-link" href="#period-of-time"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -5152,17 +5215,17 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:endDate
       <td>xsd:dateTime
       <td>0..1
-      <td>NaN
+      <td>NaN    
      <tr>
       <td>start date
       <td>The start of the period.
       <td>dcat:startDate
       <td>xsd:dateTime
       <td>0..1
-      <td>NaN
+      <td>NaN    
    </table>
    <h4 class="heading settled" data-level="7.2.5" id="quality-certificate"><span class="secno">7.2.5. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">Quality certificate</a></span><a class="self-link" href="#quality-certificate"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -5202,7 +5265,7 @@ Supportive classes are included because they form the range of properties used b
       <td>IRI pointing to the location where the quality certificate can be found.
    </table>
    <h4 class="heading settled" data-level="7.2.6" id="relationship"><span class="secno">7.2.6. </span><span class="content"><a href="https://w3c.github.io/dxwg/dcat/#Class:Relationship">Relationship</a></span><a class="self-link" href="#relationship"></a></h4>
-   <table>
+   <table class="no-style">
     <thead>
      <tr>
       <th>Class name
@@ -5244,10 +5307,8 @@ Supportive classes are included because they form the range of properties used b
    <h2 class="heading settled" data-level="8" id="further-information"><span class="secno">8. </span><span class="content">Further Information</span><a class="self-link" href="#further-information"></a></h2>
    <h3 class="heading settled" data-level="8.1" id="model-extension"><span class="secno">8.1. </span><span class="content">Model extension</span><a class="self-link" href="#model-extension"></a></h3>
    <p>This is a Health-RI core metadata schema, which means it is designed to be “minimal” and cover the basic metadata elements of catalogue resources. If you come from a specific working group or domain and see some of the important elements from your domain should be represented in the metadata, you could build an extension (or so-called petal) of this model for your domain’s specific needs. For more information on this, please check out the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/545783826/Domain-specific+metadata+schema+development">process description for domain-specific metadata</a>.</p>
-   <p>Acknowledgements:
-v1...
-v2...
-v3...</p>
+   <p>Further spec configurations:
+TBD</p>
   </main>
   <div data-fill-with="conformance">
    <h2 class="heading no-num no-ref settled" id="conformance"><span class="content">
