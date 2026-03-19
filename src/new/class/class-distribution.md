@@ -1,5 +1,5 @@
 ### [Distribution](http://www.w3.org/ns/dcat#Distribution)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

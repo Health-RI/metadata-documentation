@@ -1,5 +1,5 @@
 ### [Checksum](https://spdx.org/rdf/terms/#d4e2091)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

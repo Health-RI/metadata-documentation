@@ -1,5 +1,5 @@
 ### [Quality certificate](https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

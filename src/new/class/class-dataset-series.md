@@ -1,5 +1,5 @@
 ### [Dataset Series](https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

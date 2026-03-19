@@ -1,5 +1,5 @@
 ### [Kind](https://www.w3.org/TR/vcard-rdf/#d4e1819)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

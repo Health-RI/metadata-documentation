@@ -1,5 +1,5 @@
 ### [Agent](http://xmlns.com/foaf/spec/#term_Agent)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

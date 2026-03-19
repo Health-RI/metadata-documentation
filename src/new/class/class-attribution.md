@@ -1,5 +1,5 @@
 ### [Attribution](https://www.w3.org/ns/prov#Attribution) 
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

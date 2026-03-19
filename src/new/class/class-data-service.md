@@ -1,5 +1,5 @@
 ### [Data Service](http://www.w3.org/ns/dcat#DataService)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+

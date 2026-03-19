@@ -1,5 +1,5 @@
 ### [Catalog](https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog)
-<table> 
+<table class="no-style">   
   <thead> 
     <tr> 
       <th>Class name</th> 
@@ -17,3 +17,4 @@
     </tr> 
   </tbody> 
 </table>
+
