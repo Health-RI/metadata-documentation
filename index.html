@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 0ef803fdf, updated Tue Jan 6 11:59:39 2026 -0800" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="82aea92810866daee0c0f912922f95cead9bd993" name="revision">
+  <meta content="3a2126cd3feaf172a214e889d093999618a4cac4" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -4121,133 +4121,133 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>applicable legislation
+      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a>
       <td>The legislation that is applicable to this resource.
       <td>dcatap:applicableLegislation
       <td>eli:LegalResource (IRI)
       <td>0..n
       <td>NaN
      <tr>
-      <td>catalog
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog">catalog</a>
       <td>A catalog that is listed in the catalog.
       <td>dcat:catalog
       <td>dcat:Catalog (IRI)
       <td>0..n
       <td>For certain research projects, multiple catalogs may need to be organized in a nested manner. This property serves to connect the different catalogs with each other.
      <tr>
-      <td>contact point
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:contactPoint">contact point</a>
       <td>Relevant contact information for the cataloged resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point (department or person) that can answer questions about the catalogue. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point (department or person) that can answer questions about the catalogue. Details on how to describe these are provided under class vcard:Kind.<br>Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
-      <td>creator
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#creator">creator</a>
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>0..n
       <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows specification of multiple creators of a catalogue.
      <tr>
-      <td>dataset
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset">dataset</a>
       <td>A dataset that is listed in the catalog.
       <td>dcat:dataset
       <td>dcat:Dataset
       <td>0..n
       <td>Each catalog contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue.
      <tr>
-      <td>description
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a>
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>1..n
       <td>Briefly describe the catalog and what it contains. You can repeat this in multiple languages.
      <tr>
-      <td>geographical coverage
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">geographical coverage</a>
       <td>Spatial characteristics of the resource.
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
       <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used.
      <tr>
-      <td>has part
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#hasPart">has part</a>
       <td>A related resource that is included either physically or logically in the described resource.
       <td>dct:hasPart
       <td>dcat:Catalog (IRI)
       <td>0..n
-      <td>Use this property to establish another catalogue in this catalogue.\nNote that deeply nested structures should be avoided, and can currently not be displayed in the National Health Data Catalogue.
+      <td>Use this property to establish another catalogue in this catalogue.<br>Note that deeply nested structures should be avoided, and can currently not be displayed in the National Health Data Catalogue.
      <tr>
-      <td>home page
+      <td><a href="http://xmlns.com/foaf/spec/#term_homepage">home page</a>
       <td>A homepage for some thing.
       <td>foaf:homepage
       <td>foaf:Document (IRI)
       <td>0..1
       <td>The home page of the catalogue, if available.
      <tr>
-      <td>language
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language">language</a>
       <td>A language of the resource.
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>The value of this property must be an IRI from the provided controlled vocabulary.\nFor example: http://publications.europa.eu/resource/authority/language/NLD
+      <td>The value of this property must be an IRI from the provided controlled vocabulary.<br>For example: http://publications.europa.eu/resource/authority/language/NLD
      <tr>
-      <td>licence
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license">licence</a>
       <td>A legal document giving official permission to do something with the resource.
       <td>dct:license
       <td>dct:LicenseDocument (IRI)
       <td>0..1
       <td>The licence under which the catalogue (with resource description) is made available. In the description of distributions and data services the licences of that resources are taken up.
      <tr>
-      <td>modification date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
       <td>dct:modified
       <td>xsd:dateTime
       <td>0..1
       <td>NaN
      <tr>
-      <td>publisher
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">publisher</a>
       <td>An entity responsible for making the resource available.
       <td>dct:publisher
       <td>foaf:Agent
       <td>1
       <td>The organisation or individual that is holder of the intellectual property rights of a dataset. For more details about the publisher, see the class Agent. Example: Radboudumc.
      <tr>
-      <td>release date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued">release date</a>
       <td>Date of formal issuance of the resource.
       <td>dct:issued
       <td>xsd:dateTime
       <td>0..1
       <td>NaN
      <tr>
-      <td>rights
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rights">rights</a>
       <td>Information about rights held in and over the resource.
       <td>dct:rights
       <td>dct:RightsStatement (IRI)
       <td>0..1
       <td>The rights statement should be a free-text statement placed at a web-accessible location such that the value of this property is the IRI pointing to that statement.
      <tr>
-      <td>service
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:service">service</a>
       <td>A service that is listed in the catalog.
       <td>dcat:service
       <td>dcat:DataService (IRI)
       <td>0..n
       <td>Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalog and the Data Service via this property. While crucial for interoperability, this property is not relevant for end-users to collect.
      <tr>
-      <td>temporal coverage
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal">temporal coverage</a>
       <td>Temporal characteristics of the resource.
       <td>dct:temporal
       <td>dct:PeriodOfTime
       <td>0..n
       <td>NaN
      <tr>
-      <td>themes
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:themeTaxonomy">themes</a>
       <td>A main category of the resource. A resource can have multiple themes.
       <td>dcat:themeTaxonomy
       <td>skos:ConceptScheme (IRI)
       <td>0..n
       <td>This property refers to a knowledge organisation system used to classify the Catalogue’s Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.
      <tr>
-      <td>title
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a>
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
@@ -4281,329 +4281,329 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>access rights
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accessRights">access rights</a>
       <td>Information about who access the resource or an indication of its security status.
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. It is foreseen that one of the three options have to be used: public, restricted, non-public.\n    Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.\n    Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.\n    Sensitive Data (Non public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation.\n\nSince most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. It is foreseen that one of the three options have to be used: public, restricted, non-public.<br>    Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.<br>    Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.<br>    Sensitive Data (Non public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation.<br><br>Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.
      <tr>
-      <td>analytics
+      <td><a href="https://healthdcat-ap.github.io/#analytics">analytics</a>
       <td>An analytics distribution of the dataset.
       <td>healthdcatap:analytics
       <td>dcat:Distribution (IRI)
       <td>0..n
       <td>Publishers are encouraged to provide URLs pointing to document repositories where users can access or request associated resources such as technical reports of the dataset, quality measurements, usability indicators,... Note that HealthDCAT-AP mentions also API endpoints or analytics services, but these would not be Distriutions but rather DatasetServices.
      <tr>
-      <td>applicable legislation
+      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a>
       <td>The legislation that is applicable to this resource.
       <td>dcatap:applicableLegislation
       <td>eli:LegalResource (IRI)
       <td>1..n
-      <td>The ELI of the EHDS was published in March 2025 and can now be included as the applicable legislation mandating that the dataset has to be made public.\nFor health datasets, the value must include the ELI of the EHDS Regulation (http://data.europa.eu/eli/reg/2025/327/oj).\nAs multiple legislations may apply to the resource the maximum cardinality is not limited.\n\nWhile the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property (also in Datasets) described the legal basis for initial collection and processing of (personal) data.
+      <td>The ELI of the EHDS was published in March 2025 and can now be included as the applicable legislation mandating that the dataset has to be made public.<br>For health datasets, the value must include the ELI of the EHDS Regulation (http://data.europa.eu/eli/reg/2025/327/oj).<br>As multiple legislations may apply to the resource the maximum cardinality is not limited.<br><br>While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property (also in Datasets) described the legal basis for initial collection and processing of (personal) data.
      <tr>
-      <td>code values
+      <td><a href="https://healthdcat-ap.github.io/#hasCodeValues">code values</a>
       <td>Health classifications and their codes associated with the dataset
       <td>healthdcatap:hasCodeValues
       <td>skos:Concept (IRI)
       <td>0..n
       <td>Inside this property, you can provide the coding system of the dataset in the form of wikidata URI (example: https://www.wikidata.org/entity/P494 for ICD-10 ID) and the URI of the value that describes the dataset (example: https://icd.who.int/browse10/2019/en#/Y59.0 for viral vaccines)
      <tr>
-      <td>coding system
+      <td><a href="https://healthdcat-ap.github.io/#hasCodingSystem">coding system</a>
       <td>Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)
       <td>healthdcatap:hasCodingSystem
       <td>dct:Standard (IRI)
       <td>0..n
       <td>This property provides informatio on which coding systems are in use inside your dataset. For this, wikidata URIs must be used.
      <tr>
-      <td>conforms to
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">conforms to</a>
       <td>An established standard to which the described resource conforms.
       <td>dct:conformsTo
       <td>dct:Standard (IRI)
       <td>0..n
       <td>If your data conforms to an established standard or specification, use this property to indicate which one. The wikidata URI of the specification must be used. Example: https://www.wikidata.org/wiki/Q19597236 for FHIR.
      <tr>
-      <td>contact point
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:contactPoint">contact point</a>
       <td>Relevant contact information for the cataloged resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point (department or person) that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point (department or person) that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.<br>Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
-      <td>creator
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#creator">creator</a>
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>1..n
       <td>This property points to a person (known as Agent) responsible for generating the dataset. In most cases, this should be the project’s Principal Investigator, provided they consent to being listed in the catalogue. If not, the associated department or institute may be specified instead.
      <tr>
-      <td>description
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a>
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>1..n
       <td>Brief description of the dataset. You can repeat this property in multiple languages. Example: ''Collection of physiological data of Healthy Brain Study participants. This collection includes measurements via biowearables for heart rate, oxygenation, systolic and diastolic measures and stress levels.''
      <tr>
-      <td>distribution
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:distribution">distribution</a>
       <td>An available Distribution for the Dataset.
       <td>dcat:distribution
       <td>dcat:Distribution (IRI)
       <td>0..n
       <td>Metadata element used as a key link to the class Distribution.
      <tr>
-      <td>documentation
+      <td><a href="http://xmlns.com/foaf/spec/#term_page">documentation</a>
       <td>A page or document about this thing.
       <td>foaf:page
       <td>foaf:Document (IRI)
       <td>0..n
       <td>The value of this property is the IRI directing to the web-page or document about the dataset.
      <tr>
-      <td>frequency
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accrualPeriodicity">frequency</a>
       <td>The frequency with which items are added to a collection.
       <td>dct:accrualPeriodicity
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated.\nFor example: http://publications.europa.eu/resource/authority/frequency/WEEKLY
+      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated.<br>For example: http://publications.europa.eu/resource/authority/frequency/WEEKLY
      <tr>
-      <td>geographical coverage
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">geographical coverage</a>
       <td>Spatial characteristics of the resource.
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
       <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (eg. indicating that NL is covered), to not expose detailed information of subject’s locations.
      <tr>
-      <td>has version
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:hasVersion">has version</a>
       <td>This resource has a more specific, versioned resource.
       <td>dcat:hasVersion
       <td>dcat:Dataset (IRI)
       <td>0..n
       <td>Indicate the dataset which is the other version of the current dataset.
      <tr>
-      <td>health theme
+      <td><a href="https://healthdcat-ap.github.io/#healthTheme">health theme</a>
       <td>A category of the Dataset or tag describing the Dataset.
       <td>healthdcatap:healthTheme
       <td>skos:Concept (IRI)
       <td>0..n
       <td>This property is a structured way to tag the dataset with different health themes. This could include, for example, the specific disease the dataset is about. More details can be provided, if desirable, in the keywords property. Current status: the HealthDCAT-AP working group is currently exploring is other sources (ontologies, thesauri) can be used for this, next to Wikidata. To access Wikidata, click on the link in the controlled vocabulary column and search for your desired theme there.
      <tr>
-      <td>identifier
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#identifier">identifier</a>
       <td>An unambiguous reference to the resource within a given context.
       <td>dct:identifier
       <td>rdfs:Literal
       <td>1
-      <td>Current status: Health-RI is currently working on a strategy for persistant identifiers for, among other things, datasets. Until a solid solution has been found, we propose the following temporary solution:\nIf your data is published in a repository, fill in with the provided DOI (Example: https://doi.org/10.34894/ZLOYOJ). If not, use the identifier of the dataset as generated in the FAIR data point (FDP). Ensure that metadata is updated if your situation changes.
+      <td>Current status: Health-RI is currently working on a strategy for persistant identifiers for, among other things, datasets. Until a solid solution has been found, we propose the following temporary solution:<br>If your data is published in a repository, fill in with the provided DOI (Example: https://doi.org/10.34894/ZLOYOJ). If not, use the identifier of the dataset as generated in the FAIR data point (FDP). Ensure that metadata is updated if your situation changes.
      <tr>
-      <td>in series
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:inSeries">in series</a>
       <td>A dataset series of which the dataset is part.
       <td>dcat:inSeries
       <td>dcat:DatasetSeries (IRI)
       <td>0..n
       <td>This property points to which Dataset Series the Dataset is part of.
      <tr>
-      <td>is referenced by
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#isReferencedBy">is referenced by</a>
       <td>A related resource that references, cites, or otherwise points to the described resource.
       <td>dct:isReferencedBy
       <td>rdfs:Resource (IRI)
       <td>0..n
-      <td>The value of this property is the IRI of the doi to the publication or other related resource.\nFor example: https://doi.org/10.1186/s13690-021-00709-x
+      <td>The value of this property is the IRI of the doi to the publication or other related resource.<br>For example: https://doi.org/10.1186/s13690-021-00709-x
      <tr>
-      <td>keyword
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:keyword">keyword</a>
       <td>A keyword or tag describing the resource.
       <td>dcat:keyword
       <td>rdfs:Literal
       <td>1..n
       <td>Add keywords to increase dataset discoverability. You can include keywords in different languages, submitting each keyword as a separate entry. Example: Physiological measures, Heart Rate, Stress Measures.
      <tr>
-      <td>language
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language">language</a>
       <td>A language of the resource.
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
       <td>The language of the Dataset. For this property, the values from the EU Vocabularies Languages Named Authority List must be used. If your Dataset contains multiple languages, this property can be repeated.
      <tr>
-      <td>legal basis
+      <td><a href="https://w3id.org/dpv#hasLegalBasis">legal basis</a>
       <td>Indicates use or applicability of a Legal Basis.
       <td>dpv:hasLegalBasis
       <td>dpv:LegalBasis (IRI)
       <td>0..n
-      <td>The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column).\n\nWhile the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property described the legal basis for initial collection and processing of (personal) data.\n\nExample value for this property could be: dpv:Consent
+      <td>The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column).<br><br>While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property described the legal basis for initial collection and processing of (personal) data.<br><br>Example value for this property could be: dpv:Consent
      <tr>
-      <td>maximum typical age
+      <td><a href="https://healthdcat-ap.github.io/#maxTypicalAge">maximum typical age</a>
       <td>Maximum typical age of the population within the dataset
       <td>healthdcatap:maxTypicalAge
       <td>xsd:nonNegativeInteger
       <td>0..1
       <td>The approximate maximum age of subjects in the dataset, if applicable. Approximate age is given to protect potentially sensitive information of subjects in the dataset.
      <tr>
-      <td>minimum typical age
+      <td><a href="https://healthdcat-ap.github.io/#minTypicalAge">minimum typical age</a>
       <td>Minimum typical age of the population within the dataset
       <td>healthdcatap:minTypicalAge
       <td>xsd:nonNegativeInteger
       <td>0..1
       <td>The approximate minimum age of subjects in the dataset, if applicable. Approximate age is given to protect potentially sensitive information of subjects in the dataset.
      <tr>
-      <td>modification date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
       <td>dct:modified
       <td>xsd:dateTime
       <td>0..1
       <td>This property indicates changes to the dataset, not the metadata record. An absent value may mean the resource hasn’t changed since publication, the modification date is unknown, or the resource is continuously updated.
      <tr>
-      <td>number of records
+      <td><a href="https://healthdcat-ap.github.io/#numberOfRecords">number of records</a>
       <td>Size of the dataset in terms of the number of records
       <td>healthdcatap:numberOfRecords
       <td>xsd:nonNegativeInteger
       <td>0..1
       <td>Number of records inside a Dataset.
      <tr>
-      <td>number of unique infividuals
+      <td><a href="https://healthdcat-ap.github.io/#numberOfUniqueIndividuals">number of unique infividuals</a>
       <td>Number of records for unique individuals.
       <td>healthdcatap:numberOfUniqueIndividuals
       <td>xsd:nonNegativeInteger
       <td>0..1
       <td>This property is not mandatory, since not all datasets might include data from individuals.
      <tr>
-      <td>other identifier
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms_identifier">other identifier</a>
       <td>Links a resource to an adms:Identifier class.
       <td>adms:identifier
       <td>adms:Identifier
       <td>0..n
       <td>Examples for secondary identifiers are MAST/ADS, DataCite, DOI, EZID or W3ID (if not used for the original identifier). This property makes use of another, small class: adms:Identifier, where you provide the identifier and the name of the identifier schema (eg. DOI).
      <tr>
-      <td>personal data
+      <td><a href="https://w3id.org/dpv#hasPersonalData">personal data</a>
       <td>Indicates association with Personal Data.
       <td>dpv:hasPersonalData
       <td>dpv:PersonalData (IRI)
       <td>0..n
-      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column).\nFor example: dpv-pd:Gender
+      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column).<br>For example: dpv-pd:Gender
      <tr>
-      <td>population coverage
+      <td><a href="https://healthdcat-ap.github.io/#populationCoverage">population coverage</a>
       <td>A definition of the population within the dataset
       <td>healthdcatap:populationCoverage
       <td>rdfs:Literal
       <td>0..n
       <td>This field is a free text description of the population covered in the dataset. For example, "Adults aged 18–65 diagnosed with type 2 diabetes in the Netherlands between 2015 and 2020".
      <tr>
-      <td>publisher
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">publisher</a>
       <td>An entity responsible for making the resource available.
       <td>dct:publisher
       <td>foaf:Agent
       <td>1
       <td>This property identifies the organisation or individual responsible for making the dataset available. For datasets, this is typically the employer of the data creators. In simple cases, the dataset publisher may be the same as the catalog publisher. In more complex settings, such as when datasets come from multiple institutions within a consortium, the consortium should be listed as the publisher where possible. If no formal consortium can be specified, provide the information of the contributing organizations or individuals under dct:creator instead. For more details, refer to the Agent class.
      <tr>
-      <td>purpose
+      <td><a href="https://w3id.org/dpv#hasPurpose">purpose</a>
       <td>Indicates association with Purpose.
       <td>dpv:hasPurpose
       <td>dpv:Purpose (IRI)
       <td>0..n
-      <td>One (or many) category or sub-category of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column).\nExample value could be: dpv:ResearchAndDevelopment.
+      <td>One (or many) category or sub-category of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column).<br>Example value could be: dpv:ResearchAndDevelopment.
      <tr>
-      <td>qualified attribution
+      <td><a href="https://www.w3.org/TR/prov-o/#qualifiedAttribution">qualified attribution</a>
       <td>Attribution is the ascribing of an entity to an agent.
       <td>prov:qualifiedAttribution
       <td>prov:Attribution
       <td>0..n
-      <td>This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent). Note that for HealthDCAT-AP, the list of roles might be extended in the future.\nExample: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor\n\nUse this property if you would like to indicate the funder of the (research project that resulted in creation of the) dataset.\nThe value for role then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder
+      <td>This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent). Note that for HealthDCAT-AP, the list of roles might be extended in the future.<br>Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor<br><br>Use this property if you would like to indicate the funder of the (research project that resulted in creation of the) dataset.<br>The value for role then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder
      <tr>
-      <td>qualified relation
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:qualifiedRelation">qualified relation</a>
       <td>Link to a description of a relationship with another resource.
       <td>dcat:qualifiedRelation
       <td>dcat:Relationship
       <td>0..n
       <td>This property makes use of another small class (dcat:Relationship), in which you can indicate the related resource (via its identifier) and the nature of the relation (based on a controlled vocabulary, which is described in the information of the class).
      <tr>
-      <td>quality annotation
+      <td><a href="https://www.w3.org/TR/vocab-dqv/#hasQualityAnnotation">quality annotation</a>
       <td>Refers to a quality annotation.
       <td>dqv:hasQualityAnnotation
       <td>dqv:QualityCertificate
       <td>0..n
       <td>This property makes use of another small class (dqv:QualityCertificate), in which you indicate the IRI of the quality certificate, linked to the described resource (via the identifier of the dataset). See that class for more information.
      <tr>
-      <td>release date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued">release date</a>
       <td>Date of formal issuance of the resource.
       <td>dct:issued
       <td>xsd:dateTime
       <td>0..1
       <td>This property should point to the first known date of issuance, such as the publication date in a data repository. Example: 2023-12-10T13:16:10.246Z.
      <tr>
-      <td>retention period
+      <td><a href="https://healthdcat-ap.github.io/#retentionPeriod">retention period</a>
       <td>A temporal period which the dataset is available for secondary use.
       <td>healthdcatap:retentionPeriod
       <td>dct:PeriodOfTime
       <td>0..1
       <td>This property makes use of the class dct:PeriodOfTime, in which a start and end date should be provided.
      <tr>
-      <td>sample
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms_sample">sample</a>
       <td>Links to a sample of an Asset (which is itself an Asset).
       <td>adms:sample
       <td>dcat:Distribution (IRI)
       <td>0..n
       <td>This property makes use of the dcat:Distribution class to describe a sample distribution of the dataset, which can be anonymized or synthetic data, or the data dictionary provided in CSVW format. This is currently further developed by the TEHDAS2 program. More information can be found here: https://healthdcat-ap.github.io/#sample-distribution
      <tr>
-      <td>source
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#source">source</a>
       <td>A related resource from which the described resource is derived.
       <td>dct:source
       <td>dcat:Dataset (IRI)
       <td>0..n
       <td>Indicate the dataset on which this described dataset is based.
      <tr>
-      <td>status
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms_status">status</a>
       <td>The status of the Asset in the context of a particular workflow process.
       <td>adms:status
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset.\nFor example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED
+      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset.<br>For example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED
      <tr>
-      <td>temporal coverage
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal">temporal coverage</a>
       <td>Temporal characteristics of the resource.
       <td>dct:temporal
       <td>dct:PeriodOfTime
       <td>0..n
       <td>The start and end date of the period that the dataset covers. This property makes use of a small class: Period of Time, in which a start and end date can be given.
      <tr>
-      <td>temporal resolution
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:temporalResolution">temporal resolution</a>
       <td>Minimum time period resolvable in the dataset.
       <td>dcat:temporalResolution
       <td>xsd:duration
       <td>0..1
       <td>If the dataset is a time-series, this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset. The time period has to be provided in the xsd:duration format.
      <tr>
-      <td>theme
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:theme">theme</a>
       <td>A main category of the resource. A resource can have multiple themes.
       <td>dcat:theme
       <td>skos:Concept (IRI)
       <td>1..n
       <td>This property should use a controlled vocabulary. In the Health Data Catalogue, all datasets will use the theme 'HEAL' (http://publications.europa.eu/resource/authority/data-theme/HEAL), but additional values from the same vocabulary are allowed.
      <tr>
-      <td>title
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a>
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
       <td>1..n
       <td>Provide a unique title for your Dataset, which can be repeated in multiple languages. Example: Healthy Brain Study - Physiological Data
      <tr>
-      <td>type
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#type">type</a>
       <td>The nature or genre of the resource.
       <td>dct:type
       <td>skos:Concept (IRI)
       <td>0..n
       <td>A recommended controlled vocabulary data-type is foreseen. Health datasets with personal information must use 'personal data'. This list supports dataset categorization for the EU Open Data Portal. Currently, 'PERSONAL_DATA' is not included in the EU vocabulary and cannot be filled out.
      <tr>
-      <td>version
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:version">version</a>
       <td>The version indicator (name or identifier) of a resource.
       <td>dcat:version
       <td>rdfs:Literal
       <td>0..1
       <td>Suggested practice: track major_version.minor_version. Register a new identifier for major changes (e.g., 1.0.0 for an unchanged dataset).
      <tr>
-      <td>version notes
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms_versionNotes">version notes</a>
       <td>A description of changes between this version and the previous version of the Asset.
       <td>adms:versionNotes
       <td>rdfs:Literal
       <td>0..n
       <td>Provide a short description of changes made to the dataset from the previous version.
      <tr>
-      <td>was generated by
+      <td><a href="https://www.w3.org/TR/prov-o/#wasGeneratedBy">was generated by</a>
       <td>Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.
       <td>prov:wasGeneratedBy
       <td>prov:Activity (IRI)
@@ -4637,154 +4637,154 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>access rights
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accessRights">access rights</a>
       <td>Information about who access the resource or an indication of its security status.
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
       <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. This property is required to adopt one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the dataset is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC
      <tr>
-      <td>applicable legislation
+      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a>
       <td>The legislation that is applicable to this resource.
       <td>dcatap:applicableLegislation
       <td>eli:LegalResource (IRI)
       <td>0..n
       <td>NaN
      <tr>
-      <td>application profile
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">application profile</a>
       <td>An established standard to which the described resource conforms.
       <td>dct:conformsTo
       <td>dct:Standard (IRI)
       <td>0..n
       <td>The standards referred here SHOULD describe the Data Service and not the data it serves. The latter is provided by the dataset with which this Data Service is connected. For instance the data service adheres to the OGC WFS API standard, while the associated dataset adheres to the INSPIRE Address data model.
      <tr>
-      <td>contact point
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:contactPoint">contact point</a>
       <td>Relevant contact information for the cataloged resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point (department or person) that can answer questions about the data service. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point (department or person) that can answer questions about the data service. Details on how to describe these are provided under class vcard:Kind.<br>Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
-      <td>creator
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#creator">creator</a>
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>0..n
       <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows specification of multiple creators of a data service.
      <tr>
-      <td>rights
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rights">rights</a>
       <td>Information about rights held in and over the resource.
       <td>dct:rights
       <td>dct:RightsStatement (IRI)
       <td>0..n
       <td>NaN
      <tr>
-      <td>description
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a>
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>1..n
       <td>Briefly describe the data service provided. You can repeat this description in multiple languages. Example: A data service that provides API access to real-time electrocardiogram (ECG) monitoring data for clinical research applications.
      <tr>
-      <td>end point description
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:endpointDescription">end point description</a>
       <td>A description of the services available via the end-points, including their operations, parameters etc.
       <td>dcat:endpointDescription
       <td>rdfs:Resource  (IRI)
       <td>1
       <td>Provides technical documentation that explains how to access and interact with the data service’s endpoint.
      <tr>
-      <td>end point URL
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:endpointURL">end point URL</a>
       <td>The root location or primary endpoint of the service (a Web-resolvable IRI).
       <td>dcat:endPointURL
       <td>rdfs:Resource  (IRI)
       <td>1
       <td>Provide the URL of the endpoint that users can interact with to access the data service. This should be a direct link to the service’s endpoint, such as an API URL, SPARQL endpoint, or similar.
      <tr>
-      <td>format
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format">format</a>
       <td>The file format, physical medium, or dimensions of the resource.
       <td>dct:format
       <td>dct:MediaTypeOrExtent (IRI)
       <td>0..n
       <td>NaN
      <tr>
-      <td>HVD Category
+      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-hvdCategory">HVD Category</a>
       <td>A data category defined in the High Value Dataset Implementing Regulation.
       <td>dcatap:hvdCategory
       <td>skos:Concept (IRI)
       <td>0..n
       <td>NaN
      <tr>
-      <td>identifier
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#identifier">identifier</a>
       <td>An unambiguous reference to the resource within a given context.
       <td>dct:identifier
       <td>rdfs:Literal
       <td>1
       <td>Provide a unique identifier for the data service. This could be a globally unique and persistent identifier, such as a DOI, URN, or UUID. If no persistent identifier is available, you may use the accessURL or endpointURL as the identifier, provided it is stable and unique to the service.
      <tr>
-      <td>keyword
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:keyword">keyword</a>
       <td>A keyword or tag describing the resource.
       <td>dcat:keyword
       <td>rdfs:Literal
       <td>0..n
       <td>NaN
      <tr>
-      <td>landing Page
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:landingPage">landing Page</a>
       <td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
       <td>dcat:landingPage
       <td>foaf:Document (IRI)
       <td>0..n
       <td>It is intended to point to a landing page at the original data service provider, not to a page on a site of a third party, such as an aggregator.
      <tr>
-      <td>language
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language">language</a>
       <td>A language of the resource.
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
       <td>Indicates the natural language used in the data service, indicated with a value from the EU controlled vocabulary.
      <tr>
-      <td>licence
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license">licence</a>
       <td>A legal document giving official permission to do something with the resource.
       <td>dct:license
       <td>dct:LicenseDocument (IRI)
       <td>1
       <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.
      <tr>
-      <td>modification date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
       <td>dct:modified
       <td>xsd:dateTime
       <td>0..1
       <td>This property indicates the date of the last changes to the dataset, not the metadata record. An absent value may mean the resource hasn’t changed since publication, the modification date is unknown, or the resource is continuously updated.
      <tr>
-      <td>other identifier
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms_identifier">other identifier</a>
       <td>Links a resource to an adms:Identifier class.
       <td>adms:identifier
       <td>adms:Identifier
       <td>0..n
       <td>NaN
      <tr>
-      <td>publisher
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">publisher</a>
       <td>An entity responsible for making the resource available.
       <td>dct:publisher
       <td>foaf:Agent
       <td>1
       <td>The organization or individual responsible for making the data service available. In the context of data services, the publisher is typically the organization that manages or provides access to the service. For details, see the class Agent.
      <tr>
-      <td>serves dataset
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:servesDataset">serves dataset</a>
       <td>A collection of data that this data service can distribute.
       <td>dcat:servesDataset
       <td>dcat:Dataset (IRI)
       <td>0..n
       <td>This property connects the Data Service class to its corresponding dataset(s), ensuring every data service links to at least one dcat:Dataset. While essential for metadata implementation teams on each node, it’s less relevant for researchers to collect.
      <tr>
-      <td>theme
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:theme">theme</a>
       <td>A main category of the resource. A resource can have multiple themes.
       <td>dcat:theme
       <td>skos:Concept (IRI)
       <td>1..n
       <td>This property should use a controlled vocabulary. In the Health Data Catalogue, most data services will use NAL:data-theme 'HEAL', but additional values from the same vocabulary are allowed.
      <tr>
-      <td>title
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a>
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
@@ -4817,70 +4817,70 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>applicable legislation
+      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a>
       <td>The legislation that is applicable to this resource.
       <td>dcatap:applicableLegislation
       <td>eli:LegalResource (IRI)
       <td>0..n
       <td>The legislation that mandates the creation or management of the Dataset Series.
      <tr>
-      <td>contact point
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:contactPoint">contact point</a>
       <td>Relevant contact information for the cataloged resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1..n
-      <td>This property points to a contact point (department or person) that can answer questions about the dataset series. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point (department or person) that can answer questions about the dataset series. Details on how to describe these are provided under class vcard:Kind.<br>Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
-      <td>description
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a>
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>1..n
       <td>Briefly describe the dataset series in the catalog. You can repeat this in multiple languages.
      <tr>
-      <td>frequency
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accrualPeriodicity">frequency</a>
       <td>The frequency with which items are added to a collection.
       <td>dct:accrualPeriodicity
       <td>skos:Concept (IRI)
       <td>0..1
       <td>The frequency of a dataset series is not equal to the frequency of the dataset in the collection.
      <tr>
-      <td>geographical coverage
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">geographical coverage</a>
       <td>Spatial characteristics of the resource.
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
       <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (eg. indicating that NL is covered), to not expose detailed information of subject’s locations.
      <tr>
-      <td>modification date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
       <td>dct:modified
       <td>xsd:dateTime
       <td>0..1
       <td>This is not equal to the most recent modified dataset in the collection of the dataset series.
      <tr>
-      <td>publisher
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">publisher</a>
       <td>An entity responsible for making the resource available.
       <td>dct:publisher
       <td>foaf:Agent
       <td>0..1
       <td>The publisher of the dataset series may not be the publisher of all datasets.  E.g. a digital archive could take over the publishing of older datasets in the series.
      <tr>
-      <td>release date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued">release date</a>
       <td>Date of formal issuance of the resource.
       <td>dct:issued
       <td>xsd:dateTime
       <td>0..1
       <td>The moment when the dataset series was established as a managed resource. This is not equal to the release date of the oldest dataset in the collection of the dataset series.
      <tr>
-      <td>temporal coverage
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal">temporal coverage</a>
       <td>Temporal characteristics of the resource.
       <td>dct:temporal
       <td>dct:PeriodOfTime
       <td>0..n
       <td>When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset in the collection should be part of the temporal coverage. In that case, an open ended value is recommended, e.g. after 2012.
      <tr>
-      <td>title
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a>
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
@@ -4913,154 +4913,154 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>access service
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:accessService">access service</a>
       <td>A data service that gives access to the distribution of the dataset.
       <td>dcat:accessService
       <td>dcat:DataService
       <td>0..1
       <td>This property links the distribution class to the corresponding data service(s).
      <tr>
-      <td>access url
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:accessURL">access url</a>
       <td>A URL of the resource that gives access to a distribution of the dataset. E.g., landing page, feed, SPARQL endpoint.
       <td>dcat:accessURL
       <td>rdfs:Resource (IRI)
       <td>1
       <td>Add a link that points to where the dataset can be found. If it’s hosted in a Data Repository, include the link to its entry. For datasets not in a repository (like registries), but still available for secondary use, provide a link to an access request form or a webpage with instructions for accessing the data.
      <tr>
-      <td>applicable legislation
+      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a>
       <td>The legislation that is applicable to this resource.
       <td>dcatap:applicableLegislation
       <td>eli:LegalResource (IRI)
       <td>0..n
       <td>The legislation that mandates the creation or management of the Distribution.
      <tr>
-      <td>byte size
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:byteSize">byte size</a>
       <td>The size of a distribution in bytes.
       <td>dcat:byteSize
       <td>xsd:nonNegativeInteger
       <td>1
       <td>Describes the size of the distribution (the actual file) in bytes, and is therefore expressed as a non-negative integer. If the actual size is not know, it can be estimated.
      <tr>
-      <td>checksum
+      <td><a href="https://spdx.github.io/spdx-spec/v3.0/#checksum">checksum</a>
       <td>The checksum property provides a mechanism that can be used to verify that the contents of a file or package have not changed.
       <td>spdx:checksum
       <td>spdx:Checksum
       <td>0..1
       <td>The checksum is related to the downloadURL. This property makes use of the spdx:Checksum class, which itself has two properties to indicate checksum algorithm and checksum value (see Checksum class for further details).
      <tr>
-      <td>compression format
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:compressFormat">compression format</a>
       <td>The compression format of the distribution in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file.
       <td>dcat:compressFormat
       <td>dct:MediaType (IRI)
       <td>0..1
       <td>It MUST be expressed using a media type as defined in the official register of media types managed by IANA.
      <tr>
-      <td>description
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a>
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>0..n
       <td>Provide specific details about the distribution here, complementing the description of the related Dataset. This field can be repeated for different language versions of the description.
      <tr>
-      <td>documentation
+      <td><a href="http://xmlns.com/foaf/spec/#term_page">documentation</a>
       <td>A homepage for some thing.
       <td>foaf:page
       <td>foaf:Document (IRI)
       <td>0..n
       <td>This page can contain additional information about the distribution.
      <tr>
-      <td>download URL
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:downloadURL">download URL</a>
       <td>The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution’s dcterms:format and/or dcat:mediaType.
       <td>dcat:downloadURL
       <td>rdfs:Resource (IRI)
       <td>0..1
       <td>If the dataset is openly accessible and available in a repository, you can directly include a link to the downloadable file here.
      <tr>
-      <td>format
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#format">format</a>
       <td>The file format, physical medium, or dimensions of the resource.
       <td>dct:format
       <td>dct:MediaTypeOrExtent (IRI)
       <td>1
       <td>This property can be used to describe a media format in more detail than "media type" (using IANA media type) when needed. Instances of this property should use a URL, e.g., from the File Type vocabulary. For instance, for mzML files the value of this property could be: http://edamontology.org/format_3244
      <tr>
-      <td>language
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language">language</a>
       <td>A language of the resource.
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.\nNote that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.
+      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.<br>Note that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.
      <tr>
-      <td>license
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license">license</a>
       <td>A legal document giving official permission to do something with the resource.
       <td>dct:license
       <td>dct:LicenceDocument (IRI)
       <td>1
       <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue distributions, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.
      <tr>
-      <td>linked schemas
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">linked schemas</a>
       <td>An established standard to which the described resource conforms.
       <td>dct:conformsTo
       <td>dct:Standard (IRI)
       <td>0..n
       <td>This property SHOULD be used to indicate the model, schema, ontology, view or profile that this representation of a dataset conforms to, in a machine-readable form. This is (generally) a complementary concern to the media-type or format. Use a reference to the official publication of the respective schema.
      <tr>
-      <td>media type
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:mediaType">media type</a>
       <td>The media type of the distribution as defined by IANA.
       <td>dcat:mediaType
       <td>dct:MediaType (IRI)
       <td>0..1
-      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.\nExample: https://www.iana.org/assignments/media-types/text/csv (for csv)\nIf IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.
+      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.<br>Example: https://www.iana.org/assignments/media-types/text/csv (for csv)<br>If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.
      <tr>
-      <td>modification date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
       <td>dct:modified
       <td>xsd:dateTime
       <td>0..1
       <td>NaN
      <tr>
-      <td>packaging format
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:packageFormat">packaging format</a>
       <td>The package format of the distribution in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together.
       <td>dcat:packageFormat
       <td>dct:MediaType (IRI)
       <td>0..1
       <td>It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.
      <tr>
-      <td>release date
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued">release date</a>
       <td>Date of formal issuance of the resource.
       <td>dct:issued
       <td>xsd:dateTime
       <td>0..1
       <td>The date the dataset distribution was issued.
      <tr>
-      <td>retention period
+      <td><a href="https://healthdcat-ap.github.io/#retentionperiod">retention period</a>
       <td>A temporal period which the dataset is available for secondary use.
       <td>healthdcatap:retentionperiod
       <td>dct:PeriodOfTime
       <td>0..1
       <td>This property makes use of the class dct:PeriodOfTime, in which a start and end date should be provided.
      <tr>
-      <td>rights
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rights">rights</a>
       <td>Information about rights held in and over the resource.
       <td>dct:rights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.\nThe rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.\nCurrent status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.
+      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.<br>The rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.<br>Current status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.
      <tr>
-      <td>status
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms_status">status</a>
       <td>The status of the Asset in the context of a particular workflow process.
       <td>adms:status
       <td>skos:Concept (IRI)
       <td>0..1
       <td>It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the provided controlled vocabulary.
      <tr>
-      <td>temporal resolution
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:temporalResolution">temporal resolution</a>
       <td>Minimum time period resolvable in the dataset.
       <td>dcat:temporalResolution
       <td>xsd:duration
       <td>0..1
       <td>If applicable, this property indicates the minimum time period resolvable in the dataset distribution, expressed in xsd:duration format (see for more information here: https://www.w3schools.com/xml/schema_dtypes_date.asp)
      <tr>
-      <td>title
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a>
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
@@ -5099,56 +5099,56 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>country
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">country</a>
       <td>Spatial characteristics of the resource.
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
       <td>Use the appropriate term from the EU authority table. Example for the Netherlands: http://publications.europa.eu/resource/authority/country/NLD
      <tr>
-      <td>email
+      <td><a href="http://xmlns.com/foaf/spec/#term_mbox">email</a>
       <td>A email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [ RFC6068 ]. The email SHOULD be used to establish a communication channel to the agent.
       <td>foaf:mbox
       <td>rdfs:Resource  (IRI)
       <td>1
-      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent.\nThis protects their privacy and enables contact about the resource even after the individual has left the institution.\n\nThe email address has to be provided starting with mailto: prefix.\nFor example: mailto:info@example.com
+      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent.<br>This protects their privacy and enables contact about the resource even after the individual has left the institution.<br><br>The email address has to be provided starting with mailto: prefix.<br>For example: mailto:info@example.com
      <tr>
-      <td>identifier
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#identifier">identifier</a>
       <td>An unambiguous reference to the resource within a given context.
       <td>dct:identifier
       <td>rdfs:Literal
       <td>1..n
       <td>Specify the entity (person or organization) by providing an identifier. We recommend using an ORCID identifier for a person or ROR identifier for organization. Dutch governmenta organization are listed in TOOI. If these are not available, you can use ISNI, or Wikidata or any other identifier you may have. If you have multiple identifiers, you should provide them all.
      <tr>
-      <td>name
+      <td><a href="http://xmlns.com/foaf/spec/#term_name">name</a>
       <td>A name for some thing.
       <td>foaf:name
       <td>rdfs:Literal
       <td>1..n
       <td>This property refers to the given name of the entity. Example: Jane Doe (for a person) and Radboudumc (for an organization). This property can be repeated for different versions of the name (e.g. the name in different languages).
      <tr>
-      <td>publisher note
+      <td><a href="https://healthdcat-ap.github.io/#publishernote">publisher note</a>
       <td>A description of the publisher activities.
       <td>healthdcatap:publishernote
       <td>rdfs:Literal
       <td>0..1
       <td>This property can be repeated for parallel language versions of the publisher notes. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en
      <tr>
-      <td>publisher type
+      <td><a href="https://healthdcat-ap.github.io/#publishertype">publisher type</a>
       <td>A type of organisation that makes the Dataset available.
       <td>healthdcatap:publishertype
       <td>skos:Concept (IRI)
       <td>0..1
       <td>Current status: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL: http://purl.org/adms/publishertype/[type].
      <tr>
-      <td>type
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#type">type</a>
       <td>The nature or genre of the resource.
       <td>dct:type
       <td>skos:Concept (IRI)
       <td>0..1
       <td>This property should be filled using ADMS vocabulary (http://purl.org/adms/publishertype/1.0)
      <tr>
-      <td>URL
+      <td><a href="http://xmlns.com/foaf/spec/#term_homepage">URL</a>
       <td>A homepage for some thing.
       <td>foaf:homepage
       <td>rdfs:Resource (IRI)
@@ -5181,21 +5181,21 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>contact page
+      <td><a href="https://www.w3.org/TR/vcard-rdf/#hasURL">contact page</a>
       <td>To specify a uniform resource locator associated with the object.
       <td>vcard:hasURL
       <td>rdfs:Resource  (IRI)
       <td>0..n
       <td>A webpage that either allows to make contact (i.e. a webform) or the information contains how to get into contact.
      <tr>
-      <td>has email
+      <td><a href="https://www.w3.org/TR/vcard-rdf/#hasEmail">has email</a>
       <td>To specify the electronic mail address for communication with the object.
       <td>vcard:hasEmail
       <td>rdfs:Resource  (IRI)
       <td>1
-      <td>When naming a contact point this information needs to be further specified with additional information, i.e., an email address. This email address does not need to be a direct contact to the person responsible for the management of the data, it could be a generic information email.\nThe email address has to be provided starting with mailto: prefix.\nFor example: mailto:info@example.com / mailto: jane.doe@example.com
+      <td>When naming a contact point this information needs to be further specified with additional information, i.e., an email address. This email address does not need to be a direct contact to the person responsible for the management of the data, it could be a generic information email.<br>The email address has to be provided starting with mailto: prefix.<br>For example: mailto:info@example.com / mailto: jane.doe@example.com
      <tr>
-      <td>formatted name
+      <td><a href="https://www.w3.org/TR/vcard-rdf/#fn">formatted name</a>
       <td>The formatted text corresponding to the name of the object.
       <td>vcard:fn
       <td>xsd:string
@@ -5229,19 +5229,19 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>agent
+      <td><a href="https://www.w3.org/TR/prov-o/#agent">agent</a>
       <td>The prov:agent property references an prov:Agent which influenced a resource.
       <td>prov:agent
       <td>foaf:Agent
       <td>0..1
       <td>This property points to another instance of class foaf:Agent.
      <tr>
-      <td>role
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:hadRole">role</a>
       <td>The function of an entity or agent with respect to another entity or resource.
       <td>dcat:hadRole
       <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.\nExample: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor
+      <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.<br>Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor
    </table>
    <h4 class="heading settled" data-level="7.2.2" id="checksum"><span class="secno">7.2.2. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
    <table class="no-style">
@@ -5269,14 +5269,14 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>algorithm
+      <td><a href="https://spdx.github.io/spdx-spec/v3.0/#algorithm">algorithm</a>
       <td>Identifies the algorithm used to produce the subject Checksum.
       <td>spdx:algorithm
       <td>spdx:ChecksumAlgorithm (IRI)
       <td>1
       <td>Choose one member of the checksum algorithm members as indicated on the webpage linked in the Controlled Vocabulary column.
      <tr>
-      <td>checksum value
+      <td><a href="https://spdx.github.io/spdx-spec/v3.0/#checksumValue">checksum value</a>
       <td>The checksumValue property provides a lower case hexidecimal encoded digest value produced using a specific algorithm.
       <td>spdx:checksumValue
       <td>rdfs:Literal
@@ -5309,14 +5309,14 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>notation
+      <td><a href="https://www.w3.org/TR/skos-reference/#notation">notation</a>
       <td>A string that is an identifier in the context of the identifier scheme referenced by its datatype.
       <td>skos:notation
       <td>xsd:string
       <td>1..1
       <td>The value of this property is the alternative identifier of the dataset, next to the one indicated in the dct:identifier property.
      <tr>
-      <td>schema agency
+      <td><a href="https://www.w3.org/TR/vocab-adms/#adms_schemaAgency">schema agency</a>
       <td>The name of the agency that issued the identifier.
       <td>adms:schemaAgency
       <td>xsd:string
@@ -5349,14 +5349,14 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>end date
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:endDate">end date</a>
       <td>The end of the period.
       <td>dcat:endDate
       <td>xsd:dateTime
       <td>0..1
       <td>NaN
      <tr>
-      <td>start date
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:startDate">start date</a>
       <td>The start of the period.
       <td>dcat:startDate
       <td>xsd:dateTime
@@ -5389,14 +5389,14 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>target
+      <td><a href="https://www.w3.org/TR/annotation-vocab/#hasTarget">target</a>
       <td>The relationship between an Annotation and its Target.
       <td>oa:hasTarget
       <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>This property has to be filled with the same value as the dct:identifier of the dataset described, in order to link the quality certificate to that dataset.\nSee also example in HealthDCAT-AP: https://healthdcat-ap.github.io/#dqvhasqualityannotation
+      <td>This property has to be filled with the same value as the dct:identifier of the dataset described, in order to link the quality certificate to that dataset.<br>See also example in HealthDCAT-AP: https://healthdcat-ap.github.io/#dqvhasqualityannotation
      <tr>
-      <td>body
+      <td><a href="https://www.w3.org/TR/annotation-vocab/#hasBody">body</a>
       <td>The object of the relationship is a resource that is a body of the Annotation.
       <td>oa:hasBody
       <td>rdfs:Resource (IRI)
@@ -5429,14 +5429,14 @@ Supportive classes are included because they form the range of properties used b
       <th>Usage note
     <tbody>
      <tr>
-      <td>had role
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:hadRole">had role</a>
       <td>The function of an entity or agent with respect to another entity or resource.
       <td>dcat:hadRole
       <td>skos:Concept (IRI)
       <td>1..n
-      <td>Specify, ideally with a value from the linked controlled vocabulary, the nature of the relationship between the linked resources.\nExample: http://www.iana.org/assignments/relation/related
+      <td>Specify, ideally with a value from the linked controlled vocabulary, the nature of the relationship between the linked resources.<br>Example: http://www.iana.org/assignments/relation/related
      <tr>
-      <td>relation
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#relation">relation</a>
       <td>A related resource.
       <td>dct:relation
       <td>rdfs:Resource (IRI)
