@@ -67,10 +67,3 @@ path: src/new/chapter/6-classes-main.md
 <pre class=include>
 path: src/new/chapter/7-classes-supportive.md
 </pre>
-
-<pre class=include>
-path: src/new/chapter/8-further-information.md
-</pre>
-
-
-
