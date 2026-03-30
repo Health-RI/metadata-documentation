@@ -1,0 +1,190 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Property label</th>
+      <th>Definition</th>
+      <th>Property URI</th>
+      <th>Range</th>
+      <th>Cardinality</th>
+      <th>Usage note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>access rights</td>
+      <td>Information about who access the resource or an indication of its security status.</td>
+      <td>dct:accessRights</td>
+      <td>dct:RightsStatement (IRI)</td>
+      <td>1</td>
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. This property is required to adopt one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the dataset is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC</td>
+    </tr>
+    <tr>
+      <td>applicable legislation</td>
+      <td>The legislation that is applicable to this resource.</td>
+      <td>dcatap:applicableLegislation</td>
+      <td>eli:LegalResource (IRI)</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>application profile</td>
+      <td>An established standard to which the described resource conforms.</td>
+      <td>dct:conformsTo</td>
+      <td>dct:Standard (IRI)</td>
+      <td>0..n</td>
+      <td>The standards referred here SHOULD describe the Data Service and not the data it serves. The latter is provided by the dataset with which this Data Service is connected. For instance the data service adheres to the OGC WFS API standard, while the associated dataset adheres to the INSPIRE Address data model.</td>
+    </tr>
+    <tr>
+      <td>contact point</td>
+      <td>Relevant contact information for the cataloged resource.</td>
+      <td>dcat:contactPoint</td>
+      <td>vcard:Kind</td>
+      <td>1</td>
+      <td>This property points to a contact point (department or person) that can answer questions about the data service. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
+    </tr>
+    <tr>
+      <td>creator</td>
+      <td>An entity responsible for making the resource.</td>
+      <td>dct:creator</td>
+      <td>foaf:Agent</td>
+      <td>0..n</td>
+      <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows specification of multiple creators of a data service.</td>
+    </tr>
+    <tr>
+      <td>rights</td>
+      <td>Information about rights held in and over the resource.</td>
+      <td>dct:rights</td>
+      <td>dct:RightsStatement (IRI)</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>An account of the resource.</td>
+      <td>dct:description</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Briefly describe the data service provided. You can repeat this description in multiple languages. Example: A data service that provides API access to real-time electrocardiogram (ECG) monitoring data for clinical research applications.</td>
+    </tr>
+    <tr>
+      <td>end point description</td>
+      <td>A description of the services available via the end-points, including their operations, parameters etc.</td>
+      <td>dcat:endpointDescription</td>
+      <td>rdfs:Resource&nbsp;&nbsp;(IRI)</td>
+      <td>1</td>
+      <td>Provides technical documentation that explains how to access and interact with the data service’s endpoint.</td>
+    </tr>
+    <tr>
+      <td>end point URL</td>
+      <td>The root location or primary endpoint of the service (a Web-resolvable IRI).</td>
+      <td>dcat:endPointURL</td>
+      <td>rdfs:Resource&nbsp;&nbsp;(IRI)</td>
+      <td>1</td>
+      <td>Provide the URL of the endpoint that users can interact with to access the data service. This should be a direct link to the service's endpoint, such as an API URL, SPARQL endpoint, or similar.</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>The file format, physical medium, or dimensions of the resource.</td>
+      <td>dct:format</td>
+      <td>dct:MediaTypeOrExtent (IRI)</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>HVD Category</td>
+      <td>A data category defined in the High Value Dataset Implementing Regulation.</td>
+      <td>dcatap:hvdCategory</td>
+      <td>skos:Concept (IRI)</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>identifier</td>
+      <td>An unambiguous reference to the resource within a given context.</td>
+      <td>dct:identifier</td>
+      <td>rdfs:Literal</td>
+      <td>1</td>
+      <td>Provide a unique identifier for the data service. This could be a globally unique and persistent identifier, such as a DOI, URN, or UUID. If no persistent identifier is available, you may use the accessURL or endpointURL as the identifier, provided it is stable and unique to the service.</td>
+    </tr>
+    <tr>
+      <td>keyword</td>
+      <td>A keyword or tag describing the resource.</td>
+      <td>dcat:keyword</td>
+      <td>rdfs:Literal</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>landing Page</td>
+      <td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</td>
+      <td>dcat:landingPage</td>
+      <td>foaf:Document (IRI)</td>
+      <td>0..n</td>
+      <td>It is intended to point to a landing page at the original data service provider, not to a page on a site of a third party, such as an aggregator.</td>
+    </tr>
+    <tr>
+      <td>language</td>
+      <td>A language of the resource.</td>
+      <td>dct:language</td>
+      <td>dct:LinguisticSystem (IRI)</td>
+      <td>0..n</td>
+      <td>Indicates the natural language used in the data service, indicated with a value from the EU controlled vocabulary.</td>
+    </tr>
+    <tr>
+      <td>licence</td>
+      <td>A legal document giving official permission to do something with the resource.</td>
+      <td>dct:license</td>
+      <td>dct:LicenseDocument (IRI)</td>
+      <td>1</td>
+      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.</td>
+    </tr>
+    <tr>
+      <td>modification date</td>
+      <td>Date on which the resource was changed.</td>
+      <td>dct:modified</td>
+      <td>xsd:dateTime</td>
+      <td>0..1</td>
+      <td>This property indicates the date of the last changes to the dataset, not the metadata record. An absent value may mean the resource hasn't changed since publication, the modification date is unknown, or the resource is continuously updated.</td>
+    </tr>
+    <tr>
+      <td>other identifier</td>
+      <td>Links a resource to an adms:Identifier class.</td>
+      <td>adms:identifier</td>
+      <td>adms:Identifier</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>publisher</td>
+      <td>An entity responsible for making the resource available.</td>
+      <td>dct:publisher</td>
+      <td>foaf:Agent</td>
+      <td>1</td>
+      <td>The organization or individual responsible for making the data service available. In the context of data services, the publisher is typically the organization that manages or provides access to the service. For details, see the class Agent.</td>
+    </tr>
+    <tr>
+      <td>serves dataset</td>
+      <td>A collection of data that this data service can distribute.</td>
+      <td>dcat:servesDataset</td>
+      <td>dcat:Dataset (IRI)</td>
+      <td>0..n</td>
+      <td>This property connects the Data Service class to its corresponding dataset(s), ensuring every data service links to at least one dcat:Dataset. While essential for metadata implementation teams on each node, it’s less relevant for researchers to collect.</td>
+    </tr>
+    <tr>
+      <td>theme</td>
+      <td>A main category of the resource. A resource can have multiple themes.</td>
+      <td>dcat:theme</td>
+      <td>skos:Concept (IRI)</td>
+      <td>1..n</td>
+      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, most data services will use NAL:data-theme 'HEAL', but additional values from the same vocabulary are allowed.</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>A name given to the resource.</td>
+      <td>dct:title</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Provide a unique title for your data service, which can be repeated in multiple languages. Example: Patient counts per available diagnosis</td>
+    </tr>
+  </tbody>
+</table>

@@ -16,7 +16,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-catalogue.html
+path: src/new/property/properties-catalogue.md
 </pre>
 
 <pre class=include>
@@ -32,7 +32,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-dataset.html
+path: src/new/property/properties-dataset.md
 </pre>
 
 ## Recommended 
@@ -50,7 +50,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-dataservice.html
+path: src/new/property/properties-dataservice.md
 </pre>
 
 <pre class=include>
@@ -66,7 +66,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-datasetseries.html
+path: src/new/property/properties-datasetseries.md
 </pre>
 
 <pre class=include>
@@ -82,7 +82,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-distribution.html
+path: src/new/property/properties-distribution.md
 </pre>
 
 

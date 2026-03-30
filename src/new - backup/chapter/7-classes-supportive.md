@@ -16,7 +16,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-agent.html
+path: src/new/property/properties-agent.md
 </pre>
 
 <pre class=include>
@@ -32,7 +32,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-kind.html
+path: src/new/property/properties-kind.md
 </pre>
 
 ## Recommended 
@@ -50,7 +50,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-attribution.html
+path: src/new/property/properties-attribution.md
 </pre>
 
 <pre class=include>
@@ -66,7 +66,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-checksum.html
+path: src/new/property/properties-checksum.md
 </pre>
 
 <pre class=include>
@@ -82,7 +82,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-adms_identifier.html
+path: src/new/property/properties-adms_identifier.md
 </pre>
 
 <pre class=include>
@@ -98,7 +98,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-periodoftime.html
+path: src/new/property/properties-periodoftime.md
 </pre>
 
 <pre class=include>
@@ -114,7 +114,7 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-qualitycertificate.html
+path: src/new/property/properties-qualitycertificate.md
 </pre>
 
 <pre class=include>
@@ -130,5 +130,5 @@ path: src/new/table/style-tables-2.md
 </pre>
 
 <pre class=include>
-path: src/new/property/properties-relationship.html
+path: src/new/property/properties-relationship.md
 </pre>

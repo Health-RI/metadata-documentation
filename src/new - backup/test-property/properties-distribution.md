@@ -1,0 +1,190 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Property label</th>
+      <th>Definition</th>
+      <th>Property URI</th>
+      <th>Range</th>
+      <th>Cardinality</th>
+      <th>Usage note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>access service</td>
+      <td>A data service that gives access to the distribution of the dataset.</td>
+      <td>dcat:accessService</td>
+      <td>dcat:DataService</td>
+      <td>0..1</td>
+      <td>This property links the distribution class to the corresponding data service(s).</td>
+    </tr>
+    <tr>
+      <td>access url</td>
+      <td>A URL of the resource that gives access to a distribution of the dataset. E.g., landing page, feed, SPARQL endpoint.</td>
+      <td>dcat:accessURL</td>
+      <td>rdfs:Resource (IRI)</td>
+      <td>1</td>
+      <td>Add a link that points to where the dataset can be found. If it’s hosted in a Data Repository, include the link to its entry. For datasets not in a repository (like registries), but still available for secondary use, provide a link to an access request form or a webpage with instructions for accessing the data.</td>
+    </tr>
+    <tr>
+      <td>applicable legislation</td>
+      <td>The legislation that is applicable to this resource.</td>
+      <td>dcatap:applicableLegislation</td>
+      <td>eli:LegalResource (IRI)</td>
+      <td>0..n</td>
+      <td>The legislation that mandates the creation or management of the Distribution.</td>
+    </tr>
+    <tr>
+      <td>byte size</td>
+      <td>The size of a distribution in bytes.</td>
+      <td>dcat:byteSize</td>
+      <td>xsd:nonNegativeInteger</td>
+      <td>1</td>
+      <td>Describes the size of the distribution (the actual file) in bytes, and is therefore expressed as a non-negative integer. If the actual size is not know, it can be estimated.</td>
+    </tr>
+    <tr>
+      <td>checksum</td>
+      <td>The checksum property provides a mechanism that can be used to verify that the contents of a file or package have not changed.</td>
+      <td>spdx:checksum</td>
+      <td>spdx:Checksum</td>
+      <td>0..1</td>
+      <td>The checksum is related to the downloadURL. This property makes use of the spdx:Checksum class, which itself has two properties to indicate checksum algorithm and checksum value (see Checksum class for further details).</td>
+    </tr>
+    <tr>
+      <td>compression format</td>
+      <td>The compression format of the distribution in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file.</td>
+      <td>dcat:compressFormat</td>
+      <td>dct:MediaType (IRI)</td>
+      <td>0..1</td>
+      <td>It MUST be expressed using a media type as defined in the official register of media types managed by IANA.</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>An account of the resource.</td>
+      <td>dct:description</td>
+      <td>rdfs:Literal</td>
+      <td>0..n</td>
+      <td>Provide specific details about the distribution here, complementing the description of the related Dataset. This field can be repeated for different language versions of the description.</td>
+    </tr>
+    <tr>
+      <td>documentation</td>
+      <td>A homepage for some thing.</td>
+      <td>foaf:page</td>
+      <td>foaf:Document (IRI)</td>
+      <td>0..n</td>
+      <td>This page can contain additional information about the distribution.</td>
+    </tr>
+    <tr>
+      <td>download URL</td>
+      <td>The URL of the downloadable file in a given format. E.g., CSV file or RDF file. The format is indicated by the distribution's dcterms:format and/or dcat:mediaType.</td>
+      <td>dcat:downloadURL</td>
+      <td>rdfs:Resource (IRI)</td>
+      <td>0..1</td>
+      <td>If the dataset is openly accessible and available in a repository, you can directly include a link to the downloadable file here.</td>
+    </tr>
+    <tr>
+      <td>format</td>
+      <td>The file format, physical medium, or dimensions of the resource.</td>
+      <td>dct:format</td>
+      <td>dct:MediaTypeOrExtent (IRI)</td>
+      <td>1</td>
+      <td>This property can be used to describe a media format in more detail than "media type" (using IANA media type) when needed. Instances of this property should use a URL, e.g., from the File Type vocabulary. For instance, for mzML files the value of this property could be: http://edamontology.org/format_3244</td>
+    </tr>
+    <tr>
+      <td>language</td>
+      <td>A language of the resource.</td>
+      <td>dct:language</td>
+      <td>dct:LinguisticSystem (IRI)</td>
+      <td>0..n</td>
+      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.\nNote that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.</td>
+    </tr>
+    <tr>
+      <td>license</td>
+      <td>A legal document giving official permission to do something with the resource.</td>
+      <td>dct:license</td>
+      <td>dct:LicenceDocument (IRI)</td>
+      <td>1</td>
+      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue distributions, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.</td>
+    </tr>
+    <tr>
+      <td>linked schemas</td>
+      <td>An established standard to which the described resource conforms.</td>
+      <td>dct:conformsTo</td>
+      <td>dct:Standard (IRI)</td>
+      <td>0..n</td>
+      <td>This property SHOULD be used to indicate the model, schema, ontology, view or profile that this representation of a dataset conforms to, in a machine-readable form. This is (generally) a complementary concern to the media-type or format. Use a reference to the official publication of the respective schema.</td>
+    </tr>
+    <tr>
+      <td>media type</td>
+      <td>The media type of the distribution as defined by IANA.</td>
+      <td>dcat:mediaType</td>
+      <td>dct:MediaType (IRI)</td>
+      <td>0..1</td>
+      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.\nExample: https://www.iana.org/assignments/media-types/text/csv (for csv)\nIf IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.</td>
+    </tr>
+    <tr>
+      <td>modification date</td>
+      <td>Date on which the resource was changed.</td>
+      <td>dct:modified</td>
+      <td>xsd:dateTime</td>
+      <td>0..1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>packaging format</td>
+      <td>The package format of the distribution in which one or more data files are grouped together, e.g., to enable a set of related files to be downloaded together.</td>
+      <td>dcat:packageFormat</td>
+      <td>dct:MediaType (IRI)</td>
+      <td>0..1</td>
+      <td>It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.</td>
+    </tr>
+    <tr>
+      <td>release date</td>
+      <td>Date of formal issuance of the resource.</td>
+      <td>dct:issued</td>
+      <td>xsd:dateTime</td>
+      <td>0..1</td>
+      <td>The date the dataset distribution was issued.</td>
+    </tr>
+    <tr>
+      <td>retention period</td>
+      <td>A temporal period which the dataset is available for secondary use.</td>
+      <td>healthdcatap:retentionperiod</td>
+      <td>dct:PeriodOfTime</td>
+      <td>0..1</td>
+      <td>This property makes use of the class dct:PeriodOfTime, in which a start and end date should be provided.</td>
+    </tr>
+    <tr>
+      <td>rights</td>
+      <td>Information about rights held in and over the resource.</td>
+      <td>dct:rights</td>
+      <td>dct:RightsStatement (IRI)</td>
+      <td>1</td>
+      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.\nThe rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.\nCurrent status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>The status of the Asset in the context of a particular workflow process.</td>
+      <td>adms:status</td>
+      <td>skos:Concept (IRI)</td>
+      <td>0..1</td>
+      <td>It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the provided controlled vocabulary.</td>
+    </tr>
+    <tr>
+      <td>temporal resolution</td>
+      <td>Minimum time period resolvable in the dataset.</td>
+      <td>dcat:temporalResolution</td>
+      <td>xsd:duration</td>
+      <td>0..1</td>
+      <td>If applicable, this property indicates the minimum time period resolvable in the dataset distribution, expressed in xsd:duration format (see for more information here: https://www.w3schools.com/xml/schema_dtypes_date.asp)</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>A name given to the resource.</td>
+      <td>dct:title</td>
+      <td>rdfs:Literal</td>
+      <td>0..n</td>
+      <td>A title given to the distribution. e.g., Data Access Request of Healthy Brain study</td>
+    </tr>
+  </tbody>
+</table>

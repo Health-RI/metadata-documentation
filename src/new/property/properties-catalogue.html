@@ -1,0 +1,166 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Property label</th>
+      <th>Definition</th>
+      <th>Property URI</th>
+      <th>Range</th>
+      <th>Cardinality</th>
+      <th>Usage note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a></td>
+      <td>The legislation that is applicable to this resource.</td>
+      <td>dcatap:applicableLegislation</td>
+      <td>eli:LegalResource (IRI)</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:catalog">catalog</a></td>
+      <td>A catalog that is listed in the catalog.</td>
+      <td>dcat:catalog</td>
+      <td>dcat:Catalog (IRI)</td>
+      <td>0..n</td>
+      <td>For certain research projects, multiple catalogs may need to be organized in a nested manner. This property serves to connect the different catalogs with each other.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:contactPoint">contact point</a></td>
+      <td>Relevant contact information for the cataloged resource.</td>
+      <td>dcat:contactPoint</td>
+      <td>vcard:Kind</td>
+      <td>1</td>
+      <td>This property points to a contact point (department or person) that can answer questions about the catalogue. Details on how to describe these are provided under class vcard:Kind.<br>Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#creator">creator</a></td>
+      <td>An entity responsible for making the resource.</td>
+      <td>dct:creator</td>
+      <td>foaf:Agent</td>
+      <td>0..n</td>
+      <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows specification of multiple creators of a catalogue.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:dataset">dataset</a></td>
+      <td>A dataset that is listed in the catalog.</td>
+      <td>dcat:dataset</td>
+      <td>dcat:Dataset</td>
+      <td>0..n</td>
+      <td>Each catalog contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a></td>
+      <td>An account of the resource.</td>
+      <td>dct:description</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Briefly describe the catalog and what it contains. You can repeat this in multiple languages.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">geographical coverage</a></td>
+      <td>Spatial characteristics of the resource.</td>
+      <td>dct:spatial</td>
+      <td>dct:Location (IRI)</td>
+      <td>0..n</td>
+      <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#hasPart">has part</a></td>
+      <td>A related resource that is included either physically or logically in the described resource.</td>
+      <td>dct:hasPart</td>
+      <td>dcat:Catalog (IRI)</td>
+      <td>0..n</td>
+      <td>Use this property to establish another catalogue in this catalogue.<br>Note that deeply nested structures should be avoided, and can currently not be displayed in the National Health Data Catalogue.</td>
+    </tr>
+    <tr>
+      <td><a href="http://xmlns.com/foaf/spec/#term_homepage">home page</a></td>
+      <td>A homepage for some thing.</td>
+      <td>foaf:homepage</td>
+      <td>foaf:Document (IRI)</td>
+      <td>0..1</td>
+      <td>The home page of the catalogue, if available.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language">language</a></td>
+      <td>A language of the resource.</td>
+      <td>dct:language</td>
+      <td>dct:LinguisticSystem (IRI)</td>
+      <td>0..n</td>
+      <td>The value of this property must be an IRI from the provided controlled vocabulary.<br>For example: http://publications.europa.eu/resource/authority/language/NLD</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license">licence</a></td>
+      <td>A legal document giving official permission to do something with the resource.</td>
+      <td>dct:license</td>
+      <td>dct:LicenseDocument (IRI)</td>
+      <td>0..1</td>
+      <td>The licence under which the catalogue (with resource description) is made available. In the description of distributions and data services the licences of that resources are taken up.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a></td>
+      <td>Date on which the resource was changed.</td>
+      <td>dct:modified</td>
+      <td>xsd:dateTime</td>
+      <td>0..1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">publisher</a></td>
+      <td>An entity responsible for making the resource available.</td>
+      <td>dct:publisher</td>
+      <td>foaf:Agent</td>
+      <td>1</td>
+      <td>The organisation or individual that is holder of the intellectual property rights of a dataset. For more details about the publisher, see the class Agent. Example: Radboudumc.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued">release date</a></td>
+      <td>Date of formal issuance of the resource.</td>
+      <td>dct:issued</td>
+      <td>xsd:dateTime</td>
+      <td>0..1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#rights">rights</a></td>
+      <td>Information about rights held in and over the resource.</td>
+      <td>dct:rights</td>
+      <td>dct:RightsStatement (IRI)</td>
+      <td>0..1</td>
+      <td>The rights statement should be a free-text statement placed at a web-accessible location such that the value of this property is the IRI pointing to that statement.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:service">service</a></td>
+      <td>A service that is listed in the catalog.</td>
+      <td>dcat:service</td>
+      <td>dcat:DataService (IRI)</td>
+      <td>0..n</td>
+      <td>Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalog and the Data Service via this property. While crucial for interoperability, this property is not relevant for end-users to collect.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal">temporal coverage</a></td>
+      <td>Temporal characteristics of the resource.</td>
+      <td>dct:temporal</td>
+      <td>dct:PeriodOfTime</td>
+      <td>0..n</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:themeTaxonomy">themes</a></td>
+      <td>A main category of the resource. A resource can have multiple themes.</td>
+      <td>dcat:themeTaxonomy</td>
+      <td>skos:ConceptScheme (IRI)</td>
+      <td>0..n</td>
+      <td>This property refers to a knowledge organisation system used to classify the Catalogue's Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a></td>
+      <td>A name given to the resource.</td>
+      <td>dct:title</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Provide a unique title for your catalog, which can be repeated in multiple languages. Example: Healthy Brain Study.</td>
+    </tr>
+  </tbody>
+</table>

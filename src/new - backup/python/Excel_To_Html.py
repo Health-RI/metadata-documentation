@@ -8,29 +8,6 @@ format that can be rendered: pre-processor source document (containing only the 
 import traceback
 from pathlib import Path
 import pandas as pd
-import json
-
-# Helper functions for link injection
-def linkify_property_label(row, links):
-    label = row.get("Property label")
-    uri = row.get("Property URI")
-
-    # Safety
-    if not isinstance(label, str) or not isinstance(uri, str):
-        return label
-
-    # Ignore class IRIs like "dcat:Dataset (IRI)"
-    if "(IRI)" in uri:
-        return label
-
-    # If URI found in canonicalLinks → make label clickable
-    if uri in links["canonicalLinks"]:
-        url = links["canonicalLinks"][uri]
-        return f'<a href="{url}">{label}</a>'
-
-    return label
-
-
 
 # Configuration
 # EXCEL_FILE_PATH = "./inputs/filename.xlsx"
@@ -59,19 +36,6 @@ def main():
     print(f"  Found {len(classes_df)} classes to process")
     print()
 
-    # STEP 3: Load link registry
-    LINKS_FILE = Path(__file__).parent / "links.json"
-
-    with open(LINKS_FILE, "r", encoding="utf-8") as f:
-        links = json.load(f)
-
-    # For now, just print what we loaded (so we know it works)
-    print("Loaded link registry with:")
-    print(" -", len(links["prefixes"]), "prefixes")
-    print(" -", len(links["canonicalLinks"]), "canonical links")
-    print(" -", len(links["rawURLs"]), "raw URLs")
-
-
     # Process each class
     for idx, class_row in classes_df.iterrows():
         sheet_name = class_row['sheet_name']
@@ -96,7 +60,7 @@ def main():
             class_name = ontology_name.split(":")[-1]
 
             # Load output file name and path
-            output_file = OUTPUT_PATH / f"properties-{sheet_name.lower()}.html"
+            output_file = OUTPUT_PATH / f"properties-{sheet_name.lower()}.md"
 
 
 ### apply toepassen hier
@@ -108,22 +72,10 @@ def main():
 
             print(f"  ✓ Generated {output_file}")
             print()
-
-            # Show DataFrame (optional)
             print(class_df)
 
-            # Make ONLY the Property label clickable
-            class_df["Property label"] = class_df.apply(
-                lambda row: linkify_property_label(row, links),
-                axis=1
-            )
-
-            # Replace Excel newlines with <br> for proper HTML rendering
-            class_df = class_df.replace(r'\n', '<br>', regex=True)
-
-            # Write to output file with escape disabled
-            class_df.to_html(output_file, index=False, escape=False)
-
+            # Write to output file
+            class_df.to_html(output_file, index=False)
 
 
         except Exception as e:
