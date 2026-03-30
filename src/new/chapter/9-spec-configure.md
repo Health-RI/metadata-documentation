@@ -1,3 +1,1 @@
 
-Further spec configurations:
-TBD

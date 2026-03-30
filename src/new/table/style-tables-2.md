@@ -5,6 +5,7 @@ table {
   font-family: sans-serif;
   font-size: 11px;       /* one point larger */
   line-height: 1.2;
+  width: 100%;           /* default table width to 100% */
 }
 
 th, td {

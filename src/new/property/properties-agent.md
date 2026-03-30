@@ -24,7 +24,7 @@
       <td>foaf:mbox</td>
       <td>rdfs:Resource&nbsp;&nbsp;(IRI)</td>
       <td>1</td>
-      <td>It is possible to provide the email address of the appropriate institution or department if no personal email address can be provided.\nThe email address has to be provided starting with mailto: prefix.\nFor example: mailto:info@example.com / mailto: jane.doe@example.com</td>
+      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent.\nThis protects their privacy and enables contact about the resource even after the individual has left the institution.\n\nThe email address has to be provided starting with mailto: prefix.\nFor example: mailto:info@example.com</td>
     </tr>
     <tr>
       <td>identifier</td>

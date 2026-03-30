@@ -183,7 +183,7 @@
       <td>A name given to the resource.</td>
       <td>dct:title</td>
       <td>rdfs:Literal</td>
-      <td>0..n</td>
+      <td>1..n</td>
       <td>A title given to the distribution. e.g., Data Access Request of Healthy Brain study</td>
     </tr>
   </tbody>

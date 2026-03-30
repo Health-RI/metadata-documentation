@@ -114,10 +114,38 @@
       <td>0..n</td>
       <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (eg. indicating that NL is covered), to not expose detailed information of subject's locations.</td>
     </tr>
-
-
-
-
+    <tr>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
     <tr>
       <td>has version</td>
       <td>This resource has a more specific, versioned resource.</td>
@@ -210,7 +238,7 @@
       <td>number of records</td>
       <td>Size of the dataset in terms of the number of records</td>
       <td>healthdcatap:numberOfRecords</td>
-      <td>xsd:NonNegativeInteger</td>
+      <td>xsd:nonNegativeInteger</td>
       <td>0..1</td>
       <td>Number of records inside a Dataset.</td>
     </tr>
@@ -218,7 +246,7 @@
       <td>number of unique infividuals</td>
       <td>Number of records for unique individuals.</td>
       <td>healthdcatap:numberOfUniqueIndividuals</td>
-      <td>xsd:NonNegativeInteger</td>
+      <td>xsd:nonNegativeInteger</td>
       <td>0..1</td>
       <td>This property is not mandatory, since not all datasets might include data from individuals.</td>
     </tr>
