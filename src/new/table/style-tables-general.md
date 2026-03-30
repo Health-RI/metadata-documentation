@@ -5,6 +5,7 @@ table {
   font-family: sans-serif;
   font-size: 11px;
   line-height: 1.2;
+  width: 100%;           /* default table width to 100% */
 }
 
 th, td {
@@ -54,7 +55,7 @@ table.no-style th,
 table.no-style td {
   border: none !important;
   background: none !important;
-  font-size: 12.5px !important;    /* larger text */
+  font-size: 13px !important;    /* larger text */
   line-height: 1.4 !important;   /* better readability */
   margin-bottom: 1.5em;          /* space after table */
 }
@@ -73,4 +74,13 @@ table.no-style thead th {
 table.no-style tr:last-child td {
   border-bottom: 1px solid #aaaaaa00 !important;
 }
+
+/* Larger font for specific table */
+table.larger-font,
+table.larger-font th,
+table.larger-font td {
+  font-size: 13.5px;   /* increase as needed */
+  line-height: 1.4;  /* better readability */
+}
+
 </style>

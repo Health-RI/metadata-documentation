@@ -21,7 +21,7 @@ Supportive classes in this structure:
 - **Relationship**
 - **Quality certificate**
 
-The main classes and supportive classes together form the Health-RI data catalogue schema. 
+The main classes and supportive classes together form the Health-RI Core metadata schema. 
 
 **Please take into consideration**:
 - Certain properties (e.g. `dct:publisher`, `dct:creator`, `dct:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties will instantiate new instances of the specific supporting classes for each usage. This means that, for example, the `dct:publisher` and `dct:creator` can instantiate [`foaf:Agent`](#agent) at two separate times with different content (organisation vs. person).

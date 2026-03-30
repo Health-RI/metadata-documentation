@@ -22,7 +22,7 @@
       <td>checksum value</td>
       <td>The checksumValue property provides a lower case hexidecimal encoded digest value produced using a specific algorithm.</td>
       <td>spdx:checksumValue</td>
-      <td>xsd:hexBinary</td>
+      <td>rdfs:Literal</td>
       <td>1</td>
       <td>NaN</td>
     </tr>

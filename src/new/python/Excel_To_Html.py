@@ -11,7 +11,7 @@ import pandas as pd
 
 # Configuration
 # EXCEL_FILE_PATH = "./inputs/filename.xlsx"
-EXCEL_FILE_PATH = "../excel/Metadata_CoreGenericHealth_v2_Extended.xlsx"
+EXCEL_FILE_PATH = "../excel/HealthRI_v2.0.2.xlsx"
 FOLDER_NAME = "property"
 OUTPUT_PATH = Path("../") / FOLDER_NAME
 
@@ -39,8 +39,8 @@ def main():
     # Process each class
     for idx, class_row in classes_df.iterrows():
         sheet_name = class_row['sheet_name']
-        ontology_name = class_row['ontology_name']
-        target_class = class_row['target_ontology_name']
+        ontology_name = class_row['class_URI']
+        target_class = class_row['SHACL_target_ontology_name']
         description = class_row.get('description', None)
 
         print(f"Processing {sheet_name} class...")

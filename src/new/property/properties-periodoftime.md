@@ -16,7 +16,7 @@
       <td>dcat:endDate</td>
       <td>xsd:dateTime</td>
       <td>0..1</td>
-      <td>NaN    </td>
+      <td>NaN</td>
     </tr>
     <tr>
       <td>start date</td>
@@ -24,7 +24,7 @@
       <td>dcat:startDate</td>
       <td>xsd:dateTime</td>
       <td>0..1</td>
-      <td>NaN    </td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
