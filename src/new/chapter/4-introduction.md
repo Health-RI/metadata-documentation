@@ -56,7 +56,7 @@ A tabular overview of all classes and properties—including their range, cardin
 ## UML Class Diagram v2.0.2
 
 <a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
-  <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" alt="Health-RI Metadata Diagram" style="display:block; margin:0 auto; max-width:80%; height:auto;">
+  <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" alt="Health-RI Metadata Diagram" width=800 height=1100 title="diagram">
 </a>
 
 Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.
