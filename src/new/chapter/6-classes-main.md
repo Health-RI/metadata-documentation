@@ -1,7 +1,7 @@
 # Main Classes # {#classes-main}
 **Main Classes** represent the core entities of the data catalog. They define leading components.
 
-## Mandatory 
+## Mandatory main classes
 
 <pre class=include>
 path: src/new/table/style-tables-general.md
@@ -35,7 +35,7 @@ path: src/new/table/style-tables-2.md
 path: src/new/property/properties-dataset.html
 </pre>
 
-## Recommended 
+## Recommended main classes
 
 <pre class=include>
 path: src/new/table/style-tables-general.md

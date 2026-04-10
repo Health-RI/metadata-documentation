@@ -1,7 +1,7 @@
 # Supportive Classes # {#classes-supportive}
 **Supportive Classes** provide additional context and metadata. They enhance discoverability.
 
-## Mandatory
+## Mandatory supportive classes
 
 <pre class=include>
 path: src/new/table/style-tables-general.md
@@ -35,7 +35,7 @@ path: src/new/table/style-tables-2.md
 path: src/new/property/properties-kind.html
 </pre>
 
-## Recommended 
+## Recommended supportive classes
 
 <pre class=include>
 path: src/new/table/style-tables-general.md
