@@ -40,13 +40,9 @@ Markup Shorthands: markdown yes, css no
 path: src/new/table/style-tables-general.md
 </pre>
 
-<pre class=include>
-path: src/new/chapter/1-permanent-urls.md
-</pre>
-
-<pre class=include>
-path: src/new/chapter/2-previous-published.md
-</pre>
+#<pre class=include>
+#path: src/new/chapter/2-previous-published.md
+#</pre>
 
 <pre class=include>
 path: src/new/chapter/3-purpose-and-audience.md
@@ -54,6 +50,10 @@ path: src/new/chapter/3-purpose-and-audience.md
 
 <pre class=include>
 path: src/new/chapter/4-introduction.md
+</pre>
+
+<pre class=include>
+path: src/new/chapter/1-permanent-urls.md
 </pre>
 
 <pre class=include>
