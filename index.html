@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 0ef803fdf, updated Tue Jan 6 11:59:39 2026 -0800" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="3a2126cd3feaf172a214e889d093999618a4cac4" name="revision">
+  <meta content="9fac43bafca1a341aa061d924e1d4d164e83279f" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -3775,7 +3775,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">Health-RI Metadata Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-03-30">30 March 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-04-10">10 April 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -3816,122 +3816,75 @@ dfn > a.self-link::before      { content: "#"; }
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p><img alt="Health-RI Logo" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_Logo.png" style="max-width:480px; height:auto;" title="Health-RI Logo"> <br> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.</p>
+   <p><img alt="Health-RI Logo" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_Logo.png" title="Health-RI Logo" width="300"> <br> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
    <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
    <ol class="toc">
+    <li><a href="#purpose-and-audience"><span class="secno">1</span> <span class="content">Purpose and audience</span></a>
     <li>
-     <a href="#permanent-urls"><span class="secno">1</span> <span class="content">Permanent Urls</span></a>
+     <a href="#introduction"><span class="secno">2</span> <span class="content">Introduction</span></a>
      <ol class="toc">
-      <li><a href="#project-homepage"><span class="secno">1.1</span> <span class="content">Project Homepage</span></a>
-      <li><a href="#health-ri-metadata"><span class="secno">1.2</span> <span class="content">Health-RI Metadata</span></a>
-      <li><a href="#metadata-resources"><span class="secno">1.3</span> <span class="content">Metadata Resources</span></a>
-      <li><a href="#versioning--releases"><span class="secno">1.4</span> <span class="content">Versioning &amp; Releases</span></a>
+      <li><a href="#scope-and-current-state-of-the-schema"><span class="secno">2.1</span> <span class="content">Scope and Current State of the Schema</span></a>
+      <li><a href="#used-prefixes"><span class="secno">2.2</span> <span class="content">Used Prefixes</span></a>
      </ol>
     <li>
-     <a href="#previous-published"><span class="secno">2</span> <span class="content">Previous Published</span></a>
+     <a href="#overview-and-diagram"><span class="secno">3</span> <span class="content">Overview and Diagram</span></a>
      <ol class="toc">
-      <li><a href="#previous-versions"><span class="secno">2.1</span> <span class="content">Previous versions</span></a>
+      <li><a href="#uml-class-diagram-v202"><span class="secno">3.1</span> <span class="content">UML Class Diagram v2.0.2</span></a>
      </ol>
     <li>
-     <a href="#purpose-and-audience"><span class="secno">3</span> <span class="content">Audience Documentation</span></a>
+     <a href="#permanent-urls"><span class="secno">4</span> <span class="content">Permanent Urls</span></a>
      <ol class="toc">
-      <li><a href="#purpose-and-audience①"><span class="secno">3.1</span> <span class="content">Purpose and audience</span></a>
+      <li><a href="#classtext"><span class="secno">4.1</span> <span class="content">Class Structure</span></a>
+      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.2</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
      </ol>
     <li>
-     <a href="#introduction"><span class="secno">4</span> <span class="content">Introduction</span></a>
-     <ol class="toc">
-      <li><a href="#scope-and-current-state-of-the-schema"><span class="secno">4.1</span> <span class="content">Scope and Current State of the Schema</span></a>
-      <li><a href="#used-prefixes"><span class="secno">4.2</span> <span class="content">Used Prefixes</span></a>
-     </ol>
-    <li>
-     <a href="#overview-and-diagram"><span class="secno">5</span> <span class="content">Overview and Diagram</span></a>
-     <ol class="toc">
-      <li><a href="#uml-class-diagram-v202"><span class="secno">5.1</span> <span class="content">UML Class Diagram v2.0.2</span></a>
-      <li><a href="#classtext"><span class="secno">5.2</span> <span class="content">Class Structure</span></a>
-      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">5.3</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
-     </ol>
-    <li>
-     <a href="#classes-main"><span class="secno">6</span> <span class="content">Main Classes</span></a>
+     <a href="#classes-main"><span class="secno">5</span> <span class="content">Main Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#mandatory"><span class="secno">6.1</span> <span class="content">Mandatory</span></a>
+       <a href="#mandatory-main-classes"><span class="secno">5.1</span> <span class="content">Mandatory main classes</span></a>
        <ol class="toc">
-        <li><a href="#catalog"><span class="secno">6.1.1</span> <span class="content"><span>Catalog</span></span></a>
-        <li><a href="#dataset"><span class="secno">6.1.2</span> <span class="content"><span>Dataset</span></span></a>
+        <li><a href="#catalog"><span class="secno">5.1.1</span> <span class="content"><span>Catalog</span></span></a>
+        <li><a href="#dataset"><span class="secno">5.1.2</span> <span class="content"><span>Dataset</span></span></a>
        </ol>
       <li>
-       <a href="#recommended"><span class="secno">6.2</span> <span class="content">Recommended</span></a>
+       <a href="#recommended-main-classes"><span class="secno">5.2</span> <span class="content">Recommended main classes</span></a>
        <ol class="toc">
-        <li><a href="#data-service"><span class="secno">6.2.1</span> <span class="content"><span>Data Service</span></span></a>
-        <li><a href="#dataset-series"><span class="secno">6.2.2</span> <span class="content"><span>Dataset Series</span></span></a>
-        <li><a href="#distribution"><span class="secno">6.2.3</span> <span class="content"><span>Distribution</span></span></a>
+        <li><a href="#data-service"><span class="secno">5.2.1</span> <span class="content"><span>Data Service</span></span></a>
+        <li><a href="#dataset-series"><span class="secno">5.2.2</span> <span class="content"><span>Dataset Series</span></span></a>
+        <li><a href="#distribution"><span class="secno">5.2.3</span> <span class="content"><span>Distribution</span></span></a>
        </ol>
      </ol>
     <li>
-     <a href="#classes-supportive"><span class="secno">7</span> <span class="content">Supportive Classes</span></a>
+     <a href="#classes-supportive"><span class="secno">6</span> <span class="content">Supportive Classes</span></a>
      <ol class="toc">
       <li>
-       <a href="#mandatory①"><span class="secno">7.1</span> <span class="content">Mandatory</span></a>
+       <a href="#mandatory-supportive-classes"><span class="secno">6.1</span> <span class="content">Mandatory supportive classes</span></a>
        <ol class="toc">
-        <li><a href="#agent"><span class="secno">7.1.1</span> <span class="content"><span>Agent</span></span></a>
-        <li><a href="#kind"><span class="secno">7.1.2</span> <span class="content"><span>Kind</span></span></a>
+        <li><a href="#agent"><span class="secno">6.1.1</span> <span class="content"><span>Agent</span></span></a>
+        <li><a href="#kind"><span class="secno">6.1.2</span> <span class="content"><span>Kind</span></span></a>
        </ol>
       <li>
-       <a href="#recommended①"><span class="secno">7.2</span> <span class="content">Recommended</span></a>
+       <a href="#recommended-supportive-classes"><span class="secno">6.2</span> <span class="content">Recommended supportive classes</span></a>
        <ol class="toc">
-        <li><a href="#attribution"><span class="secno">7.2.1</span> <span class="content"><span>Attribution</span></span></a>
-        <li><a href="#checksum"><span class="secno">7.2.2</span> <span class="content"><span>Checksum</span></span></a>
-        <li><a href="#identifier"><span class="secno">7.2.3</span> <span class="content"><span>Identifier</span></span></a>
-        <li><a href="#period-of-time"><span class="secno">7.2.4</span> <span class="content"><span>Period of time</span></span></a>
-        <li><a href="#quality-certificate"><span class="secno">7.2.5</span> <span class="content"><span>Quality certificate</span></span></a>
-        <li><a href="#relationship"><span class="secno">7.2.6</span> <span class="content"><span>Relationship</span></span></a>
+        <li><a href="#attribution"><span class="secno">6.2.1</span> <span class="content"><span>Attribution</span></span></a>
+        <li><a href="#checksum"><span class="secno">6.2.2</span> <span class="content"><span>Checksum</span></span></a>
+        <li><a href="#identifier"><span class="secno">6.2.3</span> <span class="content"><span>Identifier</span></span></a>
+        <li><a href="#period-of-time"><span class="secno">6.2.4</span> <span class="content"><span>Period of time</span></span></a>
+        <li><a href="#quality-certificate"><span class="secno">6.2.5</span> <span class="content"><span>Quality certificate</span></span></a>
+        <li><a href="#relationship"><span class="secno">6.2.6</span> <span class="content"><span>Relationship</span></span></a>
        </ol>
      </ol>
    </ol>
   </nav>
   <main>
-   <h2 class="heading settled" data-level="1" id="permanent-urls"><span class="secno">1. </span><span class="content">Permanent Urls</span><a class="self-link" href="#permanent-urls"></a></h2>
-   <h3 class="heading settled" data-level="1.1" id="project-homepage"><span class="secno">1.1. </span><span class="content">Project Homepage</span><a class="self-link" href="#project-homepage"></a></h3>
-   <ul>
-    <li data-md>
-     <p><strong>Main page:</strong> <a href="https://w3id.org/health-ri/metadata">w3id.org/health-ri/metadata</a></p>
-   </ul>
-   <h3 class="heading settled" data-level="1.2" id="health-ri-metadata"><span class="secno">1.2. </span><span class="content">Health-RI Metadata</span><a class="self-link" href="#health-ri-metadata"></a></h3>
-   <ul>
-    <li data-md>
-     <p><strong>Git repository:</strong> <a href="https://w3id.org/health-ri/metadata/git">w3id.org/health-ri/metadata/git</a></p>
-   </ul>
-   <h3 class="heading settled" data-level="1.3" id="metadata-resources"><span class="secno">1.3. </span><span class="content">Metadata Resources</span><a class="self-link" href="#metadata-resources"></a></h3>
-   
-To support long-term FAIR (Findable, Accessible, Interoperable, and Reusable) access to Health-RI Metadata Schema resources, we provide persistent URLs using the <a href="https://w3id.org/">W3ID</a> system. These permanent identifiers improve the <strong>findability</strong> and <strong>accessibility</strong> of the related artifacts.
-The following <strong>W3ID redirects</strong> are available for Health-RI metadata:
-
-
-   <h3 class="heading settled" data-level="1.4" id="versioning--releases"><span class="secno">1.4. </span><span class="content">Versioning &amp; Releases</span><a class="self-link" href="#versioning--releases"></a></h3>
-   <ul>
-    <li data-md>
-     <p><strong>Latest release:</strong> <a href="https://w3id.org/health-ri/metadata/releases/latest">w3id.org/health-ri/metadata/releases/latest</a></p>
-    <li data-md>
-     <p><strong>All releases:</strong> <a href="https://w3id.org/health-ri/metadata/releases">w3id.org/health-ri/metadata/releases</a></p>
-    <li data-md>
-     <p><strong>Specific release:</strong></p>
-    <li data-md>
-     <p>Use the following pattern to reference a specific versioned release: <code>https://w3id.org/health-ri/metadata/releases/{version}</code>.</p>
-    <li data-md>
-     <p>For example: <a href="https://w3id.org/health-ri/metadata/releases/v1.0.1">w3id.org/health-ri/metadata/releases/v1.0.1</a></p>
-   </ul>
-   <h2 class="heading settled" data-level="2" id="previous-published"><span class="secno">2. </span><span class="content">Previous Published</span><a class="self-link" href="#previous-published"></a></h2>
-   <h3 class="heading settled" data-level="2.1" id="previous-versions"><span class="secno">2.1. </span><span class="content">Previous versions</span><a class="self-link" href="#previous-versions"></a></h3>
-   <p>The previous published version (version 1.0.2) of the Health-RI core metadata schema is <a href="https://github.com/Health-RI/health-ri-metadata/releases/tag/v1.0.2">available here</a>.</p>
-   <h2 class="heading settled" data-level="3" id="purpose-and-audience"><span class="secno">3. </span><span class="content">Audience Documentation</span><a class="self-link" href="#purpose-and-audience"></a></h2>
-   <h3 class="heading settled" data-level="3.1" id="purpose-and-audience①"><span class="secno">3.1. </span><span class="content">Purpose and audience</span><a class="self-link" href="#purpose-and-audience①"></a></h3>
-   <p>This branch contains the 2nd version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and entities involved and offering usage notes for developers. It addresses the schema’s design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue">here</a>). Please also visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>. <strong>Please note that we are currently still working on the implementation of the new schema into the frontend of the National Health Data Catalogue.</strong></p>
+   <h2 class="heading settled" data-level="1" id="purpose-and-audience"><span class="secno">1. </span><span class="content">Purpose and audience</span><a class="self-link" href="#purpose-and-audience"></a></h2>
+   <p>This page outlines the latest version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and properties involved and offering usage notes for data holders tasked with filling in the schema. It addresses the schema’s design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue">here</a>). Please also visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>. <strong>Please note that we are currently still working on the implementation of the new schema into the frontend of the National Health Data Catalogue.</strong></p>
    <p>This documentation aims at a <strong>technical audience</strong> tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the core metadata schema. With any further questions or comments please contact Health-RI via the <a href="https://www.health-ri.nl/health-ri-servicedesk">Health-RI ServiceDesk</a> or via <a href="mailto:servicedesk@health-ri.nl">servicedesk@health-ri.nl</a>.</p>
-   <h2 class="heading settled" data-level="4" id="introduction"><span class="secno">4. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
-   <h3 class="heading settled" data-level="4.1" id="scope-and-current-state-of-the-schema"><span class="secno">4.1. </span><span class="content">Scope and Current State of the Schema</span><a class="self-link" href="#scope-and-current-state-of-the-schema"></a></h3>
+   <h2 class="heading settled" data-level="2" id="introduction"><span class="secno">2. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
+   <h3 class="heading settled" data-level="2.1" id="scope-and-current-state-of-the-schema"><span class="secno">2.1. </span><span class="content">Scope and Current State of the Schema</span><a class="self-link" href="#scope-and-current-state-of-the-schema"></a></h3>
    
 Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/master">1st version of the metadata schema</a>, version 2 aims to incorporate both <a href="https://geonovum.github.io/DCAT-AP-NL30/">DCAT-AP NL</a> and the (yet-to-be-finalized) <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a>, along with Health-RI-specific requirements for the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It introduces several health-related properties (marked in blue in the UML diagram below), with suggested or required controlled vocabularies where applicable.
 
@@ -3940,7 +3893,7 @@ Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/ma
    <p>Additionally, several <strong>ELSI</strong>-related metadata fields, as <a href="https://health-ri.atlassian.net/wiki/spaces/HA/pages/469893133/Metadata+rondom+gebruiksvoorwaarden+en+authenticatie+autorisatie+en+ELSI+aspecten#Catalogus">gathered</a> by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.</p>
    <p>To indicate the <strong>nature of the data</strong> (e.g., whole genome sequencing or questionnaire data), we propose using <code>healthdcatap:healthTheme</code>. For <strong>synthetic data</strong>, use <code>dct:type</code> with the required controlled vocabulary in the <code>dcat:Dataset</code> class.</p>
    <p>Several classes from <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> have been included but not further specified for Health-RI yet. This includes the <strong>DataService</strong> class, meaning that these classes can be used but are not yet tailored to specific dataholder needs for the National Health Data Catalogue.</p>
-   <h3 class="heading settled" data-level="4.2" id="used-prefixes"><span class="secno">4.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
+   <h3 class="heading settled" data-level="2.2" id="used-prefixes"><span class="secno">2.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
    <table class="larger-font">
     <thead>
      <tr>
@@ -3999,7 +3952,7 @@ Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/ma
       <td>healthdcatap
       <td>To Be Determined
    </table>
-   <h2 class="heading settled" data-level="5" id="overview-and-diagram"><span class="secno">5. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h2>
+   <h2 class="heading settled" data-level="3" id="overview-and-diagram"><span class="secno">3. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h2>
    
 An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as <code>rdfs:label</code> and <code>rdfs:comment</code>. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
 
@@ -4008,12 +3961,34 @@ An overview of the metadata schema core is presented in the UML diagram below. T
    <p>The UML diagram separates <strong>main classes</strong> from <strong>supporting classes</strong>. While relationships between main classes are indicated by arrows, supporting class relationships are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.</p>
    <p>Properties derived from draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
    <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="Documents/Metadata_CoreGenericHealth_v2.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
-   <h3 class="heading settled" data-level="5.1" id="uml-class-diagram-v202"><span class="secno">5.1. </span><span class="content">UML Class Diagram v2.0.2</span><a class="self-link" href="#uml-class-diagram-v202"></a></h3>
+   <h3 class="heading settled" data-level="3.1" id="uml-class-diagram-v202"><span class="secno">3.1. </span><span class="content">UML Class Diagram v2.0.2</span><a class="self-link" href="#uml-class-diagram-v202"></a></h3>
    <p><a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
-  <img alt="Health-RI Metadata Diagram" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" style="display:block; margin:0 auto; max-width:80%; height:auto;">
+  <img alt="Health-RI Metadata Diagram" height="1100" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" title="diagram" width="800">
 </a></p>
    <p>Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.</p>
-   <h3 class="heading settled" data-level="5.2" id="classtext"><span class="secno">5.2. </span><span class="content">Class Structure</span><a class="self-link" href="#classtext"></a></h3>
+   <h2 class="heading settled" data-level="4" id="permanent-urls"><span class="secno">4. </span><span class="content">Permanent Urls</span><a class="self-link" href="#permanent-urls"></a></h2>
+   
+To support long-term FAIR (Findable, Accessible, Interoperable, and Reusable) access to Health-RI Metadata Schema resources, we provide persistent URLs using the <a href="https://w3id.org/">W3ID</a> system. These permanent identifiers improve the <strong>findability</strong> and <strong>accessibility</strong> of the related artifacts.
+The following <strong>W3ID redirects</strong> are available for Health-RI metadata:
+
+
+   <p><strong>Git repository:</strong> <a href="https://w3id.org/health-ri/metadata/git">w3id.org/health-ri/metadata/git</a></p>
+   <p><strong>Versioning &amp; Releases</strong></p>
+   <ul>
+    <li data-md>
+     <p><strong>Latest release:</strong> <a href="https://w3id.org/health-ri/metadata/releases/latest">w3id.org/health-ri/metadata/releases/latest</a></p>
+    <li data-md>
+     <p><strong>All releases:</strong> <a href="https://w3id.org/health-ri/metadata/releases">w3id.org/health-ri/metadata/releases</a></p>
+    <li data-md>
+     <p><strong>Specific release:</strong></p>
+    <li data-md>
+     <p>Use the following pattern to reference a specific versioned release: <code>https://w3id.org/health-ri/metadata/releases/{version}</code>.</p>
+    <li data-md>
+     <p>For example: <a href="https://w3id.org/health-ri/metadata/releases/v1.0.1">w3id.org/health-ri/metadata/releases/v1.0.1</a></p>
+   </ul>
+   <p><strong>Project Homepage</strong></p>
+   <p><strong>Main page:</strong> <a href="https://w3id.org/health-ri/metadata">w3id.org/health-ri/metadata</a></p>
+   <h3 class="heading settled" data-level="4.1" id="classtext"><span class="secno">4.1. </span><span class="content">Class Structure</span><a class="self-link" href="#classtext"></a></h3>
    
 The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply (and interoperable) across catalogues, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.
 
@@ -4070,7 +4045,7 @@ The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of c
     <li data-md>
      <p>Please visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>.</p>
    </ul>
-   <h3 class="heading settled" data-level="5.3" id="usage-notes-on-schema-mapping"><span class="secno">5.3. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
+   <h3 class="heading settled" data-level="4.2" id="usage-notes-on-schema-mapping"><span class="secno">4.2. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
    
 Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into <strong>mandatory properties</strong> for conformance and <strong>recommended properties</strong> for richer metadata. 
 
@@ -4089,13 +4064,13 @@ Supportive classes are included because they form the range of properties used b
      <p>Reuse supportive entities –> E.g. if the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.</p>
    </ul>
    <p>The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.</p>
-   <h2 class="heading settled" data-level="6" id="classes-main"><span class="secno">6. </span><span class="content">Main Classes</span><a class="self-link" href="#classes-main"></a></h2>
+   <h2 class="heading settled" data-level="5" id="classes-main"><span class="secno">5. </span><span class="content">Main Classes</span><a class="self-link" href="#classes-main"></a></h2>
    
 <strong>Main Classes</strong> represent the core entities of the data catalog. They define leading components.
 
 
-   <h3 class="heading settled" data-level="6.1" id="mandatory"><span class="secno">6.1. </span><span class="content">Mandatory</span><a class="self-link" href="#mandatory"></a></h3>
-   <h4 class="heading settled" data-level="6.1.1" id="catalog"><span class="secno">6.1.1. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Catalog</a></span><a class="self-link" href="#catalog"></a></h4>
+   <h3 class="heading settled" data-level="5.1" id="mandatory-main-classes"><span class="secno">5.1. </span><span class="content">Mandatory main classes</span><a class="self-link" href="#mandatory-main-classes"></a></h3>
+   <h4 class="heading settled" data-level="5.1.1" id="catalog"><span class="secno">5.1.1. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Catalog">Catalog</a></span><a class="self-link" href="#catalog"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -4254,7 +4229,7 @@ Supportive classes are included because they form the range of properties used b
       <td>1..n
       <td>Provide a unique title for your catalog, which can be repeated in multiple languages. Example: Healthy Brain Study.
    </table>
-   <h4 class="heading settled" data-level="6.1.2" id="dataset"><span class="secno">6.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset"></a></h4>
+   <h4 class="heading settled" data-level="5.1.2" id="dataset"><span class="secno">5.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -4610,8 +4585,8 @@ Supportive classes are included because they form the range of properties used b
       <td>0..n
       <td>NaN
    </table>
-   <h3 class="heading settled" data-level="6.2" id="recommended"><span class="secno">6.2. </span><span class="content">Recommended</span><a class="self-link" href="#recommended"></a></h3>
-   <h4 class="heading settled" data-level="6.2.1" id="data-service"><span class="secno">6.2.1. </span><span class="content"><a href="http://www.w3.org/ns/dcat#DataService">Data Service</a></span><a class="self-link" href="#data-service"></a></h4>
+   <h3 class="heading settled" data-level="5.2" id="recommended-main-classes"><span class="secno">5.2. </span><span class="content">Recommended main classes</span><a class="self-link" href="#recommended-main-classes"></a></h3>
+   <h4 class="heading settled" data-level="5.2.1" id="data-service"><span class="secno">5.2.1. </span><span class="content"><a href="http://www.w3.org/ns/dcat#DataService">Data Service</a></span><a class="self-link" href="#data-service"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -4791,7 +4766,7 @@ Supportive classes are included because they form the range of properties used b
       <td>1..n
       <td>Provide a unique title for your data service, which can be repeated in multiple languages. Example: Patient counts per available diagnosis
    </table>
-   <h4 class="heading settled" data-level="6.2.2" id="dataset-series"><span class="secno">6.2.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series"></a></h4>
+   <h4 class="heading settled" data-level="5.2.2" id="dataset-series"><span class="secno">5.2.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -4887,7 +4862,7 @@ Supportive classes are included because they form the range of properties used b
       <td>1..n
       <td>Provide a unique title for your Dataset Series, which can be repeated in multiple languages.
    </table>
-   <h4 class="heading settled" data-level="6.2.3" id="distribution"><span class="secno">6.2.3. </span><span class="content"><a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a></span><a class="self-link" href="#distribution"></a></h4>
+   <h4 class="heading settled" data-level="5.2.3" id="distribution"><span class="secno">5.2.3. </span><span class="content"><a href="http://www.w3.org/ns/dcat#Distribution">Distribution</a></span><a class="self-link" href="#distribution"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5067,13 +5042,13 @@ Supportive classes are included because they form the range of properties used b
       <td>1..n
       <td>A title given to the distribution. e.g., Data Access Request of Healthy Brain study
    </table>
-   <h2 class="heading settled" data-level="7" id="classes-supportive"><span class="secno">7. </span><span class="content">Supportive Classes</span><a class="self-link" href="#classes-supportive"></a></h2>
+   <h2 class="heading settled" data-level="6" id="classes-supportive"><span class="secno">6. </span><span class="content">Supportive Classes</span><a class="self-link" href="#classes-supportive"></a></h2>
    
 <strong>Supportive Classes</strong> provide additional context and metadata. They enhance discoverability.
 
 
-   <h3 class="heading settled" data-level="7.1" id="mandatory①"><span class="secno">7.1. </span><span class="content">Mandatory</span><a class="self-link" href="#mandatory①"></a></h3>
-   <h4 class="heading settled" data-level="7.1.1" id="agent"><span class="secno">7.1.1. </span><span class="content"><a href="http://xmlns.com/foaf/spec/#term_Agent">Agent</a></span><a class="self-link" href="#agent"></a></h4>
+   <h3 class="heading settled" data-level="6.1" id="mandatory-supportive-classes"><span class="secno">6.1. </span><span class="content">Mandatory supportive classes</span><a class="self-link" href="#mandatory-supportive-classes"></a></h3>
+   <h4 class="heading settled" data-level="6.1.1" id="agent"><span class="secno">6.1.1. </span><span class="content"><a href="http://xmlns.com/foaf/spec/#term_Agent">Agent</a></span><a class="self-link" href="#agent"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5155,7 +5130,7 @@ Supportive classes are included because they form the range of properties used b
       <td>1
       <td>Provide the URL of the page containing contact information, such as a contact form or details for reaching out. If a specific contact page is unavailable, the main website of the Agent is sufficient.
    </table>
-   <h4 class="heading settled" data-level="7.1.2" id="kind"><span class="secno">7.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819">Kind</a></span><a class="self-link" href="#kind"></a></h4>
+   <h4 class="heading settled" data-level="6.1.2" id="kind"><span class="secno">6.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vcard-rdf/#d4e1819">Kind</a></span><a class="self-link" href="#kind"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5202,8 +5177,8 @@ Supportive classes are included because they form the range of properties used b
       <td>1
       <td>Provide the full name of the contact point, such as the name of a person or department responsible for communication.
    </table>
-   <h3 class="heading settled" data-level="7.2" id="recommended①"><span class="secno">7.2. </span><span class="content">Recommended</span><a class="self-link" href="#recommended①"></a></h3>
-   <h4 class="heading settled" data-level="7.2.1" id="attribution"><span class="secno">7.2.1. </span><span class="content"><a href="https://www.w3.org/ns/prov#Attribution">Attribution</a></span><a class="self-link" href="#attribution"></a></h4>
+   <h3 class="heading settled" data-level="6.2" id="recommended-supportive-classes"><span class="secno">6.2. </span><span class="content">Recommended supportive classes</span><a class="self-link" href="#recommended-supportive-classes"></a></h3>
+   <h4 class="heading settled" data-level="6.2.1" id="attribution"><span class="secno">6.2.1. </span><span class="content"><a href="https://www.w3.org/ns/prov#Attribution">Attribution</a></span><a class="self-link" href="#attribution"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5243,7 +5218,7 @@ Supportive classes are included because they form the range of properties used b
       <td>0..1
       <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.<br>Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor
    </table>
-   <h4 class="heading settled" data-level="7.2.2" id="checksum"><span class="secno">7.2.2. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
+   <h4 class="heading settled" data-level="6.2.2" id="checksum"><span class="secno">6.2.2. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5283,7 +5258,7 @@ Supportive classes are included because they form the range of properties used b
       <td>1
       <td>NaN
    </table>
-   <h4 class="heading settled" data-level="7.2.3" id="identifier"><span class="secno">7.2.3. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier">Identifier</a></span><a class="self-link" href="#identifier"></a></h4>
+   <h4 class="heading settled" data-level="6.2.3" id="identifier"><span class="secno">6.2.3. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Identifier">Identifier</a></span><a class="self-link" href="#identifier"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5323,7 +5298,7 @@ Supportive classes are included because they form the range of properties used b
       <td>0..1
       <td>NaN
    </table>
-   <h4 class="heading settled" data-level="7.2.4" id="period-of-time"><span class="secno">7.2.4. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime">Period of time</a></span><a class="self-link" href="#period-of-time"></a></h4>
+   <h4 class="heading settled" data-level="6.2.4" id="period-of-time"><span class="secno">6.2.4. </span><span class="content"><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime">Period of time</a></span><a class="self-link" href="#period-of-time"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5363,7 +5338,7 @@ Supportive classes are included because they form the range of properties used b
       <td>0..1
       <td>NaN
    </table>
-   <h4 class="heading settled" data-level="7.2.5" id="quality-certificate"><span class="secno">7.2.5. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">Quality certificate</a></span><a class="self-link" href="#quality-certificate"></a></h4>
+   <h4 class="heading settled" data-level="6.2.5" id="quality-certificate"><span class="secno">6.2.5. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dqv/#dqv:QualityCertificate">Quality certificate</a></span><a class="self-link" href="#quality-certificate"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
@@ -5403,7 +5378,7 @@ Supportive classes are included because they form the range of properties used b
       <td>0..1
       <td>IRI pointing to the location where the quality certificate can be found.
    </table>
-   <h4 class="heading settled" data-level="7.2.6" id="relationship"><span class="secno">7.2.6. </span><span class="content"><a href="https://w3c.github.io/dxwg/dcat/#Class:Relationship">Relationship</a></span><a class="self-link" href="#relationship"></a></h4>
+   <h4 class="heading settled" data-level="6.2.6" id="relationship"><span class="secno">6.2.6. </span><span class="content"><a href="https://w3c.github.io/dxwg/dcat/#Class:Relationship">Relationship</a></span><a class="self-link" href="#relationship"></a></h4>
    <table class="no-style">
     <thead>
      <tr>
