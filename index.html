@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version 0ef803fdf, updated Tue Jan 6 11:59:39 2026 -0800" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="9fac43bafca1a341aa061d924e1d4d164e83279f" name="revision">
+  <meta content="22ebdeef607c64cc3362cdc5e4c11cc2213caae2" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -3775,7 +3775,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">Health-RI Metadata Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-04-10">10 April 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-04-16">16 April 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -3876,6 +3876,13 @@ dfn > a.self-link::before      { content: "#"; }
         <li><a href="#quality-certificate"><span class="secno">6.2.5</span> <span class="content"><span>Quality certificate</span></span></a>
         <li><a href="#relationship"><span class="secno">6.2.6</span> <span class="content"><span>Relationship</span></span></a>
        </ol>
+     </ol>
+    <li>
+     <a href="#controlled-vocabularies"><span class="secno">7</span> <span class="content">Controlled Vocabularies</span></a>
+     <ol class="toc">
+      <li><a href="#properties-with-controlled-vocabularies-that-must-be-used-for-the-listed-properties"><span class="secno">7.1</span> <span class="content">Properties with controlled vocabularies that <strong>MUST</strong> be used for the listed properties</span></a>
+      <li><a href="#properties-with-at-least-1-value-from-the-controlled-vocabularies"><span class="secno">7.2</span> <span class="content">Properties with <strong>AT LEAST 1</strong> value from the controlled vocabularies</span></a>
+      <li><a href="#properties-with-controlled-vocabularies-that-may-be-used-for-the-listed-properties"><span class="secno">7.3</span> <span class="content">Properties with controlled vocabularies that <strong>MAY</strong> be used for the listed properties</span></a>
      </ol>
    </ol>
   </nav>
@@ -5417,6 +5424,368 @@ Supportive classes are included because they form the range of properties used b
       <td>rdfs:Resource (IRI)
       <td>1..n
       <td>This property establishes the link between the described and the related resources. The value of this property is the IRI of the related resource.
+   </table>
+   <h2 class="heading settled" data-level="7" id="controlled-vocabularies"><span class="secno">7. </span><span class="content">Controlled Vocabularies</span><a class="self-link" href="#controlled-vocabularies"></a></h2>
+   <p>In this section, properties are listed for which specific values are expected. These values are typically taken from controlled vocabularies, but may also come from defined ontologies, authority tables, or prescribed value lists (such as licenses or identifier schemes).</p>
+   <p>Using these predefined sources ensures consistency and interoperability across datasets and catalogues.</p>
+   <p>The requirements are grouped into three categories:</p>
+   <ul>
+    <li data-md>
+     <p><strong>MUST</strong>: the value for the property must be selected from the specified vocabulary or list.</p>
+    <li data-md>
+     <p><strong>AT LEAST 1</strong>: at least one of the provided values must come from the specified vocabulary (additional values from other sources may be included where relevant).</p>
+    <li data-md>
+     <p><strong>MAY</strong>: the use of the specified vocabulary is optional, but recommended when applicable.</p>
+   </ul>
+   <p>The tables below list the relevant properties, the classes they apply to, the expected vocabularies, and additional usage notes to support correct implementation.</p>
+   <h3 class="heading settled" data-level="7.1" id="properties-with-controlled-vocabularies-that-must-be-used-for-the-listed-properties"><span class="secno">7.1. </span><span class="content">Properties with controlled vocabularies that <strong>MUST</strong> be used for the listed properties</span><a class="self-link" href="#properties-with-controlled-vocabularies-that-must-be-used-for-the-listed-properties"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Property URI
+      <th>Used for Class
+      <th>Controlled Vocabulary
+      <th>Usage Note
+    <tbody>
+     <tr>
+      <td>dct:accessRights
+      <td>Dataset
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/access-right">
+          http://publications.europa.eu/resource/authority/access-right
+        </a>
+      
+      <td>The EU authority table, containing values for access rights of the Dataset. You can choose between the values PUBLIC, NON_PUBLIC and RESTRICTED, even though in the vocabulary itself more values are included. Depending on the value that is choosed here, one of the three different versions of HealthDCAT-AP will be used.
+     <tr>
+      <td>dct:accrualPeriodicity
+      <td>Dataset
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/frequency">
+          http://publications.europa.eu/resource/authority/frequency
+        </a>
+      
+      <td>EU authority table, containing possible values to use in order to describe the frequency at which the dataset is updated.
+     <tr>
+      <td>dct:language
+      <td>Dataset
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/language">
+          http://publications.europa.eu/resource/authority/language
+        </a>
+      
+      <td>Choose the language of the dataset in the EU authority table.
+     <tr>
+      <td>dpv:hasPersonalData
+      <td>Dataset
+      <td>
+        <a href="https://w3c.github.io/dpv/2.0/pd/">
+          https://w3c.github.io/dpv/2.0/pd/
+        </a>
+      
+      <td>For this propery, you should specify the type(s) of personal data that your dataset contains or processes. These types are defined in the DPV ontology and include classes such as dpv:Age, dpv:BirthDate and dpv:Gender. Choose the classes that describe personal data inside your Dataset.
+     <tr>
+      <td>adms:status
+      <td>Dataset
+      <td>
+        <a href="https://publications.europa.eu/resource/authority/dataset-status">
+          https://publications.europa.eu/resource/authority/dataset-status
+        </a>
+      
+      <td>Choose the status of the dataset in the EU authority table.
+     <tr>
+      <td>dcat:theme
+      <td>Dataset
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/data-theme">
+          http://publications.europa.eu/resource/authority/data-theme
+        </a>
+      
+      <td>Choose the theme(s) of the dataset in the EU authority table. In the Health Data Catalogue, all datasets will use the theme 'HEAL' (http://publications.europa.eu/resource/authority/data-theme/HEAL), but additional values from the same vocabulary are allowed.
+     <tr>
+      <td>dcat:type
+      <td>Dataset
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/dataset-type">
+          http://publications.europa.eu/resource/authority/dataset-type
+        </a>
+      
+      <td>Choose the type of the dataset in the EU authority table.
+     <tr>
+      <td>dct:language
+      <td>Catalog
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/language">
+          http://publications.europa.eu/resource/authority/language
+        </a>
+      
+      <td>Choose the language of the catalog in the EU authority table.
+     <tr>
+      <td>dct:license
+      <td>Catalog
+      <td>
+        <a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">
+          https://definities.geostandaarden.nl/dcat-ap-nl/nl/
+        </a>
+      
+      <td>Choose a license that is applicable to your Catalog. You can choose one from the DCAT-AP NL provided list, which uses Creative Commons licenses. If you need help choosing one, it is recommended to use the chooser tool from Creative Commons (https://creativecommons.org/chooser/).
+     <tr>
+      <td>dct:spatial
+      <td>Agent
+      <td>
+        <a href="https://publications.europa.eu/resource/authority/country">
+          https://publications.europa.eu/resource/authority/country
+        </a>
+      
+      <td>Choose country of the Catalogue from the EU authority table.
+     <tr>
+      <td>dct:identifier
+      <td>Agent
+      <td>
+        <a href="https://orcid.org/">ORCID</a>,
+        <a href="https://ror.org/">ROR</a>,
+        <a href="https://isni.org/page/search-database/">ISNI</a>,
+        <a href="https://standaarden.overheid.nl/tooi/waardelijsten/">TOOI</a>,
+        <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>
+      
+      <td>Provide an ORCID identifier for person, ROR for organization. If these are not available, it is also allowed to use ISNI, TOOI or Wikidata.
+     <tr>
+      <td>healthdcatap:publishertype
+      <td>Agent
+      <td>
+        <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">
+          https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf
+        </a>
+      
+      <td>Choose the publisher type from the ADMS publishertype list.
+     <tr>
+      <td>dct:type
+      <td>Agent
+      <td>
+        <a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">
+          https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf
+        </a>
+      
+      <td>Choose the type of Agent from the ADMS publishertype list.
+     <tr>
+      <td>dcat:compressFormat
+      <td>Distribution
+      <td>
+        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">
+          http://www.iana.org/assignments/media-types/media-types.xhtml
+        </a>
+      
+      <td>Choose the compression format of the Distribution from the IANA media type list.
+     <tr>
+      <td>dct:format
+      <td>Distribution
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/file-type">
+          http://publications.europa.eu/resource/authority/file-type
+        </a>
+      
+      <td>Choose the format of the Distribution from the EU Authority table.
+     <tr>
+      <td>dct:language
+      <td>Distribution
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/language">
+          http://publications.europa.eu/resource/authority/language
+        </a>
+      
+      <td>Choose the language of the distribution in the EU authority table.
+     <tr>
+      <td>dct:license
+      <td>Distribution
+      <td>
+        <a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">
+          https://definities.geostandaarden.nl/dcat-ap-nl/nl/
+        </a>
+      
+      <td>For license of Distribution, please choose between "not-open" licence for non-public data or "CC0" for public data.
+     <tr>
+      <td>dcat:mediaType
+      <td>Distribution
+      <td>
+        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">
+          http://www.iana.org/assignments/media-types/media-types.xhtml
+        </a>
+      
+      <td>Choose the media type of the Distribution from the IANA media type list.
+     <tr>
+      <td>dcat:packageFormat
+      <td>Distribution
+      <td>
+        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">
+          http://www.iana.org/assignments/media-types/media-types.xhtml
+        </a>
+      
+      <td>Choose the package format of the Distribution from the IANA media type list.
+     <tr>
+      <td>adms:status
+      <td>Distribution
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/distribution-status">
+          http://publications.europa.eu/resource/authority/distribution-status
+        </a>
+      
+      <td>Choose the status of the distribution from the EU authority table.
+     <tr>
+      <td>dct:accrualPeriodicity
+      <td>Dataset Series
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/frequency">
+          http://publications.europa.eu/resource/authority/frequency
+        </a>
+      
+      <td>Choose the frequency with which items are added to a collectio from the EU authority table.
+     <tr>
+      <td>dct:accessRights
+      <td>Data Service
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/access-right">
+          http://publications.europa.eu/resource/authority/access-right
+        </a>
+      
+      <td>Choose the term for the access rights of the data service from the EU authority table.
+     <tr>
+      <td>dct:format
+      <td>Data Service
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/file-type">
+          http://publications.europa.eu/resource/authority/file-type
+        </a>
+      
+      <td>Choose the format of the data service from the EU athority table.
+     <tr>
+      <td>dct:language
+      <td>Data Service
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/language">
+          http://publications.europa.eu/resource/authority/language
+        </a>
+      
+      <td>Choose the language of the data service in the EU authority table.
+     <tr>
+      <td>dct:license
+      <td>Data Service
+      <td>
+        <a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">
+          https://definities.geostandaarden.nl/dcat-ap-nl/nl/
+        </a>
+      
+      <td>Choose a license that is applicable to your data service. You can choose one from the DCAT-AP NL provided list, which uses Creative Commons licenses. If you need help choosing one, it is recommended to use the chooser tool from Creative Commons (https://creativecommons.org/chooser/).
+     <tr>
+      <td>dcat:theme
+      <td>Data Service
+      <td>
+        <a href="https://publications.europa.eu/resource/authority/data-theme">
+          https://publications.europa.eu/resource/authority/data-theme
+        </a>
+      
+      <td>Choose the theme of the data service from the EU authority table.
+     <tr>
+      <td>dcat:hadRole
+      <td>Attribution
+      <td>
+        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">ISO RoleCode</a>,
+        <a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">CRediT taxonomy</a>
+      
+      <td>Choose the role of the attributed agent from either the ISO RoleCode list or from the Credit taxonomy.
+     <tr>
+      <td>dcat:hadRole
+      <td>Relationship
+      <td>
+        <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA Link Relations</a>,
+        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml">ISO Codelist</a>
+      
+      <td>Choose the role of the related resource from either the IANA link relations or ISO Association type code list.
+     <tr>
+      <td>spdx:algorithm
+      <td>Checksum
+      <td>
+        <a href="https://spdx.org/rdf/terms/#d4e2129">
+          https://spdx.org/rdf/terms/#d4e2129
+        </a>
+      
+      <td>Choose one of the subclasses of spdx:ChecksumAlgorithm class to indicate the algorithm used.
+   </table>
+   <h3 class="heading settled" data-level="7.2" id="properties-with-at-least-1-value-from-the-controlled-vocabularies"><span class="secno">7.2. </span><span class="content">Properties with <strong>AT LEAST 1</strong> value from the controlled vocabularies</span><a class="self-link" href="#properties-with-at-least-1-value-from-the-controlled-vocabularies"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Property URI
+      <th>Used for Class
+      <th>Controlled Vocabulary
+      <th>Usage Note
+    <tbody>
+     <tr>
+      <td>dcat:themeTaxonomy
+      <td>Catalog
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/data-theme">http://publications.europa.eu/resource/authority/data-theme</a>
+      
+      <td>Multiple taxonomies may be listed, but at least the EU Data Theme (http://publications.europa.eu/resource/authority/data-theme) must be present.
+   </table>
+   <h3 class="heading settled" data-level="7.3" id="properties-with-controlled-vocabularies-that-may-be-used-for-the-listed-properties"><span class="secno">7.3. </span><span class="content">Properties with controlled vocabularies that <strong>MAY</strong> be used for the listed properties</span><a class="self-link" href="#properties-with-controlled-vocabularies-that-may-be-used-for-the-listed-properties"></a></h3>
+   <table>
+    <thead>
+     <tr>
+      <th>Property URI
+      <th>Used for Class
+      <th>Controlled Vocabulary
+      <th>Usage Note
+    <tbody>
+     <tr>
+      <td>dct:spatial
+      <td>Dataset
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/continent">http://publications.europa.eu/resource/authority/continent</a>,
+        <a href="http://publications.europa.eu/resource/authority/country">http://publications.europa.eu/resource/authority/country</a>,
+        <a href="http://publications.europa.eu/resource/authority/place">http://publications.europa.eu/resource/authority/place</a>,
+        <a href="http://sws.geonames.org/">http://sws.geonames.org/</a>,
+        <a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a>
+      
+      <td>For this property you can use controlled vocabularies depending on which best represents your dataset. The EU provides three relevant authority tables - for continent, country, and place, with country codes aligned to ISO standards where applicable. Your choice depends on the granularity of the geographical coverage: for example, if your dataset covers the entire Netherlands, you can use http://publications.europa.eu/resource/authority/country/NLD from the Country authority table, while for a specific city you should check the Place authority table. Since the Place table has limited coverage, you can also use Geonames, a widely used geographical database with global coverage, or CBS vocabularies, which focus on places in the Netherlands. In general, prefer EU authority URIs first, then Geonames, and finally national vocabularies for finer-grained locations.
+     <tr>
+      <td>dpv:hasLegalBasis
+      <td>Dataset
+      <td>
+        <a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">
+          https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis
+        </a>
+      
+      <td>You can select one of the subclasses of dpv:LegalBasis to describe the legal basis for processing your dataset. All possible options are defined in the DPV ontology, including Consent, Contract, LegalObligation, LegitimateInterest, VitalInterest, etc. Some of these have further subclasses for more precise specification; for example, Consent can be specialized as InformedConsent → ExpressedConsent → ExplicitlyExpressedConsent. Choose the term that best reflects the legal basis applicable to your dataset.
+     <tr>
+      <td>dpv:hasPurpose
+      <td>Dataset
+      <td>
+        <a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">
+          https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes
+        </a>
+      
+      <td>Choose the purposes that describe your Dataset from the DPV Purposes, which include classes such as dpv:PublicBenefit, dpv:CommercialPurpose, dpv:Marketing, and dpv:NonCommercialPurpose.
+     <tr>
+      <td>dct:spatial
+      <td>Catalog
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/continent">http://publications.europa.eu/resource/authority/continent</a>,
+        <a href="http://publications.europa.eu/resource/authority/country">http://publications.europa.eu/resource/authority/country</a>,
+        <a href="http://publications.europa.eu/resource/authority/place">http://publications.europa.eu/resource/authority/place</a>,
+        <a href="http://sws.geonames.org/">http://sws.geonames.org/</a>,
+        <a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a>
+      
+      <td>For this property you can use controlled vocabularies depending on which best represents your catalogue. The EU provides three relevant authority tables - for continent, country, and place, with country codes aligned to ISO standards where applicable. Your choice depends on the granularity of the geographical coverage: for example, if your catalogue covers the entire Netherlands, you can use http://publications.europa.eu/resource/authority/country/NLD from the Country authority table, while for a specific city you should check the Place authority table. Since the Place table has limited coverage, you can also use Geonames, a widely used geographical database with global coverage, or CBS vocabularies, which focus on places in the Netherlands. In general, prefer EU authority URIs first, then Geonames, and finally national vocabularies for finer-grained locations.
+     <tr>
+      <td>dct:spatial
+      <td>Dataset Series
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/continent">http://publications.europa.eu/resource/authority/continent</a>,
+        <a href="http://publications.europa.eu/resource/authority/country">http://publications.europa.eu/resource/authority/country</a>,
+        <a href="http://publications.europa.eu/resource/authority/place">http://publications.europa.eu/resource/authority/place</a>,
+        <a href="http://sws.geonames.org/">http://sws.geonames.org/</a>,
+        <a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a>
+      
+      <td>For this property you can use controlled vocabularies depending on which best represents your dataset series. The EU provides three relevant authority tables - for continent, country, and place, with country codes aligned to ISO standards where applicable. Your choice depends on the granularity of the geographical coverage: for example, if your dataset series covers the entire Netherlands, you can use http://publications.europa.eu/resource/authority/country/NLD from the Country authority table, while for a specific city you should check the Place authority table. Since the Place table has limited coverage, you can also use Geonames, a widely used geographical database with global coverage, or CBS vocabularies, which focus on places in the Netherlands. In general, prefer EU authority URIs first, then Geonames, and finally national vocabularies for finer-grained locations.
    </table>
   </main>
 <script>
