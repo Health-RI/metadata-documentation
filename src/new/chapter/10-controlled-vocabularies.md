@@ -358,14 +358,6 @@ The tables below list the relevant properties, the classes they apply to, the ex
   </thead>
   <tbody>
     <tr>
-      <td>dcatap:applicableLegislation</td>
-      <td>Dataset</td>
-      <td>
-        <a href="http://data.europa.eu/eli/reg/2025/327/oj">http://data.europa.eu/eli/reg/2025/327/oj</a>
-      </td>
-      <td>Multiple legislations may be listed, but at least ELI of the EHDS Regulation must be used.</td>
-    </tr>
-    <tr>
       <td>dcat:themeTaxonomy</td>
       <td>Catalog</td>
       <td>
