@@ -1,14 +1,14 @@
 
 # Core Metadata Schema
-<img src="src/images/HRI_Logo.png" alt="HRI Logo" style="width:45%; height:auto;">
+<img src="src/images/HRI_Logo.png" alt="HRI Logo" style="width:55%; height:auto;">
 
 ## Health‑RI Metadata Schema Developer Overview
 
 ### Minimal Intro
 
-Excel = source
-Python = transformation
-Bikeshed = rendering
+1. Excel = source
+2. Python = transformation
+3. Bikeshed = rendering
 
 Output = metadata specification
 
@@ -56,8 +56,8 @@ Excel → Python → Bikeshed → HTML
 
 ## Status
 
-[DOI](https://doi.org/10.5281/zenodo.15395604)  
-Repository: https://github.com/Health-RI/health-ri-metadata
+- [DOI](https://doi.org/10.5281/zenodo.15395604)  
+- Repository: https://github.com/Health-RI/health-ri-metadata
 
 # Ways of Working
 
@@ -177,7 +177,7 @@ excel/HealthRI_v2.0.2.xlsx -> python -> property files -> index.bs -> bikeshed -
 
 # Run Generator
 
-python python/<script>.py
+- python python/<script>.py
 
 Output:
 property/*.html
@@ -186,7 +186,7 @@ property/*.html
 
 # Build Spec
 
-bikeshed spec index.bs index.html
+- bikeshed spec index.bs index.html
 
 Validate:
 
@@ -214,16 +214,16 @@ bikeshed --dry-run spec index.bs
 
 # Where to Edit
 
-Metadata -> excel/
-Specification structure -> index.bs
-Text content -> chapter/
-Class descriptions -> class/
+- Metadata and usage notes (property) -> excel/
+- Specification structure -> index.bs
+- Text content -> chapter/
+- Class descriptions -> class/
 
 ---
 
 # GitHub (No Local Install)
 
-Edit directly in GitHub.
+- Edit directly in GitHub.
 Changes will be visible at:
 
 https://health-ri.github.io/metadata-documentation/
@@ -234,11 +234,11 @@ Note: updates may take a short time to appear.
 
 # Clean Rebuild
 
-Delete:
+- Delete:
 property/*.html
 index.html
 
-Run:
+- Run:
 python python/<script>.py
 bikeshed spec index.bs index.html
 
