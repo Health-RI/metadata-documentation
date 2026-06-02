@@ -116,7 +116,7 @@ excel/HealthRI_v2.0.2.xlsx → python → property files → index.bs → bikesh
 
 ---
 
-## Class Files
+## Class Files (Static)
 
 - class-agent  
 - class-attribution  
