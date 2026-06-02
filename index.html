@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 7a96e07ec, updated Mon Jul 14 11:12:36 2025 -0700" name="generator">
+  <meta content="Bikeshed version 7b3ff057a, updated Sun Nov 9 18:39:50 2025 -0800" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="ffb26a20d845bc146d271fb3d7b260d8edc5561b" name="revision">
+  <meta content="22ebdeef607c64cc3362cdc5e4c11cc2213caae2" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -3682,7 +3682,7 @@ body {
 }
 .invalid.example:not(.no-marker)::before,
 .illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
+    content: "Invalid Example " counter(example);
 }
 
 figcaption {
@@ -3773,9 +3773,9 @@ dfn > a.self-link::before      { content: "#"; }
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Health-RI Metadata Model</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Document,
-    <time class="dt-updated" datetime="2026-04-15">15 April 2026</time></span></h2>
+   <h1 class="no-ref p-name" id="title">Health-RI Metadata Model</h1>
+   <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Editor’s Draft,
+    <time class="dt-updated" datetime="2026-06-02">2 June 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -3789,24 +3789,25 @@ dfn > a.self-link::before      { content: "#"; }
      <dd><a href="https://github.com/Health-RI/health-ri-metadata/issues/new">Open new issues</a>
      <dd><a href="https://github.com/Health-RI/health-ri-metadata/issues">Status reported issues</a>
      <dt class="editor">Editors:
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Bruna dos Santos Vieira</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Kees Burger</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Joost Daams</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Ana Konrad</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Hannah Neikes</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">⁠Reinier Groeneveld</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Niek van Ulzen</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Bruna dos Santos Vieira</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Kees Burger</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Joost Daams</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Ana Konrad</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Hannah Neikes</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">⁠Reinier Groeneveld</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Niek van Ulzen</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Pedro Paulo F. Barcelos</span>
      <dt class="editor">Former Editors:
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Inês de Oliveira Coelho Henriques</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">César Bernabé</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Patrick Dekker</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn"></span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Milou de Jong</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Dena Tahvildari</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Xiaofeng Liao</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Mark Janse</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Junda Huang</span>
-     <dd class="editor p-author h-card vcard"><span class="p-name fn">Luiz Bonino</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Inês de Oliveira Coelho Henriques</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">César Bernabé</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Patrick Dekker</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name"></span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Milou de Jong</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Dena Tahvildari</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Xiaofeng Liao</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Mark Janse</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Junda Huang</span>
+     <dd class="editor h-card p-author vcard"><span class="fn p-name">Luiz Bonino</span>
      <dt>License:
      <dd>CC-BY-4.0
     </dl>
@@ -3815,12 +3816,12 @@ dfn > a.self-link::before      { content: "#"; }
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
-   <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p><img alt="Health-RI Logo" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_Logo.png" title="Health-RI Logo" width="300"> <br> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.</p>
+   <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
+   <p><img alt="Health-RI Logo" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/images/HRI_Logo.png" title="Health-RI Logo" width="300"> <br> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g. dataset) with common metadata. It defines the requirements to access and reuse information across Health-RI nodes via the National Catalogue. This document contains the specification details on the Health-RI core metadata schema.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
-   <h2 class="no-num no-toc no-ref" id="contents">Table of Contents</h2>
+   <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
    <ol class="toc" role="directory">
     <li><a href="#purpose-and-audience"><span class="secno">1</span> <span class="content">Purpose and audience</span></a>
     <li>
@@ -3837,11 +3838,11 @@ dfn > a.self-link::before      { content: "#"; }
     <li>
      <a href="#permanent-urls"><span class="secno">4</span> <span class="content">Permanent Urls</span></a>
      <ol class="toc">
-      <li><a href="#classtext"><span class="secno">4.1</span> <span class="content">Class Structure</span></a>
+      <li><a href="#class-structure"><span class="secno">4.1</span> <span class="content">Class Structure</span></a>
       <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.2</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
      </ol>
     <li>
-     <a href="#classes-main"><span class="secno">5</span> <span class="content">Main Classes</span></a>
+     <a href="#main-classes"><span class="secno">5</span> <span class="content">Main Classes</span></a>
      <ol class="toc">
       <li>
        <a href="#mandatory-main-classes"><span class="secno">5.1</span> <span class="content">Mandatory main classes</span></a>
@@ -3858,7 +3859,7 @@ dfn > a.self-link::before      { content: "#"; }
        </ol>
      </ol>
     <li>
-     <a href="#classes-supportive"><span class="secno">6</span> <span class="content">Supportive Classes</span></a>
+     <a href="#supportive-classes"><span class="secno">6</span> <span class="content">Supportive Classes</span></a>
      <ol class="toc">
       <li>
        <a href="#mandatory-supportive-classes"><span class="secno">6.1</span> <span class="content">Mandatory supportive classes</span></a>
@@ -3969,8 +3970,8 @@ An overview of the metadata schema core is presented in the UML diagram below. T
    <p>Properties derived from draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
    <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="Documents/Metadata_CoreGenericHealth_v2.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
    <h3 class="heading settled" data-level="3.1" id="uml-class-diagram-v202"><span class="secno">3.1. </span><span class="content">UML Class Diagram v2.0.2</span><a class="self-link" href="#uml-class-diagram-v202"></a></h3>
-   <p><a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" target="_blank">
-  <img alt="Health-RI Metadata Diagram" height="1100" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/new/images/HRI_metadata_p2.png" title="diagram" width="800">
+   <p><a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/images/HRI_metadata_p2.png" target="_blank">
+  <img alt="Health-RI Metadata Diagram" height="1100" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/images/HRI_metadata_p2.png" title="diagram" width="800">
 </a></p>
    <p>Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.</p>
    <h2 class="heading settled" data-level="4" id="permanent-urls"><span class="secno">4. </span><span class="content">Permanent Urls</span><a class="self-link" href="#permanent-urls"></a></h2>
@@ -3995,7 +3996,7 @@ The following <strong>W3ID redirects</strong> are available for Health-RI metada
    </ul>
    <p><strong>Project Homepage</strong></p>
    <p><strong>Main page:</strong> <a href="https://w3id.org/health-ri/metadata">w3id.org/health-ri/metadata</a></p>
-   <h3 class="heading settled" data-level="4.1" id="classtext"><span class="secno">4.1. </span><span class="content">Class Structure</span><a class="self-link" href="#classtext"></a></h3>
+   <h3 class="heading settled" data-level="4.1" id="class-structure"><span class="secno">4.1. </span><span class="content">Class Structure</span><a class="self-link" href="#class-structure"></a></h3>
    
 The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply (and interoperable) across catalogues, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.
 
@@ -4071,7 +4072,7 @@ Supportive classes are included because they form the range of properties used b
      <p>Reuse supportive entities –> E.g. if the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.</p>
    </ul>
    <p>The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.</p>
-   <h2 class="heading settled" data-level="5" id="classes-main"><span class="secno">5. </span><span class="content">Main Classes</span><a class="self-link" href="#classes-main"></a></h2>
+   <h2 class="heading settled" data-level="5" id="main-classes"><span class="secno">5. </span><span class="content">Main Classes</span><a class="self-link" href="#main-classes"></a></h2>
    
 <strong>Main Classes</strong> represent the core entities of the data catalog. They define leading components.
 
@@ -4171,14 +4172,14 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>The value of this property must be an IRI from the provided controlled vocabulary.<br>For example: http://publications.europa.eu/resource/authority/language/NLD
+      <td>The value of this property must be an IRI from the provided controlled vocabulary.<br>For example: http://publications.europa.eu/resource/authority/language/NLD For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license">licence</a>
       <td>A legal document giving official permission to do something with the resource.
       <td>dct:license
       <td>dct:LicenseDocument (IRI)
       <td>0..1
-      <td>The licence under which the catalogue (with resource description) is made available. In the description of distributions and data services the licences of that resources are taken up.
+      <td>The licence under which the catalogue (with resource description) is made available. In the description of distributions and data services the licences of that resources are taken up. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
@@ -4268,7 +4269,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. It is foreseen that one of the three options have to be used: public, restricted, non-public.<br>    Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.<br>    Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.<br>    Sensitive Data (Non public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation.<br><br>Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. It is foreseen that one of the three options have to be used: public, restricted, non-public.<br>    Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.<br>    Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.<br>    Sensitive Data (Non public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation.<br><br>Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://healthdcat-ap.github.io/#analytics">analytics</a>
       <td>An analytics distribution of the dataset.
@@ -4345,7 +4346,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:accrualPeriodicity
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated.<br>For example: http://publications.europa.eu/resource/authority/frequency/WEEKLY
+      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated.<br>For example: http://publications.europa.eu/resource/authority/frequency/WEEKLY For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">geographical coverage</a>
       <td>Spatial characteristics of the resource.
@@ -4401,14 +4402,14 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>The language of the Dataset. For this property, the values from the EU Vocabularies Languages Named Authority List must be used. If your Dataset contains multiple languages, this property can be repeated.
+      <td>The language of the Dataset. For this property, the values from the EU Vocabularies Languages Named Authority List must be used. If your Dataset contains multiple languages, this property can be repeated.  For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://w3id.org/dpv#hasLegalBasis">legal basis</a>
       <td>Indicates use or applicability of a Legal Basis.
       <td>dpv:hasLegalBasis
       <td>dpv:LegalBasis (IRI)
       <td>0..n
-      <td>The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column).<br><br>While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property described the legal basis for initial collection and processing of (personal) data.<br><br>Example value for this property could be: dpv:Consent
+      <td>The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column).<br><br>While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property described the legal basis for initial collection and processing of (personal) data.<br><br>Example value for this property could be: dpv:Consent For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://healthdcat-ap.github.io/#maxTypicalAge">maximum typical age</a>
       <td>Maximum typical age of the population within the dataset
@@ -4457,7 +4458,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dpv:hasPersonalData
       <td>dpv:PersonalData (IRI)
       <td>0..n
-      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column).<br>For example: dpv-pd:Gender
+      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column).<br>For example: dpv-pd:Gender For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://healthdcat-ap.github.io/#populationCoverage">population coverage</a>
       <td>A definition of the population within the dataset
@@ -4478,7 +4479,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dpv:hasPurpose
       <td>dpv:Purpose (IRI)
       <td>0..n
-      <td>One (or many) category or sub-category of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column).<br>Example value could be: dpv:ResearchAndDevelopment.
+      <td>One (or many) category or sub-category of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column).<br>Example value could be: dpv:ResearchAndDevelopment. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.w3.org/TR/prov-o/#qualifiedAttribution">qualified attribution</a>
       <td>Attribution is the ascribing of an entity to an agent.
@@ -4534,7 +4535,7 @@ Supportive classes are included because they form the range of properties used b
       <td>adms:status
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset.<br>For example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED
+      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset.<br>For example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal">temporal coverage</a>
       <td>Temporal characteristics of the resource.
@@ -4555,7 +4556,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:theme
       <td>skos:Concept (IRI)
       <td>1..n
-      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, all datasets will use the theme 'HEAL' (http://publications.europa.eu/resource/authority/data-theme/HEAL), but additional values from the same vocabulary are allowed.
+      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, all datasets will use the theme 'HEAL' (http://publications.europa.eu/resource/authority/data-theme/HEAL), but additional values from the same vocabulary are allowed. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a>
       <td>A name given to the resource.
@@ -4569,7 +4570,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:type
       <td>skos:Concept (IRI)
       <td>0..n
-      <td>A recommended controlled vocabulary data-type is foreseen. Health datasets with personal information must use 'personal data'. This list supports dataset categorization for the EU Open Data Portal. Currently, 'PERSONAL_DATA' is not included in the EU vocabulary and cannot be filled out.
+      <td>A recommended controlled vocabulary data-type is foreseen. Health datasets with personal information must use 'personal data'. This list supports dataset categorization for the EU Open Data Portal. Currently, 'PERSONAL_DATA' is not included in the EU vocabulary and cannot be filled out. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:version">version</a>
       <td>The version indicator (name or identifier) of a resource.
@@ -4624,7 +4625,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. This property is required to adopt one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the dataset is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. This property is required to adopt one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the dataset is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a>
       <td>The legislation that is applicable to this resource.
@@ -4722,14 +4723,14 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>Indicates the natural language used in the data service, indicated with a value from the EU controlled vocabulary.
+      <td>Indicates the natural language used in the data service, indicated with a value from the EU controlled vocabulary. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license">licence</a>
       <td>A legal document giving official permission to do something with the resource.
       <td>dct:license
       <td>dct:LicenseDocument (IRI)
       <td>1
-      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.
+      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
@@ -4764,7 +4765,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:theme
       <td>skos:Concept (IRI)
       <td>1..n
-      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, most data services will use NAL:data-theme 'HEAL', but additional values from the same vocabulary are allowed.
+      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, most data services will use NAL:data-theme 'HEAL', but additional values from the same vocabulary are allowed. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a>
       <td>A name given to the resource.
@@ -4825,7 +4826,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:accrualPeriodicity
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>The frequency of a dataset series is not equal to the frequency of the dataset in the collection.
+      <td>The frequency of a dataset series is not equal to the frequency of the dataset in the collection. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">geographical coverage</a>
       <td>Spatial characteristics of the resource.
@@ -4935,7 +4936,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:compressFormat
       <td>dct:MediaType (IRI)
       <td>0..1
-      <td>It MUST be expressed using a media type as defined in the official register of media types managed by IANA.
+      <td>It MUST be expressed using a media type as defined in the official register of media types managed by IANA. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a>
       <td>An account of the resource.
@@ -4963,21 +4964,21 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:format
       <td>dct:MediaTypeOrExtent (IRI)
       <td>1
-      <td>This property can be used to describe a media format in more detail than "media type" (using IANA media type) when needed. Instances of this property should use a URL, e.g., from the File Type vocabulary. For instance, for mzML files the value of this property could be: http://edamontology.org/format_3244
+      <td>This property can be used to describe a media format in more detail than "media type" (using IANA media type) when needed. Instances of this property should use a URL, e.g., from the File Type vocabulary. For instance, for mzML files the value of this property could be: http://edamontology.org/format_3244 For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#language">language</a>
       <td>A language of the resource.
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.<br>Note that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.
+      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.<br>Note that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#license">license</a>
       <td>A legal document giving official permission to do something with the resource.
       <td>dct:license
       <td>dct:LicenceDocument (IRI)
       <td>1
-      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue distributions, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.
+      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue distributions, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#conformsTo">linked schemas</a>
       <td>An established standard to which the described resource conforms.
@@ -4991,7 +4992,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:mediaType
       <td>dct:MediaType (IRI)
       <td>0..1
-      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.<br>Example: https://www.iana.org/assignments/media-types/text/csv (for csv)<br>If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.
+      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.<br>Example: https://www.iana.org/assignments/media-types/text/csv (for csv)<br>If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a>
       <td>Date on which the resource was changed.
@@ -5005,7 +5006,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:packageFormat
       <td>dct:MediaType (IRI)
       <td>0..1
-      <td>It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.
+      <td>It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.  For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued">release date</a>
       <td>Date of formal issuance of the resource.
@@ -5033,7 +5034,7 @@ Supportive classes are included because they form the range of properties used b
       <td>adms:status
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the provided controlled vocabulary.
+      <td>It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the provided controlled vocabulary. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:temporalResolution">temporal resolution</a>
       <td>Minimum time period resolvable in the dataset.
@@ -5049,7 +5050,7 @@ Supportive classes are included because they form the range of properties used b
       <td>1..n
       <td>A title given to the distribution. e.g., Data Access Request of Healthy Brain study
    </table>
-   <h2 class="heading settled" data-level="6" id="classes-supportive"><span class="secno">6. </span><span class="content">Supportive Classes</span><a class="self-link" href="#classes-supportive"></a></h2>
+   <h2 class="heading settled" data-level="6" id="supportive-classes"><span class="secno">6. </span><span class="content">Supportive Classes</span><a class="self-link" href="#supportive-classes"></a></h2>
    
 <strong>Supportive Classes</strong> provide additional context and metadata. They enhance discoverability.
 
@@ -5086,7 +5087,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
-      <td>Use the appropriate term from the EU authority table. Example for the Netherlands: http://publications.europa.eu/resource/authority/country/NLD
+      <td>Use the appropriate term from the EU authority table. Example for the Netherlands: http://publications.europa.eu/resource/authority/country/NLD For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="http://xmlns.com/foaf/spec/#term_mbox">email</a>
       <td>A email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [ RFC6068 ]. The email SHOULD be used to establish a communication channel to the agent.
@@ -5100,7 +5101,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:identifier
       <td>rdfs:Literal
       <td>1..n
-      <td>Specify the entity (person or organization) by providing an identifier. We recommend using an ORCID identifier for a person or ROR identifier for organization. Dutch governmenta organization are listed in TOOI. If these are not available, you can use ISNI, or Wikidata or any other identifier you may have. If you have multiple identifiers, you should provide them all.
+      <td>Specify the entity (person or organization) by providing an identifier. We recommend using an ORCID identifier for a person or ROR identifier for organization. Dutch governmenta organization are listed in TOOI. If these are not available, you can use ISNI, or Wikidata or any other identifier you may have. If you have multiple identifiers, you should provide them all. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="http://xmlns.com/foaf/spec/#term_name">name</a>
       <td>A name for some thing.
@@ -5121,14 +5122,14 @@ Supportive classes are included because they form the range of properties used b
       <td>healthdcatap:publishertype
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>Current status: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL: http://purl.org/adms/publishertype/[type].
+      <td>Current status: Specifically for the health domain, a controlled vocabulary is being developed to include commonly recognised health publishers. This vocabulary is currently under development. Version 1.0 includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL: http://purl.org/adms/publishertype/[type]. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#type">type</a>
       <td>The nature or genre of the resource.
       <td>dct:type
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>This property should be filled using ADMS vocabulary (http://purl.org/adms/publishertype/1.0)
+      <td>This property should be filled using ADMS vocabulary (http://purl.org/adms/publishertype/1.0) For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="http://xmlns.com/foaf/spec/#term_homepage">URL</a>
       <td>A homepage for some thing.
@@ -5223,7 +5224,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:hadRole
       <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.<br>Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor
+      <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.<br>Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
    </table>
    <h4 class="heading settled" data-level="6.2.2" id="checksum"><span class="secno">6.2.2. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
    <table class="no-style">
@@ -5256,7 +5257,7 @@ Supportive classes are included because they form the range of properties used b
       <td>spdx:algorithm
       <td>spdx:ChecksumAlgorithm (IRI)
       <td>1
-      <td>Choose one member of the checksum algorithm members as indicated on the webpage linked in the Controlled Vocabulary column.
+      <td>Choose one member of the checksum algorithm members as indicated on the webpage linked in the Controlled Vocabulary column. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://spdx.github.io/spdx-spec/v3.0/#checksumValue">checksum value</a>
       <td>The checksumValue property provides a lower case hexidecimal encoded digest value produced using a specific algorithm.
@@ -5416,7 +5417,7 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:hadRole
       <td>skos:Concept (IRI)
       <td>1..n
-      <td>Specify, ideally with a value from the linked controlled vocabulary, the nature of the relationship between the linked resources.<br>Example: http://www.iana.org/assignments/relation/related
+      <td>Specify, ideally with a value from the linked controlled vocabulary, the nature of the relationship between the linked resources.<br>Example: http://www.iana.org/assignments/relation/related For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.
      <tr>
       <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#relation">relation</a>
       <td>A related resource.
