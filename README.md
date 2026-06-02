@@ -1,6 +1,6 @@
 
 # Core Metadata Schema
-<img src="src/images/HRI_Logo.png" alt="HRI Logo" style="width:65%; height:auto;">
+<img src="src/images/HRI_Logo.png" alt="HRI Logo" style="width:45%; height:auto;">
 
 ## Health‑RI Metadata Schema Developer Overview
 
@@ -12,6 +12,7 @@ Bikeshed = rendering
 
 Output = metadata specification
 
+
 ---
 
 # Quick Start (Most Users)
@@ -20,11 +21,13 @@ If you only want to view the specification:
 
 https://health-ri.github.io/metadata-documentation/
 
+
 ---
 
 ## Specification
 
 Version **2.0.2** of the Health‑RI core metadata schema for the National Health Data Catalogue, defining key classes, entities, and usage for implementation.
+
 
 ---
 
@@ -40,12 +43,14 @@ Background & onboarding:
 **Note:** Frontend implementation is still ongoing.  
 Contact: servicedesk@health-ri.nl
 
+
 ---
 
 ## Summary
 
 Excel → Python → Bikeshed → HTML
 → Metadata specification output
+
 
 ---
 
@@ -74,97 +79,99 @@ You can use this project in two ways:
 URL:
 https://health-ri.github.io/metadata-documentation/
 
+
 ---
 
 # Full Pipeline Overview
 
 excel/HealthRI_v2.0.2.xlsx -> python -> property files -> index.bs -> bikeshed -> index.html
 
+
 ---
 
 # Repository Structure
 
-chapter/
-class/
-excel/
-images/
-property/
-python/
-table/
+- chapter/
+- class/
+- excel/
+- images/
+- property/
+- python/
+- table/
 
 ---
 
 # Generated Property Files
 
-properties-adms_identifier
-properties-agent
-properties-attribution
-properties-catalogue
-properties-checksum
-properties-dataservice
-properties-dataset
-properties-datasetseries
-properties-distribution
-properties-kind
-properties-periodoftime
-properties-qualitycertificate
-properties-relationship
-properties-resource
+- properties-adms_identifier
+- properties-agent
+- properties-attribution
+- properties-catalogue
+- properties-checksum
+- properties-dataservice
+- properties-dataset
+- properties-datasetseries
+- properties-distribution
+- properties-kind
+- properties-periodoftime
+- properties-qualitycertificate
+- properties-relationship
+- properties-resource
 
 ---
 
 # Class Files
 
-class-agent
-class-attribution
-class-catalog
-class-checksum
-class-data-service
-class-dataset
-class-dataset-series
-class-distribution
-class-identifier
-class-kind
-class-period-of-time
-class-quality-certificate
-class-relationship
+- class-agent
+- class-attribution
+- class-catalog
+- class-checksum
+- class-data-service
+- class-dataset
+- class-dataset-series
+- class-distribution
+- class-identifier
+- class-kind
+- class-period-of-time
+- class-quality-certificate
+- class-relationship
 
 ---
 
 # Installation Links
 
-Homebrew: https://brew.sh
-pyenv: https://github.com/pyenv/pyenv#installation
-pipx: https://pipx.pypa.io/stable/
-Bikeshed: https://speced.github.io/bikeshed/#install-final
+- Homebrew: https://brew.sh
+- pyenv: https://github.com/pyenv/pyenv#installation
+- pipx: https://pipx.pypa.io/stable/
+- Bikeshed: https://speced.github.io/bikeshed/#install-final
 
 ---
 
 # Install (macOS)
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install pyenv
-pyenv install 3.12.3
-pyenv global 3.12.3
-brew install pipx
-pipx ensurepath
-pipx install bikeshed
-bikeshed update
+- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+- brew install pyenv
+- pyenv install 3.12.3
+- pyenv global 3.12.3
+- brew install pipx
+- pipx ensurepath
+- pipx install bikeshed
+- bikeshed update
 
 ---
 
 # Install (Windows)
 
-pip install pipx
-pipx ensurepath
-pipx install bikeshed
-bikeshed update
+- pip install pipx
+- pipx ensurepath
+- pipx install bikeshed
+- bikeshed update
 
 ---
 
 # Python Requirements
 
-pip install pandas openpyxl
+- pip install pandas openpyxl
 
 ---
 
