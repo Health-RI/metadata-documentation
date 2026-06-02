@@ -2,7 +2,7 @@
 # Core Metadata Schema
 <img src="src/images/HRI_Logo.png" alt="HRI Logo" style="width:55%; height:auto;">
 
-## Health‑RI Metadata Schema Developer Overview
+## Developer Overview
 
 ### Minimal Intro
 
@@ -171,13 +171,13 @@ excel/HealthRI_v2.0.2.xlsx -> python -> property files -> index.bs -> bikeshed -
 
 # Python Requirements
 
-- pip install pandas openpyxl
+pip install pandas openpyxl
 
 ---
 
 # Run Generator
 
-- python python/<script>.py
+python python/<script>.py
 
 Output:
 property/*.html
@@ -186,7 +186,7 @@ property/*.html
 
 # Build Spec
 
-- bikeshed spec index.bs index.html
+bikeshed spec index.bs index.html
 
 Validate:
 
@@ -223,7 +223,7 @@ bikeshed --dry-run spec index.bs
 
 # GitHub (No Local Install)
 
-- Edit directly in GitHub.
+Edit directly in GitHub.
 Changes will be visible at:
 
 https://health-ri.github.io/metadata-documentation/
@@ -234,11 +234,11 @@ Note: updates may take a short time to appear.
 
 # Clean Rebuild
 
-- Delete:
+Delete:
 property/*.html
 index.html
 
-- Run:
+Run:
 python python/<script>.py
 bikeshed spec index.bs index.html
 
