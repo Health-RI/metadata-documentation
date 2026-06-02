@@ -2,9 +2,9 @@
 # Core Metadata Schema
 <img src="src/images/HRI_Logo.png" alt="HRI Logo" style="width:65%; height:auto;">
 
-# Health‑RI Metadata Schema Developer Overview
+## Health‑RI Metadata Schema Developer Overview
 
-## Minimal Intro
+### Minimal Intro
 
 Excel = source
 Python = transformation
