@@ -11,7 +11,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://semiceu.github.io/DCAT-AP/releases/3.0.0/#property-applicableLegislation">applicable legislation</a></td>
+      <td>applicable legislation</td>
       <td>The legislation that is applicable to this resource.</td>
       <td>dcatap:applicableLegislation</td>
       <td>eli:LegalResource (IRI)</td>
@@ -19,15 +19,15 @@
       <td>The legislation that mandates the creation or management of the Dataset Series.</td>
     </tr>
     <tr>
-      <td><a href="https://www.w3.org/TR/vocab-dcat-3/#Property:contactPoint">contact point</a></td>
+      <td>contact point</td>
       <td>Relevant contact information for the cataloged resource.</td>
       <td>dcat:contactPoint</td>
       <td>vcard:Kind</td>
       <td>1..n</td>
-      <td>This property points to a contact point (department or person) that can answer questions about the dataset series. Details on how to describe these are provided under class vcard:Kind.<br>Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
+      <td>This property points to a contact point (department or person) that can answer questions about the dataset series. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description">description</a></td>
+      <td>description</td>
       <td>An account of the resource.</td>
       <td>dct:description</td>
       <td>rdfs:Literal</td>
@@ -35,23 +35,23 @@
       <td>Briefly describe the dataset series in the catalog. You can repeat this in multiple languages.</td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#accrualPeriodicity">frequency</a></td>
+      <td>frequency</td>
       <td>The frequency with which items are added to a collection.</td>
       <td>dct:accrualPeriodicity</td>
       <td>skos:Concept (IRI)</td>
       <td>0..1</td>
-      <td>The frequency of a dataset series is not equal to the frequency of the dataset in the collection. For this specific case please refer to the <a href="#controlled-vocabularies">controlled vocabularies</a>.</td>
+      <td>The frequency of a dataset series is not equal to the frequency of the dataset in the collection.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a><br></td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#spatial">geographical coverage</a></td>
+      <td>geographical coverage</td>
       <td>Spatial characteristics of the resource.</td>
       <td>dct:spatial</td>
       <td>dct:Location (IRI)</td>
       <td>0..n</td>
-      <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (eg. indicating that NL is covered), to not expose detailed information of subject's locations.</td>
+      <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (eg. indicating that NL is covered), to not expose detailed information of subject's locations.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br></td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#modified">modification date</a></td>
+      <td>modification date</td>
       <td>Date on which the resource was changed.</td>
       <td>dct:modified</td>
       <td>xsd:dateTime</td>
@@ -59,7 +59,7 @@
       <td>This is not equal to the most recent modified dataset in the collection of the dataset series.</td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">publisher</a></td>
+      <td>publisher</td>
       <td>An entity responsible for making the resource available.</td>
       <td>dct:publisher</td>
       <td>foaf:Agent</td>
@@ -67,7 +67,7 @@
       <td>The publisher of the dataset series may not be the publisher of all datasets.&nbsp;&nbsp;E.g. a digital archive could take over the publishing of older datasets in the series.</td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#issued">release date</a></td>
+      <td>release date</td>
       <td>Date of formal issuance of the resource.</td>
       <td>dct:issued</td>
       <td>xsd:dateTime</td>
@@ -75,7 +75,7 @@
       <td>The moment when the dataset series was established as a managed resource. This is not equal to the release date of the oldest dataset in the collection of the dataset series.</td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#temporal">temporal coverage</a></td>
+      <td>temporal coverage</td>
       <td>Temporal characteristics of the resource.</td>
       <td>dct:temporal</td>
       <td>dct:PeriodOfTime</td>
@@ -83,7 +83,7 @@
       <td>When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset in the collection should be part of the temporal coverage. In that case, an open ended value is recommended, e.g. after 2012.</td>
     </tr>
     <tr>
-      <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title">title</a></td>
+      <td>title</td>
       <td>A name given to the resource.</td>
       <td>dct:title</td>
       <td>rdfs:Literal</td>

@@ -1,5 +1,15 @@
 {
-  "prefixes": {
+  "_meta": {
+    "description": "Central registry for prefixes, canonical links, raw URLs, and controlled vocabulary rules.",
+    "note": "Fields vocabRequirements and vocabTexts are used for usage note generation. Others are for linking and parsing.",
+    "notUsedDirectly": [
+      "rawURLs (only used for comparison)",
+      "prefixes (used for URI expansion of static ones in html doc)",
+      "canonicalLinks (used for property linking)"
+    ]
+  },
+
+    "prefixes": {
     "adms": "http://www.w3.org/ns/adms#",
     "adms_status": "http://purl.org/adms/status/",
     "dcat": "https://www.w3.org/ns/dcat#",
@@ -208,5 +218,69 @@
     "https://www.iana.org/assignments/media-types/media-types.xhtml",
     "https://bioportal.bioontology.org/ontologies/ZONMW-GENERIC/",
     "https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf"
-  ]
+  ],
+
+  "vocabTexts": {
+    "MUST": "The value for the property must be selected from the specified vocabulary or list.",
+    "AT_LEAST_1": "At least one of the provided values must come from the specified vocabulary (additional values from other sources may be included where relevant).",
+    "MAY": "The use of the specified vocabulary is optional, but recommended when applicable."
+  },
+
+  "vocabRequirements": {
+    "dct:accessRights|Dataset": "MUST",
+    "dct:accrualPeriodicity|Dataset": "MUST",
+    "dct:language|Dataset": "MUST",
+    "dpv:hasPersonalData|Dataset": "MUST",
+    "adms:status|Dataset": "MUST",
+    "dcat:theme|Dataset": "MUST",
+    "dct:type|Dataset": "MUST",
+
+    "dct:language|Catalog": "MUST",
+    "dct:license|Catalog": "MUST",
+
+    "dct:spatial|Agent": "MUST",
+    "dct:identifier|Agent": "MUST",
+    "healthdcatap:publishertype|Agent": "MUST",
+    "dct:type|Agent": "MUST",
+
+    "dcat:compressFormat|Distribution": "MUST",
+    "dct:format|Distribution": "MUST",
+    "dct:language|Distribution": "MUST",
+    "dct:license|Distribution": "MUST",
+    "dcat:mediaType|Distribution": "MUST",
+    "dcat:packageFormat|Distribution": "MUST",
+    "adms:status|Distribution": "MUST",
+
+    "dct:accrualPeriodicity|DatasetSeries": "MUST",
+
+    "dct:accessRights|DataService": "MUST",
+    "dct:format|DataService": "MUST",
+    "dct:language|DataService": "MUST",
+    "dct:license|DataService": "MUST",
+    "dcat:theme|DataService": "MUST",
+
+    "dcat:hadRole|Attribution": "MUST",
+    "dcat:hadRole|Relationship": "MUST",
+    "spdx:algorithm|Checksum": "MUST",
+
+    "dcat:themeTaxonomy|Catalog": "AT_LEAST_1",
+
+    "dct:spatial|Dataset": "MAY",
+    "dpv:hasLegalBasis|Dataset": "MAY",
+    "dpv:hasPurpose|Dataset": "MAY",
+    "dct:spatial|Catalog": "MAY",
+    "dct:spatial|Catalogue": "MAY",
+    "dct:spatial|DatasetSeries": "MAY"
+  },
+
+"vocabLabelMapping": {
+  "EU Vocabularies Continents Named Authority List": "https://publications.europa.eu/resource/authority/continent",
+  "EU Vocabularies Countries Named Authority List": "https://publications.europa.eu/resource/authority/country",
+  "EU Vocabularies Places Named Authority List": "https://publications.europa.eu/resource/authority/place",
+  "Geonames": "http://sws.geonames.org/",
+  "CBS": "https://vocabs.cbs.nl/nl/",
+  "vocabs.cbs": "https://vocabs.cbs.nl/nl/"
+}
+
+
 }

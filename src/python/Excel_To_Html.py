@@ -1,185 +1,303 @@
-"""
-Generate HTML bikeshed  Excel files from Health-RI metadata Excel.
-
-This script converts the Health-RI metadata Excel file to Bikeshed-flavored Markdown -compatible
-format that can be rendered: pre-processor source document (containing only the actual spec content, plus several shorthands for linking to terms and other things) into a final spec document, with appropriate boilerplate, bibliography, indexes, etc all filled in. imported into SHACLPlay for SHACL shape editing.
-"""
-
-import traceback
 from pathlib import Path
 import pandas as pd
+import re
 import json
-import re
-
-# Helper functions for link injection
-def linkify_property_label(row, links):
-    label = row.get("Property label")
-    uri = row.get("Property URI")
-
-    # Safety
-    if not isinstance(label, str) or not isinstance(uri, str):
-        return label
-
-    # Ignore class IRIs like "dcat:Dataset (IRI)"
-    if "(IRI)" in uri:
-        return label
-
-    # If URI found in canonicalLinks → make label clickable
-    if uri in links["canonicalLinks"]:
-        url = links["canonicalLinks"][uri]
-        return f'<a href="{url}">{label}</a>'
-
-    return label
-
-import re
-
-def linkify_usage_note(value):
-    if isinstance(value, str):
-        return re.sub(
-            r"controlled vocabulary",
-            '<a href="#controlled-vocabularies">controlled vocabulary</a>',
-            value,
-            flags=re.IGNORECASE
-        )
-    return value
+from openpyxl import load_workbook
+from urllib.parse import urlparse, urlunparse
 
 
-# Configuration
-# EXCEL_FILE_PATH = "./inputs/filename.xlsx"
 EXCEL_FILE_PATH = "../excel/HealthRI_v2.0.2.xlsx"
-FOLDER_NAME = "property"
-OUTPUT_PATH = Path("../") / FOLDER_NAME
+OUTPUT_PATH = Path("../property")
+LINKS_FILE = Path(__file__).parent / "links.json"
+
+
+# ========================
+# URL HELPERS
+# ========================
+
+def extract_urls(text):
+    if not isinstance(text, str):
+        return []
+    return re.findall(r'https?://[^\s\]\),]+', text)
+
+
+def strip_urls(text):
+    if not isinstance(text, str):
+        return ""
+    return re.sub(r'https?://[^\s\]\),]+', '', text)
+
+
+def make_clickable(url):
+    return f'<a href="{url}">{url}</a>'
+
+
+def normalize_url(url):
+    parsed = urlparse(url)
+    return urlunparse((
+        "",
+        parsed.netloc,
+        parsed.path.rstrip("/"),
+        "", "", ""
+    ))
+
+
+def select_canonical_urls(urls):
+    groups = {}
+
+    for url in urls:
+        if not url:
+            continue
+
+        base = normalize_url(url)
+        groups.setdefault(base, []).append(url)
+
+    final = []
+
+    for variants in groups.values():
+        fragments = [u for u in variants if "#" in u]
+        if fragments:
+            final.append(fragments[0])
+        else:
+            https = [u for u in variants if u.startswith("https")]
+            final.append(https[0] if https else variants[0])
+
+    return final
+
+
+# ========================
+# LABEL → URL MAPPING
+# ========================
+
+def resolve_vocab_labels(text, mapping):
+    if not isinstance(text, str):
+        return []
+
+    return [
+        url for label, url in mapping.items()
+        if label.lower() in text.lower()
+    ]
+
+
+# ========================
+# REQUIREMENT DETECTION (fallback only)
+# ========================
+
+def detect_requirement(text):
+    if not isinstance(text, str):
+        return "MAY"
+
+    t = text.lower()
+
+    if re.search(r"at\s+least", t):
+        return "AT_LEAST_1"
+
+    # ✅ tightening this prevents false MUST
+    if "must " in t:
+        return "MUST"
+
+    return "MAY"
+
+
+# ========================
+# EXCEL URL EXTRACTION
+# ========================
+
+def extract_urls_per_property(sheet_name):
+    wb = load_workbook(EXCEL_FILE_PATH)
+    ws = wb[sheet_name]
+
+    headers = [c.value for c in ws[1]]
+    vocab_idx = headers.index("Controlled vocabluary (if applicable)") + 1
+    uri_idx = headers.index("Property URI") + 1
+
+    url_map = {}
+
+    for row_idx in range(2, ws.max_row + 1):
+        uri = ws.cell(row=row_idx, column=uri_idx).value
+        cell = ws.cell(row=row_idx, column=vocab_idx)
+
+        if not uri:
+            continue
+
+        urls = []
+
+        if cell.value:
+            urls += extract_urls(str(cell.value))
+
+        if cell.hyperlink:
+            urls.append(cell.hyperlink.target)
+
+        url_map[uri] = urls
+
+    return url_map
+
+
+# ========================
+# MERGE MULTI-ROW VOCAB
+# ========================
+
+def merge_vocab_rows(df):
+    merged = []
+    current = None
+
+    for _, row in df.iterrows():
+        vocab = row["Controlled vocabluary (if applicable)"]
+
+        is_cont = (
+            pd.notna(vocab)
+            and all(
+                pd.isna(v) or str(v).strip() == ""
+                for col, v in row.items()
+                if col != "Controlled vocabluary (if applicable)"
+            )
+        )
+
+        if is_cont and current is not None:
+            existing = current["Controlled vocabluary (if applicable)"]
+            current["Controlled vocabluary (if applicable)"] = (
+                str(existing) + "\n" + str(vocab) if pd.notna(existing) else str(vocab)
+            )
+        else:
+            if current is not None:
+                merged.append(current)
+            current = row.copy()
+
+    if current is not None:
+        merged.append(current)
+
+    return pd.DataFrame(merged).reindex(columns=df.columns)
+
+
+# ========================
+# ✅ FINAL USAGE NOTE (CORRECT + SHEET-PROOF)
+# ========================
+
+def build_usage_note(row, sheet_name, url_map, links):
+
+    base = row["Usage note"]
+    if not isinstance(base, str) or not base.strip():
+        base = "N.A."
+
+    vocab = row["Controlled vocabluary (if applicable)"]
+    prop = row["Property URI"]
+
+    if not isinstance(vocab, str) or not vocab.strip():
+        return base
+
+    key_exact = f"{prop}|{sheet_name}"
+    key_lower = f"{prop}|{sheet_name.lower()}"
+
+    prop_key_norm = prop.strip().lower()
+
+    # ✅ ✅ FINAL FIXED LOOKUP
+    vocab_type = (
+        links["vocabRequirements"].get(key_exact)
+        or links["vocabRequirements"].get(key_lower)
+        or next(
+            (
+                v
+                for k, v in links["vocabRequirements"].items()
+                if k.split("|")[0].strip().lower() == prop_key_norm
+            ),
+            None
+        )
+        or detect_requirement(vocab)
+    )
+
+    vocab_text = links["vocabTexts"].get(vocab_type, "")
+
+    # URLs
+    text_urls = extract_urls(vocab)
+    excel_urls = url_map.get(prop, [])
+    mapped_urls = resolve_vocab_labels(vocab, links["vocabLabelMapping"])
+
+    urls = select_canonical_urls(text_urls + excel_urls + mapped_urls)
+
+    # clean vocab text
+    mapping_labels = [k.lower() for k in links["vocabLabelMapping"].keys()]
+    clean_lines = []
+
+    for line in strip_urls(vocab).split("\n"):
+        l = line.strip()
+        if not l:
+            continue
+
+        lower = l.lower()
+
+        if any(label in lower for label in mapping_labels):
+            continue
+
+        if len(l.split()) <= 6:
+            continue
+
+        if not re.search(r"\b(is|are|must|should|may|use|used|provides|represents)\b", lower):
+            continue
+
+        clean_lines.append(l)
+
+    clean_text = "<br>".join(clean_lines)
+
+    parts = []
+
+    if vocab_text:
+        parts.append(vocab_text)
+
+    if clean_text:
+        parts.append(clean_text)
+
+    if urls:
+        parts.append("")
+        parts.extend([make_clickable(u) for u in urls])
+        parts.append("")
+
+    vocab_block = "<br>".join(parts)
+
+    return base + "<br><br><strong>Controlled vocabulary</strong><br>" + vocab_block
+
+
+# ========================
+# MAIN
+# ========================
 
 def main():
-    """Main conversion function."""
-    print("=" * 80)
-    print("HTML Generator")
-    print("=" * 80)
-    print()
-
-    # Create output directory
     OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
 
-    # Initialize converter
-    # print(f"Loading template from {TEMPLATE_PATH}...")
-    # print(f"Loading prefixes from {EXCEL_FILE_PATH}...")
-    #converter = SHACLPlayConverter(TEMPLATE_PATH, Path(EXCEL_FILE_PATH))
-
-    # Read the classes sheet to get configuration for each class
-    print(f"Reading classes configuration from {EXCEL_FILE_PATH}...")
-    classes_df = pd.read_excel(EXCEL_FILE_PATH, sheet_name='classes')
-    print(f"  Found {len(classes_df)} classes to process")
-    print()
-
-    # STEP 3: Load link registry
-    LINKS_FILE = Path(__file__).parent / "links.json"
+    classes_df = pd.read_excel(EXCEL_FILE_PATH, sheet_name="classes")
 
     with open(LINKS_FILE, "r", encoding="utf-8") as f:
         links = json.load(f)
 
-    # For now, just print what we loaded (so we know it works)
-    print("Loaded link registry with:")
-    print(" -", len(links["prefixes"]), "prefixes")
-    print(" -", len(links["canonicalLinks"]), "canonical links")
-    print(" -", len(links["rawURLs"]), "raw URLs")
+    for _, class_row in classes_df.iterrows():
+        sheet_name = class_row["sheet_name"]
 
+        df = pd.read_excel(EXCEL_FILE_PATH, sheet_name=sheet_name)
 
-    # Process each class
-    for idx, class_row in classes_df.iterrows():
-        sheet_name = class_row['sheet_name']
-        ontology_name = class_row['class_URI']
-        target_class = class_row['SHACL_target_ontology_name']
-        description = class_row.get('description', None)
+        cols = [
+            "Property label",
+            "Definition",
+            "Property URI",
+            "Range",
+            "Cardinality",
+            "Usage note",
+            "Controlled vocabluary (if applicable)"
+        ]
 
-        print(f"Processing {sheet_name} class...")
-        print(f"  Ontology: {ontology_name}")
-        print(f"  Target: {target_class}")
+        df = df[cols]
+        df = merge_vocab_rows(df)
 
-        try:
-            # Read the class sheet from Health-RI Excel
-            class_df = pd.read_excel(EXCEL_FILE_PATH, sheet_name=sheet_name)
-            class_df = class_df[[
-                "Property label",
-                "Definition",
-                "Property URI",
-                "Range",
-                "Cardinality",
-                "Usage note",
-                "Controlled vocabluary (if applicable)"
-            ]]
+        url_map = extract_urls_per_property(sheet_name)
 
-            # REMOVE empty rows (this fixes your NaN rows problem!)
-            class_df = class_df.dropna(how="all")
+        df["Usage note"] = df.apply(
+            lambda r: build_usage_note(r, sheet_name, url_map, links),
+            axis=1
+        )
 
-            print(f"  Loaded {len(class_df)} properties")
-            print("COLUMNS FOUND:")
-            for col in class_df.columns:
-                print(repr(col))
+        df = df.drop(columns=["Controlled vocabluary (if applicable)"])
 
-            # Extract class name
-            class_name = ontology_name.split(":")[-1]
+        output_file = OUTPUT_PATH / f"properties-{sheet_name.lower()}.html"
+        df.to_html(output_file, index=False, escape=False)
 
-            # Load output file name and path
-            output_file = OUTPUT_PATH / f"properties-{sheet_name.lower()}.html"
-
-
-### apply toepassen hier
-            ## Convert NaN to None for description
-            if pd.isna(description):
-                description = None
-            if not description or str(description).strip().lower() in ("NA", "nan", "none"):
-                description = None
-
-            print(f"  ✓ Generated {output_file}")
-            print()
-
-            # Show DataFrame (optional)
-            print(class_df)
-
-            # Make ONLY the Property label clickable
-            class_df["Property label"] = class_df.apply(
-                lambda row: linkify_property_label(row, links),
-                axis=1
-            )
-
-            # Make "controlled vocabulary" clickable inside Usage note
-            def enhance_usage_note(row):
-                value = row["Usage note"]
-
-                if (
-                        pd.notna(row["Controlled vocabluary (if applicable)"]) and
-                        isinstance(value, str)
-                ):
-                    return (
-                            value
-                            + ' For this specific case please refer to the '
-                            + '<a href="#controlled-vocabularies">controlled vocabularies</a>.'
-                    )
-
-                return value
-
-            class_df["Usage note"] = class_df.apply(enhance_usage_note, axis=1)
-
-
-            class_df = class_df.drop(columns=["Controlled vocabluary (if applicable)"])
-
-            # Replace Excel newlines with <br> for proper HTML rendering
-            class_df = class_df.replace(r'\n', '<br>', regex=True)
-
-            # Write to output file with escape disabled
-            class_df.to_html(output_file, index=False, escape=False)
-
-
-
-        except Exception as e:
-            print(f"  ✗ Error processing {sheet_name}: {e}")
-            traceback.print_exc()
-            print()
-
-    print("=" * 80)
-    print("Conversion complete!")
-    print(f"Output files written to {OUTPUT_PATH}")
-    print("=" * 80)
+        print(f"Generated {output_file}")
 
 
 if __name__ == "__main__":
