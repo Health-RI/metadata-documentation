@@ -91,7 +91,7 @@ The tables below list the relevant properties, the classes they apply to, the ex
     </tr>
 
     <tr>
-      <td>dcat:type</td>
+      <td>dct:type</td>
       <td>Dataset</td>
       <td>
         <a href="http://publications.europa.eu/resource/authority/dataset-type">
