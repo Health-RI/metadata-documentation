@@ -22,8 +22,8 @@ It contains:
 * manually maintained explanatory chapters;
 * manually maintained class descriptions;
 * an Excel workbook used as structured source material for generated property tables;
-* a JSON configuration for controlled vocabulary mappings, requirement lookups, and property links;
-* a Python generator that converts Excel content into HTML table fragments;
+* a JSON configuration file for controlled vocabulary mappings, requirement lookups, and property links;
+* a Python script that converts Excel content into HTML table fragments;
 * generated property-table fragments included by Bikeshed;
 * GitHub Actions configuration for publication to GitHub Pages.
 
