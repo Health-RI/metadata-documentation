@@ -36,7 +36,7 @@ https://github.com/Health-RI/health-ri-metadata
 
 ---
 
-## Useful resources and repository structure
+## Useful resources 
 
 The Health-RI metadata ecosystem uses multiple repositories, tools, and publication targets.
 
