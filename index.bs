@@ -1,7 +1,7 @@
 <pre class='metadata'>
 Title: Health-RI Metadata Model
 Shortname: Hri-spec
-status: fido/ED
+status: iso/TS
 level: none
 TR: https://w3id.org/health-ri/metadata/releases/latest
 URL: https://health-ri.github.io/metadata-documentation/
