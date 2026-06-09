@@ -30,9 +30,7 @@ It contains:
 This repository is primarily intended for **internal use** by documentation maintainers, metadata model maintainers, and technical contributors working on the specification website.
 
 It is **not** the main repository for Health-RI metadata model artifacts.  
-Model-level artifacts, SHACL shapes, releases, and **all issue tracking (including documentation issues)** are maintained in:
-
-https://github.com/Health-RI/health-ri-metadata
+Model-level artifacts, SHACL shapes, releases, and **all issue tracking (including documentation issues)** are maintained in: https://github.com/Health-RI/health-ri-metadata
 
 ---
 
@@ -185,8 +183,8 @@ https://health-ri.github.io/metadata-documentation/
 
 If changes are not visible:
 
-- check GitHub Actions runs  
-- verify changes were merged into `main`  
-- check the `gh-pages` branch  
-- confirm generated files were committed  
-- clear browser/cache
+- check the GitHub Actions workflow runs and confirm they completed successfully  
+- verify that the changes were merged into the `main` branch  
+- check the `gh-pages` branch to confirm the updated content was deployed  
+- ensure that generated files (e.g. `index.html`) were included in the commit  
+- refresh the page and clear your browser cache if necessary  
