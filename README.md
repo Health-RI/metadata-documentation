@@ -94,6 +94,19 @@ Different parts of the specification are maintained in different locations.
 The documentation workflow has two related but distinct parts:
 
 1. Property-table generation (when the Excel workbook changes)  
+
+```mermaid
+flowchart LR
+    A{"Excel workbook changed?"}
+    A -- "Yes" --> B["Edit versioned workbook<br/>src/excel/HealthRI_v*.xlsx"]
+    A -- "No" --> F["Do not regenerate property tables"]
+
+    B --> C["Run generator from src/python<br/>python Excel_To_Html.py"]
+    C --> D["Regenerate property tables<br/>src/property/*.html"]
+    D --> E["Review generated diff"]
+    E --> G["Commit workbook and generated table changes"]
+```
+
 2. Specification rendering and publication  
 
 ```mermaid
@@ -127,18 +140,6 @@ flowchart TD
     main --> ciMain["GitHub Actions publication run"]
     ciMain --> ghpages["Deploy rendered specification<br/>to gh-pages"]
     ghpages --> site["Published documentation site"]
-```
-
-```mermaid
-flowchart LR
-    A{"Excel workbook changed?"}
-    A -- "Yes" --> B["Edit versioned workbook<br/>src/excel/HealthRI_v*.xlsx"]
-    A -- "No" --> F["Do not regenerate property tables"]
-
-    B --> C["Run generator from src/python<br/>python Excel_To_Html.py"]
-    C --> D["Regenerate property tables<br/>src/property/*.html"]
-    D --> E["Review generated diff"]
-    E --> G["Commit workbook and generated table changes"]
 ```
 
 ---
