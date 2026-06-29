@@ -22,7 +22,7 @@
       <td>analytics</td>
       <td>An analytics distribution of the dataset.</td>
       <td>healthdcatap:analytics</td>
-      <td>dcat:Distribution (IRI)</td>
+      <td>dcat:Distribution</td>
       <td>0..n</td>
       <td>Publishers are encouraged to provide URLs pointing to document repositories where users can access or request associated resources such as technical reports of the dataset, quality measurements, usability indicators,... Note that HealthDCAT-AP mentions also API endpoints or analytics services, but these would not be Distriutions but rather DatasetServices.</td>
     </tr>
@@ -64,7 +64,7 @@
       <td>dcat:contactPoint</td>
       <td>vcard:Kind</td>
       <td>1</td>
-      <td>This property points to a contact point (department or person) that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
     </tr>
     <tr>
       <td>creator</td>
@@ -72,7 +72,7 @@
       <td>dct:creator</td>
       <td>foaf:Agent</td>
       <td>1..n</td>
-      <td>This property points to a person (known as Agent) responsible for generating the dataset. In most cases, this should be the project’s Principal Investigator, provided they consent to being listed in the catalogue. If not, the associated department or institute may be specified instead.</td>
+      <td>The creator (of the dataset) is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the dataset was created.\nIn case there are multiple (collaborating) organisation involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator.\nIn case you wish to credit other contributors to the dataset, you can use the prov:qualifiedAttribution property. This could be useful if you wish to indicate, for example, the funding organisation(s), collaborating organosation(s) or name specific individuals (e.g., principal investigator) involved in creation or managing of the dataset.</td>
     </tr>
     <tr>
       <td>description</td>
@@ -86,7 +86,7 @@
       <td>distribution</td>
       <td>An available Distribution for the Dataset.</td>
       <td>dcat:distribution</td>
-      <td>dcat:Distribution (IRI)</td>
+      <td>dcat:Distribution</td>
       <td>0..n</td>
       <td>Metadata element used as a key link to the class Distribution.</td>
     </tr>
@@ -118,7 +118,7 @@
       <td>has version</td>
       <td>This resource has a more specific, versioned resource.</td>
       <td>dcat:hasVersion</td>
-      <td>dcat:Dataset (IRI)</td>
+      <td>dcat:Dataset</td>
       <td>0..n</td>
       <td>Indicate the dataset which is the other version of the current dataset.</td>
     </tr>
@@ -142,7 +142,7 @@
       <td>in series</td>
       <td>A dataset series of which the dataset is part.</td>
       <td>dcat:inSeries</td>
-      <td>dcat:DatasetSeries (IRI)</td>
+      <td>dcat:DatasetSeries</td>
       <td>0..n</td>
       <td>This property points to which Dataset Series the Dataset is part of.</td>
     </tr>
@@ -174,7 +174,7 @@
       <td>legal basis</td>
       <td>Indicates use or applicability of a Legal Basis.</td>
       <td>dpv:hasLegalBasis</td>
-      <td>dpv:LegalBasis (IRI)</td>
+      <td>dpv:LegalBasis</td>
       <td>0..n</td>
       <td>The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column).\n\nWhile the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property described the legal basis for initial collection and processing of (personal) data.\n\nExample value for this property could be: dpv:Consent<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis</a><br></td>
     </tr>
@@ -182,7 +182,7 @@
       <td>maximum typical age</td>
       <td>Maximum typical age of the population within the dataset</td>
       <td>healthdcatap:maxTypicalAge</td>
-      <td>xsd:nonNegativeInteger</td>
+      <td>xsd:non NegativeInteger</td>
       <td>0..1</td>
       <td>The approximate maximum age of subjects in the dataset, if applicable. Approximate age is given to protect potentially sensitive information of subjects in the dataset.</td>
     </tr>
@@ -190,7 +190,7 @@
       <td>minimum typical age</td>
       <td>Minimum typical age of the population within the dataset</td>
       <td>healthdcatap:minTypicalAge</td>
-      <td>xsd:nonNegativeInteger</td>
+      <td>xsd:non NegativeInteger</td>
       <td>0..1</td>
       <td>The approximate minimum age of subjects in the dataset, if applicable. Approximate age is given to protect potentially sensitive information of subjects in the dataset.</td>
     </tr>
@@ -206,7 +206,7 @@
       <td>number of records</td>
       <td>Size of the dataset in terms of the number of records</td>
       <td>healthdcatap:numberOfRecords</td>
-      <td>xsd:nonNegativeInteger</td>
+      <td>xsd:NonNegativeInteger</td>
       <td>0..1</td>
       <td>Number of records inside a Dataset.</td>
     </tr>
@@ -214,7 +214,7 @@
       <td>number of unique infividuals</td>
       <td>Number of records for unique individuals.</td>
       <td>healthdcatap:numberOfUniqueIndividuals</td>
-      <td>xsd:nonNegativeInteger</td>
+      <td>xsd:NonNegativeInteger</td>
       <td>0..1</td>
       <td>This property is not mandatory, since not all datasets might include data from individuals.</td>
     </tr>
@@ -230,7 +230,7 @@
       <td>personal data</td>
       <td>Indicates association with Personal Data.</td>
       <td>dpv:hasPersonalData</td>
-      <td>dpv:PersonalData (IRI)</td>
+      <td>dpv:PersonalData</td>
       <td>0..n</td>
       <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column).\nFor example: dpv-pd:Gender<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://w3c.github.io/dpv/2.0/pd/">https://w3c.github.io/dpv/2.0/pd/</a><br></td>
     </tr>
@@ -254,7 +254,7 @@
       <td>purpose</td>
       <td>Indicates association with Purpose.</td>
       <td>dpv:hasPurpose</td>
-      <td>dpv:Purpose (IRI)</td>
+      <td>dpv:Purpose</td>
       <td>0..n</td>
       <td>One (or many) category or sub-category of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column).\nExample value could be: dpv:ResearchAndDevelopment.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes</a><br></td>
     </tr>
@@ -264,7 +264,7 @@
       <td>prov:qualifiedAttribution</td>
       <td>prov:Attribution</td>
       <td>0..n</td>
-      <td>This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent). Note that for HealthDCAT-AP, the list of roles might be extended in the future.\nExample: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor\n\nUse this property if you would like to indicate the funder of the (research project that resulted in creation of the) dataset.\nThe value for role then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder</td>
+      <td>This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent).\nRepeat this property if you wish to specify multiple roles for the same agent.\nRefer to the Attribution class for more information how to fill this.\n\nUse this property if you would like to indicate the funder of the (research project that resulted in creation of the) dataset.\nThe value for role in the Attribution class then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder</td>
     </tr>
     <tr>
       <td>qualified relation</td>
@@ -302,7 +302,7 @@
       <td>sample</td>
       <td>Links to a sample of an Asset (which is itself an Asset).</td>
       <td>adms:sample</td>
-      <td>dcat:Distribution (IRI)</td>
+      <td>dcat:Distribution</td>
       <td>0..n</td>
       <td>This property makes use of the dcat:Distribution class to describe a sample distribution of the dataset, which can be anonymized or synthetic data, or the data dictionary provided in CSVW format. This is currently further developed by the TEHDAS2 program. More information can be found here: https://healthdcat-ap.github.io/#sample-distribution</td>
     </tr>
@@ -310,7 +310,7 @@
       <td>source</td>
       <td>A related resource from which the described resource is derived.</td>
       <td>dct:source</td>
-      <td>dcat:Dataset (IRI)</td>
+      <td>dcat:Dataset</td>
       <td>0..n</td>
       <td>Indicate the dataset on which this described dataset is based.</td>
     </tr>
@@ -382,7 +382,7 @@
       <td>was generated by</td>
       <td>Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.</td>
       <td>prov:wasGeneratedBy</td>
-      <td>prov:Activity (IRI)</td>
+      <td>prov:Activity</td>
       <td>0..n</td>
       <td>N.A.</td>
     </tr>
