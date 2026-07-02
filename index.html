@@ -1488,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version e74aa0952, updated Fri Jun 5 23:16:28 2026 +0000" name="generator">
+  <meta content="Bikeshed version d113b2e81, updated Tue Jun 9 14:57:55 2026 -0700" name="generator">
   <link href="https://w3id.org/health-ri/metadata/releases/latest" rel="canonical">
-  <meta content="ecc28f44e8ce4b07642f40c3929bb58d4e44d647" name="revision">
+  <meta content="8e0e7227fe33a8c716f3a15245888671db0d7126" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -3782,7 +3782,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p data-fill-with="logo"></p>
    <h1 class="no-ref p-name" id="title">Health-RI Metadata Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Technical Specification,
-    <time class="dt-updated" datetime="2026-06-09">9 June 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-07-02">2 July 2026</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -3840,7 +3840,7 @@ dfn > a.self-link::before      { content: "#"; }
     <li>
      <a href="#overview-and-diagram"><span class="secno">3</span> <span class="content">Overview and Diagram</span></a>
      <ol class="toc">
-      <li><a href="#uml-class-diagram-v202"><span class="secno">3.1</span> <span class="content">UML Class Diagram v2.0.2</span></a>
+      <li><a href="#uml-class-diagram-v203"><span class="secno">3.1</span> <span class="content">UML Class Diagram v2.0.3</span></a>
      </ol>
     <li>
      <a href="#permanent-urls"><span class="secno">4</span> <span class="content">Permanent Urls</span></a>
@@ -3976,7 +3976,7 @@ An overview of the metadata schema core is presented in the UML diagram below. T
    <p>The UML diagram separates <strong>main classes</strong> from <strong>supporting classes</strong>. While relationships between main classes are indicated by arrows, supporting class relationships are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.</p>
    <p>Properties derived from draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
    <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="Documents/Metadata_CoreGenericHealth_v2.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
-   <h3 class="heading settled" data-level="3.1" id="uml-class-diagram-v202"><span class="secno">3.1. </span><span class="content">UML Class Diagram v2.0.2</span><a class="self-link" href="#uml-class-diagram-v202"></a></h3>
+   <h3 class="heading settled" data-level="3.1" id="uml-class-diagram-v203"><span class="secno">3.1. </span><span class="content">UML Class Diagram v2.0.3</span><a class="self-link" href="#uml-class-diagram-v203"></a></h3>
    <p><a href="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/images/HRI_metadata_p2.png" target="_blank">
   <img alt="Health-RI Metadata Diagram" height="1100" src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/images/HRI_metadata_p2.png" title="diagram" width="800">
 </a></p>
@@ -4123,7 +4123,7 @@ Supportive classes are included because they form the range of properties used b
       <td>catalog
       <td>A catalog that is listed in the catalog.
       <td>dcat:catalog
-      <td>dcat:Catalog (IRI)
+      <td>dcat:Catalog
       <td>0..n
       <td>For certain research projects, multiple catalogs may need to be organized in a nested manner. This property serves to connect the different catalogs with each other.
      <tr>
@@ -4132,20 +4132,23 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point (department or person) that can answer questions about the catalogue. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.
+Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
       <td>creator
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>0..n
-      <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows specification of multiple creators of a catalogue.
+      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the catalogue was created.
+In case there are multiple (collaborating) organisation involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator.
+Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.
      <tr>
       <td>dataset
       <td>A dataset that is listed in the catalog.
       <td>dcat:dataset
       <td>dcat:Dataset
-      <td>0..n
+      <td>1..n
       <td>Each catalog contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue.
      <tr>
       <td>description
@@ -4165,9 +4168,10 @@ Supportive classes are included because they form the range of properties used b
       <td>has part
       <td>A related resource that is included either physically or logically in the described resource.
       <td>dct:hasPart
-      <td>dcat:Catalog (IRI)
+      <td>dcat:Catalog
       <td>0..n
-      <td>Use this property to establish another catalogue in this catalogue.\nNote that deeply nested structures should be avoided, and can currently not be displayed in the National Health Data Catalogue.
+      <td>Use this property to establish another catalogue in this catalogue.
+Note that deeply nested structures should be avoided, and can currently not be displayed in the National Health Data Catalogue.
      <tr>
       <td>home page
       <td>A homepage for some thing.
@@ -4181,7 +4185,8 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>The value of this property must be an IRI from the provided controlled vocabulary.\nFor example: http://publications.europa.eu/resource/authority/language/NLD<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br>
+      <td>The value of this property must be an IRI from the provided controlled vocabulary.
+For example: http://publications.europa.eu/resource/authority/language/NLD<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br>
      <tr>
       <td>licence
       <td>A legal document giving official permission to do something with the resource.
@@ -4221,7 +4226,7 @@ Supportive classes are included because they form the range of properties used b
       <td>service
       <td>A service that is listed in the catalog.
       <td>dcat:service
-      <td>dcat:DataService (IRI)
+      <td>dcat:DataService
       <td>0..n
       <td>Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalog and the Data Service via this property. While crucial for interoperability, this property is not relevant for end-users to collect.
      <tr>
@@ -4235,9 +4240,9 @@ Supportive classes are included because they form the range of properties used b
       <td>themes
       <td>A main category of the resource. A resource can have multiple themes.
       <td>dcat:themeTaxonomy
-      <td>skos:ConceptScheme (IRI)
+      <td>skos:ConceptScheme
       <td>0..n
-      <td>This property refers to a knowledge organisation system used to classify the Catalogue’s Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.<br><br><strong>Controlled vocabulary</strong><br>At least one of the provided values must come from the specified vocabulary (additional values from other sources may be included where relevant).<br><br><a href="http://publications.europa.eu/resource/authority/data-theme">http://publications.europa.eu/resource/authority/data-theme</a><br>
+      <td>This property refers to a knowledge organisation system used to classify the Catalogue’s Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.
      <tr>
       <td>title
       <td>A name given to the resource.
@@ -4278,12 +4283,19 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. It is foreseen that one of the three options have to be used: public, restricted, non-public.\n    Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.\n    Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.\n    Sensitive Data (Non public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation.\n\nSince most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
+      <td>
+       Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. It is foreseen that one of the three options have to be used: public, restricted, non-public.
+    Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.
+    Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.
+    Sensitive Data (Non public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation.
+
+
+       <p>Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br></p>
      <tr>
       <td>analytics
       <td>An analytics distribution of the dataset.
       <td>healthdcatap:analytics
-      <td>dcat:Distribution (IRI)
+      <td>dcat:Distribution
       <td>0..n
       <td>Publishers are encouraged to provide URLs pointing to document repositories where users can access or request associated resources such as technical reports of the dataset, quality measurements, usability indicators,... Note that HealthDCAT-AP mentions also API endpoints or analytics services, but these would not be Distriutions but rather DatasetServices.
      <tr>
@@ -4292,7 +4304,13 @@ Supportive classes are included because they form the range of properties used b
       <td>dcatap:applicableLegislation
       <td>eli:LegalResource (IRI)
       <td>1..n
-      <td>The ELI of the EHDS was published in March 2025 and can now be included as the applicable legislation mandating that the dataset has to be made public.\nFor health datasets, the value must include the ELI of the EHDS Regulation (http://data.europa.eu/eli/reg/2025/327/oj).\nAs multiple legislations may apply to the resource the maximum cardinality is not limited.\n\nWhile the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property (also in Datasets) described the legal basis for initial collection and processing of (personal) data.
+      <td>
+       The ELI of the EHDS was published in March 2025 and can now be included as the applicable legislation mandating that the dataset has to be made public.
+For health datasets, the value must include the ELI of the EHDS Regulation (http://data.europa.eu/eli/reg/2025/327/oj).
+As multiple legislations may apply to the resource the maximum cardinality is not limited.
+
+
+       <p>While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property (also in Datasets) described the legal basis for initial collection and processing of (personal) data.</p>
      <tr>
       <td>code values
       <td>Health classifications and their codes associated with the dataset
@@ -4320,14 +4338,17 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point (department or person) that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.
+Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
       <td>creator
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>1..n
-      <td>This property points to a person (known as Agent) responsible for generating the dataset. In most cases, this should be the project’s Principal Investigator, provided they consent to being listed in the catalogue. If not, the associated department or institute may be specified instead.
+      <td>The creator (of the dataset) is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the dataset was created.
+In case there are multiple (collaborating) organisation involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator.
+In case you wish to credit other contributors to the dataset, you can use the prov:qualifiedAttribution property. This could be useful if you wish to indicate, for example, the funding organisation(s), collaborating organosation(s) or name specific individuals (e.g., principal investigator) involved in creation or managing of the dataset.
      <tr>
       <td>description
       <td>An account of the resource.
@@ -4339,7 +4360,7 @@ Supportive classes are included because they form the range of properties used b
       <td>distribution
       <td>An available Distribution for the Dataset.
       <td>dcat:distribution
-      <td>dcat:Distribution (IRI)
+      <td>dcat:Distribution
       <td>0..n
       <td>Metadata element used as a key link to the class Distribution.
      <tr>
@@ -4355,7 +4376,8 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:accrualPeriodicity
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated.\nFor example: http://publications.europa.eu/resource/authority/frequency/WEEKLY<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a><br>
+      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated.
+For example: http://publications.europa.eu/resource/authority/frequency/WEEKLY<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a><br>
      <tr>
       <td>geographical coverage
       <td>Spatial characteristics of the resource.
@@ -4367,7 +4389,7 @@ Supportive classes are included because they form the range of properties used b
       <td>has version
       <td>This resource has a more specific, versioned resource.
       <td>dcat:hasVersion
-      <td>dcat:Dataset (IRI)
+      <td>dcat:Dataset
       <td>0..n
       <td>Indicate the dataset which is the other version of the current dataset.
      <tr>
@@ -4383,12 +4405,13 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:identifier
       <td>rdfs:Literal
       <td>1
-      <td>Current status: Health-RI is currently working on a strategy for persistant identifiers for, among other things, datasets. Until a solid solution has been found, we propose the following temporary solution:\nIf your data is published in a repository, fill in with the provided DOI (Example: https://doi.org/10.34894/ZLOYOJ). If not, use the identifier of the dataset as generated in the FAIR data point (FDP). Ensure that metadata is updated if your situation changes.
+      <td>Current status: Health-RI is currently working on a strategy for persistant identifiers for, among other things, datasets. Until a solid solution has been found, we propose the following temporary solution:
+If your data is published in a repository, fill in with the provided DOI (Example: https://doi.org/10.34894/ZLOYOJ). If not, use the identifier of the dataset as generated in the FAIR data point (FDP). Ensure that metadata is updated if your situation changes.
      <tr>
       <td>in series
       <td>A dataset series of which the dataset is part.
       <td>dcat:inSeries
-      <td>dcat:DatasetSeries (IRI)
+      <td>dcat:DatasetSeries
       <td>0..n
       <td>This property points to which Dataset Series the Dataset is part of.
      <tr>
@@ -4397,7 +4420,8 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:isReferencedBy
       <td>rdfs:Resource (IRI)
       <td>0..n
-      <td>The value of this property is the IRI of the doi to the publication or other related resource.\nFor example: https://doi.org/10.1186/s13690-021-00709-x
+      <td>The value of this property is the IRI of the doi to the publication or other related resource.
+For example: https://doi.org/10.1186/s13690-021-00709-x
      <tr>
       <td>keyword
       <td>A keyword or tag describing the resource.
@@ -4416,21 +4440,26 @@ Supportive classes are included because they form the range of properties used b
       <td>legal basis
       <td>Indicates use or applicability of a Legal Basis.
       <td>dpv:hasLegalBasis
-      <td>dpv:LegalBasis (IRI)
+      <td>dpv:LegalBasis
       <td>0..n
-      <td>The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column).\n\nWhile the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property described the legal basis for initial collection and processing of (personal) data.\n\nExample value for this property could be: dpv:Consent<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis</a><br>
+      <td>
+       The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column).
+
+
+       <p>While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property described the legal basis for initial collection and processing of (personal) data.</p>
+       <p>Example value for this property could be: dpv:Consent<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis</a><br></p>
      <tr>
       <td>maximum typical age
       <td>Maximum typical age of the population within the dataset
       <td>healthdcatap:maxTypicalAge
-      <td>xsd:nonNegativeInteger
+      <td>xsd:non NegativeInteger
       <td>0..1
       <td>The approximate maximum age of subjects in the dataset, if applicable. Approximate age is given to protect potentially sensitive information of subjects in the dataset.
      <tr>
       <td>minimum typical age
       <td>Minimum typical age of the population within the dataset
       <td>healthdcatap:minTypicalAge
-      <td>xsd:nonNegativeInteger
+      <td>xsd:non NegativeInteger
       <td>0..1
       <td>The approximate minimum age of subjects in the dataset, if applicable. Approximate age is given to protect potentially sensitive information of subjects in the dataset.
      <tr>
@@ -4444,14 +4473,14 @@ Supportive classes are included because they form the range of properties used b
       <td>number of records
       <td>Size of the dataset in terms of the number of records
       <td>healthdcatap:numberOfRecords
-      <td>xsd:nonNegativeInteger
+      <td>xsd:NonNegativeInteger
       <td>0..1
       <td>Number of records inside a Dataset.
      <tr>
       <td>number of unique infividuals
       <td>Number of records for unique individuals.
       <td>healthdcatap:numberOfUniqueIndividuals
-      <td>xsd:nonNegativeInteger
+      <td>xsd:NonNegativeInteger
       <td>0..1
       <td>This property is not mandatory, since not all datasets might include data from individuals.
      <tr>
@@ -4465,9 +4494,10 @@ Supportive classes are included because they form the range of properties used b
       <td>personal data
       <td>Indicates association with Personal Data.
       <td>dpv:hasPersonalData
-      <td>dpv:PersonalData (IRI)
+      <td>dpv:PersonalData
       <td>0..n
-      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column).\nFor example: dpv-pd:Gender<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://w3c.github.io/dpv/2.0/pd/">https://w3c.github.io/dpv/2.0/pd/</a><br>
+      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column).
+For example: dpv-pd:Gender<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://w3c.github.io/dpv/2.0/pd/">https://w3c.github.io/dpv/2.0/pd/</a><br>
      <tr>
       <td>population coverage
       <td>A definition of the population within the dataset
@@ -4486,16 +4516,24 @@ Supportive classes are included because they form the range of properties used b
       <td>purpose
       <td>Indicates association with Purpose.
       <td>dpv:hasPurpose
-      <td>dpv:Purpose (IRI)
+      <td>dpv:Purpose
       <td>0..n
-      <td>One (or many) category or sub-category of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column).\nExample value could be: dpv:ResearchAndDevelopment.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes</a><br>
+      <td>One (or many) category or sub-category of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column).
+Example value could be: dpv:ResearchAndDevelopment.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes</a><br>
      <tr>
       <td>qualified attribution
       <td>Attribution is the ascribing of an entity to an agent.
       <td>prov:qualifiedAttribution
       <td>prov:Attribution
       <td>0..n
-      <td>This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent). Note that for HealthDCAT-AP, the list of roles might be extended in the future.\nExample: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor\n\nUse this property if you would like to indicate the funder of the (research project that resulted in creation of the) dataset.\nThe value for role then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder
+      <td>
+       This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent).
+Repeat this property if you wish to specify multiple roles for the same agent.
+Refer to the Attribution class for more information how to fill this.
+
+
+       <p>Use this property if you would like to indicate the funder of the (research project that resulted in creation of the) dataset.
+The value for role in the Attribution class then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder</p>
      <tr>
       <td>qualified relation
       <td>Link to a description of a relationship with another resource.
@@ -4528,14 +4566,14 @@ Supportive classes are included because they form the range of properties used b
       <td>sample
       <td>Links to a sample of an Asset (which is itself an Asset).
       <td>adms:sample
-      <td>dcat:Distribution (IRI)
+      <td>dcat:Distribution
       <td>0..n
       <td>This property makes use of the dcat:Distribution class to describe a sample distribution of the dataset, which can be anonymized or synthetic data, or the data dictionary provided in CSVW format. This is currently further developed by the TEHDAS2 program. More information can be found here: https://healthdcat-ap.github.io/#sample-distribution
      <tr>
       <td>source
       <td>A related resource from which the described resource is derived.
       <td>dct:source
-      <td>dcat:Dataset (IRI)
+      <td>dcat:Dataset
       <td>0..n
       <td>Indicate the dataset on which this described dataset is based.
      <tr>
@@ -4544,7 +4582,8 @@ Supportive classes are included because they form the range of properties used b
       <td>adms:status
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset.\nFor example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://publications.europa.eu/resource/authority/dataset-status">https://publications.europa.eu/resource/authority/dataset-status</a><br>
+      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset.
+For example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://publications.europa.eu/resource/authority/dataset-status">https://publications.europa.eu/resource/authority/dataset-status</a><br>
      <tr>
       <td>temporal coverage
       <td>Temporal characteristics of the resource.
@@ -4598,7 +4637,7 @@ Supportive classes are included because they form the range of properties used b
       <td>was generated by
       <td>Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.
       <td>prov:wasGeneratedBy
-      <td>prov:Activity (IRI)
+      <td>prov:Activity
       <td>0..n
       <td>N.A.
    </table>
@@ -4655,14 +4694,17 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point (department or person) that can answer questions about the data service. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.
+Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
       <td>creator
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>0..n
-      <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows specification of multiple creators of a data service.
+      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the catalogue was created.
+In case there are multiple (collaborating) organisation involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator.
+Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.
      <tr>
       <td>rights
       <td>Information about rights held in and over the resource.
@@ -4765,7 +4807,7 @@ Supportive classes are included because they form the range of properties used b
       <td>serves dataset
       <td>A collection of data that this data service can distribute.
       <td>dcat:servesDataset
-      <td>dcat:Dataset (IRI)
+      <td>dcat:Dataset
       <td>0..n
       <td>This property connects the Data Service class to its corresponding dataset(s), ensuring every data service links to at least one dcat:Dataset. While essential for metadata implementation teams on each node, it’s less relevant for researchers to collect.
      <tr>
@@ -4821,7 +4863,8 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1..n
-      <td>This property points to a contact point (department or person) that can answer questions about the dataset series. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.
+Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.
      <tr>
       <td>description
       <td>An account of the resource.
@@ -4980,7 +5023,8 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.\nNote that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br>
+      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.
+Note that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br>
      <tr>
       <td>license
       <td>A legal document giving official permission to do something with the resource.
@@ -5001,7 +5045,9 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:mediaType
       <td>dct:MediaType (IRI)
       <td>0..1
-      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.\nExample: https://www.iana.org/assignments/media-types/text/csv (for csv)\nIf IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br>
+      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.
+Example: https://www.iana.org/assignments/media-types/text/csv (for csv)
+If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br>
      <tr>
       <td>modification date
       <td>Date on which the resource was changed.
@@ -5036,14 +5082,16 @@ Supportive classes are included because they form the range of properties used b
       <td>dct:rights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.\nThe rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.\nCurrent status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.
+      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.
+The rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.
+Current status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.
      <tr>
       <td>status
       <td>The status of the Asset in the context of a particular workflow process.
       <td>adms:status
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the provided controlled vocabulary.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://publications.europa.eu/resource/authority/distribution-status">https://publications.europa.eu/resource/authority/distribution-status</a><br>
+      <td>It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the provided controlled vocabulary.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/distribution-status">http://publications.europa.eu/resource/authority/distribution-status</a><br>
      <tr>
       <td>temporal resolution
       <td>Minimum time period resolvable in the dataset.
@@ -5056,7 +5104,7 @@ Supportive classes are included because they form the range of properties used b
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
-      <td>1..n
+      <td>0..n
       <td>A title given to the distribution. e.g., Data Access Request of Healthy Brain study
    </table>
    <h2 class="heading settled" data-level="6" id="supportive-classes"><span class="secno">6. </span><span class="content">Supportive Classes</span><a class="self-link" href="#supportive-classes"></a></h2>
@@ -5099,11 +5147,17 @@ Supportive classes are included because they form the range of properties used b
       <td>Use the appropriate term from the EU authority table. Example for the Netherlands: http://publications.europa.eu/resource/authority/country/NLD<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br>
      <tr>
       <td>email
-      <td>A email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [ RFC6068 ]. The email SHOULD be used to establish a communication channel to the agent.
+      <td>A email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme [  RFC6068  ]. The email SHOULD be used to establish a communication channel to the agent.
       <td>foaf:mbox
       <td>rdfs:Resource  (IRI)
       <td>1
-      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent.\nThis protects their privacy and enables contact about the resource even after the individual has left the institution.\n\nThe email address has to be provided starting with mailto: prefix.\nFor example: mailto:info@example.com
+      <td>
+       It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent.
+This protects their privacy and enables contact about the resource even after the individual has left the institution.
+
+
+       <p>The email address has to be provided starting with mailto: prefix.
+For example: mailto:info@example.com</p>
      <tr>
       <td>identifier
       <td>An unambiguous reference to the resource within a given context.
@@ -5185,7 +5239,13 @@ Supportive classes are included because they form the range of properties used b
       <td>vcard:hasEmail
       <td>rdfs:Resource  (IRI)
       <td>1
-      <td>When naming a contact point this information needs to be further specified with additional information, i.e., an email address. This email address does not need to be a direct contact to the person responsible for the management of the data, it could be a generic information email.\nThe email address has to be provided starting with mailto: prefix.\nFor example: mailto:info@example.com / mailto: jane.doe@example.com
+      <td>
+       It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of vcard:Kind.
+This protects their privacy and enables contact about the resource even after the individual has left the institution.
+
+
+       <p>The email address has to be provided starting with mailto: prefix.
+For example: mailto:info@example.com</p>
      <tr>
       <td>formatted name
       <td>The formatted text corresponding to the name of the object.
@@ -5233,7 +5293,12 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:hadRole
       <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.\nExample: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml</a><br><a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls</a><br>
+      <td>
+       Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future.
+Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor
+
+
+       <p>Next to the CI_RoleCode, we also propose to use the CRediT Taxonomy to specify roles of contributors.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml</a><br><a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls</a><br></p>
    </table>
    <h4 class="heading settled" data-level="6.2.2" id="checksum"><span class="secno">6.2.2. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
    <table class="no-style">
@@ -5271,7 +5336,7 @@ Supportive classes are included because they form the range of properties used b
       <td>checksum value
       <td>The checksumValue property provides a lower case hexidecimal encoded digest value produced using a specific algorithm.
       <td>spdx:checksumValue
-      <td>rdfs:Literal
+      <td>xsd:hexBinary
       <td>1
       <td>N.A.
    </table>
@@ -5304,14 +5369,14 @@ Supportive classes are included because they form the range of properties used b
       <td>notation
       <td>A string that is an identifier in the context of the identifier scheme referenced by its datatype.
       <td>skos:notation
-      <td>xsd:string
+      <td>rdfs:Literal
       <td>1..1
       <td>The value of this property is the alternative identifier of the dataset, next to the one indicated in the dct:identifier property.
      <tr>
       <td>schema agency
       <td>The name of the agency that issued the identifier.
       <td>adms:schemaAgency
-      <td>xsd:string
+      <td>rdfs:Literal
       <td>0..1
       <td>N.A.
    </table>
@@ -5386,7 +5451,8 @@ Supportive classes are included because they form the range of properties used b
       <td>oa:hasTarget
       <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>This property has to be filled with the same value as the dct:identifier of the dataset described, in order to link the quality certificate to that dataset.\nSee also example in HealthDCAT-AP: https://healthdcat-ap.github.io/#dqvhasqualityannotation
+      <td>This property has to be filled with the same value as the dct:identifier of the dataset described, in order to link the quality certificate to that dataset.
+See also example in HealthDCAT-AP: https://healthdcat-ap.github.io/#dqvhasqualityannotation
      <tr>
       <td>body
       <td>The object of the relationship is a resource that is a body of the Annotation.
@@ -5426,7 +5492,8 @@ Supportive classes are included because they form the range of properties used b
       <td>dcat:hadRole
       <td>skos:Concept (IRI)
       <td>1..n
-      <td>Specify, ideally with a value from the linked controlled vocabulary, the nature of the relationship between the linked resources.\nExample: http://www.iana.org/assignments/relation/related<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a><br><a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml">https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml</a><br>
+      <td>Specify, ideally with a value from the linked controlled vocabulary, the nature of the relationship between the linked resources.
+Example: http://www.iana.org/assignments/relation/related<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a><br><a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml">https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml</a><br>
      <tr>
       <td>relation
       <td>A related resource.
