@@ -40,7 +40,8 @@
       <td>dcat:contactPoint</td>
       <td>vcard:Kind</td>
       <td>1</td>
-      <td>This property points to a contact point (department or person) that can answer questions about the data service. Details on how to describe these are provided under class vcard:Kind.\nWhenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind.
+Whenever possible, use a general contact information (for example from a department) instead of contact information of an individual.</td>
     </tr>
     <tr>
       <td>creator</td>
@@ -48,7 +49,9 @@
       <td>dct:creator</td>
       <td>foaf:Agent</td>
       <td>0..n</td>
-      <td>Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows specification of multiple creators of a data service.</td>
+      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the catalogue was created.
+In case there are multiple (collaborating) organisation involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator.
+Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.</td>
     </tr>
     <tr>
       <td>rights</td>
@@ -166,7 +169,7 @@
       <td>serves dataset</td>
       <td>A collection of data that this data service can distribute.</td>
       <td>dcat:servesDataset</td>
-      <td>dcat:Dataset (IRI)</td>
+      <td>dcat:Dataset</td>
       <td>0..n</td>
       <td>This property connects the Data Service class to its corresponding dataset(s), ensuring every data service links to at least one dcat:Dataset. While essential for metadata implementation teams on each node, it’s less relevant for researchers to collect.</td>
     </tr>

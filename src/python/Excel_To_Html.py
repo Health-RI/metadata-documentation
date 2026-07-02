@@ -6,7 +6,7 @@ from openpyxl import load_workbook
 from urllib.parse import urlparse, urlunparse
 
 
-EXCEL_FILE_PATH = "../excel/HealthRI_v2.0.2.xlsx"
+EXCEL_FILE_PATH = "../excel/HealthRI_v2.0.3.xlsx"
 OUTPUT_PATH = Path("../property")
 LINKS_FILE = Path(__file__).parent / "links.json"
 
