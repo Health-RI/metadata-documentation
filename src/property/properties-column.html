@@ -1,0 +1,54 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Property label</th>
+      <th>Definition</th>
+      <th>Property URI</th>
+      <th>Range</th>
+      <th>Cardinality</th>
+      <th>Usage note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>A Technical name given to the Variable as it appears in the CSV file.</td>
+      <td>csvw:name</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Technical variable name required to match a column header in the CSV file (synthetic, anonymized representation of the real data), can appear in multiple languages.</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>A Human-readable name given to the Variable.</td>
+      <td>csvw:title</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Human-readable title(s) for the column. May be multilingual.</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>Variable description.</td>
+      <td>dct:description</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Used to provide human-readable information about the variable (column). Can appear in multiple languages. This is especially helpful for variable documentation.</td>
+    </tr>
+    <tr>
+      <td>datatype</td>
+      <td>Specifies the expected datatype of the values in the column.</td>
+      <td>csvw:datatype</td>
+      <td>rdfs:Literal</td>
+      <td>1</td>
+      <td>Should match the label of one of the CSVW types as defined in the Built-in datatypes from XML Schema. https://w3c.github.io/csvw/metadata/#datatypes Example: string, integer, boolean …<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/csvw/metadata/#datatypes">https://w3c.github.io/csvw/metadata/#datatypes</a><br></td>
+    </tr>
+    <tr>
+      <td>property URL</td>
+      <td>A URI template used to define the RDF predicate associated with the values in the column, relative to each row.</td>
+      <td>csvw:propetyUrl</td>
+      <td>IRI (IRI)</td>
+      <td>0..1</td>
+      <td>The propertyUrl may point to standard, controlled vocabularies, or ontologies that define the semantic meaning of the column. For example: csvw:propertyUrl http://publications.europa.eu/resource/authority/country.\n For advanced usage, refer to the official specification: https://www.w3.org/TR/tabular-metadata/#propertyurl</td>
+    </tr>
+  </tbody>
+</table>

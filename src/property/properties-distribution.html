@@ -35,11 +35,19 @@
       <td>The legislation that mandates the creation or management of the Distribution.</td>
     </tr>
     <tr>
+      <td>availability</td>
+      <td>An indication how long it is planned to keep the Distribution of the Dataset available.</td>
+      <td>dcatap:availability</td>
+      <td>skos:Concept (IRI)</td>
+      <td>0..1</td>
+      <td>To indicate the planned availability of the Distribution, the EU planned-availability controlled vocabulary MUST be used.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="http://publications.europa.eu/resource/authority/planned-availability">http://publications.europa.eu/resource/authority/planned-availability</a><br></td>
+    </tr>
+    <tr>
       <td>byte size</td>
       <td>The size of a distribution in bytes.</td>
       <td>dcat:byteSize</td>
       <td>xsd:nonNegativeInteger</td>
-      <td>1</td>
+      <td>0..1</td>
       <td>Describes the size of the distribution (the actual file) in bytes, and is therefore expressed as a non-negative integer. If the actual size is not know, it can be estimated.</td>
     </tr>
     <tr>
@@ -87,8 +95,8 @@
       <td>The file format, physical medium, or dimensions of the resource.</td>
       <td>dct:format</td>
       <td>dct:MediaTypeOrExtent (IRI)</td>
-      <td>1</td>
-      <td>This property can be used to describe a media format in more detail than "media type" (using IANA media type) when needed. Instances of this property should use a URL, e.g., from the File Type vocabulary. For instance, for mzML files the value of this property could be: http://edamontology.org/format_3244<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/file-type">http://publications.europa.eu/resource/authority/file-type</a><br></td>
+      <td>0..1</td>
+      <td>This property can be used to describe a media format in more detail than "media type" (using IANA media type) when needed. Instances of this property should use a URL from the File Type vocabulary.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/file-type">http://publications.europa.eu/resource/authority/file-type</a><br></td>
     </tr>
     <tr>
       <td>language</td>
@@ -96,8 +104,7 @@
       <td>dct:language</td>
       <td>dct:LinguisticSystem (IRI)</td>
       <td>0..n</td>
-      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.
-Note that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
+      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.\nNote that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
     </tr>
     <tr>
       <td>license</td>
@@ -121,9 +128,7 @@ Note that here the Health-RI model diverges from DCAT-AP NL, which allows maximu
       <td>dcat:mediaType</td>
       <td>dct:MediaType (IRI)</td>
       <td>0..1</td>
-      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.
-Example: https://www.iana.org/assignments/media-types/text/csv (for csv)
-If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br></td>
+      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.\nExample: https://www.iana.org/assignments/media-types/text/csv (for csv)\nIf IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br></td>
     </tr>
     <tr>
       <td>modification date</td>
@@ -155,17 +160,15 @@ If IANA media types do not sufficiently describe the format, use "format" to des
       <td>healthdcatap:retentionperiod</td>
       <td>dct:PeriodOfTime</td>
       <td>0..1</td>
-      <td>This property makes use of the class dct:PeriodOfTime, in which a start and end date should be provided.</td>
+      <td>Note: This property will be deprecated in the upcoming major release. It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property. \n\nIndicate with this property in case the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints).\nThis property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided.\n\nIf the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies).\nIf only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime).\nIf a limit is known, provide both dcat:startDate and dcat:endDate.</td>
     </tr>
     <tr>
       <td>rights</td>
       <td>Information about rights held in and over the resource.</td>
       <td>dct:rights</td>
       <td>dct:RightsStatement (IRI)</td>
-      <td>1</td>
-      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.
-The rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.
-Current status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.</td>
+      <td>0..1</td>
+      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.\nThe rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.\nCurrent status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.</td>
     </tr>
     <tr>
       <td>status</td>

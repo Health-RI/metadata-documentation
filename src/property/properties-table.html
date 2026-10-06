@@ -1,0 +1,46 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Property label</th>
+      <th>Definition</th>
+      <th>Property URI</th>
+      <th>Range</th>
+      <th>Cardinality</th>
+      <th>Usage note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>url</td>
+      <td>The URL of the CSV file to which this table refers.</td>
+      <td>csvw:url</td>
+      <td>xsd:anyURI</td>
+      <td>0..1</td>
+      <td>The URL should be a valid IRI and should point to the CSV file (synthetic, anonymized representation of the real data) for this table.</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>Table title.</td>
+      <td>dct:title</td>
+      <td>rdfs:Literal</td>
+      <td>1..n</td>
+      <td>Used to provide a human-readable title for the table. Can appear in multiple languages.</td>
+    </tr>
+    <tr>
+      <td>keyword</td>
+      <td>A keyword or tag describing the table.</td>
+      <td>dcat:keyword</td>
+      <td>rdfs:Literal</td>
+      <td>0..n</td>
+      <td>Provides a set of keywords to support search and discovery of the table.</td>
+    </tr>
+    <tr>
+      <td>column</td>
+      <td>Variable (column) defines metadata about one field in the CSV file.</td>
+      <td>csvw:column</td>
+      <td>csvw:Column</td>
+      <td>1..n</td>
+      <td>Each variable (column) node defines characteristics such as name, title, datatype, etc., for one column of the CSV. Should be either a blank node or IRI referring to a csvw:Column.</td>
+    </tr>
+  </tbody>
+</table>
