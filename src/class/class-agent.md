@@ -12,7 +12,7 @@
     <tr> 
       <td>Agent</td> 
       <td>Any entity carrying out actions with respect to the (Core) entities Catalogue, Datasets, Data Services and Distributions.</td> 
-      <td>A person or organisation associated with a described resource. Use this class when a property has `foaf:Agent` as its range.</td> 
+      <td>A person or organisation that is associated with the catalogue or dataset. This class is instantiated in these classes whenever the range is `foaf:Agent`.</td> 
       <td>foaf:Agent</td> 
     </tr> 
   </tbody> 

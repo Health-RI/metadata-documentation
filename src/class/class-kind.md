@@ -12,7 +12,7 @@
     <tr> 
       <td>Kind</td> 
       <td>A description following the vCard specification.</td> 
-      <td>Used to describe contact information. Use this class when a property has `vcard:Kind` as its range.</td> 
+      <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is `vcard:Kind`.</td> 
       <td>vcard:Kind</td> 
     </tr> 
   </tbody> 
