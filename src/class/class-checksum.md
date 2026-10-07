@@ -12,7 +12,7 @@
     <tr> 
       <td>Checksum</td> 
       <td>A value that allows the contents of a file to be authenticated.</td> 
-      <td>This class is instantiated by properties in other classes that have the range `spdx:Checksum`.</td> 
+      <td>Use this class when a property has `spdx:Checksum` as its range.</td> 
       <td>spdx:Checksum</td> 
     </tr> 
   </tbody> 

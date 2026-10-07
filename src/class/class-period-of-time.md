@@ -12,7 +12,7 @@
     <tr> 
       <td>Period of Time</td> 
       <td>An interval of time that is named or defined by its start and end dates.</td> 
-      <td>This class is instantiated by properties in other classes that have the range `dct:PeriodOfTime`.</td> 
+      <td>Use this class when a property has `dct:PeriodOfTime` as its range.</td> 
       <td>dct:PeriodOfTime</td> 
     </tr> 
   </tbody> 
