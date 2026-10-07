@@ -12,7 +12,7 @@
     <tr> 
       <td>Data Service</td> 
       <td>A collection of operations that provides access to one or more datasets or data processing functions.</td> 
-      <td>A Data service offers the possibility to access and query the data of one (or several datasets) through operations. It offers more extensive possibilities to access the data than the [Distribution](linkto:distribution) through a variety of potential actions. An example of a Data Service is a [Beacon API](https://docs.genomebeacons.org/) to query genomics data.</td> 
+      <td>A Data Service provides access to and allows queries over one or more datasets through operations. It can offer a broader range of ways to access the data than a [Distribution](linkto:distribution). An example of a Data Service is a [Beacon API](https://docs.genomebeacons.org/) for querying genomics data.</td> 
       <td>dcat:DataService</td> 
     </tr> 
   </tbody> 

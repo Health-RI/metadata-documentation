@@ -1,7 +1,7 @@
 ## Class Structure 
-The Health-RI metadata schema is builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply (and interoperable) across catalogues, the schema organizes its structure around two types of classes: **Main Classes** and **Supportive Classes**.
+The Health-RI metadata schema builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply across catalogues while maintaining interoperability, the schema organizes its structure around two types of classes: **Main Classes** and **Supportive Classes**.
 
-- **Main Classes** – the core entities that form the core of the catalogue.
+- **Main Classes** – the core entities of the catalogue.
 - **Supportive Classes** – contextual entities that provide detail to the main classes.
 
 Main classes in this structure:
@@ -26,26 +26,26 @@ Supportive classes in this structure:
 The main classes and supportive classes together form the Health-RI Core metadata schema. 
 
 **Please take into consideration**:
-- Certain properties (e.g. `dct:publisher`, `dct:creator`, `dct:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties will instantiate new instances of the specific supporting classes for each usage. This means that, for example, the `dct:publisher` and `dct:creator` can instantiate [`foaf:Agent`](#agent) at two separate times with different content (organisation vs. person).
+- Certain properties (e.g. `dct:publisher`, `dct:creator`, `dcat:contactPoint`) in several of the main classes refer to supportive classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). These properties link to instances of the relevant supportive classes. The same Agent may be reused for creator and publisher, or separate Agents may be identified when those roles are fulfilled by different entities.
 
-- It is possible that not all main classes of the metadata schema are necessary to describe your data or the structure of your data. For example, [DataService](#data-service) or [DatasetSeries](#dataset-series) might not apply to all datasets described/onboarded in the National Health Data Catalogue.
+- It is possible that not all main classes of the metadata schema are necessary to describe your data or the structure of your data. For example, [DataService](#data-service) or [DatasetSeries](#dataset-series) might not apply to all datasets described or onboarded in the National Health Data Catalogue.
 
 - The power of [DCAT](https://www.w3.org/TR/vocab-dcat-3/) is that it is flexible in use, giving a data holder the ability to reflect the structure of their data by using the different classes.
 
-- We aim to collect mapping examples from different data sources [here](https://health-ri.atlassian.net/wiki/spaces/FSD/folder/736985095). Currently, this collection only holds mapping examples to v1 though.
+- We aim to collect mapping examples from different data sources [here](https://health-ri.atlassian.net/wiki/spaces/FSD/folder/736985095). Currently, this collection contains only mapping examples for v1.
 
 - Please visit Confluence for general information about the [metadata schema](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping) and [metadata mapping](https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial).
 
 
 ## Usage Notes on Schema / Mapping
-Supportive classes are included because they form the range of properties used by the main classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into **mandatory properties** for conformance and **recommended properties** for richer metadata. 
+Supportive classes are included because they serve as ranges for properties of the main classes. They provide additional information about the main classes, which are the core entities in the catalogue. Both groups of classes contain **mandatory properties** for conformance and **recommended properties** for richer metadata. 
 
-The separation from above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. It helps users to easier use those classes. To apply it:
+This separation helps modularize metadata and makes it easier to reuse supportive elements across multiple datasets or services. To apply the schema:
 - Start with main classes -> Identify the datasets, services, and distributions you need to describe.
 - Link supportive classes –> Use them wherever the schema specifies a property range (e.g., publisher → Agent).
 - Always fill mandatory properties –> Ensure your metadata is valid and interoperable.
-- Check controlled vocabulary requirements -> For each property, consult Section 7 to determine whether a MUST, AT LEAST 1, or MAY requirement applies, as controlled vocabularies ensure consistent and interoperable values.
-- Add recommended properties where possible –> Improve FAIRness and increases the overall maturity of your metadata.
+- Check controlled vocabulary requirements -> For each property, consult [Controlled Vocabularies](#controlled-vocabularies) to determine whether a MUST, AT LEAST 1, or MAY requirement applies, as controlled vocabularies ensure consistent and interoperable values.
+- Add recommended properties where possible –> Improve FAIRness and increase the overall maturity of your metadata.
 - Reuse supportive entities –> E.g. if the same Agent or Identifier appears in multiple records, reference it rather than duplicating it.
 
 The following sections describe each class in detail, including its role in the schema, its mandatory and recommended properties, and examples of how to populate them.

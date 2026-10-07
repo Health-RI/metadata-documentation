@@ -1,5 +1,5 @@
 # Main Classes 
-**Main Classes** represent the core entities of the data catalog. They define leading components.
+**Main Classes** represent the core entities of the data catalogue.
 
 ## Mandatory main classes
 

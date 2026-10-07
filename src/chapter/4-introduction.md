@@ -9,7 +9,7 @@ Additionally, several **ELSI**-related metadata fields, as [gathered](https://he
 
 To indicate the **nature of the data** (e.g., whole genome sequencing or questionnaire data), we propose using `healthdcatap:healthTheme`. For **synthetic data**, use `dct:type` with the required controlled vocabulary in the `dcat:Dataset` class.
 
-Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/) and draft [HealthDCAT-AP](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/) have been included but not further specified for Health-RI yet. This includes the **DataService** class, meaning that these classes can be used but are not yet tailored to specific dataholder needs for the National Health Data Catalogue.
+Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/) and draft [HealthDCAT-AP](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/) have been included but not further specified for Health-RI yet. This includes the **DataService** class, meaning that these classes can be used but are not yet tailored to specific data holder needs for the National Health Data Catalogue.
 
   
 ## Used Prefixes
@@ -42,11 +42,11 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
 </table>
 
 # Overview and Diagram
-An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
+An overview of the core metadata schema is presented in the UML diagram below. The diagram shows the main classes (entities), omitting details such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
 
 If a class is linked to another class with a closed arrow, it inherits all properties from the other class (e.g., `dcat:Dataset` inherits from `dcat:Resource`). Other arrows represent relationships, including their types (e.g., `dcat:Dataset` connects to a `dcat:DatasetSeries` via `dcat:inSeries`), along with cardinalities (e.g., `dcat:Dataset` connects to zero or more `dcat:DatasetSeries`). **Mandatory relationships** are marked with dark labels, while **recommended relationships** use a lighter color.
 
-The UML diagram separates **main classes** from **supporting classes**. While relationships between main classes are indicated by arrows, supporting class relationships are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.
+The UML diagram separates **main classes** from **supportive classes**. While relationships between main classes are indicated by arrows, relationships to supportive classes are not shown with arrows in order to keep the diagram clear. Instead, they can be identified from the pink-colored property ranges listed for each class.
 
 Properties derived from draft [HealthDCAT-AP](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/) (mostly within the `dcat:Dataset` class) are marked blue.
 
@@ -63,4 +63,4 @@ A tabular overview of all classes and properties—including their range, cardin
        title="diagram">
 </a>
 
-Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.
+Usage guidance, profile-specific constraints, and property ranges are listed below.
