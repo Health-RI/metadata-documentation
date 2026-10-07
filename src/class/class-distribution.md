@@ -12,7 +12,7 @@
     <tr> 
       <td>Distribution</td> 
       <td>A physical embodiment of the Dataset in a particular format.</td> 
-      <td>Used to describe the different ways that a dataset can be made available, for example as a downloadable CSV file or through online access.</td> 
+      <td>Used to describe a way in which a dataset is made available. A dataset may have one or more distributions, for example a downloadable CSV file or an access/query webpage.</td> 
       <td>dcat:Distribution</td> 
     </tr> 
   </tbody> 

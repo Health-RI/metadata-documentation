@@ -6,7 +6,7 @@ level: none
 TR: https://w3id.org/health-ri/metadata/releases/latest
 URL: https://health-ri.github.io/metadata-documentation/
 Previous Version: https://w3id.org/health-ri/metadata/releases
-Status Text: status text
+Status Text: Health-RI metadata schema v2.1.0.
 Repository: w3id.org/health-ri/metadata/git
 Editor: Bruna dos Santos Vieira
 Former Editor: Inês de Oliveira Coelho Henriques

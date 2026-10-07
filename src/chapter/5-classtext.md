@@ -26,7 +26,7 @@ Supportive classes in this structure:
 The main classes and supportive classes together form the Health-RI Core metadata schema. 
 
 **Please take into consideration**:
-- Certain properties (e.g. `dct:publisher`, `dct:creator`, `dcat:contactPoint`) in several of the main classes refer to supportive classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). These properties link to instances of the relevant supportive classes. The same Agent may be reused for creator and publisher, or separate Agents may be identified when those roles are fulfilled by different entities.
+- Certain properties (e.g. `dct:publisher`, `dct:creator`, `dcat:contactPoint`) in several of the main classes refer to supportive classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). These properties link to instances of the relevant supportive classes. For example, `dct:publisher` and `dct:creator` link to [`foaf:Agent`](#agent) resources that can describe different entities (e.g. an organisation and a person).
 
 - It is possible that not all main classes of the metadata schema are necessary to describe your data or the structure of your data. For example, [DataService](#data-service) or [DatasetSeries](#dataset-series) might not apply to all datasets described or onboarded in the National Health Data Catalogue.
 
