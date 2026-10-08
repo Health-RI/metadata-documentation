@@ -14,11 +14,10 @@ Former Editor: César Bernabé
 Editor: Kees Burger
 Former Editor: Patrick Dekker
 Editor: Joost Daams
-Former Editor:
 Former Editor: Milou de Jong
 Editor: Ana Konrad
 Editor: Hannah Neikes
-Editor: ⁠Reinier Groeneveld
+Editor: Reinier Groeneveld
 Editor: Niek van Ulzen
 Editor: Pedro Paulo F. Barcelos
 Former Editor: Dena Tahvildari
