@@ -33,7 +33,7 @@ Logo: health-ri logo
 !License: CC-BY-4.0
 Boilerplate: copyright no, conformance off, references off
 Max ToC Depth: 4
-Abstract: <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/images/HRI_Logo.png" alt="Health-RI Logo" title="Health-RI Logo" width="300"> <br/> The National Health Data Catalogue uses a core metadata schema: a set of minimal elements for describing each resource (e.g., a dataset) with common metadata. The schema defines metadata requirements that support access to and reuse of information across Health-RI nodes via the National Catalogue. This document provides the technical specification for the Health-RI core metadata schema. 
+Abstract: <img src="https://raw.githubusercontent.com/Health-RI/metadata-documentation/main/src/images/HRI_Logo.png" alt="Health-RI Logo" title="Health-RI Logo" width="300"> <br/> The National Health Data Catalogue uses a core metadata schema: a set of minimal, common metadata elements for describing each resource (e.g., a dataset). The schema defines metadata requirements that support access to and reuse of information across Health-RI nodes via the National Catalogue. This document provides the technical specification for the Health-RI core metadata schema. 
 Markup Shorthands: markdown yes, css no
 </pre>
 
