@@ -1,4 +1,4 @@
-# Controlled Vocabularies 
+# Controlled Vocabularies
 
 This section lists properties whose values are expected to come from specified sources. These sources are typically controlled vocabularies, but may also be ontologies, authority tables, or prescribed value lists (such as licences or identifier schemes).
 

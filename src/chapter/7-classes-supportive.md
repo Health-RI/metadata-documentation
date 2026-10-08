@@ -1,4 +1,4 @@
-# Supportive Classes 
+# Supportive Classes
 **Supportive Classes** provide additional context and metadata for the main classes.
 
 ## Mandatory supportive classes

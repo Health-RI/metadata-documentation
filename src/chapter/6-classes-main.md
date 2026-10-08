@@ -1,4 +1,4 @@
-# Main Classes 
+# Main Classes
 **Main Classes** represent the core entities of the data catalogue.
 
 ## Mandatory main classes
