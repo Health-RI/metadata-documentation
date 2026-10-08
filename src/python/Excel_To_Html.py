@@ -155,7 +155,9 @@ def merge_vocab_rows(df):
         if is_cont and current is not None:
             existing = current["Controlled vocabluary (if applicable)"]
             current["Controlled vocabluary (if applicable)"] = (
-                str(existing) + "\n" + str(vocab) if pd.notna(existing) else str(vocab)
+                str(existing) + "\n" + str(vocab)
+                if pd.notna(existing)
+                else str(vocab)
             )
         else:
             if current is not None:
@@ -169,7 +171,33 @@ def merge_vocab_rows(df):
 
 
 # ========================
-# ✅ FINAL USAGE NOTE (CORRECT + SHEET-PROOF)
+# TABLE TEXT NORMALIZATION
+# ========================
+
+def normalize_table_text(value):
+    """
+    Convert line breaks in Excel/table cell text to spaces before
+    pandas serializes the DataFrame to HTML.
+
+    pandas.to_html() can serialize newline characters in a way that
+    results in the literal characters "\\n" appearing in the generated
+    HTML. Bikeshed then displays those characters instead of treating
+    them as whitespace.
+
+    This handles:
+      - Windows line breaks: \\r\\n
+      - Unix line breaks: \\n
+      - Old Mac line breaks: \\r
+      - Literal escaped sequences: \\\\n
+    """
+    if not isinstance(value, str):
+        return value
+
+    return re.sub(r"(?:\r\n|\r|\n|\\n)+", " ", value)
+
+
+# ========================
+# FINAL USAGE NOTE
 # ========================
 
 def build_usage_note(row, sheet_name, url_map, links):
@@ -189,7 +217,7 @@ def build_usage_note(row, sheet_name, url_map, links):
 
     prop_key_norm = prop.strip().lower()
 
-    # ✅ ✅ FINAL FIXED LOOKUP
+    # FINAL FIXED LOOKUP
     vocab_type = (
         links["vocabRequirements"].get(key_exact)
         or links["vocabRequirements"].get(key_lower)
@@ -209,16 +237,26 @@ def build_usage_note(row, sheet_name, url_map, links):
     # URLs
     text_urls = extract_urls(vocab)
     excel_urls = url_map.get(prop, [])
-    mapped_urls = resolve_vocab_labels(vocab, links["vocabLabelMapping"])
+    mapped_urls = resolve_vocab_labels(
+        vocab,
+        links["vocabLabelMapping"]
+    )
 
-    urls = select_canonical_urls(text_urls + excel_urls + mapped_urls)
+    urls = select_canonical_urls(
+        text_urls + excel_urls + mapped_urls
+    )
 
-    # clean vocab text
-    mapping_labels = [k.lower() for k in links["vocabLabelMapping"].keys()]
+    # Clean vocab text
+    mapping_labels = [
+        k.lower()
+        for k in links["vocabLabelMapping"].keys()
+    ]
+
     clean_lines = []
 
     for line in strip_urls(vocab).split("\n"):
         l = line.strip()
+
         if not l:
             continue
 
@@ -230,7 +268,10 @@ def build_usage_note(row, sheet_name, url_map, links):
         if len(l.split()) <= 6:
             continue
 
-        if not re.search(r"\b(is|are|must|should|may|use|used|provides|represents)\b", lower):
+        if not re.search(
+            r"\b(is|are|must|should|may|use|used|provides|represents)\b",
+            lower
+        ):
             continue
 
         clean_lines.append(l)
@@ -247,12 +288,19 @@ def build_usage_note(row, sheet_name, url_map, links):
 
     if urls:
         parts.append("")
-        parts.extend([make_clickable(u) for u in urls])
+        parts.extend([
+            make_clickable(u)
+            for u in urls
+        ])
         parts.append("")
 
     vocab_block = "<br>".join(parts)
 
-    return base + "<br><br><strong>Controlled vocabulary</strong><br>" + vocab_block
+    return (
+        base
+        + "<br><br><strong>Controlled vocabulary</strong><br>"
+        + vocab_block
+    )
 
 
 # ========================
@@ -260,17 +308,31 @@ def build_usage_note(row, sheet_name, url_map, links):
 # ========================
 
 def main():
-    OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
+    OUTPUT_PATH.mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
-    classes_df = pd.read_excel(EXCEL_FILE_PATH, sheet_name="classes")
+    classes_df = pd.read_excel(
+        EXCEL_FILE_PATH,
+        sheet_name="classes"
+    )
 
-    with open(LINKS_FILE, "r", encoding="utf-8") as f:
+    with open(
+        LINKS_FILE,
+        "r",
+        encoding="utf-8"
+    ) as f:
         links = json.load(f)
 
     for _, class_row in classes_df.iterrows():
+
         sheet_name = class_row["sheet_name"]
 
-        df = pd.read_excel(EXCEL_FILE_PATH, sheet_name=sheet_name)
+        df = pd.read_excel(
+            EXCEL_FILE_PATH,
+            sheet_name=sheet_name
+        )
 
         cols = [
             "Property label",
@@ -283,21 +345,53 @@ def main():
         ]
 
         df = df[cols]
+
         df = merge_vocab_rows(df)
 
-        url_map = extract_urls_per_property(sheet_name)
+        url_map = extract_urls_per_property(
+            sheet_name
+        )
 
         df["Usage note"] = df.apply(
-            lambda r: build_usage_note(r, sheet_name, url_map, links),
+            lambda r: build_usage_note(
+                r,
+                sheet_name,
+                url_map,
+                links
+            ),
             axis=1
         )
 
-        df = df.drop(columns=["Controlled vocabluary (if applicable)"])
+        df = df.drop(
+            columns=[
+                "Controlled vocabluary (if applicable)"
+            ]
+        )
 
-        output_file = OUTPUT_PATH / f"properties-{sheet_name.lower()}.html"
-        df.to_html(output_file, index=False, escape=False)
+        # ============================================================
+        # IMPORTANT:
+        # Normalize all table cell text BEFORE pandas generates HTML.
+        #
+        # This prevents literal "\\n" from appearing in the generated
+        # HTML and therefore being displayed by Bikeshed.
+        # ============================================================
 
-        print(f"Generated {output_file}")
+        df = df.map(normalize_table_text)
+
+        output_file = (
+            OUTPUT_PATH
+            / f"properties-{sheet_name.lower()}.html"
+        )
+
+        df.to_html(
+            output_file,
+            index=False,
+            escape=False
+        )
+
+        print(
+            f"Generated {output_file}"
+        )
 
 
 if __name__ == "__main__":

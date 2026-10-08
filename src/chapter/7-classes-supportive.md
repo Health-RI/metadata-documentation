@@ -149,6 +149,22 @@ path: src/table/style-tables-2.md
 path: src/property/properties-activity.html
 </pre>
 
+<pre class=include>
+path: src/table/style-tables-general.md
+</pre>
+
+<pre class=include>
+path: src/class/class-provenance-statement.md
+</pre>
+
+<pre class=include>
+path: src/table/style-tables-2.md
+</pre>
+
+<pre class=include>
+path: src/property/properties-provenancestatement.html
+</pre>
+
 ### CSVW Variables
 
 The CSVW (CSV on the Web) specification provides a framework for describing tabular data and its metadata. In Health-RI, it is used to describe data variables in a machine-readable form.
@@ -158,6 +174,8 @@ The following three classes work together to describe those variables:
 * Table Group - The top-level container that organizes one or more CSV tables.
 * Table - Represents a single CSV file with its metadata and variable definitions.
 * Column - Describes individual variables (columns) within the CSV file.
+
+**Note**: The CSVW variables have been added to the Health-RI metadata model version 2.1 for testing purposes. For now it is not yet planned to be added to the national catalogue's front end.
 
 <pre class=include>
 path: src/table/style-tables-general.md

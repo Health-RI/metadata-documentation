@@ -170,6 +170,17 @@ The tables below list the relevant properties, the classes to which they apply, 
     </tr>
 
     <tr>
+      <td>dcatap:availability</td>
+      <td>Distribution</td>
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/planned-availability">
+          http://publications.europa.eu/resource/authority/planned-availability
+        </a>
+      </td>
+      <td>Choose the planned availability of the Distribution from the EU authority table.</td>
+    </tr>
+
+    <tr>
       <td>dcat:compressFormat</td>
       <td>Distribution</td>
       <td>

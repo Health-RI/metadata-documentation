@@ -40,7 +40,7 @@
       <td>dcatap:availability</td>
       <td>skos:Concept (IRI)</td>
       <td>0..1</td>
-      <td>To indicate the planned availability of the Distribution, the EU planned-availability controlled vocabulary MUST be used.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="http://publications.europa.eu/resource/authority/planned-availability">http://publications.europa.eu/resource/authority/planned-availability</a><br></td>
+      <td>To indicate the planned availability of the Distribution, the EU planned-availability controlled vocabulary MUST be used.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/planned-availability">http://publications.europa.eu/resource/authority/planned-availability</a><br></td>
     </tr>
     <tr>
       <td>byte size</td>
@@ -48,7 +48,7 @@
       <td>dcat:byteSize</td>
       <td>xsd:nonNegativeInteger</td>
       <td>0..1</td>
-      <td>Describes the size of the distribution (the actual file) in bytes, and is therefore expressed as a non-negative integer. If the actual size is not know, it can be estimated.</td>
+      <td>Describes the size of the distribution (the actual file) in bytes, and is therefore expressed as a non-negative integer. If the actual size is not known, it can be estimated.</td>
     </tr>
     <tr>
       <td>checksum</td>
@@ -104,13 +104,13 @@
       <td>dct:language</td>
       <td>dct:LinguisticSystem (IRI)</td>
       <td>0..n</td>
-      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data.\nNote that here the Health-RI model diverges from DCAT-AP NL, which allows maximum of 1 languages per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
+      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data. Note that here the Health-RI model diverges from DCAT-AP NL, which allows a maximum of 1 language per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
     </tr>
     <tr>
       <td>license</td>
       <td>A legal document giving official permission to do something with the resource.</td>
       <td>dct:license</td>
-      <td>dct:LicenceDocument (IRI)</td>
+      <td>dct:LicenseDocument (IRI)</td>
       <td>1</td>
       <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue distributions, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br></td>
     </tr>
@@ -128,7 +128,7 @@
       <td>dcat:mediaType</td>
       <td>dct:MediaType (IRI)</td>
       <td>0..1</td>
-      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to descibe the format.\nExample: https://www.iana.org/assignments/media-types/text/csv (for csv)\nIf IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br></td>
+      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to describe the format. Example: https://www.iana.org/assignments/media-types/text/csv (for csv) If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br></td>
     </tr>
     <tr>
       <td>modification date</td>
@@ -160,7 +160,7 @@
       <td>healthdcatap:retentionperiod</td>
       <td>dct:PeriodOfTime</td>
       <td>0..1</td>
-      <td>Note: This property will be deprecated in the upcoming major release. It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property. \n\nIndicate with this property in case the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints).\nThis property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided.\n\nIf the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies).\nIf only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime).\nIf a limit is known, provide both dcat:startDate and dcat:endDate.</td>
+      <td>Note: This property will be deprecated in the upcoming major release. It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property.&nbsp;&nbsp;Indicate with this property in case the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.</td>
     </tr>
     <tr>
       <td>rights</td>
@@ -168,7 +168,7 @@
       <td>dct:rights</td>
       <td>dct:RightsStatement (IRI)</td>
       <td>0..1</td>
-      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (eg. Data Transfer Agreement, DTA,) should be stated in this property.\nThe rights statement should be a free-text statement placed at an web-accessible location such that the value of this property is the IRI pointing to that statement.\nCurrent status: This recommendation on how to state data transfer/reuse conditions will be pilotted in 2025.</td>
+      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (e.g. Data Transfer Agreement, DTA) should be stated in this property. The rights statement should be a free-text statement placed at a web-accessible location such that the value of this property is the IRI pointing to that statement.</td>
     </tr>
     <tr>
       <td>status</td>
