@@ -1,8 +1,8 @@
-# Controlled Vocabularies 
+# Controlled Vocabularies
 
-In this section, properties are listed for which specific values are expected. These values are typically taken from controlled vocabularies, but may also come from defined ontologies, authority tables, or prescribed value lists (such as licenses or identifier schemes).
+This section lists properties whose values are expected to come from specified sources. These sources are typically controlled vocabularies, but may also be ontologies, authority tables, or prescribed value lists (such as licences or identifier schemes).
 
-Using these predefined sources ensures consistency and interoperability across datasets and catalogues.
+Using these predefined sources supports consistency and interoperability across datasets and catalogues.
 
 The requirements are grouped into three categories:
 
@@ -10,7 +10,7 @@ The requirements are grouped into three categories:
 * **AT LEAST 1**: at least one of the provided values must come from the specified vocabulary (additional values from other sources may be included where relevant).
 * **MAY**: the use of the specified vocabulary is optional, but recommended when applicable.
 
-The tables below list the relevant properties, the classes they apply to, the expected vocabularies, and additional usage notes to support correct implementation.
+The tables below list the relevant properties, the classes to which they apply, the expected vocabularies, and additional usage notes for implementation.
 
 ## Properties with controlled vocabularies that **MUST** be used for the listed properties
 

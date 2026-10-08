@@ -1,5 +1,5 @@
-# Supportive Classes 
-**Supportive Classes** provide additional context and metadata. They enhance discoverability.
+# Supportive Classes
+**Supportive Classes** provide additional context and metadata for the main classes.
 
 ## Mandatory supportive classes
 
@@ -151,9 +151,9 @@ path: src/property/properties-activity.html
 
 ### CSVW Variables
 
-The CSVW (CSV on the Web) specification provides a framework for describing tabular data and its metadata. In the context of Health-RI, CSVW is used to provide a machine-readable description of the data variables.
+The CSVW (CSV on the Web) specification provides a framework for describing tabular data and its metadata. In Health-RI, it is used to describe data variables in a machine-readable form.
 
-The following three entities work together to provide comprehensive variable documentation:
+The following three classes work together to describe those variables:
 
 * Table Group - The top-level container that organizes one or more CSV tables.
 * Table - Represents a single CSV file with its metadata and variable definitions.
