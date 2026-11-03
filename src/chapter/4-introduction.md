@@ -2,11 +2,11 @@
 
 ## Scope and Current State of the Schema ## {#scope-and-current-state-of-the-schema}
 
-Building on the [1st version of the metadata schema](https://github.com/Health-RI/health-ri-metadata/tree/v1.0.2), version 2 aims to incorporate both [DCAT-AP NL](https://geonovum.github.io/DCAT-AP-NL30/) and the (yet-to-be-finalized) [HealthDCAT-AP](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/), along with Health-RI-specific requirements for the [National Health Data Catalogue](https://catalogus.healthdata.nl/). It introduces several health-related properties (marked in blue in the [Unified Modeling Language (UML)](https://www.omg.org/spec/UML/) diagram below), with suggested or required controlled vocabularies where applicable.
+Building on the [1st version of the metadata schema](https://github.com/Health-RI/health-ri-metadata/tree/v1.0.2), version 2 aims to incorporate both [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/) and the (yet-to-be-finalized) [HealthDCAT-AP](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/), along with Health-RI-specific requirements for the [National Health Data Catalogue](https://catalogus.healthdata.nl/). It introduces several health-related properties (marked in blue in the [Unified Modeling Language (UML)](https://www.omg.org/spec/UML/) diagram below), with suggested or required controlled vocabularies where applicable.
 
 **Important Note:** HealthDCAT-AP has not yet been officially finalized and remains subject to change. Once its official release is published, Health-RI will reevaluate compatibility with HealthDCAT-AP. This version of the Health-RI schema is based on the HealthDCAT-AP draft dated *16-12-2024*. In that draft, the cardinalities of HealthDCAT-AP vary depending on different access rights (public, restricted, non-public). For now, the [OPEN variant](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/) is used as a baseline, with documented Health-RI-specific deviations, and its UML diagram is used for reference.
 
-Additionally, several metadata fields related to <strong>[Ethical, Legal and Societal Implications (ELSI)](https://www.health-ri.nl/en/about-health-ri/our-experts/elsi)</strong>, as [gathered](https://health-ri.atlassian.net/wiki/spaces/HA/pages/469893133/Metadata+rondom+gebruiksvoorwaarden+en+authenticatie+autorisatie+en+ELSI+aspecten#Catalogus) by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.
+Additionally, several metadata fields related to <strong>[Ethical, Legal and Societal Implications (ELSI)](https://www.health-ri.nl/en/about-health-ri/our-experts/elsi)</strong>, as gathered by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.
 
 To describe the **data domain** (e.g., surveys and questionnaires), we propose using `edam:has_topic`; to describe the **measurement technique** (e.g., whole genome sequencing), we propose using `schema:measurementTechnique`. For **health themes**, we propose using `healthdcatap:healthTheme`. For **synthetic data**, use [`dct:type`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/) with the required controlled vocabulary in the [`dcat:Dataset`](http://www.w3.org/ns/dcat#Dataset) class.
 
@@ -39,7 +39,7 @@ Several classes from [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl
     <tr><td>prov</td><td>http://www.w3.org/ns/prov#</td></tr>
     <tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td></tr>
     <tr><td>rdfs</td><td>http://www.w3.org/2000/01/rdf-schema#</td></tr>
-    <tr><td>schema</td><td>http://schema.org/</td></tr>
+    <tr><td>schema</td><td>https://schema.org/</td></tr>
     <tr><td>skos</td><td>http://www.w3.org/2004/02/skos/core#</td></tr>
     <tr><td>spdx</td><td>http://spdx.org/rdf/terms#</td></tr>
     <tr><td>time</td><td>http://www.w3.org/2006/time#</td></tr>

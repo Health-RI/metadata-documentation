@@ -20,11 +20,11 @@
     </tr>
     <tr>
       <td>email</td>
-      <td>An email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme RFC6068. The email SHOULD be used to establish a communication channel to the agent.</td>
+      <td>An email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using the fully qualified mailto: URI scheme defined in RFC 6068. The email SHOULD be used to establish a communication channel to the agent.</td>
       <td>foaf:mbox</td>
-      <td>rdfs:Resource&nbsp;&nbsp;(IRI)</td>
+      <td>rdfs:Resource (IRI)</td>
       <td>1</td>
-      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent. This protects their privacy and enables contact about the resource even after the individual has left the institution. The email address has to be provided starting with mailto: prefix. For example: mailto:info@example.com</td>
+      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent. This protects their privacy and enables contact about the resource even after the individual has left the institution. The email address must start with the mailto: prefix. For example: mailto:info@example.com</td>
     </tr>
     <tr>
       <td>identifier</td>
@@ -32,7 +32,7 @@
       <td>dct:identifier</td>
       <td>rdfs:Literal</td>
       <td>1..n</td>
-      <td>Specify the entity (person or organization) by providing an identifier. We recommend using an ORCID identifier for a person or ROR identifier for an organization. Dutch government organizations are listed in TOOI. If these are not available, you can use ISNI, or Wikidata or any other identifier you may have. If you have multiple identifiers, you should provide them all.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://orcid.org/">https://orcid.org/</a><br><a href="https://ror.org/">https://ror.org/</a><br><a href="https://isni.org/page/search-database/">https://isni.org/page/search-database/</a><br><a href="https://standaarden.overheid.nl/tooi/waardelijsten/">https://standaarden.overheid.nl/tooi/waardelijsten/</a><br><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">https://www.wikidata.org/wiki/Wikidata:Main_Page</a><br></td>
+      <td>Specify the entity (person or organisation) by providing an identifier. We recommend using an ORCID identifier for a person or a ROR identifier for an organisation. Dutch government organisations are listed in TOOI. If these are not available, you can use ISNI, Wikidata or any other identifier you may have. If you have multiple identifiers, you should provide them all.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://orcid.org/">https://orcid.org/</a><br><a href="https://ror.org/">https://ror.org/</a><br><a href="https://isni.org/page/search-database/">https://isni.org/page/search-database/</a><br><a href="https://standaarden.overheid.nl/tooi/waardelijsten/">https://standaarden.overheid.nl/tooi/waardelijsten/</a><br><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">https://www.wikidata.org/wiki/Wikidata:Main_Page</a><br></td>
     </tr>
     <tr>
       <td>name</td>
@@ -40,11 +40,11 @@
       <td>foaf:name</td>
       <td>rdfs:Literal</td>
       <td>1..n</td>
-      <td>This property refers to the given name of the entity. Example: Jane Doe (for a person) and Radboudumc (for an organization). This property can be repeated for different versions of the name (e.g. the name in different languages).</td>
+      <td>This property refers to the given name of the entity. Example: Jane Doe (for a person) and Radboudumc (for an organisation). This property can be repeated for different versions of the name (e.g. the name in different languages).</td>
     </tr>
     <tr>
       <td>publisher note</td>
-      <td>A description of the publisher activities.</td>
+      <td>A description of the publisher's activities.</td>
       <td>healthdcatap:publishernote</td>
       <td>rdfs:Literal</td>
       <td>0..1</td>
@@ -56,7 +56,7 @@
       <td>healthdcatap:publishertype</td>
       <td>skos:Concept (IRI)</td>
       <td>0..1</td>
-      <td><strong>Note:</strong> This property will be deprecated in the next major release.<br><br> Choose a term from the controlled vocabulary, which includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL: http://purl.org/adms/publishertype/[type].<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br></td>
+      <td>Note: This property will be deprecated in the next major release. Choose a term from the controlled vocabulary, which includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use URLs of the following form: http://purl.org/adms/publishertype/[type].<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br></td>
     </tr>
     <tr>
       <td>type</td>
@@ -64,7 +64,7 @@
       <td>dct:type</td>
       <td>skos:Concept (IRI)</td>
       <td>0..1</td>
-      <td>This property should be filled using ADMS vocabulary (http://purl.org/adms/publishertype/1.0)<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br></td>
+      <td>This property should be filled using ADMS vocabulary (http://purl.org/adms/publishertype/1.0).<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br></td>
     </tr>
     <tr>
       <td>URL</td>

@@ -109,6 +109,22 @@ class ExcelHeaderTests(unittest.TestCase):
         self.assertIn('<a href="https://example.org/vocabulary">', html)
         self.assertIn("The external vocabulary may be used for relevant terms.", html)
 
+    def test_tabs_in_property_text_do_not_render_as_escape_sequences(self):
+        path = self.workbook()
+        wb = load_workbook(path)
+        wb["Dataset"]["B2"] = "\t\nA definition\twith a line break"
+        wb["Dataset"]["F2"] = "\t\nUsage\tnote"
+        wb.save(path)
+        wb.close()
+
+        status, _, stderr, files = self.generate(path)
+        self.assertEqual(status, 0, stderr)
+        html = files["properties-dataset.html"].decode()
+        self.assertNotIn(r"\t", html)
+        self.assertNotIn(r"\n", html)
+        self.assertIn("A definition with a line break", html)
+        self.assertIn("Usage note", html)
+
     def test_whitespace_variants_produce_identical_html(self):
         status, _, stderr, expected = self.generate(self.workbook())
         self.assertEqual(status, 0, stderr)

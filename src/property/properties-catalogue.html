@@ -19,20 +19,20 @@
       <td>N.A.</td>
     </tr>
     <tr>
-      <td>catalog</td>
-      <td>A catalog that is listed in the catalog.</td>
+      <td>catalogue</td>
+      <td>A catalogue that is listed in the catalogue.</td>
       <td>dcat:catalog</td>
       <td>dcat:Catalog</td>
       <td>0..n</td>
-      <td>For certain research projects, multiple catalogs may need to be organized in a nested manner. This property serves to connect the different catalogs with each other.</td>
+      <td>For certain research projects, multiple catalogues may need to be organised in a nested manner. This property serves to connect the different catalogues with each other.</td>
     </tr>
     <tr>
       <td>contact point</td>
-      <td>Relevant contact information for the cataloged resource.</td>
+      <td>Relevant contact information for the catalogued resource.</td>
       <td>dcat:contactPoint</td>
       <td>vcard:Kind</td>
       <td>1</td>
-      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind. Whenever possible, use general contact information (for example from a department) instead of the contact information of an individual.</td>
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under the vcard:Kind class. Whenever possible, use general contact information (for example, from a department) instead of the contact information of an individual.</td>
     </tr>
     <tr>
       <td>creator</td>
@@ -40,15 +40,15 @@
       <td>dct:creator</td>
       <td>foaf:Agent</td>
       <td>0..n</td>
-      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the catalogue was created. In case there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.</td>
+      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation/employer bearing investment risk, instead of an individual (e.g. an individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher: the organisation (not a department or subdivision of the organisation) where the catalogue was created. If there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.</td>
     </tr>
     <tr>
       <td>dataset</td>
-      <td>A dataset that is listed in the catalog.</td>
+      <td>A dataset that is listed in the catalogue.</td>
       <td>dcat:dataset</td>
       <td>dcat:Dataset</td>
       <td>1..n</td>
-      <td>Each catalog contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue.</td>
+      <td>Each catalogue contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue.</td>
     </tr>
     <tr>
       <td>description</td>
@@ -56,7 +56,7 @@
       <td>dct:description</td>
       <td>rdfs:Literal</td>
       <td>1..n</td>
-      <td>Briefly describe the catalog and what it contains. You can repeat this in multiple languages.</td>
+      <td>Briefly describe the catalogue and what it contains. You can repeat this in multiple languages.</td>
     </tr>
     <tr>
       <td>geographical coverage</td>
@@ -64,7 +64,7 @@
       <td>dct:spatial</td>
       <td>dct:Location (IRI)</td>
       <td>0..n</td>
-      <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br></td>
+      <td>The EU Vocabularies Named Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, GeoNames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocabulary can be used.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br></td>
     </tr>
     <tr>
       <td>has part</td>
@@ -72,7 +72,7 @@
       <td>dct:hasPart</td>
       <td>dcat:Catalog</td>
       <td>0..n</td>
-      <td>Use this property to establish another catalogue in this catalogue. Note that deeply nested structures should be avoided, and can currently not be displayed in the National Health Data Catalogue.</td>
+      <td>Use this property to establish another catalogue in this catalogue. Note that deeply nested structures should be avoided, and cannot currently be displayed in the National Health Data Catalogue.</td>
     </tr>
     <tr>
       <td>home page</td>
@@ -96,7 +96,7 @@
       <td>dct:license</td>
       <td>dct:LicenseDocument (IRI)</td>
       <td>0..1</td>
-      <td>The licence under which the catalogue (with resource description) is made available. The licences for Distributions and Data Services are not specified here. They are specified in the licence properties of their respective classes.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br></td>
+      <td>The licence under which the catalogue (with its resource description) is made available. The licences for Distributions and Data Services are not specified here. They are specified in the licence properties of their respective classes.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br></td>
     </tr>
     <tr>
       <td>modification date</td>
@@ -112,7 +112,7 @@
       <td>dct:publisher</td>
       <td>foaf:Agent</td>
       <td>1</td>
-      <td>The organisation or individual that is holder of the intellectual property rights of a dataset. For more details about the publisher, see the class Agent. Example: Radboudumc.</td>
+      <td>The organisation or individual that is the holder of the intellectual property rights of a dataset. For more details about the publisher, see the class Agent. Example: Radboudumc.</td>
     </tr>
     <tr>
       <td>release date</td>
@@ -132,11 +132,11 @@
     </tr>
     <tr>
       <td>service</td>
-      <td>A service that is listed in the catalog.</td>
+      <td>A service that is listed in the catalogue.</td>
       <td>dcat:service</td>
       <td>dcat:DataService</td>
       <td>0..n</td>
-      <td>Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalog and the Data Service via this property. While crucial for interoperability, this property is not relevant for end-users to collect.</td>
+      <td>Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalogue and the Data Service via this property. While crucial for interoperability, this property is not relevant for end users to collect.</td>
     </tr>
     <tr>
       <td>temporal coverage</td>
@@ -150,9 +150,9 @@
       <td>themes</td>
       <td>A main category of the resource. A resource can have multiple themes.</td>
       <td>dcat:themeTaxonomy</td>
-      <td>skos:ConceptScheme</td>
+      <td>skos:ConceptScheme (IRI)</td>
       <td>0..n</td>
-      <td>This property refers to a knowledge organisation system used to classify the Catalogue's Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.</td>
+      <td>This property refers to a knowledge organisation system used to classify the Catalogue's Datasets. It must include at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.</td>
     </tr>
     <tr>
       <td>title</td>
@@ -160,7 +160,7 @@
       <td>dct:title</td>
       <td>rdfs:Literal</td>
       <td>1..n</td>
-      <td>Provide a unique title for your catalog, which can be repeated in multiple languages. Example: Healthy Brain Study.</td>
+      <td>Provide a unique title for your catalogue, which can be repeated in multiple languages. Example: Healthy Brain Study.</td>
     </tr>
   </tbody>
 </table>

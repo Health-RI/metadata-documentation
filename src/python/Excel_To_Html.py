@@ -267,7 +267,7 @@ def merge_vocab_rows(df):
 
 def normalize_table_text(value):
     """
-    Convert line breaks in Excel/table cell text to spaces before
+    Convert line breaks and tabs in Excel/table cell text to spaces before
     pandas serializes the DataFrame to HTML.
 
     pandas.to_html() can serialize newline characters in a way that
@@ -279,12 +279,13 @@ def normalize_table_text(value):
       - Windows line breaks: \\r\\n
       - Unix line breaks: \\n
       - Old Mac line breaks: \\r
+      - Tabs: \\t
       - Literal escaped sequences: \\\\n
     """
     if not isinstance(value, str):
         return value
 
-    return re.sub(r"(?:\r\n|\r|\n|\\n)+", " ", value)
+    return re.sub(r"(?:\r\n|\r|\n|\t|\\n)+", " ", value)
 
 
 # ========================

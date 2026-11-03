@@ -15,8 +15,8 @@
       <td>A technical name given to the Variable as it appears in the CSV file.</td>
       <td>csvw:name</td>
       <td>rdfs:Literal</td>
-      <td>1..n</td>
-      <td>Technical variable name required to match a column header in the CSV file (synthetic, anonymized representation of the real data), can appear in multiple languages.</td>
+      <td>1</td>
+      <td>A technical variable name is required to match a column header in the CSV file (a synthetic, anonymised representation of the real data).</td>
     </tr>
     <tr>
       <td>title</td>
@@ -40,15 +40,15 @@
       <td>csvw:datatype</td>
       <td>rdfs:Literal</td>
       <td>1</td>
-      <td>Should match the label of one of the CSVW types as defined in the Built-in datatypes from XML Schema. https://w3c.github.io/csvw/metadata/#datatypes Example: string, integer, boolean …<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/csvw/metadata/#datatypes">https://w3c.github.io/csvw/metadata/#datatypes</a><br></td>
+      <td>The value should match the label of one of the CSVW types as defined in the Built-in datatypes from XML Schema. See: https://w3c.github.io/csvw/metadata/#datatypes Example: string, integer, boolean …<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/csvw/metadata/#datatypes">https://w3c.github.io/csvw/metadata/#datatypes</a><br></td>
     </tr>
     <tr>
       <td>property URL</td>
       <td>A URI template used to define the RDF predicate associated with the values in the column, relative to each row.</td>
       <td>csvw:propertyUrl</td>
-      <td>rdfs:Literal (IRI)</td>
+      <td>rdfs:Resource (IRI)</td>
       <td>0..1</td>
-      <td>The propertyUrl may point to standard, controlled vocabularies, or ontologies that define the semantic meaning of the column. <br>For example: csvw:propertyUrl http://publications.europa.eu/resource/authority/country <br><br>For advanced usage, refer to the official specification: <a href="https://www.w3.org/TR/tabular-metadata/#propertyurl">www.w3.org/TR/tabular-metadata/#propertyurl</a></td>
+      <td>The propertyUrl may point to standard vocabularies, controlled vocabularies or ontologies that define the semantic meaning of the column. For example: csvw:propertyUrl http://publications.europa.eu/resource/authority/country For advanced usage, refer to the official specification: https://www.w3.org/TR/tabular-metadata/#propertyurl</td>
     </tr>
   </tbody>
 </table>

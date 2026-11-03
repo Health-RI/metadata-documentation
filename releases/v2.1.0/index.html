@@ -1488,9 +1488,8 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
+  <meta content="Bikeshed version e0b165ae4, updated Mon Nov 2 15:16:49 2026 -0800" name="generator">
   <link href="https://w3id.org/health-ri/metadata/docs/v2.1.0" rel="canonical">
-  <meta content="b5f97561e41f504f0172f3e04487105649830224" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -5024,9 +5023,9 @@ dfn > a.self-link::before      { content: "#"; }
    <p>This documentation aims at a <strong>technical audience</strong> tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the core metadata schema. For any further questions or comments, please contact Health-RI via the <a href="https://www.health-ri.nl/health-ri-servicedesk">Health-RI ServiceDesk</a> or via <a href="mailto:servicedesk@health-ri.nl">servicedesk@health-ri.nl</a>.</p>
    <h2 class="heading settled" data-level="2" id="introduction"><span class="secno">2. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="scope-and-current-state-of-the-schema"><span class="secno">2.1. </span><span class="content">Scope and Current State of the Schema</span><a class="self-link" href="#scope-and-current-state-of-the-schema"></a></h3>
-   <p>Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/v1.0.2">1st version of the metadata schema</a>, version 2 aims to incorporate both <a href="https://geonovum.github.io/DCAT-AP-NL30/">DCAT-AP NL</a> and the (yet-to-be-finalized) <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a>, along with Health-RI-specific requirements for the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It introduces several health-related properties (marked in blue in the <a href="https://www.omg.org/spec/UML/">Unified Modeling Language (UML)</a> diagram below), with suggested or required controlled vocabularies where applicable.</p>
+   <p>Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/v1.0.2">1st version of the metadata schema</a>, version 2 aims to incorporate both <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and the (yet-to-be-finalized) <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a>, along with Health-RI-specific requirements for the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It introduces several health-related properties (marked in blue in the <a href="https://www.omg.org/spec/UML/">Unified Modeling Language (UML)</a> diagram below), with suggested or required controlled vocabularies where applicable.</p>
    <p><strong>Important Note:</strong> HealthDCAT-AP has not yet been officially finalized and remains subject to change. Once its official release is published, Health-RI will reevaluate compatibility with HealthDCAT-AP. This version of the Health-RI schema is based on the HealthDCAT-AP draft dated <em>16-12-2024</em>. In that draft, the cardinalities of HealthDCAT-AP vary depending on different access rights (public, restricted, non-public). For now, the <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">OPEN variant</a> is used as a baseline, with documented Health-RI-specific deviations, and its UML diagram is used for reference.</p>
-   <p>Additionally, several metadata fields related to <strong><a href="https://www.health-ri.nl/en/about-health-ri/our-experts/elsi">Ethical, Legal and Societal Implications (ELSI)</a></strong>, as <a href="https://health-ri.atlassian.net/wiki/spaces/HA/pages/469893133/Metadata+rondom+gebruiksvoorwaarden+en+authenticatie+autorisatie+en+ELSI+aspecten#Catalogus">gathered</a> by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.</p>
+   <p>Additionally, several metadata fields related to <strong><a href="https://www.health-ri.nl/en/about-health-ri/our-experts/elsi">Ethical, Legal and Societal Implications (ELSI)</a></strong>, as gathered by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.</p>
    <p>To describe the <strong>data domain</strong> (e.g., surveys and questionnaires), we propose using <code>edam:has_topic</code>; to describe the <strong>measurement technique</strong> (e.g., whole genome sequencing), we propose using <code>schema:measurementTechnique</code>. For <strong>health themes</strong>, we propose using <code>healthdcatap:healthTheme</code>. For <strong>synthetic data</strong>, use <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/"><code>dct:type</code></a> with the required controlled vocabulary in the <a href="http://www.w3.org/ns/dcat#Dataset"><code>dcat:Dataset</code></a> class.</p>
    <p>Several classes from <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> have been included but not further specified for Health-RI yet. This includes the <strong>DataService</strong> class, meaning that these classes can be used but are not yet tailored to specific data holder needs for the National Health Data Catalogue.</p>
    <h3 class="heading settled" data-level="2.2" id="used-prefixes"><span class="secno">2.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
@@ -5089,7 +5088,7 @@ dfn > a.self-link::before      { content: "#"; }
       <td>http://www.w3.org/2000/01/rdf-schema#
      <tr>
       <td>schema
-      <td>http://schema.org/
+      <td>https://schema.org/
      <tr>
       <td>skos
       <td>http://www.w3.org/2004/02/skos/core#
@@ -5267,54 +5266,54 @@ The following links distinguish the published specification from the metadata mo
       <td>0..n
       <td>N.A.
      <tr>
-      <td>catalog
-      <td>A catalog that is listed in the catalog.
+      <td>catalogue
+      <td>A catalogue that is listed in the catalogue.
       <td>dcat:catalog
       <td>dcat:Catalog
       <td>0..n
-      <td>For certain research projects, multiple catalogs may need to be organized in a nested manner. This property serves to connect the different catalogs with each other.
+      <td>For certain research projects, multiple catalogues may need to be organised in a nested manner. This property serves to connect the different catalogues with each other.
      <tr>
       <td>contact point
-      <td>Relevant contact information for the cataloged resource.
+      <td>Relevant contact information for the catalogued resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind. Whenever possible, use general contact information (for example from a department) instead of the contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under the vcard:Kind class. Whenever possible, use general contact information (for example, from a department) instead of the contact information of an individual.
      <tr>
       <td>creator
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>0..n
-      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the catalogue was created. In case there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.
+      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation/employer bearing investment risk, instead of an individual (e.g. an individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher: the organisation (not a department or subdivision of the organisation) where the catalogue was created. If there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.
      <tr>
       <td>dataset
-      <td>A dataset that is listed in the catalog.
+      <td>A dataset that is listed in the catalogue.
       <td>dcat:dataset
       <td>dcat:Dataset
       <td>1..n
-      <td>Each catalog contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue.
+      <td>Each catalogue contains one or more datasets. This property serves to link datasets to a catalogue. Therefore, a dataset is always contained inside a catalogue.
      <tr>
       <td>description
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>1..n
-      <td>Briefly describe the catalog and what it contains. You can repeat this in multiple languages.
+      <td>Briefly describe the catalogue and what it contains. You can repeat this in multiple languages.
      <tr>
       <td>geographical coverage
       <td>Spatial characteristics of the resource.
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
-      <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br>
+      <td>The EU Vocabularies Named Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, GeoNames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocabulary can be used.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br>
      <tr>
       <td>has part
       <td>A related resource that is included either physically or logically in the described resource.
       <td>dct:hasPart
       <td>dcat:Catalog
       <td>0..n
-      <td>Use this property to establish another catalogue in this catalogue. Note that deeply nested structures should be avoided, and can currently not be displayed in the National Health Data Catalogue.
+      <td>Use this property to establish another catalogue in this catalogue. Note that deeply nested structures should be avoided, and cannot currently be displayed in the National Health Data Catalogue.
      <tr>
       <td>home page
       <td>A homepage for some thing.
@@ -5335,7 +5334,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:license
       <td>dct:LicenseDocument (IRI)
       <td>0..1
-      <td>The licence under which the catalogue (with resource description) is made available. The licences for Distributions and Data Services are not specified here. They are specified in the licence properties of their respective classes.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br>
+      <td>The licence under which the catalogue (with its resource description) is made available. The licences for Distributions and Data Services are not specified here. They are specified in the licence properties of their respective classes.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br>
      <tr>
       <td>modification date
       <td>Date on which the resource was changed.
@@ -5349,7 +5348,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:publisher
       <td>foaf:Agent
       <td>1
-      <td>The organisation or individual that is holder of the intellectual property rights of a dataset. For more details about the publisher, see the class Agent. Example: Radboudumc.
+      <td>The organisation or individual that is the holder of the intellectual property rights of a dataset. For more details about the publisher, see the class Agent. Example: Radboudumc.
      <tr>
       <td>release date
       <td>Date of formal issuance of the resource.
@@ -5366,11 +5365,11 @@ The following links distinguish the published specification from the metadata mo
       <td>The rights statement should be a free-text statement placed at a web-accessible location such that the value of this property is the IRI pointing to that statement.
      <tr>
       <td>service
-      <td>A service that is listed in the catalog.
+      <td>A service that is listed in the catalogue.
       <td>dcat:service
       <td>dcat:DataService
       <td>0..n
-      <td>Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalog and the Data Service via this property. While crucial for interoperability, this property is not relevant for end-users to collect.
+      <td>Some datasets may have real-time Data Services (e.g., Beacon API counting individuals). IT teams should define the relationship between the catalogue and the Data Service via this property. While crucial for interoperability, this property is not relevant for end users to collect.
      <tr>
       <td>temporal coverage
       <td>Temporal characteristics of the resource.
@@ -5382,16 +5381,16 @@ The following links distinguish the published specification from the metadata mo
       <td>themes
       <td>A main category of the resource. A resource can have multiple themes.
       <td>dcat:themeTaxonomy
-      <td>skos:ConceptScheme
+      <td>skos:ConceptScheme (IRI)
       <td>0..n
-      <td>This property refers to a knowledge organisation system used to classify the Catalogue’s Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.
+      <td>This property refers to a knowledge organisation system used to classify the Catalogue’s Datasets. It must include at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.
      <tr>
       <td>title
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
       <td>1..n
-      <td>Provide a unique title for your catalog, which can be repeated in multiple languages. Example: Healthy Brain Study.
+      <td>Provide a unique title for your catalogue, which can be repeated in multiple languages. Example: Healthy Brain Study.
    </table>
    <h4 class="heading settled" data-level="5.1.2" id="dataset"><span class="secno">5.1.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">Dataset</a></span><a class="self-link" href="#dataset"></a></h4>
    <table class="no-style">
@@ -5425,7 +5424,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. It is foreseen that one of the three options has to be used: <strong>public</strong>, <strong>restricted</strong>, <strong>non-public</strong>. <br><strong>Open Data (Public)</strong>: The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation. <br><strong>Protected Data (Restricted)</strong>: The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act. <br><strong>Sensitive Data (Non-public)</strong>: The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation. Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. One of the three options must be used: public, restricted, non-public.     Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.     Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.     Sensitive Data (Non-public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation. Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
      <tr>
       <td>alternative
       <td>An alternative name for the dataset.
@@ -5439,65 +5438,63 @@ The following links distinguish the published specification from the metadata mo
       <td>healthdcatap:analytics
       <td>dcat:Distribution
       <td>0..n
-      <td>Publishers are encouraged to provide URLs pointing to document repositories where users can access or request associated resources such as technical reports of the dataset, quality measurements, usability indicators, etc. Note that HealthDCAT-AP also mentions API endpoints or analytics services, but these would not be Distributions but rather DatasetServices.
+      <td>Publishers are encouraged to provide URLs pointing to document repositories where users can access or request associated resources such as technical reports of the dataset, quality measurements, usability indicators, etc. Note that HealthDCAT-AP also mentions API endpoints or analytics services, but these would be Data Services rather than Distributions.
      <tr>
       <td>anatomical location covered
       <td>Relates a dataset to an anatomical class that is Anatomical structure (SNOMED CT 91723000) or one of its subclasses, describing anatomical coverage of the dataset as a whole at metadata or catalogue level.
       <td>hri:anatomicalLocationCovered
       <td>skos:Concept (IRI)
       <td>0..n
-      <td>Use this property to indicate which anatomical parts of the body are covered by the Dataset. Select the relevant anatomical structure from SNOMED CT. Multiple anatomical locations can be provided. <br>Example: Dataset containing lung imaging data can use Lung structure (<a href="http://snomed.info/id/39607008">http://snomed.info/id/39607008</a>).
-       .
-    
+      <td>Use this property to indicate which anatomical parts of the body are covered by the Dataset. Select the relevant anatomical structure from SNOMED CT. Multiple anatomical locations can be provided. Example: A dataset containing lung imaging data can use Lung structure (http://snomed.info/id/39607008).
      <tr>
       <td>applicable legislation
       <td>The legislation that is applicable to this resource.
       <td>dcatap:applicableLegislation
       <td>eli:LegalResource (IRI)
       <td>1..n
-      <td>The ELI of the EHDS was published in March 2025 and can now be included as the applicable legislation mandating that the dataset has to be made public. For health datasets, the value must include the ELI of the EHDS Regulation (<a href="http://data.europa.eu/eli/reg/2025/327/oj">http://data.europa.eu/eli/reg/2025/327/oj</a>). As multiple legislations may apply to the resource the maximum cardinality is not limited. Note that the relation with other legislations is complex and is being looked into by legal experts. While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property (also in Datasets) described the legal basis for initial collection and processing of (personal) data.
+      <td>The ELI of the EHDS was published in March 2025 and can now be included as the applicable legislation mandating that the dataset has to be made public. For health datasets, the value must include the ELI of the EHDS Regulation (http://data.europa.eu/eli/reg/2025/327/oj). As multiple pieces of legislation may apply to the resource, the maximum cardinality is not limited. Note that the relationship with other legislation is complex and is being looked into by legal experts. While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property (also in Datasets) describes the legal basis for initial collection and processing of (personal) data.
      <tr>
       <td>code values
       <td>Health classifications and their codes associated with the dataset
       <td>healthdcatap:hasCodeValues
       <td>skos:Concept (IRI)
       <td>0..n
-      <td><strong>Note</strong>: The use of wikidata URIs will be replaced with free text in the next major release. <br><br>Inside this property, you can provide the coding system of the dataset in the form of wikidata URI (example: https://www.wikidata.org/entity/P494 for ICD-10 ID) and the URI of the value that describes the dataset (example: https://icd.who.int/browse10/2019/en#/Y59.0 for viral vaccines)
+      <td>Note: The use of Wikidata URIs will be replaced with free text in the next major release. Inside this property, you can provide the coding system of the dataset in the form of a Wikidata URI (example: https://www.wikidata.org/entity/P494 for ICD-10 ID) and the URI of the value that describes the dataset (example: https://icd.who.int/browse10/2019/en#/Y59.0 for viral vaccines).
      <tr>
       <td>coding system
-      <td>Coding systems in use (ex: ICD-10-CM, DGRs, SNOMED=CT, ...)
+      <td>Coding systems in use (e.g. ICD-10-CM, DGRs, SNOMED CT, ...)
       <td>healthdcatap:hasCodingSystem
       <td>dct:Standard (IRI)
       <td>0..n
-      <td><strong>Note:</strong> The use of wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. <br><br>This property provides information on which coding systems are in use in your dataset. For this, wikidata URIs must be used.
+      <td>Note: The use of Wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. This property provides information on which coding systems are in use in your dataset. For this, Wikidata URIs must be used.
      <tr>
       <td>conforms to
       <td>An established standard to which the described resource conforms.
       <td>dct:conformsTo
       <td>dct:Standard (IRI)
       <td>0..n
-      <td><strong>Note</strong>: The use of wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. <br><br>If your data conforms to an established standard or specification, use this property to indicate which one. The wikidata URI of the specification must be used. Example: https://www.wikidata.org/wiki/Q19597236 for FHIR.
+      <td>Note: The use of Wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. If your data conforms to an established standard or specification, use this property to indicate which one. The Wikidata URI of the specification must be used. Example: https://www.wikidata.org/wiki/Q19597236 for FHIR.
      <tr>
       <td>contact point
-      <td>Relevant contact information for the cataloged resource.
+      <td>Relevant contact information for the catalogued resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind. Whenever possible, use general contact information (for example from a department) instead of the contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under the vcard:Kind class. Whenever possible, use general contact information (for example, from a department) instead of the contact information of an individual.
      <tr>
       <td>creator
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>1..n
-      <td>The creator (of the dataset) is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the dataset was created. In case there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. In case you wish to credit other contributors to the dataset, you can use the prov:qualifiedAttribution property. This could be useful if you wish to indicate, for example, the funding organisation(s), collaborating organisation(s) or name specific individuals (e.g., principal investigator) involved in creating or managing the dataset.
+      <td>The creator (of the dataset) is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation/employer bearing investment risk, instead of an individual (e.g. an individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher: the organisation (not a department or subdivision of the organisation) where the dataset was created. If there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. In case you wish to credit other contributors to the dataset, you can use the prov:qualifiedAttribution property. This could be useful if you wish to indicate, for example, the funding organisation(s), collaborating organisation(s) or name specific individuals (e.g., principal investigator) involved in creating or managing the dataset.
      <tr>
       <td>description
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>1..n
-      <td>Brief description of the dataset. You can repeat this property in multiple languages. Example: ''Collection of physiological data of Healthy Brain Study participants. This collection includes measurements via biowearables for heart rate, oxygenation, systolic and diastolic measures and stress levels.''
+      <td>Brief description of the dataset. You can repeat this property in multiple languages. Example: ‘Collection of physiological data of Healthy Brain Study participants. This collection includes measurements via biowearables for heart rate, oxygenation, systolic and diastolic measures and stress levels.’
      <tr>
       <td>distribution
       <td>An available Distribution for the Dataset.
@@ -5511,14 +5508,14 @@ The following links distinguish the published specification from the metadata mo
       <td>foaf:page
       <td>foaf:Document (IRI)
       <td>0..n
-      <td>The value of this property is the IRI directing to the web-page or document about the dataset.
+      <td>The value of this property is the IRI pointing to the web page or document about the dataset.
      <tr>
       <td>domain of the data
       <td>In this context, the definition should be considered as: The data domain(s) present in the Dataset.
       <td>edam:has_topic
       <td>skos:Concept (IRI)
       <td>0..n
-      <td>Select data domain(s) from the predefined value list, available at this link: <a href="https://github.com/Health-RI/health-ri-metadata/blob/d9d8c34908a6a96dc4e86a474e22e1cd55dcc4f9/Formalisation(shacl)/Core/ValueLists/edam-has-topic.tsv">https://github.com/Health-RI/health-ri-metadata/blob/d9d8c34908a6a96dc4e86a474e22e1cd55dcc4f9/Formalisation(shacl)/Core/ValueLists/edam-has-topic.tsv</a> <br><strong>Note</strong>: This is a temporary location and it will change with the release. <br><br>A data domain refers to the broader scientific or health-related area covered by the Dataset. Select the domain that best represents the Dataset as a whole, rather than a specific data element within it. If the dataset contains data from more than one domain, you can select multiple. See the property "measurement technique" for more information about the technique(s) used to generate the data in the Dataset.
+      <td>Select data domain(s) from the predefined value list, available at this link: https://github.com/Health-RI/health-ri-metadata/blob/testing/Formalisation(shacl)/Core/ValueLists/edam-has-topic.tsv Note: This is a temporary location and it will change with the release.  A data domain refers to the broader scientific or health-related area covered by the Dataset. Select the domain that best represents the Dataset as a whole, rather than a specific data element within it. If the dataset contains data from more than one domain, you can select multiple. See the property "measurement technique" for more information about the technique(s) used to generate the data in the Dataset.
      <tr>
       <td>frequency
       <td>The frequency with which items are added to a collection.
@@ -5532,63 +5529,63 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
-      <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (e.g. indicating that NL is covered), to avoid exposing detailed information about subjects' locations.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br>
+      <td>The EU Vocabularies Named Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, GeoNames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocabulary can be used. However, it might in many cases be desirable to keep the geographical coverage broader (e.g. indicating that NL is covered), to avoid exposing detailed information about subjects' locations.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br>
      <tr>
       <td>has version
       <td>This resource has a more specific, versioned resource.
       <td>dcat:hasVersion
       <td>dcat:Dataset
       <td>0..n
-      <td>Indicate the dataset which is the other version of the current dataset.
+      <td>Indicate the dataset that is another version of the current dataset.
      <tr>
       <td>health condition of interest
-      <td>Relates a dataset to a SNOMED CT, ICD-10, or ORPHAcode concept representing a disease, disorder, or other clinical condition that the dataset concerns as a whole.
+      <td>Relates a dataset to a SNOMED CT, ICD-10, ICD-11, or ORPHAcode concept representing a disease, disorder, or other clinical condition that the dataset concerns as a whole.
       <td>hri:healthConditionOfInterest
       <td>skos:Concept (IRI)
       <td>0..n
-      <td>Use this property to describe health conditions of interest in dataset-level metadata. Multiple values may be provided. Select only SNOMED CT, ICD-10, or ORPHAcode concepts that represent diseases, disorders, or other clinical conditions. The relation does not assert that any individual participant has been diagnosed with a condition and is not intended to enumerate diagnoses in individual records. <br>Example: A Dataset concerning myocardial infarction can use http://snomed.info/id/22298006.
+      <td>Use this property to describe health conditions of interest in dataset-level metadata. Multiple values may be provided. Select only SNOMED CT, ICD-10, ICD-11, or ORPHAcode concepts that represent diseases, disorders, or other clinical conditions. The relation does not assert that any individual participant has been diagnosed with a condition and is not intended to enumerate diagnoses in individual records. Example: A Dataset concerning myocardial infarction can use http://snomed.info/id/22298006.
      <tr>
       <td>health theme
       <td>A category of the Dataset or tag describing the Dataset.
       <td>healthdcatap:healthTheme
       <td>skos:Concept (IRI)
       <td>0..n
-      <td><strong>Note</strong>: The use of wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. <br><br>This property is a structured way to tag the dataset with different health themes. This could include, for example, the specific disease the dataset is about. More details can be provided, if desirable, in the keywords property. <br>The wikidata URI of the health theme must be used here.
+      <td>Note: The use of Wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. This property is a structured way to tag the dataset with different health themes. This could include, for example, the specific disease the dataset is about. More details can be provided, if desirable, in the keywords property.  The Wikidata URI of the health theme must be used here.
      <tr>
       <td>identifier
       <td>An unambiguous reference to the resource within a given context.
       <td>dct:identifier
       <td>rdfs:Literal
       <td>1
-      <td>Current status: Health-RI is currently working on a strategy for persistent identifiers for, among other things, datasets. Until a solid solution has been found, we propose the following temporary solution: If your data is published in a repository, fill in with the provided DOI (Example: https://doi.org/10.34894/ZLOYOJ). If not, use the identifier of the dataset as generated in the FAIR data point (FDP). Ensure that metadata is updated if your situation changes.
+      <td>Current status: Health-RI is currently working on a strategy for persistent identifiers for, among other things, datasets. Until a solid solution has been found, we propose the following temporary solution: If your data is published in a repository, enter the provided DOI (Example: https://doi.org/10.34894/ZLOYOJ). If not, use the identifier of the dataset as generated in the FAIR data point (FDP). Ensure that metadata is updated if your situation changes.
      <tr>
       <td>in series
       <td>A dataset series of which the dataset is part.
       <td>dcat:inSeries
       <td>dcat:DatasetSeries
       <td>0..n
-      <td>This property points to which Dataset Series the Dataset is part of.
+      <td>This property points to the Dataset Series of which the Dataset is part.
      <tr>
       <td>is referenced by
       <td>A related resource that references, cites, or otherwise points to the described resource.
       <td>dct:isReferencedBy
       <td>rdfs:Resource (IRI)
       <td>0..n
-      <td>The value of this property is the IRI of the doi to the publication or other related resource. For example: <a href="https://doi.org/10.1186/s13690-021-00709-x">https://doi.org/10.1186/s13690-021-00709-x</a>
+      <td>The value of this property is the IRI of the DOI for the publication or other related resource. For example: https://doi.org/10.1186/s13690-021-00709-x
      <tr>
       <td>keyword
       <td>A keyword or tag describing the resource.
       <td>dcat:keyword
       <td>rdfs:Literal
       <td>1..n
-      <td>Add keywords to increase dataset discoverability. You can include keywords in different languages, submitting each keyword as a separate entry. <br>Example: Physiological measures, Heart Rate, Stress Measures.
+      <td>Add keywords to increase dataset discoverability. You can include keywords in different languages, submitting each keyword as a separate entry. Example: Physiological measures, Heart Rate, Stress Measures.
      <tr>
       <td>landing page
       <td>A web page that provides access to the Dataset, its Distributions and/or additional information.
       <td>dcat:landingPage
       <td>foaf:Document (IRI)
       <td>0..n
-      <td>Use this property for the main human-readable web page for the Dataset at the original data provider. Use dct:identifier or adms:identifier for identifiers of the Dataset, such as DOI; use dcat:accessURL for access to a specific Distribution; and use relationship properties for links to related resources. foaf:page is a general property for pages about a resource, while dcat:landingPage specifically identifies the Dataset’s main web entry point. Example: For an EGA Dataset, dcat:landingPage points to the corresponding human-readable EGA Dataset page, like <a href="https://ega-archive.org/datasets/EGAD00001005083">https://ega-archive.org/datasets/EGAD00001005083</a>.
+      <td>Use this property for the main human-readable web page for the Dataset at the original data provider. Use dct:identifier or adms:identifier for identifiers of the Dataset, such as a DOI; use dcat:accessURL for access to a specific Distribution; and use relationship properties for links to related resources. foaf:page is a general property for pages about a resource, while dcat:landingPage specifically identifies the Dataset’s main web entry point. Example: For an EGA Dataset, dcat:landingPage points to the corresponding human-readable EGA Dataset page, like https://ega-archive.org/datasets/EGAD00001005083.
      <tr>
       <td>language
       <td>A language of the resource.
@@ -5602,7 +5599,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dpv:hasLegalBasis
       <td>dpv:LegalBasis (IRI)
       <td>0..n
-      <td>The legal basis can be provided as a value from the dpv taxonomy (see Controlled vocabulary column). While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property describes the legal basis for initial collection and processing of (personal) data. This property should always be filled if the dataset contains personal data and the applicable legislation is GDPR. Example value for this property could be: dpv:Consent<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis</a><br>
+      <td>The legal basis can be provided as a value from the DPV taxonomy (see the Controlled vocabulary column). While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property describes the legal basis for initial collection and processing of (personal) data. This property should always be filled if the dataset contains personal data and the applicable legislation is GDPR. An example value for this property could be dpv:Consent.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis</a><br>
      <tr>
       <td>maximum typical age
       <td>Maximum typical age of the population within the dataset
@@ -5623,7 +5620,7 @@ The following links distinguish the published specification from the metadata mo
       <td>schema:measurementTechnique
       <td>skos:Concept (IRI)
       <td>0..n
-      <td>Select a suitable value or suitable values from the value list to indicate the technique(s) used to generate data in the dataset. <br>The value list is available at this link: <a href="https://github.com/Health-RI/health-ri-metadata/blob/v2.1-changes/Formalisation(shacl)/Core/ValueLists/schema-measurement-technique.tsv">https://github.com/Health-RI/health-ri-metadata/blob/v2.1-changes/Formalisation(shacl)/Core/ValueLists/schema-measurement-technique.tsv</a> <br><strong>Note</strong>: This is a temporary location and it will change with the next release .
+      <td>Select one or more suitable values from the value list to indicate the technique(s) used to generate data in the dataset. The value list is available at this link: https://github.com/Health-RI/health-ri-metadata/blob/testing/Formalisation(shacl)/Core/ValueLists/schema-measurement-technique.tsv Note: This is a temporary location and it will change with the next release.
      <tr>
       <td>modification date
       <td>Date on which the resource was changed.
@@ -5651,49 +5648,49 @@ The following links distinguish the published specification from the metadata mo
       <td>adms:identifier
       <td>adms:Identifier
       <td>0..n
-      <td>Examples for secondary identifiers are MAST/ADS, DataCite, DOI, EZID or W3ID (if not used for the original identifier). This property makes use of another, small class: adms:Identifier, where you provide the identifier and the name of the identifier schema (eg. DOI).
+      <td>Examples of secondary identifiers include MAST/ADS, DataCite, DOI, EZID or W3ID (if not used for the original identifier). This property makes use of another small class: adms:Identifier, where you provide the identifier and the name of the identifier schema (e.g. DOI).
      <tr>
       <td>personal data
       <td>Indicates association with Personal Data.
       <td>dpv:hasPersonalData
       <td>dpv:PersonalData (IRI)
       <td>0..n
-      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the dpv taxonomy (see controlled vocabulary column). For example: dpv-pd:Gender<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://w3c.github.io/dpv/2.0/pd/">https://w3c.github.io/dpv/2.0/pd/</a><br>
+      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the DPV taxonomy (see the Controlled vocabulary column). For example: dpv-pd:Gender<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://w3c.github.io/dpv/2.0/pd/">https://w3c.github.io/dpv/2.0/pd/</a><br>
      <tr>
       <td>population coverage
       <td>A definition of the population within the dataset
       <td>healthdcatap:populationCoverage
       <td>rdfs:Literal
       <td>0..n
-      <td>This field is a free text description of the population covered in the dataset. For example, "Adults aged 18–65 diagnosed with type 2 diabetes in the Netherlands between 2015 and 2020".
+      <td>This field is a free-text description of the population covered in the dataset. For example, "Adults aged 18–65 diagnosed with type 2 diabetes in the Netherlands between 2015 and 2020".
      <tr>
       <td>provenance
       <td>A statement about the lineage of a Dataset.
       <td>dct:provenance
       <td>dct:ProvenanceStatement
       <td>0..n
-      <td>Information about how the data was collected, including methodologies, tools, and protocols used. This property can be repeated for different versions of the provenance (e.g. the provenance in different languages). This is where the collection-method statements not captured by dedicated properties can be listed.
+      <td>Information about how the data was collected, including methodologies, tools, and protocols used. This property can be repeated for different versions of the provenance (e.g. in different languages). This is where the collection-method statements not captured by dedicated properties can be listed.
      <tr>
       <td>publisher
       <td>An entity responsible for making the resource available.
       <td>dct:publisher
       <td>foaf:Agent
       <td>1
-      <td>This property identifies the organisation or individual responsible for making the dataset available. For datasets, this is typically the employer of the data creators. In simple cases, the dataset publisher may be the same as the catalog publisher. In more complex settings, such as when datasets come from multiple institutions within a consortium, the consortium should be listed as the publisher where possible. If no formal consortium can be specified, provide the information of the contributing organizations or individuals under dct:creator instead. For more details, refer to the Agent class.
+      <td>This property identifies the organisation or individual responsible for making the dataset available. For datasets, this is typically the employer of the data creators. In simple cases, the dataset publisher may be the same as the catalogue publisher. In more complex settings, such as when datasets come from multiple institutions within a consortium, the consortium should be listed as the publisher where possible. If no formal consortium can be specified, provide information about the contributing organisations or individuals under dct:creator instead. For more details, refer to the Agent class.
      <tr>
       <td>purpose
       <td>Indicates association with Purpose.
       <td>dpv:hasPurpose
       <td>dpv:Purpose (IRI)
       <td>0..n
-      <td>One (or many) categories or sub-categories of the purposes can be chosen from the taxonomy provided by dpv (see controlled vocabulary column). Try to be as specific as possible. Example value could be: dpv:ResearchAndDevelopment.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes</a><br>
+      <td>One or more categories or sub-categories of purposes can be chosen from the taxonomy provided by dpv (see the Controlled vocabulary column). Try to be as specific as possible. An example value could be dpv:ResearchAndDevelopment.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes</a><br>
      <tr>
       <td>qualified attribution
       <td>Attribution is the ascribing of an entity to an agent.
       <td>prov:qualifiedAttribution
       <td>prov:Attribution
       <td>0..n
-      <td>This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent). Repeat this property if you wish to specify multiple roles for the same agent. Refer to the Attribution class for more information how to fill this. Use this property if you would like to indicate the funder of the (research project that resulted in creation of the) dataset. The value for role in the Attribution class then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder
+      <td>This property makes use of another small class (prov:Attribution). There, you can choose one of the roles as listed in the controlled vocabulary and link that to a specific Agent (expressed with foaf:Agent). Repeat this property if you wish to specify multiple roles for the same agent. Refer to the Attribution class for more information on how to fill this in. Use this property if you would like to indicate the funder of the dataset (or of the research project that resulted in its creation). The value for role in the Attribution class then becomes: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#funder
      <tr>
       <td>qualified relation
       <td>Link to a description of a relationship with another resource.
@@ -5717,18 +5714,18 @@ The following links distinguish the published specification from the metadata mo
       <td>This property should point to the first known date of issuance, such as the publication date in a data repository. Example: 2023-12-10T13:16:10.246Z.
      <tr>
       <td>retention period
-      <td>A temporal period which the dataset is available for secondary use.
+      <td>A temporal period during which the dataset is available for secondary use.
       <td>healthdcatap:retentionPeriod
       <td>dct:PeriodOfTime
       <td>0..1
-      <td>Indicate with this property in case the Dataset is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Dataset is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.
+      <td>Use this property if the Dataset is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Dataset is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.
      <tr>
       <td>sample
       <td>Links to a sample of an Asset (which is itself an Asset).
       <td>adms:sample
       <td>dcat:Distribution
       <td>0..n
-      <td>This property makes use of the dcat:Distribution class to describe a sample distribution of the dataset, which can be anonymized or synthetic data, or the data dictionary provided in CSVW format. This is currently further developed by the TEHDAS2 program. More information can be found here: https://healthdcat-ap.github.io/#sample-distribution
+      <td>This property makes use of the dcat:Distribution class to describe a sample distribution of the dataset, which can consist of anonymised or synthetic data, or a data dictionary provided in CSVW format. This is currently being further developed by the TEHDAS2 programme. More information can be found here: https://healthdcat-ap.github.io/#sample-distribution
      <tr>
       <td>source
       <td>A related resource from which the described resource is derived.
@@ -5756,7 +5753,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dcat:temporalResolution
       <td>xsd:duration
       <td>0..1
-      <td>If the dataset is a time-series, this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset. The time period has to be provided in the xsd:duration format.
+      <td>If the dataset is a time-series, this should correspond to the spacing of items in the series. For other kinds of datasets, this property will usually indicate the smallest time difference between items in the dataset. The time period has to be provided in the xsd:duration format.
      <tr>
       <td>theme
       <td>A main category of the resource. A resource can have multiple themes.
@@ -5784,7 +5781,7 @@ The following links distinguish the published specification from the metadata mo
       <td>healthdcatap:hasVariables
       <td>csvw:TableGroup
       <td>0..n
-      <td><strong>Note</strong>: The variables have been added to the metadata model version 2.1 for testing purposes. For now it is not yet planned to be added to the national catalogue’s front end. <br><br>Use this property to link a structured dataset to a CSVW TableGroup that documents its data variables, columns, or fields in a machine-readable way.
+      <td>Note: The variables have been added to the metadata model version 2.1 for testing purposes. For now, their inclusion in the national catalogue’s front end is not yet planned. Use this property to link a structured dataset to a CSVW TableGroup that documents its data variables, columns, or fields in a machine-readable way.
      <tr>
       <td>version
       <td>The version indicator (name or identifier) of a resource.
@@ -5798,7 +5795,7 @@ The following links distinguish the published specification from the metadata mo
       <td>adms:versionNotes
       <td>rdfs:Literal
       <td>0..n
-      <td>Provide a short description of changes made to the dataset from the previous version.
+      <td>Provide a short description of changes made to the dataset since the previous version.
      <tr>
       <td>was generated by
       <td>Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.
@@ -5839,7 +5836,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. This property is required to adopt one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the dataset is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. This property must take one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the dataset is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
      <tr>
       <td>applicable legislation
       <td>The legislation that is applicable to this resource.
@@ -5856,18 +5853,18 @@ The following links distinguish the published specification from the metadata mo
       <td>The standards referred to here SHOULD describe the Data Service and not the data it serves. The latter is provided by the dataset with which this Data Service is connected. For instance, the data service adheres to the OGC WFS API standard, while the associated dataset adheres to the INSPIRE Address data model.
      <tr>
       <td>contact point
-      <td>Relevant contact information for the cataloged resource.
+      <td>Relevant contact information for the catalogued resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>1
-      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind. Whenever possible, use general contact information (for example from a department) instead of the contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under the vcard:Kind class. Whenever possible, use general contact information (for example, from a department) instead of the contact information of an individual.
      <tr>
       <td>creator
       <td>An entity responsible for making the resource.
       <td>dct:creator
       <td>foaf:Agent
       <td>0..n
-      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation / employer bearing investment risk, instead of an individual (e.g. individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher, being the organisation (not a department or subdivision of the organisation) where the catalogue was created. In case there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.
+      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation/employer bearing investment risk, instead of an individual (e.g. an individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher: the organisation (not a department or subdivision of the organisation) where the catalogue was created. If there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.
      <tr>
       <td>rights
       <td>Information about rights held in and over the resource.
@@ -5883,17 +5880,17 @@ The following links distinguish the published specification from the metadata mo
       <td>1..n
       <td>Briefly describe the data service provided. You can repeat this description in multiple languages. Example: A data service that provides API access to real-time electrocardiogram (ECG) monitoring data for clinical research applications.
      <tr>
-      <td>end point description
-      <td>A description of the services available via the end-points, including their operations, parameters etc.
+      <td>endpoint description
+      <td>A description of the services available via the endpoints, including their operations, parameters, etc.
       <td>dcat:endpointDescription
-      <td>rdfs:Resource  (IRI)
+      <td>rdfs:Resource (IRI)
       <td>1
       <td>Provides technical documentation that explains how to access and interact with the data service’s endpoint.
      <tr>
-      <td>end point URL
+      <td>endpoint URL
       <td>The root location or primary endpoint of the service (a Web-resolvable IRI).
       <td>dcat:endpointURL
-      <td>rdfs:Resource  (IRI)
+      <td>rdfs:Resource (IRI)
       <td>1
       <td>Provide the URL of the endpoint that users can interact with to access the data service. This should be a direct link to the service’s endpoint, such as an API URL, SPARQL endpoint, or similar.
      <tr>
@@ -5925,12 +5922,12 @@ The following links distinguish the published specification from the metadata mo
       <td>0..n
       <td>N.A.
      <tr>
-      <td>landing Page
-      <td>A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
+      <td>landing page
+      <td>A Web page that can be navigated to in a Web browser to gain access to the catalogue, a dataset, its distributions and/or additional information.
       <td>dcat:landingPage
       <td>foaf:Document (IRI)
       <td>0..n
-      <td>It is intended to point to a landing page at the original data service provider, not to a page on a site of a third party, such as an aggregator.
+      <td>It is intended to point to a landing page at the original data service provider, not to a page on a third-party site, such as an aggregator.
      <tr>
       <td>language
       <td>A language of the resource.
@@ -5944,7 +5941,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:license
       <td>dct:LicenseDocument (IRI)
       <td>1
-      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br>
+      <td>For public data, use a Creative Commons (CC) licence (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' licence from Geonovum and specify data reuse agreements in the dct:rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br>
      <tr>
       <td>modification date
       <td>Date on which the resource was changed.
@@ -5965,7 +5962,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:publisher
       <td>foaf:Agent
       <td>1
-      <td>The organization or individual responsible for making the data service available. In the context of data services, the publisher is typically the organization that manages or provides access to the service. For details, see the class Agent.
+      <td>The organisation or individual responsible for making the data service available. In the context of data services, the publisher is typically the organisation that manages or provides access to the service. For details, see the class Agent.
      <tr>
       <td>serves dataset
       <td>A collection of data that this data service can distribute.
@@ -5986,7 +5983,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:title
       <td>rdfs:Literal
       <td>1..n
-      <td>Provide a unique title for your data service, which can be repeated in multiple languages. Example: Patient counts per available diagnosis
+      <td>Provide a unique title for your data service, which can be repeated in multiple languages. Example: Patient counts per available diagnosis.
    </table>
    <h4 class="heading settled" data-level="5.2.2" id="dataset-series"><span class="secno">5.2.2. </span><span class="content"><a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset_Series">Dataset Series</a></span><a class="self-link" href="#dataset-series"></a></h4>
    <table class="no-style">
@@ -6022,18 +6019,18 @@ The following links distinguish the published specification from the metadata mo
       <td>The legislation that mandates the creation or management of the Dataset Series.
      <tr>
       <td>contact point
-      <td>Relevant contact information for the cataloged resource.
+      <td>Relevant contact information for the catalogued resource.
       <td>dcat:contactPoint
       <td>vcard:Kind
       <td>0..n
-      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under class vcard:Kind. Whenever possible, use general contact information (for example from a department) instead of the contact information of an individual.
+      <td>This property points to a contact point that can answer questions about the dataset. Details on how to describe these are provided under the vcard:Kind class. Whenever possible, use general contact information (for example, from a department) instead of the contact information of an individual.
      <tr>
       <td>description
       <td>An account of the resource.
       <td>dct:description
       <td>rdfs:Literal
       <td>1..n
-      <td>Briefly describe the dataset series in the catalog. You can repeat this in multiple languages.
+      <td>Briefly describe the dataset series in the catalogue. You can repeat this in multiple languages.
      <tr>
       <td>frequency
       <td>The frequency with which items are added to a collection.
@@ -6047,7 +6044,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:spatial
       <td>dct:Location (IRI)
       <td>0..n
-      <td>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, Geonames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocab can be used. However, it might in many cases be desirable to keep the geographical coverage broader (e.g. indicating that NL is covered), to avoid exposing detailed information about subjects' locations.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br>
+      <td>The EU Vocabularies Named Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, GeoNames URIs must be used. For districts or neighbourhoods in NL, the Dutch vocabulary can be used. However, it might in many cases be desirable to keep the geographical coverage broader (e.g. indicating that NL is covered), to avoid exposing detailed information about subjects' locations.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br>
      <tr>
       <td>modification date
       <td>Date on which the resource was changed.
@@ -6061,7 +6058,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:publisher
       <td>foaf:Agent
       <td>0..1
-      <td>The publisher of the dataset series may not be the publisher of all datasets.  E.g. a digital archive could take over the publishing of older datasets in the series.
+      <td>The publisher of the dataset series may not be the publisher of all datasets. For example, a digital archive could take over the publishing of older datasets in the series.
      <tr>
       <td>release date
       <td>Date of formal issuance of the resource.
@@ -6075,7 +6072,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:temporal
       <td>dct:PeriodOfTime
       <td>0..n
-      <td>When temporal coverage is a dimension in the dataset series then the temporal coverage of each dataset in the collection should be part of the temporal coverage. In that case, an open-ended value is recommended, e.g. after 2012.
+      <td>When temporal coverage is a dimension in the dataset series, the temporal coverage of each dataset in the collection should be part of the series' temporal coverage. In that case, an open-ended value is recommended, e.g. after 2012.
      <tr>
       <td>title
       <td>A name given to the resource.
@@ -6117,7 +6114,7 @@ The following links distinguish the published specification from the metadata mo
       <td>0..1
       <td>This property links the distribution class to the corresponding data service(s).
      <tr>
-      <td>access url
+      <td>access URL
       <td>A URL of the resource that gives access to a distribution of the dataset. E.g., landing page, feed, SPARQL endpoint.
       <td>dcat:accessURL
       <td>rdfs:Resource (IRI)
@@ -6132,11 +6129,11 @@ The following links distinguish the published specification from the metadata mo
       <td>The legislation that mandates the creation or management of the Distribution.
      <tr>
       <td>availability
-      <td>An indication how long it is planned to keep the Distribution of the Dataset available.
+      <td>An indication of how long it is planned to keep the Distribution of the Dataset available.
       <td>dcatap:availability
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>To indicate the planned availability of the Distribution, the EU planned-availability controlled vocabulary MUST be used.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/planned-availability">http://publications.europa.eu/resource/authority/planned-availability</a><br>
+      <td>To indicate the planned availability of the Distribution, the EU planned-availability controlled vocabulary MUST be used.<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="http://publications.europa.eu/resource/authority/planned-availability">http://publications.europa.eu/resource/authority/planned-availability</a><br>
      <tr>
       <td>byte size
       <td>The size of a distribution in bytes.
@@ -6150,10 +6147,10 @@ The following links distinguish the published specification from the metadata mo
       <td>spdx:checksum
       <td>spdx:Checksum
       <td>0..1
-      <td>The checksum is related to the downloadURL. This property makes use of the spdx:Checksum class, which itself has two properties to indicate checksum algorithm and checksum value (see Checksum class for further details).
+      <td>The checksum is related to the downloadURL. This property makes use of the spdx:Checksum class, which itself has two properties to indicate the checksum algorithm and checksum value (see Checksum class for further details).
      <tr>
       <td>compression format
-      <td>The compression format of the distribution in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file.
+      <td>The compression format of the distribution in which the data is compressed, e.g., to reduce the size of the downloadable file.
       <td>dcat:compressFormat
       <td>dct:MediaType (IRI)
       <td>0..1
@@ -6192,14 +6189,14 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:language
       <td>dct:LinguisticSystem (IRI)
       <td>0..n
-      <td>Indicates the natural language used in the Distribution, indicated with a value from the EU controlled vocabulary. Not all distributions might have a language, for example imaging data. Note that here the Health-RI model diverges from DCAT-AP NL, which allows a maximum of 1 language per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br>
+      <td>Indicates the natural language used in the Distribution, using a value from the EU controlled vocabulary. Not all distributions necessarily have a language; for example, those containing imaging data may not. Note that here the Health-RI model diverges from DCAT-AP NL, which allows a maximum of 1 language per Distribution. The Health-RI model allows multiple languages in the same Distribution.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br>
      <tr>
-      <td>license
+      <td>licence
       <td>A legal document giving official permission to do something with the resource.
       <td>dct:license
       <td>dct:LicenseDocument (IRI)
       <td>1
-      <td>For public data, use a Creative Commons (CC) license (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue distributions, where data is not public, use the 'not open' license from Geonovum and specify data reuse agreements in the dct:rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br>
+      <td>For public data, use a Creative Commons (CC) licence (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue distributions, where data is not public, use the 'not open' licence from Geonovum and specify data reuse agreements in the dct:rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br>
      <tr>
       <td>linked schemas
       <td>An established standard to which the described resource conforms.
@@ -6213,7 +6210,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dcat:mediaType
       <td>dct:MediaType (IRI)
       <td>0..1
-      <td>Use the specified vocabularies, prioritizing IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to describe the format. Example: https://www.iana.org/assignments/media-types/text/csv (for csv) If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br>
+      <td>Use the specified vocabularies, prioritising IANA media types whenever possible. If unavailable, consider other ontologies, such as ZonMw generic terms, to describe the format. Example: https://www.iana.org/assignments/media-types/text/csv (for csv) If IANA media types do not sufficiently describe the format, use "format" to describe it in more detail.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a><br>
      <tr>
       <td>modification date
       <td>Date on which the resource was changed.
@@ -6237,39 +6234,39 @@ The following links distinguish the published specification from the metadata mo
       <td>The date the dataset distribution was issued.
      <tr>
       <td>retention period
-      <td>A temporal period which the dataset is available for secondary use.
+      <td>A temporal period during which the dataset is available for secondary use.
       <td>healthdcatap:retentionperiod
       <td>dct:PeriodOfTime
       <td>0..1
-      <td><strong>Note</strong>: This property will be deprecated in the upcoming major release. It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property. <br><br>Indicate with this property in case the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.
+      <td>Note: This property will be deprecated in the upcoming major release. It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property.  Use this property if the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.
      <tr>
       <td>rights
       <td>Information about rights held in and over the resource.
       <td>dct:rights
       <td>dct:RightsStatement (IRI)
       <td>0..1
-      <td>A statement that concerns all rights not addressed in fields License or Access rights. In case of not open data (as specified in the dct:licence property), further agreements regarding data reuse (e.g. Data Transfer Agreement, DTA) should be stated in this property. The rights statement should be a free-text statement placed at a web-accessible location such that the value of this property is the IRI pointing to that statement.
+      <td>A statement that concerns all rights not addressed in the Licence or Access rights fields. For data that is not open (as specified in the dct:license property), further agreements regarding data reuse (e.g. Data Transfer Agreement, DTA) should be stated in this property. The rights statement should be a free-text statement placed at a web-accessible location such that the value of this property is the IRI pointing to that statement.
      <tr>
       <td>status
       <td>The status of the Asset in the context of a particular workflow process.
       <td>adms:status
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the provided controlled vocabulary.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/distribution-status">http://publications.europa.eu/resource/authority/distribution-status</a><br>
+      <td>It MUST take one of the following values from the provided controlled vocabulary: Completed, Deprecated, Under Development or Withdrawn.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/distribution-status">http://publications.europa.eu/resource/authority/distribution-status</a><br>
      <tr>
       <td>temporal resolution
       <td>Minimum time period resolvable in the dataset.
       <td>dcat:temporalResolution
       <td>xsd:duration
       <td>0..1
-      <td>If applicable, this property indicates the minimum time period resolvable in the dataset distribution, expressed in xsd:duration format (see for more information here: <a href="https://www.w3schools.com/xml/schema_dtypes_date.asp">https://www.w3schools.com/xml/schema_dtypes_date.asp</a>)
+      <td>If applicable, this property indicates the minimum time period resolvable in the dataset distribution, expressed in xsd:duration format (for more information, see: https://www.w3schools.com/xml/schema_dtypes_date.asp).
      <tr>
       <td>title
       <td>A name given to the resource.
       <td>dct:title
       <td>rdfs:Literal
       <td>0..n
-      <td>A title given to the distribution. e.g., Data Access Request of Healthy Brain study
+      <td>A title given to the distribution, e.g. Data Access Request for the Healthy Brain Study
    </table>
    <h2 class="heading settled" data-level="6" id="supportive-classes"><span class="secno">6. </span><span class="content">Supportive Classes</span><a class="self-link" href="#supportive-classes"></a></h2>
    <p><strong>Supportive Classes</strong> provide additional context and metadata for the main classes.</p>
@@ -6308,28 +6305,28 @@ The following links distinguish the published specification from the metadata mo
       <td>Note: This property will be deprecated in the next major release. Use the appropriate term from the EU authority table. Example for the Netherlands: http://publications.europa.eu/resource/authority/country/NLD<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br>
      <tr>
       <td>email
-      <td>An email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using fully qualified mailto: URI scheme RFC6068. The email SHOULD be used to establish a communication channel to the agent.
+      <td>An email address via which contact can be made. This property SHOULD be used to provide the email address of the Agent, specified using the fully qualified mailto: URI scheme defined in RFC 6068. The email SHOULD be used to establish a communication channel to the agent.
       <td>foaf:mbox
-      <td>rdfs:Resource  (IRI)
+      <td>rdfs:Resource (IRI)
       <td>1
-      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent. This protects their privacy and enables contact about the resource even after the individual has left the institution. The email address has to be provided starting with mailto: prefix. For example: mailto:info@example.com
+      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of foaf:Agent. This protects their privacy and enables contact about the resource even after the individual has left the institution. The email address must start with the mailto: prefix. For example: mailto:info@example.com
      <tr>
       <td>identifier
       <td>An unambiguous reference to the resource within a given context.
       <td>dct:identifier
       <td>rdfs:Literal
       <td>1..n
-      <td>Specify the entity (person or organization) by providing an identifier. We recommend using an ORCID identifier for a person or ROR identifier for an organization. Dutch government organizations are listed in TOOI. If these are not available, you can use ISNI, or Wikidata or any other identifier you may have. If you have multiple identifiers, you should provide them all.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://orcid.org/">https://orcid.org/</a><br><a href="https://ror.org/">https://ror.org/</a><br><a href="https://isni.org/page/search-database/">https://isni.org/page/search-database/</a><br><a href="https://standaarden.overheid.nl/tooi/waardelijsten/">https://standaarden.overheid.nl/tooi/waardelijsten/</a><br><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">https://www.wikidata.org/wiki/Wikidata:Main_Page</a><br>
+      <td>Specify the entity (person or organisation) by providing an identifier. We recommend using an ORCID identifier for a person or a ROR identifier for an organisation. Dutch government organisations are listed in TOOI. If these are not available, you can use ISNI, Wikidata or any other identifier you may have. If you have multiple identifiers, you should provide them all.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://orcid.org/">https://orcid.org/</a><br><a href="https://ror.org/">https://ror.org/</a><br><a href="https://isni.org/page/search-database/">https://isni.org/page/search-database/</a><br><a href="https://standaarden.overheid.nl/tooi/waardelijsten/">https://standaarden.overheid.nl/tooi/waardelijsten/</a><br><a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">https://www.wikidata.org/wiki/Wikidata:Main_Page</a><br>
      <tr>
       <td>name
       <td>A name for some thing.
       <td>foaf:name
       <td>rdfs:Literal
       <td>1..n
-      <td>This property refers to the given name of the entity. Example: Jane Doe (for a person) and Radboudumc (for an organization). This property can be repeated for different versions of the name (e.g. the name in different languages).
+      <td>This property refers to the given name of the entity. Example: Jane Doe (for a person) and Radboudumc (for an organisation). This property can be repeated for different versions of the name (e.g. the name in different languages).
      <tr>
       <td>publisher note
-      <td>A description of the publisher activities.
+      <td>A description of the publisher’s activities.
       <td>healthdcatap:publishernote
       <td>rdfs:Literal
       <td>0..1
@@ -6340,14 +6337,14 @@ The following links distinguish the published specification from the metadata mo
       <td>healthdcatap:publishertype
       <td>skos:Concept (IRI)
       <td>0..1
-      <td><strong>Note:</strong> This property will be deprecated in the next major release.<br><br> Choose a term from the controlled vocabulary, which includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use the following URL: http://purl.org/adms/publishertype/[type].<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br>
+      <td>Note: This property will be deprecated in the next major release. Choose a term from the controlled vocabulary, which includes the following types: Academia-ScientificOrganisation, Company, IndustryConsortium, LocalAuthority, NationalAuthority, NonGovernmentalOrganisation, NonProfitOrganisation, PrivateIndividual, RegionalAuthority, StandardisationBody and SupraNationalAuthority. These should use URLs of the following form: http://purl.org/adms/publishertype/[type].<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br>
      <tr>
       <td>type
       <td>The nature or genre of the resource.
       <td>dct:type
       <td>skos:Concept (IRI)
       <td>0..1
-      <td>This property should be filled using ADMS vocabulary (http://purl.org/adms/publishertype/1.0)<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br>
+      <td>This property should be filled using ADMS vocabulary (http://purl.org/adms/publishertype/1.0).<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf">https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf</a><br>
      <tr>
       <td>URL
       <td>A homepage for some thing.
@@ -6385,16 +6382,16 @@ The following links distinguish the published specification from the metadata mo
       <td>contact page
       <td>To specify a uniform resource locator associated with the object.
       <td>vcard:hasURL
-      <td>rdfs:Resource  (IRI)
+      <td>rdfs:Resource (IRI)
       <td>0..n
       <td>A webpage that either allows contact (i.e. a web form) or contains information on how to make contact.
      <tr>
       <td>has email
       <td>To specify the electronic mail address for communication with the object.
       <td>vcard:hasEmail
-      <td>rdfs:Resource  (IRI)
+      <td>rdfs:Resource (IRI)
       <td>1
-      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of vcard:Kind. This protects their privacy and enables contact about the resource even after the individual has left the institution. The email address has to be provided starting with mailto: prefix. For example: mailto:info@example.com
+      <td>It is preferred to provide a general email address of the appropriate institution or department instead of a personal email address, even if an individual is described with this instance of vcard:Kind. This protects their privacy and enables contact about the resource even after the individual has left the institution. The email address must start with the mailto: prefix. For example: mailto:info@example.com
      <tr>
       <td>formatted name
       <td>The formatted text corresponding to the name of the object.
@@ -6431,7 +6428,7 @@ The following links distinguish the published specification from the metadata mo
     <tbody>
      <tr>
       <td>agent
-      <td>The prov:agent property references a prov:Agent which influenced a resource.
+      <td>The prov:agent property references a prov:Agent that influenced a resource.
       <td>prov:agent
       <td>foaf:Agent
       <td>0..1
@@ -6442,7 +6439,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dcat:hadRole
       <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>Choose one of the roles as listed in the controlled vocabulary.<br> Note that for HealthDCAT-AP, the list of roles might be extended in the future. <br><br>Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor Next to the CI_RoleCode, we also propose to use the CRediT Taxonomy to specify roles of contributors.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml</a><br><a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls</a><br>
+      <td>Choose one of the roles as listed in the controlled vocabulary. Note that for HealthDCAT-AP, the list of roles might be extended in the future. Example: https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml#processor In addition to CI_RoleCode, we also propose to use the CRediT Taxonomy to specify roles of contributors.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml</a><br><a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls</a><br>
    </table>
    <h4 class="heading settled" data-level="6.2.2" id="checksum"><span class="secno">6.2.2. </span><span class="content"><a href="https://spdx.org/rdf/terms/#d4e2091">Checksum</a></span><a class="self-link" href="#checksum"></a></h4>
    <table class="no-style">
@@ -6475,7 +6472,7 @@ The following links distinguish the published specification from the metadata mo
       <td>spdx:algorithm
       <td>spdx:ChecksumAlgorithm (IRI)
       <td>1
-      <td>Choose one member of the checksum algorithm members as indicated on the webpage linked in the Controlled Vocabulary column.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://spdx.org/rdf/terms/#d4e2129">https://spdx.org/rdf/terms/#d4e2129</a><br>
+      <td>Choose one of the checksum algorithms as indicated on the webpage linked in the Controlled Vocabulary column.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://spdx.org/rdf/terms/#d4e2129">https://spdx.org/rdf/terms/#d4e2129</a><br>
      <tr>
       <td>checksum value
       <td>The checksumValue property provides a lowercase hexadecimal-encoded digest value produced using a specific algorithm.
@@ -6595,7 +6592,7 @@ The following links distinguish the published specification from the metadata mo
       <td>oa:hasTarget
       <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>This property has to be filled with the same value as the dct:identifier of the dataset described, in order to link the quality certificate to that dataset. See also example in HealthDCAT-AP: <a href="https://healthdcat-ap.github.io/#dqvhasqualityannotation">https://healthdcat-ap.github.io/#dqvhasqualityannotation</a>
+      <td>This property has to be filled with the same value as the dct:identifier of the dataset described, in order to link the quality certificate to that dataset. See also the example in HealthDCAT-AP: https://healthdcat-ap.github.io/#dqvhasqualityannotation
      <tr>
       <td>body
       <td>The object of the relationship is a resource that is a body of the Annotation.
@@ -6673,16 +6670,9 @@ The following links distinguish the published specification from the metadata mo
       <td>type
       <td>The nature or genre of the resource.
       <td>dct:type
-      <td>skos:Concept
+      <td>skos:Concept (IRI)
       <td>0..n
       <td>Choose the type of Activity that was used to generate the Dataset from the Health Activity controlled vocabulary.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity">https://hdeu-dcat.data.health.europa.eu/resource/authority/health-activity</a><br>
-     <tr>
-      <td>study design
-      <td>Specifics about the observational study design.
-      <td>schema:studyDesign
-      <td>skos:Concept
-      <td>0..n
-      <td>Select the study design that was used from the predefined list. Note: The exact value list is still in progress and will be added with the new release.
    </table>
    <h4 class="heading settled" data-level="6.2.8" id="provenance-statement"><span class="secno">6.2.8. </span><span class="content"><a href="http://purl.org/dc/terms/ProvenanceStatement">Provenance Statement</a></span><a class="self-link" href="#provenance-statement"></a></h4>
    <table class="no-style">
@@ -6711,11 +6701,11 @@ The following links distinguish the published specification from the metadata mo
     <tbody>
      <tr>
       <td>label
-      <td>In this context the definition should be considered as: A textual statement describing the provenance of the Dataset, including information about its origin, history, or activities involved in its creation or modification.
+      <td>In this context, the definition should be considered as: A textual statement describing the provenance of the Dataset, including information about its origin, history, or activities involved in its creation or modification.
       <td>rdfs:label
       <td>rdfs:Literal
       <td>1..n
-      <td>Provide a short textual statement describing the provenance of the Dataset, such as its origin, how it was created or collected, or any relevant processing or transformations it has undergone. This statement should describe the provenance of the Dataset as a whole and be provided as free text.  You can repeat this property in multiple languages
+      <td>Provide a short textual statement describing the provenance of the Dataset, such as its origin, how it was created or collected, or any relevant processing or transformations it has undergone. This statement should describe the provenance of the Dataset as a whole and be provided as free text. You can repeat this property in multiple languages.
    </table>
    <h4 class="heading settled" data-level="6.2.9" id="csvw-variables"><span class="secno">6.2.9. </span><span class="content">CSVW Variables</span><a class="self-link" href="#csvw-variables"></a></h4>
    <p>The <a href="https://www.w3.org/TR/tabular-metadata/">CSV on the Web (CSVW)</a> specification provides a framework for describing tabular data and its metadata. In Health-RI, it is used to describe data variables in a machine-readable form.</p>
@@ -6761,6 +6751,13 @@ The following links distinguish the published specification from the metadata mo
       <td>csvw:Table
       <td>1..n
       <td>Used to associate one or more tables with a table group. It holds all variable dictionary entries, using columns describing each variable.
+     <tr>
+      <td>title
+      <td>Table group title.
+      <td>dct:title
+      <td>rdfs:Literal
+      <td>1..n
+      <td>Used to provide a human-readable title for the table group. Can appear in multiple languages.
    </table>
    <h5 class="heading settled" data-level="6.2.9.2" id="table"><span class="secno">6.2.9.2. </span><span class="content"><a href="http://www.w3.org/ns/csvw#Table">Table</a></span><a class="self-link" href="#table"></a></h5>
    <table class="no-style">
@@ -6791,9 +6788,9 @@ The following links distinguish the published specification from the metadata mo
       <td>url
       <td>The URL of the CSV file to which this table refers.
       <td>csvw:url
-      <td>xsd:anyURI
+      <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>The URL should be a valid IRI and should point to the CSV file (synthetic, anonymized representation of the real data) for this table.
+      <td>The URL should be a valid IRI and should point to the CSV file (a synthetic, anonymised representation of the real data) for this table.
      <tr>
       <td>title
       <td>Table title.
@@ -6803,7 +6800,7 @@ The following links distinguish the published specification from the metadata mo
       <td>Used to provide a human-readable title for the table. Can appear in multiple languages.
      <tr>
       <td>keyword
-      <td>A keyword or tag describing the table.\t
+      <td>A keyword or tag describing the table.
       <td>dcat:keyword
       <td>rdfs:Literal
       <td>0..n
@@ -6846,8 +6843,8 @@ The following links distinguish the published specification from the metadata mo
       <td>A technical name given to the Variable as it appears in the CSV file.
       <td>csvw:name
       <td>rdfs:Literal
-      <td>1..n
-      <td>Technical variable name required to match a column header in the CSV file (synthetic, anonymized representation of the real data), can appear in multiple languages.
+      <td>1
+      <td>A technical variable name is required to match a column header in the CSV file (a synthetic, anonymised representation of the real data).
      <tr>
       <td>title
       <td>A human-readable name given to the Variable.
@@ -6868,14 +6865,14 @@ The following links distinguish the published specification from the metadata mo
       <td>csvw:datatype
       <td>rdfs:Literal
       <td>1
-      <td>Should match the label of one of the CSVW types as defined in the Built-in datatypes from XML Schema. https://w3c.github.io/csvw/metadata/#datatypes Example: string, integer, boolean …<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/csvw/metadata/#datatypes">https://w3c.github.io/csvw/metadata/#datatypes</a><br>
+      <td>The value should match the label of one of the CSVW types as defined in the Built-in datatypes from XML Schema. See: https://w3c.github.io/csvw/metadata/#datatypes Example: string, integer, boolean …<br><br><strong>Controlled vocabulary</strong><br>The use of the specified vocabulary is optional, but recommended when applicable.<br><br><a href="https://w3c.github.io/csvw/metadata/#datatypes">https://w3c.github.io/csvw/metadata/#datatypes</a><br>
      <tr>
       <td>property URL
       <td>A URI template used to define the RDF predicate associated with the values in the column, relative to each row.
       <td>csvw:propertyUrl
-      <td>rdfs:Literal (IRI)
+      <td>rdfs:Resource (IRI)
       <td>0..1
-      <td>The propertyUrl may point to standard, controlled vocabularies, or ontologies that define the semantic meaning of the column. <br>For example: csvw:propertyUrl http://publications.europa.eu/resource/authority/country <br><br>For advanced usage, refer to the official specification: <a href="https://www.w3.org/TR/tabular-metadata/#propertyurl">www.w3.org/TR/tabular-metadata/#propertyurl</a>
+      <td>The propertyUrl may point to standard vocabularies, controlled vocabularies or ontologies that define the semantic meaning of the column. For example: csvw:propertyUrl http://publications.europa.eu/resource/authority/country For advanced usage, refer to the official specification: https://www.w3.org/TR/tabular-metadata/#propertyurl
    </table>
    <h2 class="heading settled" data-level="7" id="controlled-vocabularies"><span class="secno">7. </span><span class="content">Controlled Vocabularies</span><a class="self-link" href="#controlled-vocabularies"></a></h2>
    <p>This section lists properties whose values are expected to come from specified sources. These sources are typically controlled vocabularies, but may also be ontologies, authority tables, or prescribed value lists (such as licences or identifier schemes).</p>
