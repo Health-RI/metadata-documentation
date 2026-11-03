@@ -1,4 +1,4 @@
-### [Kind](https://www.w3.org/TR/vcard-rdf/#d4e1819)
+### [Kind](https://www.w3.org/TR/vcard-rdf/#d4e1819) ### {#kind}
 <table class="no-style">   
   <thead> 
     <tr> 
@@ -12,7 +12,7 @@
     <tr> 
       <td>Kind</td> 
       <td>A description following the vCard specification.</td> 
-      <td>Used to describe contact information for Dataset and DatasetSeries. This class is instantiated in these classes whenever the range is `vcard:Kind`.</td> 
+      <td>Used to describe contact information for [Dataset](#dataset) and [DatasetSeries](#dataset-series). This class is instantiated in these classes whenever the range is `vcard:Kind`.</td>
       <td>vcard:Kind</td> 
     </tr> 
   </tbody> 

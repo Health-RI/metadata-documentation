@@ -1,4 +1,4 @@
-### [Period of time](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime) 
+### [Period of time](https://semiceu.github.io/DCAT-AP/releases/3.0.0/#Periodoftime) ### {#period-of-time}
 <table class="no-style">   
   <thead> 
     <tr> 
@@ -12,7 +12,7 @@
     <tr> 
       <td>Period of Time</td> 
       <td>An interval of time that is named or defined by its start and end dates.</td> 
-      <td>This class is instantiated by properties in other classes that have the range `dct:PeriodOfTime`.</td> 
+      <td>This class is instantiated by properties in other classes that have the range [`dct:PeriodOfTime`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/PeriodOfTime/).</td>
       <td>dct:PeriodOfTime</td> 
     </tr> 
   </tbody> 
