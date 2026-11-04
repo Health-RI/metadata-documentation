@@ -27,16 +27,12 @@ The following links distinguish the published specification from the metadata mo
 
 ## Versioning and releases ## {#versioning-and-releases}
 
-Each version of the Health-RI metadata schema has a corresponding specification, SHACL validation shapes, and supporting artifacts. Draft versions may change during development.
-
 Version numbers communicate compatibility:
 
 - **Major:** backward-incompatible changes that may require updates to existing metadata or implementations.
 - **Minor:** backward-compatible extensions and improvements.
 - **Patch:** backward-compatible technical corrections or documentation improvements that preserve the schema’s meaning and validation outcomes.
 
-A **release candidate** (such as `-rc.1`) is feature frozen for testing and may receive bug fixes before final release.
+Draft versions may change during development. A **release candidate** (such as `-rc.1`) is feature frozen for testing and may receive bug fixes before final release.
 
 Major and minor releases undergo conceptual review, technical validation, and implementer testing to assess semantic correctness, consistency between the specification and validation shapes, and practical usability before approval.
-
-Schema publication and implementation in the National Health Data Catalogue are coordinated but may occur at different times. A documented property may therefore not yet be available in catalogue search, filtering, or display.
