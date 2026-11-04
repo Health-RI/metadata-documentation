@@ -27,7 +27,7 @@ The following links distinguish the published specification from the metadata mo
 
 ## Versioning and releases ## {#versioning-and-releases}
 
-Use the specification, SHACL validation shapes, and supporting artifacts from the same schema version. Check whether that version is a draft, a release candidate, or a final release before adopting it.
+Each version of the Health-RI metadata schema has a corresponding specification, SHACL validation shapes, and supporting artifacts. Draft versions may change during development.
 
 Version numbers communicate compatibility:
 
@@ -37,6 +37,6 @@ Version numbers communicate compatibility:
 
 A **release candidate** (such as `-rc.1`) is feature frozen for testing and may receive bug fixes before final release.
 
-Major and minor releases require conceptual review, technical validation, testing by implementers, and formal approval. Patches follow a lighter review and approval process. Review the changes and any migration guidance before upgrading.
+Major and minor releases undergo conceptual review, technical validation, and implementer testing to assess semantic correctness, consistency between the specification and validation shapes, and practical usability before approval.
 
-Schema publication and implementation in the National Health Data Catalogue are coordinated but may occur at different times. A documented property may therefore not yet be available in catalogue search, filtering, or display. Check implementation notes when relying on a specific feature.
+Schema publication and implementation in the National Health Data Catalogue are coordinated but may occur at different times. A documented property may therefore not yet be available in catalogue search, filtering, or display.
