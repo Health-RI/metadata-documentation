@@ -2,9 +2,9 @@
 
 ## Scope and Current State of the Schema ## {#scope-and-current-state-of-the-schema}
 
-Version 2.1.0 of the Health-RI metadata schema defines metadata for describing health data resources in the [National Health Data Catalogue](https://catalogus.healthdata.nl/). It draws on [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/) and the [OPEN variant of the HealthDCAT-AP draft dated December 16, 2024](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/), with documented Health-RI-specific adaptations.
+Version 2.1.0 of the Health-RI metadata schema defines metadata for describing health data resources in the [National Health Data Catalogue](https://catalogus.healthdata.nl/). It draws on [DCAT-AP NL](https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/) and the OPEN variant of the [HealthDCAT-AP draft snapshot taken on December 16, 2024](https://github.com/healthDCAT-AP/healthDCAT-AP.github.io/tree/ecf64cec714faf72b136a838232e661f61e2d3e5), with documented Health-RI-specific adaptations.
 
-This version expands Dataset descriptions with data domains (`edam:has_topic`), measurement techniques (`schema:measurementTechnique`), health conditions of interest (`hri:healthConditionOfInterest`), and anatomical coverage (`hri:anatomicalLocationCovered`). It also adds alternative dataset names, landing pages, provenance statements, and [CSVW variable descriptions](#csvw-variables) using Table Group, Table, and Column.
+This version expands Dataset descriptions with data domains (`edam:has_topic`), measurement techniques (`schema:measurementTechnique`), health conditions of interest (`hri:healthConditionOfInterest`), and anatomical coverage (`hri:anatomicalLocationCovered`). It also adds alternative dataset names, landing pages, provenance statements, and [CSV on the Web (CSVW) variable descriptions](#csvw-variables) using Table Group, Table, and Column.
 
 Selected property requirements are relaxed compared with version 2.0.3. The class and property tables in this specification define the applicable ranges, cardinalities, and usage requirements for version 2.1.0. An overview of the changes is available in the [model changelog](https://github.com/Health-RI/health-ri-metadata/blob/testing/CHANGELOG.md#v210).
 
@@ -48,7 +48,7 @@ CSVW variable descriptions are included for testing purposes. Their current impl
 
 # Overview and Diagram # {#overview-and-diagram}
 
-An overview of the Health-RI metadata schema is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
+An overview of the Health-RI metadata schema is presented in the [Unified Modeling Language (UML)](https://www.omg.org/spec/UML/) diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as `rdfs:label` and `rdfs:comment`. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.
 
 If a class is linked to another class by an arrow with a hollow triangular arrowhead, it inherits all properties from the other class (e.g., `dcat:Dataset` inherits from [`dcat:Resource`](http://www.w3.org/ns/dcat#Resource)). Other arrows represent relationships, including their types (e.g., `dcat:Dataset` connects to a [`dcat:DatasetSeries`](http://www.w3.org/ns/dcat#DatasetSeries) via [`dcat:inSeries`](http://www.w3.org/ns/dcat#inSeries)), along with cardinalities (e.g., `dcat:Dataset` connects to zero or more `dcat:DatasetSeries`). **Mandatory relationships** are marked with dark labels, while **recommended relationships** use a lighter color.
 
