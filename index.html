@@ -4959,9 +4959,8 @@ dfn > a.self-link::before      { content: "#"; }
     <li>
      <a href="#permanent-urls"><span class="secno">4</span> <span class="content">Permanent Urls</span></a>
      <ol class="toc">
-      <li><a href="#release-management"><span class="secno">4.1</span> <span class="content">Release management</span></a>
-      <li><a href="#class-structure"><span class="secno">4.2</span> <span class="content">Class Structure</span></a>
-      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.3</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
+      <li><a href="#class-structure"><span class="secno">4.1</span> <span class="content">Class Structure</span></a>
+      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.2</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
      </ol>
     <li>
      <a href="#main-classes"><span class="secno">5</span> <span class="content">Main Classes</span></a>
@@ -5152,11 +5151,7 @@ The following links distinguish the published specification from the metadata mo
    </ul>
    <p><strong>Project Homepage</strong></p>
    <p><strong>Main page:</strong> <a href="https://w3id.org/health-ri/metadata">w3id.org/health-ri/metadata</a></p>
-   <h3 class="heading settled" data-level="4.1" id="release-management"><span class="secno">4.1. </span><span class="content">Release management</span><a class="self-link" href="#release-management"></a></h3>
-   <p>Changes to the Health-RI metadata schema are tracked in the <a href="https://github.com/Health-RI/health-ri-metadata">model repository</a>. Enhancement proposals are assessed by the metadata modeling group as described in the <a href="https://github.com/Health-RI/health-ri-metadata/blob/develop/CONTRIBUTING.md#i-want-to-suggest-enhancements">contribution guide</a>. Published schema versions are recorded in the <a href="https://w3id.org/health-ri/metadata/releases">model releases</a>, with changes described in the corresponding changelog.</p>
-   <p>The technical specification is maintained in the documentation repository. Before publication, maintainers update its version and publication date, regenerate property tables when the Excel source changes, and build and validate the HTML. Each published specification and its images are saved in a versioned folder, retaining earlier specifications for future reference. The <a href="https://github.com/Health-RI/metadata-documentation/blob/v2.1/README.md#publication">publication instructions</a> describe these steps.</p>
-   <p>When adopting a schema version, use the corresponding specification and consult that version’s model changelog to identify changes affecting your metadata.</p>
-   <h3 class="heading settled" data-level="4.2" id="class-structure"><span class="secno">4.2. </span><span class="content">Class Structure</span><a class="self-link" href="#class-structure"></a></h3>
+   <h3 class="heading settled" data-level="4.1" id="class-structure"><span class="secno">4.1. </span><span class="content">Class Structure</span><a class="self-link" href="#class-structure"></a></h3>
    <p>The Health-RI metadata schema builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply (and interoperable) across catalogues, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.</p>
    <ul>
     <li data-md>
@@ -5216,7 +5211,7 @@ The following links distinguish the published specification from the metadata mo
     <li data-md>
      <p>Please visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>.</p>
    </ul>
-   <h3 class="heading settled" data-level="4.3" id="usage-notes-on-schema-mapping"><span class="secno">4.3. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
+   <h3 class="heading settled" data-level="4.2" id="usage-notes-on-schema-mapping"><span class="secno">4.2. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
    <p>Supportive classes are included because they form the range of properties used by the main classes or by other supportive classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into <strong>mandatory properties</strong> for conformance and <strong>recommended properties</strong> for richer metadata.</p>
    <p>The separation described above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. It helps users to use those classes more easily. To apply it:</p>
    <ul>
