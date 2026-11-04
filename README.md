@@ -2,7 +2,7 @@
 
 This repository contains the source files, generated documentation fragments, and publication workflow for the **Health-RI Metadata Model documentation**.
 
-The published documentation describes the Health-RI Core Metadata Schema for the **National Health Data Catalogue**.
+The published documentation describes the Health-RI metadata schema for the **National Health Data Catalogue**.
 
 | Resource                 | Link                                                                                              |
 |--------------------------|---------------------------------------------------------------------------------------------------|
@@ -14,7 +14,7 @@ The published documentation describes the Health-RI Core Metadata Schema for the
 
 ## Purpose
 
-This repository is used to maintain and publish the human-readable technical specification of the Health-RI Core Metadata Schema.
+This repository is used to maintain and publish the human-readable technical specification of the Health-RI metadata schema.
 
 It contains:
 
@@ -41,7 +41,7 @@ The Health-RI metadata ecosystem uses multiple repositories, tools, and publicat
 | Resource | Role | Description |
 |----------|------|------------|
 | https://github.com/Health-RI/metadata-documentation | Documentation repository | Bikeshed source, Markdown chapters, class descriptions, generated property tables, and publication workflow |
-| https://github.com/Health-RI/health-ri-metadata | Main metadata repository | Core metadata schema artifacts, SHACL shapes, releases, and all issue tracking (including documentation issues) |
+| https://github.com/Health-RI/health-ri-metadata | Main metadata repository | Metadata schema artifacts, SHACL shapes, releases, and all issue tracking (including documentation issues) |
 | https://health-ri.github.io/metadata-documentation/ | Published specification | Rendered HTML documentation |
 | https://doi.org/10.5281/zenodo.15395604 | DOI record | Citable archival record |
 | https://speced.github.io/bikeshed/ | Bikeshed documentation | Documentation for the Bikeshed tool |

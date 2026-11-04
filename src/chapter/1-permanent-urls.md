@@ -1,6 +1,6 @@
 # Permanent Urls # {#permanent-urls}
 
-To support long-term [FAIR (Findable, Accessible, Interoperable, and Reusable)](https://www.go-fair.org/fair-principles/) access to Health-RI Metadata Schema resources, we provide persistent URLs using the [W3ID](https://w3id.org/) system. These permanent identifiers improve the **findability** and **accessibility** of the related artifacts.
+To support long-term [FAIR (Findable, Accessible, Interoperable, and Reusable)](https://www.go-fair.org/fair-principles/) access to Health-RI metadata schema resources, we provide persistent URLs using the [W3ID](https://w3id.org/) system. These permanent identifiers improve the **findability** and **accessibility** of the related artifacts.
 The following links distinguish the published specification from the metadata model and its SHACL sources:
 
 **Specification**
@@ -25,6 +25,11 @@ The following links distinguish the published specification from the metadata mo
 
 **Main page:** [w3id.org/health-ri/metadata](https://w3id.org/health-ri/metadata)
 
+## Release management ## {#release-management}
 
+Changes to the Health-RI metadata schema are tracked in the [model repository](https://github.com/Health-RI/health-ri-metadata). Enhancement proposals are assessed by the metadata modeling group as described in the [contribution guide](https://github.com/Health-RI/health-ri-metadata/blob/develop/CONTRIBUTING.md#i-want-to-suggest-enhancements). Published schema versions are recorded in the [model releases](https://w3id.org/health-ri/metadata/releases), with changes described in the corresponding changelog.
 
+The technical specification is maintained in the documentation repository. Before publication, maintainers update its version and publication date, regenerate property tables when the Excel source changes, and build and validate the HTML. Each published specification and its images are saved in a versioned folder, retaining earlier specifications for future reference. The [publication instructions](https://github.com/Health-RI/metadata-documentation/blob/v2.1/README.md#publication) describe these steps.
+
+When adopting a schema version, use the corresponding specification and consult that version's model changelog to identify changes affecting your metadata.
 

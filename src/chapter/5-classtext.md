@@ -25,7 +25,7 @@ Supportive classes in this structure:
 - **Provenance Statement**
 - **CSVW (Variables)**
 
-The main classes and supportive classes together form the Health-RI Core metadata schema. 
+The main classes and supportive classes together form the Health-RI metadata schema.
 
 **Please take into consideration**:
 - Certain properties (e.g. [`dct:publisher`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/publisher/), [`dct:creator`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/creator/), `dcat:contactPoint`) in several of the main classes refer to the supporting classes (e.g. [`foaf:Agent`](#agent), [`vcard:Kind`](#kind)). When used, these properties refer to instances of the specific supporting classes. For example, `dct:publisher` and `dct:creator` can refer to different [`foaf:Agent`](#agent) instances (organisation vs. person).
