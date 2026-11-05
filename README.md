@@ -188,3 +188,10 @@ If changes are not visible:
 - check the `gh-pages` branch to confirm the updated content was deployed  
 - ensure that generated files (e.g. `index.html`) were included in the commit  
 - refresh the page and clear your browser cache if necessary  
+
+
+---
+
+## Acknowledgements
+
+We acknowledge the input of the Health-RI implementation team, particularly Alexander Harms for technical feedback, tooling suggestions, and code contributions.
