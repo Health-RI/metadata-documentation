@@ -4938,7 +4938,7 @@ dfn > a.self-link::before      { content: "#"; }
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>The National Health Data Catalogue uses a core metadata schema: a set of minimal, common metadata elements for describing each resource (e.g., a dataset). The schema defines metadata requirements that support access to and reuse of information across Health-RI nodes via the National Catalogue. This document provides the technical specification for the Health-RI core metadata schema.</p>
+   <p>This document specifies the Health-RI metadata schema for the National Health Data Catalogue. The schema draws on DCAT-AP NL and a draft of HealthDCAT-AP, with Health-RI-specific adaptations. It defines classes, properties, cardinalities, and controlled vocabularies for describing catalogues, datasets, data services, dataset series, distributions, and supporting entities. The specification provides definitions and usage notes to help data holders and technical implementers apply the schema consistently. These common, machine-readable resource descriptions support interoperability and help make health and life sciences data in the Netherlands findable and reusable across institutions, in line with the FAIR principles.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -4959,8 +4959,9 @@ dfn > a.self-link::before      { content: "#"; }
     <li>
      <a href="#permanent-urls"><span class="secno">4</span> <span class="content">Permanent Urls</span></a>
      <ol class="toc">
-      <li><a href="#class-structure"><span class="secno">4.1</span> <span class="content">Class Structure</span></a>
-      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.2</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
+      <li><a href="#versioning-and-releases"><span class="secno">4.1</span> <span class="content">Versioning and releases</span></a>
+      <li><a href="#class-structure"><span class="secno">4.2</span> <span class="content">Class Structure</span></a>
+      <li><a href="#usage-notes-on-schema-mapping"><span class="secno">4.3</span> <span class="content">Usage Notes on Schema / Mapping</span></a>
      </ol>
     <li>
      <a href="#main-classes"><span class="secno">5</span> <span class="content">Main Classes</span></a>
@@ -5019,15 +5020,14 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="purpose-and-audience"><span class="secno">1. </span><span class="content">Purpose and audience</span><a class="self-link" href="#purpose-and-audience"></a></h2>
-   <p>This page outlines the latest version of the Health-RI core and generic health metadata schema for the National Health Data Catalogue, detailing the classes and properties involved and offering usage notes for data holders tasked with filling in the schema. It addresses the schema’s design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue">here</a>). Please also visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>. <strong>Please note that we are currently still working on the implementation of the new schema into the frontend of the National Health Data Catalogue.</strong></p>
-   <p>This documentation aims at a <strong>technical audience</strong> tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the core metadata schema. For any further questions or comments, please contact Health-RI via the <a href="https://www.health-ri.nl/health-ri-servicedesk">Health-RI ServiceDesk</a> or via <a href="mailto:servicedesk@health-ri.nl">servicedesk@health-ri.nl</a>.</p>
+   <p>This page outlines the latest version of the Health-RI metadata schema for the National Health Data Catalogue, detailing the classes and properties involved and offering usage notes for data holders tasked with filling in the schema. It addresses the schema’s design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue">here</a>). Please also visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>. <strong>Please note that we are currently still working on the implementation of the new schema into the frontend of the National Health Data Catalogue.</strong></p>
+   <p>This documentation aims at a <strong>technical audience</strong> tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the Health-RI metadata schema. For any further questions or comments, please contact Health-RI via the <a href="https://www.health-ri.nl/health-ri-servicedesk">Health-RI ServiceDesk</a> or via <a href="mailto:servicedesk@health-ri.nl">servicedesk@health-ri.nl</a>.</p>
    <h2 class="heading settled" data-level="2" id="introduction"><span class="secno">2. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="scope-and-current-state-of-the-schema"><span class="secno">2.1. </span><span class="content">Scope and Current State of the Schema</span><a class="self-link" href="#scope-and-current-state-of-the-schema"></a></h3>
-   <p>Building on the <a href="https://github.com/Health-RI/health-ri-metadata/tree/v1.0.2">1st version of the metadata schema</a>, version 2 aims to incorporate both <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and the (yet-to-be-finalized) <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a>, along with Health-RI-specific requirements for the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It introduces several health-related properties (marked in blue in the <a href="https://www.omg.org/spec/UML/">Unified Modeling Language (UML)</a> diagram below), with suggested or required controlled vocabularies where applicable.</p>
-   <p><strong>Important Note:</strong> HealthDCAT-AP has not yet been officially finalized and remains subject to change. Once its official release is published, Health-RI will reevaluate compatibility with HealthDCAT-AP. This version of the Health-RI schema is based on the HealthDCAT-AP draft dated <em>16-12-2024</em>. In that draft, the cardinalities of HealthDCAT-AP vary depending on different access rights (public, restricted, non-public). For now, the <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">OPEN variant</a> is used as a baseline, with documented Health-RI-specific deviations, and its UML diagram is used for reference.</p>
-   <p>Additionally, several metadata fields related to <strong><a href="https://www.health-ri.nl/en/about-health-ri/our-experts/elsi">Ethical, Legal and Societal Implications (ELSI)</a></strong>, as gathered by the Health-RI ELSI team, have been included in this version 2. These fields are not mandatory but will be evaluated upon implementation in the catalogue.</p>
-   <p>To describe the <strong>data domain</strong> (e.g., surveys and questionnaires), we propose using <code>edam:has_topic</code>; to describe the <strong>measurement technique</strong> (e.g., whole genome sequencing), we propose using <code>schema:measurementTechnique</code>. For <strong>health themes</strong>, we propose using <code>healthdcatap:healthTheme</code>. For <strong>synthetic data</strong>, use <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/"><code>dct:type</code></a> with the required controlled vocabulary in the <a href="http://www.w3.org/ns/dcat#Dataset"><code>dcat:Dataset</code></a> class.</p>
-   <p>Several classes from <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> have been included but not further specified for Health-RI yet. This includes the <strong>DataService</strong> class, meaning that these classes can be used but are not yet tailored to specific data holder needs for the National Health Data Catalogue.</p>
+   <p>Version 2.1.0 of the Health-RI metadata schema defines metadata for describing health data resources in the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It draws on <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and the OPEN variant of the <a href="https://github.com/healthDCAT-AP/healthDCAT-AP.github.io/tree/ecf64cec714faf72b136a838232e661f61e2d3e5">HealthDCAT-AP draft snapshot taken on December 16, 2024</a>, with documented Health-RI-specific adaptations.</p>
+   <p>This version expands Dataset descriptions with data domains (<code>edam:has_topic</code>), measurement techniques (<code>schema:measurementTechnique</code>), health conditions of interest (<code>hri:healthConditionOfInterest</code>), and anatomical coverage (<code>hri:anatomicalLocationCovered</code>). It also adds alternative dataset names, landing pages, provenance statements, and <a href="#csvw-variables">CSV on the Web (CSVW) variable descriptions</a> using Table Group, Table, and Column.</p>
+   <p>Selected property requirements are relaxed compared with version 2.0.3. The class and property tables in this specification define the applicable ranges, cardinalities, and usage requirements for version 2.1.0. An overview of the changes is available in the <a href="https://github.com/Health-RI/health-ri-metadata/blob/testing/CHANGELOG.md#v210">model changelog</a>.</p>
+   <p>CSVW variable descriptions are included for testing purposes. Their current implementation status in the National Health Data Catalogue is explained in the <a href="#csvw-variables">CSVW Variables section</a>.</p>
    <h3 class="heading settled" data-level="2.2" id="used-prefixes"><span class="secno">2.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
    <table class="larger-font">
     <thead>
@@ -5109,11 +5109,11 @@ dfn > a.self-link::before      { content: "#"; }
       <td>http://healthdataportal.eu/ns/health#
    </table>
    <h2 class="heading settled" data-level="3" id="overview-and-diagram"><span class="secno">3. </span><span class="content">Overview and Diagram</span><a class="self-link" href="#overview-and-diagram"></a></h2>
-   <p>An overview of the metadata schema core is presented in the UML diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as <code>rdfs:label</code> and <code>rdfs:comment</code>. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.</p>
+   <p>An overview of the Health-RI metadata schema is presented in the <a href="https://www.omg.org/spec/UML/">Unified Modeling Language (UML)</a> diagram below. This UML diagram showcases primary classes (entities), excluding detailed definitions such as <code>rdfs:label</code> and <code>rdfs:comment</code>. Each block represents a class and lists its attributes (properties). Where properties reference another class, their range is displayed in pink font.</p>
    <p>If a class is linked to another class by an arrow with a hollow triangular arrowhead, it inherits all properties from the other class (e.g., <code>dcat:Dataset</code> inherits from <a href="http://www.w3.org/ns/dcat#Resource"><code>dcat:Resource</code></a>). Other arrows represent relationships, including their types (e.g., <code>dcat:Dataset</code> connects to a <a href="http://www.w3.org/ns/dcat#DatasetSeries"><code>dcat:DatasetSeries</code></a> via <a href="http://www.w3.org/ns/dcat#inSeries"><code>dcat:inSeries</code></a>), along with cardinalities (e.g., <code>dcat:Dataset</code> connects to zero or more <code>dcat:DatasetSeries</code>). <strong>Mandatory relationships</strong> are marked with dark labels, while <strong>recommended relationships</strong> use a lighter color.</p>
    <p>The UML diagram separates <strong>main classes</strong> from <strong>supporting classes</strong>. While relationships between main classes are indicated by arrows, supporting class relationships (except for those between the CSVW Table Group, Table, and Column classes) are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.</p>
    <p>Properties derived from draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
-   <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="https://github.com/Health-RI/metadata-documentation/blob/v2.1/src/excel/HealthRI_v2.1.0.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI core metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
+   <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="https://github.com/Health-RI/metadata-documentation/blob/v2.1/src/excel/HealthRI_v2.1.0.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
    <div id="uml-class-diagram-v210"></div>
    <h3 class="heading settled" data-level="3.1" id="uml-class-diagram"><span class="secno">3.1. </span><span class="content">UML Class Diagram v2.1.0</span><a class="self-link" href="#uml-class-diagram"></a></h3>
    <p><a href="src/images/HRI_metadata_V2.1.png" target="_blank">
@@ -5121,7 +5121,7 @@ dfn > a.self-link::before      { content: "#"; }
 </a></p>
    <p>Usage directions for the properties and their associated constraints that apply in the context of this profile, and the range of properties, are listed below.</p>
    <h2 class="heading settled" data-level="4" id="permanent-urls"><span class="secno">4. </span><span class="content">Permanent Urls</span><a class="self-link" href="#permanent-urls"></a></h2>
-   <p>To support long-term <a href="https://www.go-fair.org/fair-principles/">FAIR (Findable, Accessible, Interoperable, and Reusable)</a> access to Health-RI Metadata Schema resources, we provide persistent URLs using the <a href="https://w3id.org/">W3ID</a> system. These permanent identifiers improve the <strong>findability</strong> and <strong>accessibility</strong> of the related artifacts.
+   <p>To support long-term <a href="https://www.go-fair.org/fair-principles/">FAIR (Findable, Accessible, Interoperable, and Reusable)</a> access to Health-RI metadata schema resources, we provide persistent URLs using the <a href="https://w3id.org/">W3ID</a> system. These permanent identifiers improve the <strong>findability</strong> and <strong>accessibility</strong> of the related artifacts.
 The following links distinguish the published specification from the metadata model and its SHACL sources:</p>
    <p><strong>Specification</strong></p>
    <ul>
@@ -5152,7 +5152,19 @@ The following links distinguish the published specification from the metadata mo
    </ul>
    <p><strong>Project Homepage</strong></p>
    <p><strong>Main page:</strong> <a href="https://w3id.org/health-ri/metadata">w3id.org/health-ri/metadata</a></p>
-   <h3 class="heading settled" data-level="4.1" id="class-structure"><span class="secno">4.1. </span><span class="content">Class Structure</span><a class="self-link" href="#class-structure"></a></h3>
+   <h3 class="heading settled" data-level="4.1" id="versioning-and-releases"><span class="secno">4.1. </span><span class="content">Versioning and releases</span><a class="self-link" href="#versioning-and-releases"></a></h3>
+   <p>Version numbers communicate compatibility:</p>
+   <ul>
+    <li data-md>
+     <p><strong>Major:</strong> backward-incompatible changes that may require updates to existing metadata or implementations.</p>
+    <li data-md>
+     <p><strong>Minor:</strong> backward-compatible extensions and improvements.</p>
+    <li data-md>
+     <p><strong>Patch:</strong> backward-compatible technical corrections or documentation improvements that preserve the schema’s meaning and validation outcomes.</p>
+   </ul>
+   <p>Draft versions may change during development. A <strong>release candidate</strong> (such as <code>-rc.1</code>) is feature frozen for testing and may receive bug fixes before final release.</p>
+   <p>Major and minor releases undergo conceptual review, technical validation, and implementer testing to assess semantic correctness, consistency between the specification and validation shapes, and practical usability before approval.</p>
+   <h3 class="heading settled" data-level="4.2" id="class-structure"><span class="secno">4.2. </span><span class="content">Class Structure</span><a class="self-link" href="#class-structure"></a></h3>
    <p>The Health-RI metadata schema builds on DCAT-AP 3.0, which defines a set of classes and properties for describing datasets, services, and related resources. To make the model easier to apply (and interoperable) across catalogues, the schema organizes its structure around two types of classes: <strong>Main Classes</strong> and <strong>Supportive Classes</strong>.</p>
    <ul>
     <li data-md>
@@ -5198,7 +5210,7 @@ The following links distinguish the published specification from the metadata mo
     <li data-md>
      <p><strong>CSVW (Variables)</strong></p>
    </ul>
-   <p>The main classes and supportive classes together form the Health-RI Core metadata schema.</p>
+   <p>The main classes and supportive classes together form the Health-RI metadata schema.</p>
    <p><strong>Please take into consideration</strong>:</p>
    <ul>
     <li data-md>
@@ -5212,7 +5224,7 @@ The following links distinguish the published specification from the metadata mo
     <li data-md>
      <p>Please visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>.</p>
    </ul>
-   <h3 class="heading settled" data-level="4.2" id="usage-notes-on-schema-mapping"><span class="secno">4.2. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
+   <h3 class="heading settled" data-level="4.3" id="usage-notes-on-schema-mapping"><span class="secno">4.3. </span><span class="content">Usage Notes on Schema / Mapping</span><a class="self-link" href="#usage-notes-on-schema-mapping"></a></h3>
    <p>Supportive classes are included because they form the range of properties used by the main classes or by other supportive classes [additional requirements to properties for the entity]. They enrich the main classes which are the core entities in the catalogue. Both structures are further divided into <strong>mandatory properties</strong> for conformance and <strong>recommended properties</strong> for richer metadata.</p>
    <p>The separation described above helps modularize metadata and makes it easier to reuse supporting elements across multiple datasets or services. It helps users to use those classes more easily. To apply it:</p>
    <ul>
@@ -5245,7 +5257,7 @@ The following links distinguish the published specification from the metadata mo
      <tr>
       <td>Catalog
       <td>A catalogue or repository that hosts the Datasets or Data Services being described.
-      <td>A catalog that is listed in the <a href="https://catalogus.healthdata.nl/">National Health Data catalog</a> and contains one or several datasets and may also contain data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.
+      <td>A catalog that is listed in the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a> and contains one or several datasets and may also contain data services. Used to describe a bundle of datasets (and other resources) under a single title, for example, a collection.
       <td>dcat:Catalog
    </table>
    <table border="1" class="dataframe">
@@ -5781,7 +5793,7 @@ The following links distinguish the published specification from the metadata mo
       <td>healthdcatap:hasVariables
       <td>csvw:TableGroup
       <td>0..n
-      <td>Note: The variables have been added to the metadata model version 2.1 for testing purposes. For now, their inclusion in the national catalogue’s front end is not yet planned. Use this property to link a structured dataset to a CSVW TableGroup that documents its data variables, columns, or fields in a machine-readable way.
+      <td>Note: The variables have been added to the Health-RI metadata schema version 2.1 for testing purposes. For now, their inclusion in the National Health Data Catalogue’s front end is not yet planned. Use this property to link a structured dataset to a CSVW TableGroup that documents its data variables, columns, or fields in a machine-readable way.
      <tr>
       <td>version
       <td>The version indicator (name or identifier) of a resource.
@@ -6718,7 +6730,7 @@ The following links distinguish the published specification from the metadata mo
     <li data-md>
      <p><a href="#column">Column</a> - Describes individual variables (columns) within the CSV file.</p>
    </ul>
-   <p><strong>Note</strong>: The CSVW variables have been added to the Health-RI metadata model version 2.1 for testing purposes. For now support for CSVW variable descriptions is not yet planned to be added to the national catalogue’s front end.</p>
+   <p><strong>Note</strong>: The CSVW variables have been added to the Health-RI metadata schema version 2.1 for testing purposes. For now support for CSVW variable descriptions is not yet planned to be added to the National Health Data Catalogue’s front end.</p>
    <h5 class="heading settled" data-level="6.2.9.1" id="table-group"><span class="secno">6.2.9.1. </span><span class="content"><a href="http://www.w3.org/ns/csvw#TableGroup">Table Group</a></span><a class="self-link" href="#table-group"></a></h5>
    <table class="no-style">
     <thead>
