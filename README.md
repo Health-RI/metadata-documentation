@@ -194,4 +194,4 @@ If changes are not visible:
 
 ## Acknowledgements
 
-We acknowledge the input of the Health-RI implementation team, particularly Alexander Harms for technical feedback, tooling suggestions, and code contributions.
+We acknowledge the input of the Health-RI implementation team, particularly Alexander Harms, for feedback, suggestions, and code contributions.
