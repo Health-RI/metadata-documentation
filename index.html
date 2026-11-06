@@ -6247,7 +6247,7 @@ The following links distinguish the published specification from the metadata mo
      <tr>
       <td>retention period
       <td>A temporal period during which the dataset is available for secondary use.
-      <td>healthdcatap:retentionperiod
+      <td>healthdcatap:retentionPeriod
       <td>dct:PeriodOfTime
       <td>0..1
       <td>Note: This property will be deprecated in the upcoming major release. It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property.  Use this property if the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.
