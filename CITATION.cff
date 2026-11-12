@@ -1,18 +1,33 @@
 cff-version: 1.2.0
+
 message: >-
-  If you use this documentation, please cite the specification
-  using the metadata in preferred-citation.
+  If you use the human-readable Health-RI Metadata Model specification,
+  please cite it using the metadata in preferred-citation. For the
+  Health-RI Metadata Model's machine-readable schema artifacts,
+  cite the health-ri-metadata repository
+  (https://github.com/Health-RI/health-ri-metadata).
+
 title: Health-RI Metadata Documentation
+
+abstract: >-
+  This repository maintains the human-readable technical specification
+  of the Health-RI Metadata Model for the National Health Data Catalogue.
+  The specification describes metadata classes, properties, cardinalities,
+  controlled vocabularies, and usage guidance to support consistent
+  implementation and interoperability.
+
 authors:
-  - name: Health-RI
+  - name: Stichting Health-RI
+
 version: v2.1.0
 repository-code: https://github.com/Health-RI/metadata-documentation
 license: CC-BY-4.0
+
 preferred-citation:
   type: manual
   title: Health-RI Metadata Model
   authors:
-    - name: Health-RI
+    - name: Stichting Health-RI
   editors:
     - family-names: Konrad
       given-names: Ana

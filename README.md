@@ -34,6 +34,18 @@ Model-level artifacts, SHACL shapes, releases, and **all issue tracking (includi
 
 ---
 
+## How to cite
+
+This repository maintains the **human-readable Health-RI Metadata Model specification**, including descriptions of classes, properties, cardinalities, controlled vocabularies, and usage notes.
+
+If your work refers to this technical specification, please cite it using the preferred citation provided in [CITATION.cff](CITATION.cff). GitHub's **Cite this repository** feature can also be used to generate a citation.
+
+For the **Health-RI Metadata Model's machine-readable artifacts**, including schema workbooks, SHACL shapes, and related resources, please cite the [health-ri-metadata repository](https://github.com/Health-RI/health-ri-metadata) using its own `CITATION.cff`.
+
+If your work relies on both the schema artifacts and the human-readable specification, cite both resources. In all cases, identify the version(s) used.
+
+---
+
 ## Useful resources 
 
 The Health-RI metadata ecosystem uses multiple repositories, tools, and publication targets.
