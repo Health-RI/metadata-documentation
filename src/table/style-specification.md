@@ -251,6 +251,32 @@ body main .spec-table-wrap > table {
   margin: 0;
 }
 
+body main .spec-class-table-wrap {
+  --spec-class-label-height: 2.5rem;
+}
+
+/* Keep the class label above its own sticky column headings. */
+body main .spec-class-label {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: var(--spec-class-label-height);
+  padding: 0 0.625rem;
+  border: 1px solid var(--spec-border);
+  border-bottom: 0;
+  background: var(--spec-table-head);
+  color: var(--spec-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+body main .spec-class-table-wrap > table.dataframe thead th {
+  top: var(--spec-class-label-height);
+}
+
 body #toc {
   font-size: 0.9375rem;
   line-height: 1.45;
@@ -364,7 +390,8 @@ body #toc .toc li {
     min-width: 44rem;
   }
 
-  body main table thead th {
+  body main table thead th,
+  body main .spec-class-label {
     position: static;
   }
 }
@@ -394,7 +421,8 @@ body #toc .toc li {
     display: none !important;
   }
 
-  body main table thead th {
+  body main table thead th,
+  body main .spec-class-label {
     position: static;
   }
 

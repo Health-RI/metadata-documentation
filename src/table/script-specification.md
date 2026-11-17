@@ -92,13 +92,37 @@
     return scheduleUpdate;
   }
 
+  function classHeadingForTable(table) {
+    // Classes use h4 headings, or h5 for the CSVW classes. Do not
+    // assign a previous class across a main section boundary.
+    var sibling = table.previousElementSibling;
+    while (sibling) {
+      if (sibling.matches("h4[id], h5[id]")) return sibling;
+      if (sibling.matches("h2, h3")) return null;
+      sibling = sibling.previousElementSibling;
+    }
+    return null;
+  }
+
   function enhanceSpecificationLayout() {
     enhanceAppearance();
     // Keep horizontal scrolling local to tables on narrow screens.
     document.querySelectorAll("main table").forEach(function (table) {
+      var heading = table.classList.contains("dataframe")
+        ? classHeadingForTable(table)
+        : null;
       var wrapper = document.createElement("div");
       wrapper.className = "spec-table-wrap";
+      if (heading) wrapper.classList.add("spec-class-table-wrap");
       table.parentNode.insertBefore(wrapper, table);
+      if (heading) {
+        var label = document.createElement("div");
+        label.className = "spec-class-label";
+        label.textContent = (heading.querySelector(".content") || heading).textContent.trim();
+        label.setAttribute("aria-hidden", "true");
+        wrapper.appendChild(label);
+        table.setAttribute("aria-labelledby", heading.id);
+      }
       wrapper.appendChild(table);
     });
 
