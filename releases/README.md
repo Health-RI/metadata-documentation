@@ -9,9 +9,7 @@ For the latest specification and citation guidance, see the [repository overview
 | Version | Committed HTML | Published location after deployment |
 |---------|----------------|-------------------------------------|
 | v2.0.3 | [Saved specification](v2.0.3/index.html) | [Read v2.0.3](https://health-ri.github.io/metadata-documentation/releases/v2.0.3/) |
-| v2.1.0 | [Release preparation snapshot](v2.1.0/index.html) | [v2.1.0 location](https://health-ri.github.io/metadata-documentation/releases/v2.1.0/) |
-
-The v2.1.0 snapshot is still a preparation copy. Set the actual publication date and regenerate it from the final sources before publication. Its saved HTML must include any final narrative or navigation changes; generating a separate preview does not update the snapshot.
+| v2.1.0 | [Saved specification](v2.1.0/index.html) | [Read v2.1.0](https://health-ri.github.io/metadata-documentation/releases/v2.1.0/) |
 
 ## Prepare and save a version
 
