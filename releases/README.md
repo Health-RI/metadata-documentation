@@ -39,7 +39,6 @@ Run commands from the repository root. The example below illustrates preparing v
 
    - Add the new version to the saved versions table in this guide.
    - Keep the latest-specification link in the root `README.md`, and add the outgoing release to its previous-specification links.
-   - Update the previous-specification link in `src/chapter/1-permanent-urls.md` and keep earlier version links available.
    - Use `https://health-ri.github.io/metadata-documentation/releases/vX.Y.Z/` for a saved HTML specification. Versioned PIDs use `https://w3id.org/health-ri/metadata/docs/vX.Y.Z`; verify that the separately maintained w3id redirects resolve to the intended saved version before publication. A generic version redirect rule, once active, does not need a new rule for each release.
 
 4. Generate the snapshot and copy its images while preserving relative paths. For example, in PowerShell:
@@ -58,7 +57,7 @@ Run commands from the repository root. The example below illustrates preparing v
 
 ## Publication and verification
 
-The [publication workflow](../.github/workflows/publish.yml) builds the latest page with `w3c/spec-prod`. After a push to upstream `main`, it also copies the committed `releases/` folders and current `src/images/` to GitHub Pages, retaining existing site files. It does not regenerate saved HTML or property tables.
+The [publication workflow](../.github/workflows/publish.yml) builds the latest page. After a push to upstream `main`, it also copies the committed `releases/` folders and current `src/images/` to GitHub Pages, retaining existing site files. It does not regenerate saved HTML or property tables.
 
 After publication, verify:
 

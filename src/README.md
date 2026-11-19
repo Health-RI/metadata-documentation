@@ -94,7 +94,7 @@ flowchart TD
     publish --> pages["Publish latest page, saved versions, and images to gh-pages"]
 ```
 
-The [publication workflow](../.github/workflows/publish.yml) runs a `w3c/spec-prod` build for pull requests targeting `main`. A push to upstream `main` builds and publishes the latest specification, then copies committed saved versions and images to GitHub Pages. It does not regenerate property tables or saved version HTML. Pull requests targeting `v2.1` do not trigger that publication workflow; use a local build to preview them. The version consistency workflow runs on pushes and pull requests.
+The [publication workflow](../.github/workflows/publish.yml) builds the specification for pull requests targeting `main`. A push to upstream `main` builds and publishes the latest specification, then copies committed saved versions and images to GitHub Pages. It does not regenerate property tables or saved version HTML. Pull requests targeting `v2.1` do not trigger that publication workflow; use a local build to preview them. The version consistency workflow runs on pushes and pull requests.
 
 ## Reference resources
 
