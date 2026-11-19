@@ -6,6 +6,8 @@ The following links distinguish the published specification from the metadata mo
 **Specification**
 
 - **Published specification:** [w3id.org/health-ri/metadata/docs](https://w3id.org/health-ri/metadata/docs)
+- **Previous specification (v2.0.3):** [read the saved HTML specification](https://health-ri.github.io/metadata-documentation/releases/v2.0.3/)
+- **Version-specific specifications:** use `https://w3id.org/health-ri/metadata/docs/vX.Y.Z`, for example [v2.0.3](https://w3id.org/health-ri/metadata/docs/v2.0.3). Saved HTML versions are also available at `https://health-ri.github.io/metadata-documentation/releases/vX.Y.Z/`.
 - **Documentation repository:** [w3id.org/health-ri/metadata/docs/git](https://w3id.org/health-ri/metadata/docs/git)
 
 **Metadata model and SHACL resources**
