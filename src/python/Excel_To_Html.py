@@ -365,7 +365,8 @@ def build_usage_note(row, sheet_name, url_map, links):
         parts.append(clean_text)
 
     if urls:
-        parts.append("")
+        if clean_text:
+            parts.append("")
         parts.extend([
             make_clickable(u)
             for u in urls
@@ -376,8 +377,8 @@ def build_usage_note(row, sheet_name, url_map, links):
 
     return (
         base
-        + "<br><br><strong>Controlled vocabulary</strong><br>"
-        + vocab_block
+        + "<br><br><strong>Controlled vocabulary:</strong>"
+        + (" " + vocab_block if vocab_block else "")
     )
 
 

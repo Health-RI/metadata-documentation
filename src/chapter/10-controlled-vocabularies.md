@@ -224,16 +224,7 @@ The tables below list the relevant properties, the classes to which they apply, 
       <td>Choose the media type of the Distribution from the IANA media type list.</td>
     </tr>
 
-    <tr>
-      <td>dcat:packageFormat</td>
-      <td>Distribution</td>
-      <td>
-        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">
-          http://www.iana.org/assignments/media-types/media-types.xhtml
-        </a>
-      </td>
-      <td>Choose the package format of the Distribution from the IANA media type list.</td>
-    </tr>
+
 
     <tr>
       <td>adms:status</td>
@@ -447,6 +438,17 @@ The tables below list the relevant properties, the classes to which they apply, 
       </td>
       <td>For this property you can use controlled vocabularies depending on which best represents your dataset series. The EU provides three relevant authority tables - for continent, country, and place, with country codes aligned to ISO standards where applicable. Your choice depends on the granularity of the geographical coverage: for example, if your dataset series covers the entire Netherlands, you can use http://publications.europa.eu/resource/authority/country/NLD from the Country authority table, while for a specific city you should check the Place authority table. Since the Place table has limited coverage, you can also use GeoNames, a widely used geographical database with global coverage, or CBS vocabularies, which focus on places in the Netherlands. In general, prefer EU authority URIs first, then GeoNames, and finally national vocabularies for finer-grained locations.</td>
     </tr>
+    <tr>
+      <td>dcat:packageFormat</td>
+      <td>Distribution</td>
+      <td>
+        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">
+          http://www.iana.org/assignments/media-types/media-types.xhtml
+        </a>
+      </td>
+      <td>Choose the package format of the Distribution from the IANA media type list.</td>
+    </tr>
+
     <tr>
       <td>csvw:datatype</td>
       <td>Column</td>
