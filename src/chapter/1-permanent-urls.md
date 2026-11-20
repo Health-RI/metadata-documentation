@@ -18,8 +18,8 @@ The following links distinguish the published specification from the metadata mo
 - **Latest model release:** [w3id.org/health-ri/metadata/releases/latest](https://w3id.org/health-ri/metadata/releases/latest)
 - **All model releases:** [w3id.org/health-ri/metadata/releases](https://w3id.org/health-ri/metadata/releases)
 - **Specific model release:**
-  - Use the following pattern to reference a specific versioned model release: `https://w3id.org/health-ri/metadata/releases/{version}`.
-  - For example: [w3id.org/health-ri/metadata/releases/v1.0.1](https://w3id.org/health-ri/metadata/releases/v1.0.1)
+    - Use the following pattern to reference a specific versioned model release: `https://w3id.org/health-ri/metadata/releases/{version}`.
+    - For example: [w3id.org/health-ri/metadata/releases/v1.0.1](https://w3id.org/health-ri/metadata/releases/v1.0.1)
 
 **Project Homepage**
 

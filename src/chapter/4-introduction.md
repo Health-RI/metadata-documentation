@@ -6,7 +6,7 @@ Version 2.1.0 of the Health-RI metadata schema defines metadata for describing h
 
 This version expands Dataset descriptions with data domains (`edam:has_topic`), measurement techniques (`schema:measurementTechnique`), health conditions of interest (`hri:healthConditionOfInterest`), and anatomical coverage (`hri:anatomicalLocationCovered`). It also adds alternative dataset names, landing pages, provenance statements, and [CSV on the Web (CSVW) variable descriptions](#csvw-variables) using Table Group, Table, and Column.
 
-Selected property requirements are relaxed compared with version 2.0.3. The class and property tables in this specification define the applicable ranges, cardinalities, and usage requirements for version 2.1.0. An overview of the changes is available in the [model changelog](https://github.com/Health-RI/health-ri-metadata/blob/testing/CHANGELOG.md#v210).
+Selected property requirements are relaxed compared with version 2.0.3. The class and property tables in this specification define the applicable ranges, cardinalities, and usage requirements for version 2.1.0. An overview of the changes is available in the [model changelog](https://github.com/Health-RI/health-ri-metadata/blob/v2.1.0/CHANGELOG.md#v210).
 
 CSVW variable descriptions are included for testing purposes. Their current implementation status in the National Health Data Catalogue is explained in the [CSVW Variables section](#csvw-variables).
 
@@ -56,7 +56,7 @@ The UML diagram separates **main classes** from **supporting classes**. While re
 
 Properties derived from draft [HealthDCAT-AP](https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/) (mostly within the `dcat:Dataset` class) are marked blue.
 
-A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found [here](https://github.com/Health-RI/metadata-documentation/blob/v2.1/src/excel/HealthRI_v2.1.0.xlsx). This sheet also documents property histories (compared to v1 of the Health-RI metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).
+A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found [here](https://github.com/Health-RI/metadata-documentation/blob/5c5792e3d7d68abeadce7b198aed4b6b765f5845/src/excel/HealthRI_v2.1.0.xlsx). This sheet also documents property histories (compared to v1 of the Health-RI metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).
 
 
 <!-- Preserve the previous version-specific fragment URL. -->

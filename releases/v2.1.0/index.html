@@ -1488,8 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version e0b165ae4, updated Mon Nov 2 15:16:49 2026 -0800" name="generator">
+  <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
   <link href="https://w3id.org/health-ri/metadata/docs/v2.1.0" rel="canonical">
+  <meta content="f912030dec986d7241ef0f33a1aaca7435f6377b" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -4314,6 +4315,32 @@ body main .spec-table-wrap > table {
   margin: 0;
 }
 
+body main .spec-class-table-wrap {
+  --spec-class-label-height: 2.5rem;
+}
+
+/* Keep the class label above its own sticky column headings. */
+body main .spec-class-label {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: var(--spec-class-label-height);
+  padding: 0 0.625rem;
+  border: 1px solid var(--spec-border);
+  border-bottom: 0;
+  background: var(--spec-table-head);
+  color: var(--spec-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+body main .spec-class-table-wrap > table.dataframe thead th {
+  top: var(--spec-class-label-height);
+}
+
 body #toc {
   font-size: 0.9375rem;
   line-height: 1.45;
@@ -4427,7 +4454,8 @@ body #toc .toc li {
     min-width: 44rem;
   }
 
-  body main table thead th {
+  body main table thead th,
+  body main .spec-class-label {
     position: static;
   }
 }
@@ -4457,7 +4485,8 @@ body #toc .toc li {
     display: none !important;
   }
 
-  body main table thead th {
+  body main table thead th,
+  body main .spec-class-label {
     position: static;
   }
 
@@ -4893,7 +4922,7 @@ dfn > a.self-link::before      { content: "#"; }
    </p>
    <h1 class="no-ref p-name" id="title">Health-RI Metadata Model</h1>
    <h2 class="heading no-num no-ref no-toc settled" id="profile-and-date"><span class="content">Technical Specification,
-    <time class="dt-updated" datetime="2026-10-27">27 October 2026</time></span></h2>
+    <time class="dt-updated" datetime="2026-11-20">20 November 2026</time></span></h2>
    <p class="spec-brand">
     <img alt="Health-RI Logo" class="spec-logo spec-logo-blue" height="205" src="src/images/health-ri-logo-blue.png" title="Health-RI Logo" width="1008">
     <img alt="Health-RI Logo" class="spec-logo spec-logo-white" height="205" src="src/images/health-ri-logo-white.png" title="Health-RI Logo" width="1008">
@@ -5020,13 +5049,13 @@ dfn > a.self-link::before      { content: "#"; }
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="purpose-and-audience"><span class="secno">1. </span><span class="content">Purpose and audience</span><a class="self-link" href="#purpose-and-audience"></a></h2>
-   <p>This page outlines the latest version of the Health-RI metadata schema for the National Health Data Catalogue, detailing the classes and properties involved and offering usage notes for data holders tasked with filling in the schema. It addresses the schema’s design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue">here</a>). Please also visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>. <strong>Please note that we are currently still working on the implementation of the new schema into the frontend of the National Health Data Catalogue.</strong></p>
+   <p>This page outlines the latest version of the Health-RI metadata schema for the National Health Data Catalogue, detailing the classes and properties involved and offering usage notes for data holders tasked with filling in the schema. It addresses the schema’s design and application but excludes discussion on the National Health Data Catalogue and its onboarding process (these are described <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279150593/Metadata+onboarding+on+the+National+Catalogue">here</a>). Please also visit Confluence for general information about the <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/279281676/4A+Metadata+mapping">metadata schema</a> and <a href="https://health-ri.atlassian.net/wiki/spaces/FSD/pages/290291734/Mapping+tutorial">metadata mapping</a>. <strong>Some features described in this specification may not yet be available in the National Health Data Catalogue frontend.</strong></p>
    <p>This documentation aims at a <strong>technical audience</strong> tasked with implementing the metadata schema and stakeholders interested in a detailed understanding of the Health-RI metadata schema. For any further questions or comments, please contact Health-RI via the <a href="https://www.health-ri.nl/health-ri-servicedesk">Health-RI ServiceDesk</a> or via <a href="mailto:servicedesk@health-ri.nl">servicedesk@health-ri.nl</a>.</p>
    <h2 class="heading settled" data-level="2" id="introduction"><span class="secno">2. </span><span class="content">Introduction</span><a class="self-link" href="#introduction"></a></h2>
    <h3 class="heading settled" data-level="2.1" id="scope-and-current-state-of-the-schema"><span class="secno">2.1. </span><span class="content">Scope and Current State of the Schema</span><a class="self-link" href="#scope-and-current-state-of-the-schema"></a></h3>
    <p>Version 2.1.0 of the Health-RI metadata schema defines metadata for describing health data resources in the <a href="https://catalogus.healthdata.nl/">National Health Data Catalogue</a>. It draws on <a href="https://docs.geostandaarden.nl/dcat/dcat-ap-nl30/">DCAT-AP NL</a> and the OPEN variant of the <a href="https://github.com/healthDCAT-AP/healthDCAT-AP.github.io/tree/ecf64cec714faf72b136a838232e661f61e2d3e5">HealthDCAT-AP draft snapshot taken on December 16, 2024</a>, with documented Health-RI-specific adaptations.</p>
    <p>This version expands Dataset descriptions with data domains (<code>edam:has_topic</code>), measurement techniques (<code>schema:measurementTechnique</code>), health conditions of interest (<code>hri:healthConditionOfInterest</code>), and anatomical coverage (<code>hri:anatomicalLocationCovered</code>). It also adds alternative dataset names, landing pages, provenance statements, and <a href="#csvw-variables">CSV on the Web (CSVW) variable descriptions</a> using Table Group, Table, and Column.</p>
-   <p>Selected property requirements are relaxed compared with version 2.0.3. The class and property tables in this specification define the applicable ranges, cardinalities, and usage requirements for version 2.1.0. An overview of the changes is available in the <a href="https://github.com/Health-RI/health-ri-metadata/blob/testing/CHANGELOG.md#v210">model changelog</a>.</p>
+   <p>Selected property requirements are relaxed compared with version 2.0.3. The class and property tables in this specification define the applicable ranges, cardinalities, and usage requirements for version 2.1.0. An overview of the changes is available in the <a href="https://github.com/Health-RI/health-ri-metadata/blob/v2.1.0/CHANGELOG.md#v210">model changelog</a>.</p>
    <p>CSVW variable descriptions are included for testing purposes. Their current implementation status in the National Health Data Catalogue is explained in the <a href="#csvw-variables">CSVW Variables section</a>.</p>
    <h3 class="heading settled" data-level="2.2" id="used-prefixes"><span class="secno">2.2. </span><span class="content">Used Prefixes</span><a class="self-link" href="#used-prefixes"></a></h3>
    <table class="larger-font">
@@ -5113,7 +5142,7 @@ dfn > a.self-link::before      { content: "#"; }
    <p>If a class is linked to another class by an arrow with a hollow triangular arrowhead, it inherits all properties from the other class (e.g., <code>dcat:Dataset</code> inherits from <a href="http://www.w3.org/ns/dcat#Resource"><code>dcat:Resource</code></a>). Other arrows represent relationships, including their types (e.g., <code>dcat:Dataset</code> connects to a <a href="http://www.w3.org/ns/dcat#DatasetSeries"><code>dcat:DatasetSeries</code></a> via <a href="http://www.w3.org/ns/dcat#inSeries"><code>dcat:inSeries</code></a>), along with cardinalities (e.g., <code>dcat:Dataset</code> connects to zero or more <code>dcat:DatasetSeries</code>). <strong>Mandatory relationships</strong> are marked with dark labels, while <strong>recommended relationships</strong> use a lighter color.</p>
    <p>The UML diagram separates <strong>main classes</strong> from <strong>supporting classes</strong>. While relationships between main classes are indicated by arrows, supporting class relationships (except for those between the CSVW Table Group, Table, and Column classes) are not visually connected via arrows to maintain clarity in the diagram. Instead, they can be deduced from the pink-colored property ranges listed per class.</p>
    <p>Properties derived from draft <a href="https://healthdataeu.pages.code.europa.eu/healthdcat-ap/releases/release-6/">HealthDCAT-AP</a> (mostly within the <code>dcat:Dataset</code> class) are marked blue.</p>
-   <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="https://github.com/Health-RI/metadata-documentation/blob/v2.1/src/excel/HealthRI_v2.1.0.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
+   <p>A tabular overview of all classes and properties—including their range, cardinality, controlled vocabulary (if applicable), and usage notes—is provided below. A reference sheet containing this information can be found <a href="https://github.com/Health-RI/metadata-documentation/blob/5c5792e3d7d68abeadce7b198aed4b6b765f5845/src/excel/HealthRI_v2.1.0.xlsx">here</a>. This sheet also documents property histories (compared to v1 of the Health-RI metadata schema) and specifies the origins of new constraints (whether they stem from DCAT-AP v3, DCAT-AP NL, or HealthDCAT-AP).</p>
    <div id="uml-class-diagram-v210"></div>
    <h3 class="heading settled" data-level="3.1" id="uml-class-diagram"><span class="secno">3.1. </span><span class="content">UML Class Diagram v2.1.0</span><a class="self-link" href="#uml-class-diagram"></a></h3>
    <p><a href="src/images/HRI_metadata_V2.1.png" target="_blank">
@@ -5145,10 +5174,12 @@ The following links distinguish the published specification from the metadata mo
      <p><strong>All model releases:</strong> <a href="https://w3id.org/health-ri/metadata/releases">w3id.org/health-ri/metadata/releases</a></p>
     <li data-md>
      <p><strong>Specific model release:</strong></p>
-    <li data-md>
-     <p>Use the following pattern to reference a specific versioned model release: <code>https://w3id.org/health-ri/metadata/releases/{version}</code>.</p>
-    <li data-md>
-     <p>For example: <a href="https://w3id.org/health-ri/metadata/releases/v1.0.1">w3id.org/health-ri/metadata/releases/v1.0.1</a></p>
+     <ul>
+      <li data-md>
+       <p>Use the following pattern to reference a specific versioned model release: <code>https://w3id.org/health-ri/metadata/releases/{version}</code>.</p>
+      <li data-md>
+       <p>For example: <a href="https://w3id.org/health-ri/metadata/releases/v1.0.1">w3id.org/health-ri/metadata/releases/v1.0.1</a></p>
+     </ul>
    </ul>
    <p><strong>Project Homepage</strong></p>
    <p><strong>Main page:</strong> <a href="https://w3id.org/health-ri/metadata">w3id.org/health-ri/metadata</a></p>
@@ -7361,13 +7392,37 @@ The following links distinguish the published specification from the metadata mo
     return scheduleUpdate;
   }
 
+  function classHeadingForTable(table) {
+    // Classes use h4 headings, or h5 for the CSVW classes. Do not
+    // assign a previous class across a main section boundary.
+    var sibling = table.previousElementSibling;
+    while (sibling) {
+      if (sibling.matches("h4[id], h5[id]")) return sibling;
+      if (sibling.matches("h2, h3")) return null;
+      sibling = sibling.previousElementSibling;
+    }
+    return null;
+  }
+
   function enhanceSpecificationLayout() {
     enhanceAppearance();
     // Keep horizontal scrolling local to tables on narrow screens.
     document.querySelectorAll("main table").forEach(function (table) {
+      var heading = table.classList.contains("dataframe")
+        ? classHeadingForTable(table)
+        : null;
       var wrapper = document.createElement("div");
       wrapper.className = "spec-table-wrap";
+      if (heading) wrapper.classList.add("spec-class-table-wrap");
       table.parentNode.insertBefore(wrapper, table);
+      if (heading) {
+        var label = document.createElement("div");
+        label.className = "spec-class-label";
+        label.textContent = (heading.querySelector(".content") || heading).textContent.trim();
+        label.setAttribute("aria-hidden", "true");
+        wrapper.appendChild(label);
+        table.setAttribute("aria-labelledby", heading.id);
+      }
       wrapper.appendChild(table);
     });
 
