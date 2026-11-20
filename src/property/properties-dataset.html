@@ -16,7 +16,7 @@
       <td>dct:accessRights</td>
       <td>dct:RightsStatement (IRI)</td>
       <td>1</td>
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. One of the three options must be used: public, restricted, non-public.&nbsp;&nbsp;&nbsp;&nbsp; Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.&nbsp;&nbsp;&nbsp;&nbsp; Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.&nbsp;&nbsp;&nbsp;&nbsp; Sensitive Data (Non-public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation. Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br></td>
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. One of the three options must be used: public, restricted, non-public.&nbsp;&nbsp;&nbsp;&nbsp; Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.&nbsp;&nbsp;&nbsp;&nbsp; Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.&nbsp;&nbsp;&nbsp;&nbsp; Sensitive Data (Non-public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation. Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br></td>
     </tr>
     <tr>
       <td>alternative</td>
@@ -128,7 +128,7 @@
       <td>dct:accrualPeriodicity</td>
       <td>skos:Concept (IRI)</td>
       <td>0..1</td>
-      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated. For example: http://publications.europa.eu/resource/authority/frequency/WEEKLY<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a><br></td>
+      <td>The value of this property should be the IRI from the listed controlled vocabulary indicating the frequency at which the dataset is updated. For example: http://publications.europa.eu/resource/authority/frequency/WEEKLY<br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a><br></td>
     </tr>
     <tr>
       <td>geographical coverage</td>
@@ -136,7 +136,7 @@
       <td>dct:spatial</td>
       <td>dct:Location (IRI)</td>
       <td>0..n</td>
-      <td>The EU Vocabularies Named Authority Lists MAY be used for continents, countries and places that are in those lists. If a particular location is not in any of those lists, GeoNames URIs MAY be used. For districts or neighbourhoods in NL, the Dutch vocabulary can be used. However, it might in many cases be desirable to keep the geographical coverage broader (e.g. indicating that NL is covered), to avoid exposing detailed information about subjects' locations.<br><br><strong>Controlled vocabulary</strong><br><br><a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br></td>
+      <td>The EU Vocabularies Named Authority Lists MAY be used for continents, countries and places that are in those lists. If a particular location is not in any of those lists, GeoNames URIs MAY be used. For districts or neighbourhoods in NL, the Dutch vocabulary can be used. However, it might in many cases be desirable to keep the geographical coverage broader (e.g. indicating that NL is covered), to avoid exposing detailed information about subjects' locations.<br><br><strong>Controlled vocabulary:</strong> <a href="https://vocabs.cbs.nl/nl/">https://vocabs.cbs.nl/nl/</a><br><a href="https://publications.europa.eu/resource/authority/continent">https://publications.europa.eu/resource/authority/continent</a><br><a href="https://publications.europa.eu/resource/authority/country">https://publications.europa.eu/resource/authority/country</a><br><a href="https://publications.europa.eu/resource/authority/place">https://publications.europa.eu/resource/authority/place</a><br><a href="http://sws.geonames.org/">http://sws.geonames.org/</a><br></td>
     </tr>
     <tr>
       <td>has version</td>
@@ -208,7 +208,7 @@
       <td>dct:language</td>
       <td>dct:LinguisticSystem (IRI)</td>
       <td>0..n</td>
-      <td>The language of the Dataset. For this property, the values from the EU Vocabularies Languages Named Authority List must be used. If your Dataset contains multiple languages, this property can be repeated. <br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
+      <td>The language of the Dataset. For this property, the values from the EU Vocabularies Languages Named Authority List must be used. If your Dataset contains multiple languages, this property can be repeated. <br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
     </tr>
     <tr>
       <td>legal basis</td>
@@ -216,7 +216,7 @@
       <td>dpv:hasLegalBasis</td>
       <td>dpv:LegalBasis (IRI)</td>
       <td>0..n</td>
-      <td>The legal basis can be provided as a value from the DPV taxonomy (see the Controlled vocabulary column). While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property describes the legal basis for initial collection and processing of (personal) data. This property should always be filled if the dataset contains personal data and the applicable legislation is GDPR. An example value for this property could be dpv:Consent.<br><br><strong>Controlled vocabulary</strong><br><br><a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis</a><br></td>
+      <td>The legal basis can be provided as a value from the DPV taxonomy (see the Controlled vocabulary column). While the applicable legislation indicates which legislation mandates the publication of the dataset, the legal basis property describes the legal basis for initial collection and processing of (personal) data. This property should always be filled if the dataset contains personal data and the applicable legislation is GDPR. An example value for this property could be dpv:Consent.<br><br><strong>Controlled vocabulary:</strong> <a href="https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis">https://w3c.github.io/dpv/2.0/dpv/modules/legal_basis.html#vocab-legal-basis</a><br></td>
     </tr>
     <tr>
       <td>maximum typical age</td>
@@ -280,7 +280,7 @@
       <td>dpv:hasPersonalData</td>
       <td>dpv:PersonalData (IRI)</td>
       <td>0..n</td>
-      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the DPV taxonomy (see the Controlled vocabulary column). For example: dpv-pd:Gender<br><br><strong>Controlled vocabulary</strong><br><br><a href="https://w3c.github.io/dpv/2.0/pd/">https://w3c.github.io/dpv/2.0/pd/</a><br></td>
+      <td>The different types of personal information that are collected in the dataset can be indicated with this property. Values can be picked from the DPV taxonomy (see the Controlled vocabulary column). For example: dpv-pd:Gender<br><br><strong>Controlled vocabulary:</strong> <a href="https://w3c.github.io/dpv/2.0/pd/">https://w3c.github.io/dpv/2.0/pd/</a><br></td>
     </tr>
     <tr>
       <td>population coverage</td>
@@ -312,7 +312,7 @@
       <td>dpv:hasPurpose</td>
       <td>dpv:Purpose (IRI)</td>
       <td>0..n</td>
-      <td>One or more categories or sub-categories of purposes can be chosen from the taxonomy provided by dpv (see the Controlled vocabulary column). Try to be as specific as possible. An example value could be dpv:ResearchAndDevelopment.<br><br><strong>Controlled vocabulary</strong><br><br><a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes</a><br></td>
+      <td>One or more categories or sub-categories of purposes can be chosen from the taxonomy provided by dpv (see the Controlled vocabulary column). Try to be as specific as possible. An example value could be dpv:ResearchAndDevelopment.<br><br><strong>Controlled vocabulary:</strong> <a href="https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes">https://w3c.github.io/dpv/2.1/dpv/#vocab-purposes</a><br></td>
     </tr>
     <tr>
       <td>qualified attribution</td>
@@ -376,7 +376,7 @@
       <td>adms:status</td>
       <td>skos:Concept (IRI)</td>
       <td>0..1</td>
-      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset. For example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED<br><br><strong>Controlled vocabulary</strong><br><br><a href="https://publications.europa.eu/resource/authority/dataset-status">https://publications.europa.eu/resource/authority/dataset-status</a><br></td>
+      <td>This property makes use of a controlled vocabulary to indicate the status of the described dataset. For example: http://publications.europa.eu/resource/authority/dataset-status/COMPLETED<br><br><strong>Controlled vocabulary:</strong> <a href="https://publications.europa.eu/resource/authority/dataset-status">https://publications.europa.eu/resource/authority/dataset-status</a><br></td>
     </tr>
     <tr>
       <td>temporal coverage</td>
@@ -400,7 +400,7 @@
       <td>dcat:theme</td>
       <td>skos:Concept (IRI)</td>
       <td>1..n</td>
-      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, all datasets will use the theme 'HEAL' (http://publications.europa.eu/resource/authority/data-theme/HEAL), but additional values from the same vocabulary are allowed.<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/data-theme">http://publications.europa.eu/resource/authority/data-theme</a><br></td>
+      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, all datasets will use the theme 'HEAL' (http://publications.europa.eu/resource/authority/data-theme/HEAL), but additional values from the same vocabulary are allowed.<br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/data-theme">http://publications.europa.eu/resource/authority/data-theme</a><br></td>
     </tr>
     <tr>
       <td>title</td>
@@ -416,7 +416,7 @@
       <td>dct:type</td>
       <td>skos:Concept (IRI)</td>
       <td>0..n</td>
-      <td>A Dataset may be associated with multiple types. The EU Dataset-type controlled vocabulary SHOULD be used.<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/dataset-type">http://publications.europa.eu/resource/authority/dataset-type</a><br></td>
+      <td>A Dataset may be associated with multiple types. The EU Dataset-type controlled vocabulary SHOULD be used.<br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/dataset-type">http://publications.europa.eu/resource/authority/dataset-type</a><br></td>
     </tr>
     <tr>
       <td>variables</td>
