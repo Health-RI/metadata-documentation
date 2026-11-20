@@ -1,4 +1,5 @@
 from pathlib import Path
+import argparse
 import pandas as pd
 import re
 import json
@@ -6,9 +7,97 @@ from openpyxl import load_workbook
 from urllib.parse import urlparse, urlunparse
 
 
-EXCEL_FILE_PATH = "../excel/HealthRI_v2.0.3.xlsx"
-OUTPUT_PATH = Path("../property")
-LINKS_FILE = Path(__file__).parent / "links.json"
+ROOT = Path(__file__).resolve().parents[2]
+EXCEL_DIRECTORY = ROOT / "src/excel"
+OUTPUT_PATH = ROOT / "src/property"
+LINKS_FILE = Path(__file__).resolve().parent / "links.json"
+PROPERTY_COLUMNS = [
+    "Property label",
+    "Definition",
+    "Property URI",
+    "Range",
+    "Cardinality",
+    "Usage note",
+    "Controlled vocabulary (if applicable)"
+]
+
+
+def select_workbook(excel_path=None):
+    """Resolve explicit paths from the repository root, or select by mtime."""
+    if excel_path is not None:
+        workbook = Path(excel_path)
+        if not workbook.is_absolute():
+            workbook = ROOT / workbook
+        workbook = workbook.resolve()
+
+        if not workbook.exists():
+            raise ValueError(f"Workbook does not exist: {workbook}")
+        if workbook.is_dir():
+            raise ValueError(f"Workbook path points to a directory: {workbook}")
+        if not workbook.is_file():
+            raise ValueError(f"Workbook path is not a regular file: {workbook}")
+        return workbook
+
+    candidates = [
+        (path, path.stat().st_mtime_ns)
+        for path in EXCEL_DIRECTORY.iterdir()
+        if path.is_file()
+        and path.suffix.lower() == ".xlsx"
+        and not path.name.startswith("~$")
+    ]
+    if not candidates:
+        raise ValueError(
+            f"No eligible .xlsx workbooks found in {EXCEL_DIRECTORY}. "
+            "Use --excel PATH to select a workbook explicitly."
+        )
+
+    latest_mtime = max(mtime for _, mtime in candidates)
+    latest = [path for path, mtime in candidates if mtime == latest_mtime]
+    if len(latest) > 1:
+        names = ", ".join(sorted(path.name for path in latest))
+        raise ValueError(
+            f"Workbooks share the most recent modification timestamp: {names}. "
+            "Use --excel PATH to select a workbook explicitly."
+        )
+    return latest[0].resolve()
+
+
+def normalize_headers(headers, sheet_name, required_columns):
+    """Normalise whitespace only; required headings must occur exactly once."""
+    headers = [
+        " ".join(header.split()) if isinstance(header, str) else header
+        for header in headers
+    ]
+    errors = []
+    for required in required_columns:
+        count = headers.count(required)
+        if count == 0:
+            errors.append(f"Required column {required!r} was not found.")
+        elif count > 1:
+            errors.append(
+                f"Required column {required!r} occurs {count} times after "
+                "whitespace normalisation."
+            )
+    if errors:
+        available = "\n".join(f"- {header}" for header in headers)
+        raise ValueError(
+            f"Error processing {sheet_name}:\n" + "\n".join(errors)
+            + f"\nAvailable columns:\n{available}"
+        )
+    return headers
+
+
+def read_worksheet(excel_file_path, sheet_name, required_columns):
+    # Inspect the raw first row before pandas can rename duplicate headings.
+    header_row = pd.read_excel(
+        excel_file_path, sheet_name=sheet_name, header=None, nrows=1
+    )
+    headers = [] if header_row.empty else header_row.iloc[0].tolist()
+    normalize_headers(headers, sheet_name, required_columns)
+
+    df = pd.read_excel(excel_file_path, sheet_name=sheet_name)
+    df.columns = normalize_headers(df.columns, sheet_name, required_columns)
+    return df
 
 
 # ========================
@@ -102,12 +191,14 @@ def detect_requirement(text):
 # EXCEL URL EXTRACTION
 # ========================
 
-def extract_urls_per_property(sheet_name):
-    wb = load_workbook(EXCEL_FILE_PATH)
+def extract_urls_per_property(sheet_name, excel_file_path):
+    wb = load_workbook(excel_file_path)
     ws = wb[sheet_name]
 
-    headers = [c.value for c in ws[1]]
-    vocab_idx = headers.index("Controlled vocabluary (if applicable)") + 1
+    headers = normalize_headers(
+        [c.value for c in ws[1]], sheet_name, PROPERTY_COLUMNS
+    )
+    vocab_idx = headers.index("Controlled vocabulary (if applicable)") + 1
     uri_idx = headers.index("Property URI") + 1
 
     url_map = {}
@@ -141,21 +232,23 @@ def merge_vocab_rows(df):
     current = None
 
     for _, row in df.iterrows():
-        vocab = row["Controlled vocabluary (if applicable)"]
+        vocab = row["Controlled vocabulary (if applicable)"]
 
         is_cont = (
             pd.notna(vocab)
             and all(
                 pd.isna(v) or str(v).strip() == ""
                 for col, v in row.items()
-                if col != "Controlled vocabluary (if applicable)"
+                if col != "Controlled vocabulary (if applicable)"
             )
         )
 
         if is_cont and current is not None:
-            existing = current["Controlled vocabluary (if applicable)"]
-            current["Controlled vocabluary (if applicable)"] = (
-                str(existing) + "\n" + str(vocab) if pd.notna(existing) else str(vocab)
+            existing = current["Controlled vocabulary (if applicable)"]
+            current["Controlled vocabulary (if applicable)"] = (
+                str(existing) + "\n" + str(vocab)
+                if pd.notna(existing)
+                else str(vocab)
             )
         else:
             if current is not None:
@@ -169,7 +262,34 @@ def merge_vocab_rows(df):
 
 
 # ========================
-# ✅ FINAL USAGE NOTE (CORRECT + SHEET-PROOF)
+# TABLE TEXT NORMALIZATION
+# ========================
+
+def normalize_table_text(value):
+    """
+    Convert line breaks and tabs in Excel/table cell text to spaces before
+    pandas serializes the DataFrame to HTML.
+
+    pandas.to_html() can serialize newline characters in a way that
+    results in the literal characters "\\n" appearing in the generated
+    HTML. Bikeshed then displays those characters instead of treating
+    them as whitespace.
+
+    This handles:
+      - Windows line breaks: \\r\\n
+      - Unix line breaks: \\n
+      - Old Mac line breaks: \\r
+      - Tabs: \\t
+      - Literal escaped sequences: \\\\n
+    """
+    if not isinstance(value, str):
+        return value
+
+    return re.sub(r"(?:\r\n|\r|\n|\t|\\n)+", " ", value)
+
+
+# ========================
+# FINAL USAGE NOTE
 # ========================
 
 def build_usage_note(row, sheet_name, url_map, links):
@@ -178,47 +298,45 @@ def build_usage_note(row, sheet_name, url_map, links):
     if not isinstance(base, str) or not base.strip():
         base = "N.A."
 
-    vocab = row["Controlled vocabluary (if applicable)"]
+    # Format deprecation notices at generation time, not in the workbook.
+    base = base.replace(
+        "This property will be deprecated in the next major release.",
+        "<strong>This property will be deprecated in the next major release.</strong>"
+    )
+    base = base.replace(
+        "Note: This property will be deprecated in the upcoming major release.",
+        "<strong>Note: This property will be deprecated in the upcoming major release.</strong>"
+    )
+
+    vocab = row["Controlled vocabulary (if applicable)"]
     prop = row["Property URI"]
 
     if not isinstance(vocab, str) or not vocab.strip():
         return base
 
-    key_exact = f"{prop}|{sheet_name}"
-    key_lower = f"{prop}|{sheet_name.lower()}"
-
-    prop_key_norm = prop.strip().lower()
-
-    # ✅ ✅ FINAL FIXED LOOKUP
-    vocab_type = (
-        links["vocabRequirements"].get(key_exact)
-        or links["vocabRequirements"].get(key_lower)
-        or next(
-            (
-                v
-                for k, v in links["vocabRequirements"].items()
-                if k.split("|")[0].strip().lower() == prop_key_norm
-            ),
-            None
-        )
-        or detect_requirement(vocab)
-    )
-
-    vocab_text = links["vocabTexts"].get(vocab_type, "")
-
     # URLs
     text_urls = extract_urls(vocab)
     excel_urls = url_map.get(prop, [])
-    mapped_urls = resolve_vocab_labels(vocab, links["vocabLabelMapping"])
+    mapped_urls = resolve_vocab_labels(
+        vocab,
+        links["vocabLabelMapping"]
+    )
 
-    urls = select_canonical_urls(text_urls + excel_urls + mapped_urls)
+    urls = select_canonical_urls(
+        text_urls + excel_urls + mapped_urls
+    )
 
-    # clean vocab text
-    mapping_labels = [k.lower() for k in links["vocabLabelMapping"].keys()]
+    # Clean vocab text
+    mapping_labels = [
+        k.lower()
+        for k in links["vocabLabelMapping"].keys()
+    ]
+
     clean_lines = []
 
     for line in strip_urls(vocab).split("\n"):
         l = line.strip()
+
         if not l:
             continue
 
@@ -230,7 +348,10 @@ def build_usage_note(row, sheet_name, url_map, links):
         if len(l.split()) <= 6:
             continue
 
-        if not re.search(r"\b(is|are|must|should|may|use|used|provides|represents)\b", lower):
+        if not re.search(
+            r"\b(is|are|must|should|may|use|used|provides|represents)\b",
+            lower
+        ):
             continue
 
         clean_lines.append(l)
@@ -239,65 +360,140 @@ def build_usage_note(row, sheet_name, url_map, links):
 
     parts = []
 
-    if vocab_text:
-        parts.append(vocab_text)
 
     if clean_text:
         parts.append(clean_text)
 
     if urls:
-        parts.append("")
-        parts.extend([make_clickable(u) for u in urls])
+        if clean_text:
+            parts.append("")
+        parts.extend([
+            make_clickable(u)
+            for u in urls
+        ])
         parts.append("")
 
     vocab_block = "<br>".join(parts)
 
-    return base + "<br><br><strong>Controlled vocabulary</strong><br>" + vocab_block
+    return (
+        base
+        + "<br><br><strong>Controlled vocabulary:</strong>"
+        + (" " + vocab_block if vocab_block else "")
+    )
 
 
 # ========================
 # MAIN
 # ========================
 
-def main():
-    OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        description="Generate HTML property tables from an Excel workbook."
+    )
+    parser.add_argument(
+        "--excel",
+        metavar="PATH",
+        help=(
+            "Workbook path (absolute or relative to the repository root). "
+            "Defaults to the most recently modified .xlsx file in src/excel/."
+        )
+    )
+    args = parser.parse_args(argv)
 
-    classes_df = pd.read_excel(EXCEL_FILE_PATH, sheet_name="classes")
+    try:
+        excel_file_path = select_workbook(args.excel)
+    except (OSError, ValueError) as exc:
+        parser.error(f"Cannot select Excel workbook: {exc}")
 
-    with open(LINKS_FILE, "r", encoding="utf-8") as f:
+    mode = "Explicit" if args.excel is not None else "Automatic (most recently modified)"
+    print(f"Excel input mode: {mode}")
+    print(f"Selected workbook: {excel_file_path}")
+
+    try:
+        classes_df = read_worksheet(
+            excel_file_path,
+            "classes",
+            ["sheet_name"]
+        )
+    except Exception as exc:
+        parser.error(
+            f"Cannot read workbook {excel_file_path} (worksheet 'classes'): {exc}"
+        )
+
+    OUTPUT_PATH.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+    with open(
+        LINKS_FILE,
+        "r",
+        encoding="utf-8"
+    ) as f:
         links = json.load(f)
 
     for _, class_row in classes_df.iterrows():
+
         sheet_name = class_row["sheet_name"]
 
-        df = pd.read_excel(EXCEL_FILE_PATH, sheet_name=sheet_name)
+        try:
+            df = read_worksheet(excel_file_path, sheet_name, PROPERTY_COLUMNS)
+        except ValueError as exc:
+            parser.error(str(exc))
 
-        cols = [
-            "Property label",
-            "Definition",
-            "Property URI",
-            "Range",
-            "Cardinality",
-            "Usage note",
-            "Controlled vocabluary (if applicable)"
-        ]
+        df = df[PROPERTY_COLUMNS]
 
-        df = df[cols]
+        if df.replace(r"^\s*$", pd.NA, regex=True).dropna(how="all").empty:
+            print(f"Skipped {sheet_name}: no properties to document")
+            continue
+
         df = merge_vocab_rows(df)
 
-        url_map = extract_urls_per_property(sheet_name)
+        url_map = extract_urls_per_property(
+            sheet_name,
+            excel_file_path
+        )
 
         df["Usage note"] = df.apply(
-            lambda r: build_usage_note(r, sheet_name, url_map, links),
+            lambda r: build_usage_note(
+                r,
+                sheet_name,
+                url_map,
+                links
+            ),
             axis=1
         )
 
-        df = df.drop(columns=["Controlled vocabluary (if applicable)"])
+        df = df.drop(
+            columns=[
+                "Controlled vocabulary (if applicable)"
+            ]
+        )
 
-        output_file = OUTPUT_PATH / f"properties-{sheet_name.lower()}.html"
-        df.to_html(output_file, index=False, escape=False)
+        # ============================================================
+        # IMPORTANT:
+        # Normalize all table cell text BEFORE pandas generates HTML.
+        #
+        # This prevents literal "\\n" from appearing in the generated
+        # HTML and therefore being displayed by Bikeshed.
+        # ============================================================
 
-        print(f"Generated {output_file}")
+        df = df.map(normalize_table_text)
+
+        output_file = (
+            OUTPUT_PATH
+            / f"properties-{sheet_name.lower()}.html"
+        )
+
+        df.to_html(
+            output_file,
+            index=False,
+            escape=False
+        )
+
+        print(
+            f"Generated {output_file}"
+        )
 
 
 if __name__ == "__main__":

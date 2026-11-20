@@ -126,7 +126,6 @@
     "healthdcatap:publishernote": "https://healthdcat-ap.github.io/#publishernote",
     "healthdcatap:publishertype": "https://healthdcat-ap.github.io/#publishertype",
     "healthdcatap:retentionPeriod": "https://healthdcat-ap.github.io/#retentionPeriod",
-    "healthdcatap:retentionperiod": "https://healthdcat-ap.github.io/#retentionperiod",
 
     "oa:hasBody": "https://www.w3.org/TR/annotation-vocab/#hasBody",
     "oa:hasTarget": "https://www.w3.org/TR/annotation-vocab/#hasTarget",
