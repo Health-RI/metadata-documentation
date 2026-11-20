@@ -323,16 +323,6 @@ The tables below list the relevant properties, the classes to which they apply, 
     </tr>
 
     <tr>
-      <td>dcat:hadRole</td>
-      <td>Relationship</td>
-      <td>
-        <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA Link Relations</a>,
-        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml">ISO Codelist</a>
-      </td>
-      <td>Choose the role of the related resource from either the IANA link relations or the ISO Association type code list.</td>
-    </tr>
-
-    <tr>
       <td>spdx:algorithm</td>
       <td>Checksum</td>
       <td>
@@ -463,5 +453,15 @@ The tables below list the relevant properties, the classes to which they apply, 
       <td><a href="https://w3c.github.io/csvw/metadata/#datatypes">CSVW built-in datatypes</a></td>
       <td>Using a CSVW built-in datatype name (e.g., string, integer, boolean) is recommended when applicable.</td>
     </tr>
+    <tr>
+      <td>dcat:hadRole</td>
+      <td>Relationship</td>
+      <td>
+        <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA Link Relations</a>,
+        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml">ISO Codelist</a>
+      </td>
+      <td>The role SHOULD be selected from either the IANA Link Relations registry or the ISO Association Type Code list.</td>
+    </tr>
+
   </tbody>
 </table>
