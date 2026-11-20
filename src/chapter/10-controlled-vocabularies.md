@@ -303,15 +303,7 @@ The tables below list the relevant properties, the classes to which they apply, 
       <td>Choose the theme of the data service from the EU authority table.</td>
     </tr>
 
-    <tr>
-      <td>dcat:hadRole</td>
-      <td>Attribution</td>
-      <td>
-        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">ISO RoleCode</a>,
-        <a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">CRediT taxonomy</a>
-      </td>
-      <td>Choose the role of the attributed agent from either the ISO RoleCode list or the Contributor Role Taxonomy (CRediT).</td>
-    </tr>
+
 
     <tr>
       <td>spdx:algorithm</td>
@@ -455,6 +447,16 @@ The tables below list the relevant properties, the classes to which they apply, 
       <td><a href="https://w3c.github.io/csvw/metadata/#datatypes">CSVW built-in datatypes</a></td>
       <td>Using a CSVW built-in datatype name (e.g., string, integer, boolean) is recommended when applicable.</td>
     </tr>
+    <tr>
+      <td>dcat:hadRole</td>
+      <td>Attribution</td>
+      <td>
+        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">ISO RoleCode</a>,
+        <a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">CRediT taxonomy</a>
+      </td>
+      <td>Choose the role of the attributed agent from either the ISO RoleCode list or the Contributor Role Taxonomy (CRediT).</td>
+    </tr>
+
     <tr>
       <td>dcat:hadRole</td>
       <td>Relationship</td>
