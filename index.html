@@ -1490,7 +1490,7 @@ Possible extra rowspan handling
 </style>
   <meta content="Bikeshed version a035d7dc6, updated Fri Nov 20 03:13:55 2026 +0000" name="generator">
   <link href="https://w3id.org/health-ri/metadata/docs/v2.1.0" rel="canonical">
-  <meta content="fda46aa3dee5ba4a2abcff3c600896551891ee4c" name="revision">
+  <meta content="77a61c2be66ee74e15e47709a32db07bde55e065" name="revision">
   <meta content="dark light" name="color-scheme">
 <style>
 /* ===== Global table style (unchanged) ===== */
@@ -5467,7 +5467,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. One of the three options must be used: public, restricted, non-public.     Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.     Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.     Sensitive Data (Non-public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation. Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
+      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. One of the three options must be used: public, restricted, non-public.     Open Data (Public): The dataset is available under general open data rules, such as those covered by the High Value Datasets Implementing Regulation.     Protected Data (Restricted): The dataset contains protected data and is accessible only under specific conditions, as outlined in regulations like the Data Governance Act.     Sensitive Data (Non-public): The dataset includes resources that may contain sensitive or personal information, falling under regulations such as the EHDS Regulation. Since most data contain personal information, these datasets will need to take the value 'non-public' for the access rights property.<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
      <tr>
       <td>alternative
       <td>An alternative name for the dataset.
@@ -5558,7 +5558,7 @@ The following links distinguish the published specification from the metadata mo
       <td>edam:has_topic
       <td>skos:Concept (IRI)
       <td>0..n
-      <td>Select data domain(s) from the predefined value list, available at this link: https://github.com/Health-RI/health-ri-metadata/blob/testing/Formalisation(shacl)/Core/ValueLists/edam-has-topic.tsv Note: This is a temporary location and it will change with the release.  A data domain refers to the broader scientific or health-related area covered by the Dataset. Select the domain that best represents the Dataset as a whole, rather than a specific data element within it. If the dataset contains data from more than one domain, you can select multiple. See the property "measurement technique" for more information about the technique(s) used to generate the data in the Dataset.
+      <td>Select data domain(s) from the predefined value list, available at this link: https://github.com/Health-RI/health-ri-metadata/blob/testing/Formalisation(shacl)/Core/ValueLists/edam-has-topic.tsv Note: This is a temporary location and it will change with the release.  A data domain refers to the broader scientific or health-related area covered by the Dataset. Select the domain that best represents the Dataset as a whole, rather than a specific data element within it. If the dataset contains data from more than one domain, you can select multiple. See the property "measurement technique" for more information about the technique(s) used to generate the data in the Dataset.
      <tr>
       <td>frequency
       <td>The frequency with which items are added to a collection.
@@ -5593,7 +5593,7 @@ The following links distinguish the published specification from the metadata mo
       <td>healthdcatap:healthTheme
       <td>skos:Concept (IRI)
       <td>0..n
-      <td>Note: The use of Wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. This property is a structured way to tag the dataset with different health themes. This could include, for example, the specific disease the dataset is about. More details can be provided, if desirable, in the keywords property.  The Wikidata URI of the health theme must be used here.
+      <td>Note: The use of Wikidata URIs will be replaced with the terms from a controlled vocabulary in the next major release. This property is a structured way to tag the dataset with different health themes. This could include, for example, the specific disease the dataset is about. More details can be provided, if desirable, in the keywords property.  The Wikidata URI of the health theme must be used here.
      <tr>
       <td>identifier
       <td>An unambiguous reference to the resource within a given context.
@@ -5879,7 +5879,7 @@ The following links distinguish the published specification from the metadata mo
       <td>dct:accessRights
       <td>dct:RightsStatement (IRI)
       <td>1
-      <td>Information that indicates whether the Data Service is publicly accessible, has access restrictions or is not public. This property must take one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the Data Service is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
+      <td>Information that indicates whether the Data Service is publicly accessible, has access restrictions or is not public. This property must take one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office.<br><br><strong>Controlled vocabulary</strong><br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br>
      <tr>
       <td>applicable legislation
       <td>The legislation that is applicable to this resource.
@@ -6281,7 +6281,7 @@ The following links distinguish the published specification from the metadata mo
       <td>healthdcatap:retentionPeriod
       <td>dct:PeriodOfTime
       <td>0..1
-      <td><strong>Note: This property will be deprecated in the upcoming major release.</strong> It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property.  Use this property if the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.
+      <td><strong>Note: This property will be deprecated in the upcoming major release.</strong> It is recommended to indicate the planned availability of the distribution with the newly added Distribution.availability property.  Use this property if the Distribution is only available for secondary use for a specific period of time (e.g. due to data protection, contractual, or project constraints). This property makes use of the class dct:PeriodOfTime, in which a start and end date can be provided. If the Distribution is available indefinitely, leave the property empty (cardinality is 0..1; it is only meaningful when a retention limit applies). If only a start is known, provide dcat:startDate only (open-ended interval, as allowed by dct:PeriodOfTime). If a limit is known, provide both dcat:startDate and dcat:endDate.
      <tr>
       <td>rights
       <td>Information about rights held in and over the resource.
@@ -6373,7 +6373,7 @@ The following links distinguish the published specification from the metadata mo
       <td>healthdcatap:publishernote
       <td>rdfs:Literal
       <td>0..1
-      <td>Note: <strong>This property will be deprecated in the next major release.</strong> At most one publisher note can be provided per Agent. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."@en
+      <td>Note: <strong>This property will be deprecated in the next major release.</strong> At most one publisher note can be provided per Agent. Example: "Sciensano is a research institute and the national public health institute of Belgium. It is a so-called federal scientific institution that operates under the authority of the federal minister of Public Health and the federal minister of Agriculture of Belgium."
      <tr>
       <td>publisher type
       <td>A type of organisation that makes the Dataset available.
