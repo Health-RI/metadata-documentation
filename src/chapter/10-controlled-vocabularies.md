@@ -91,17 +91,6 @@ The tables below list the relevant properties, the classes to which they apply, 
     </tr>
 
     <tr>
-      <td>dct:type</td>
-      <td>Dataset</td>
-      <td>
-        <a href="http://publications.europa.eu/resource/authority/dataset-type">
-          http://publications.europa.eu/resource/authority/dataset-type
-        </a>
-      </td>
-      <td>Choose the type of the dataset in the EU authority table.</td>
-    </tr>
-
-    <tr>
       <td>dct:language</td>
       <td>Catalog</td>
       <td>
@@ -397,6 +386,17 @@ The tables below list the relevant properties, the classes to which they apply, 
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>dct:type</td>
+      <td>Dataset</td>
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/dataset-type">
+          http://publications.europa.eu/resource/authority/dataset-type
+        </a>
+      </td>
+      <td>The EU Dataset-type controlled vocabulary SHOULD be used.</td>
+    </tr>
+
     <tr>
       <td>dct:spatial</td>
       <td>Dataset</td>
