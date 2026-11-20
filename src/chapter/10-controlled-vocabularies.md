@@ -91,17 +91,6 @@ The tables below list the relevant properties, the classes to which they apply, 
     </tr>
 
     <tr>
-      <td>dct:type</td>
-      <td>Dataset</td>
-      <td>
-        <a href="http://publications.europa.eu/resource/authority/dataset-type">
-          http://publications.europa.eu/resource/authority/dataset-type
-        </a>
-      </td>
-      <td>Choose the type of the dataset in the EU authority table.</td>
-    </tr>
-
-    <tr>
       <td>dct:language</td>
       <td>Catalog</td>
       <td>
@@ -235,16 +224,7 @@ The tables below list the relevant properties, the classes to which they apply, 
       <td>Choose the media type of the Distribution from the IANA media type list.</td>
     </tr>
 
-    <tr>
-      <td>dcat:packageFormat</td>
-      <td>Distribution</td>
-      <td>
-        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">
-          http://www.iana.org/assignments/media-types/media-types.xhtml
-        </a>
-      </td>
-      <td>Choose the package format of the Distribution from the IANA media type list.</td>
-    </tr>
+
 
     <tr>
       <td>adms:status</td>
@@ -323,25 +303,7 @@ The tables below list the relevant properties, the classes to which they apply, 
       <td>Choose the theme of the data service from the EU authority table.</td>
     </tr>
 
-    <tr>
-      <td>dcat:hadRole</td>
-      <td>Attribution</td>
-      <td>
-        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">ISO RoleCode</a>,
-        <a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">CRediT taxonomy</a>
-      </td>
-      <td>Choose the role of the attributed agent from either the ISO RoleCode list or the Contributor Role Taxonomy (CRediT).</td>
-    </tr>
 
-    <tr>
-      <td>dcat:hadRole</td>
-      <td>Relationship</td>
-      <td>
-        <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA Link Relations</a>,
-        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml">ISO Codelist</a>
-      </td>
-      <td>Choose the role of the related resource from either the IANA link relations or the ISO Association type code list.</td>
-    </tr>
 
     <tr>
       <td>spdx:algorithm</td>
@@ -397,6 +359,17 @@ The tables below list the relevant properties, the classes to which they apply, 
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>dct:type</td>
+      <td>Dataset</td>
+      <td>
+        <a href="http://publications.europa.eu/resource/authority/dataset-type">
+          http://publications.europa.eu/resource/authority/dataset-type
+        </a>
+      </td>
+      <td>The EU Dataset-type controlled vocabulary SHOULD be used.</td>
+    </tr>
+
     <tr>
       <td>dct:spatial</td>
       <td>Dataset</td>
@@ -458,10 +431,41 @@ The tables below list the relevant properties, the classes to which they apply, 
       <td>For this property you can use controlled vocabularies depending on which best represents your dataset series. The EU provides three relevant authority tables - for continent, country, and place, with country codes aligned to ISO standards where applicable. Your choice depends on the granularity of the geographical coverage: for example, if your dataset series covers the entire Netherlands, you can use http://publications.europa.eu/resource/authority/country/NLD from the Country authority table, while for a specific city you should check the Place authority table. Since the Place table has limited coverage, you can also use GeoNames, a widely used geographical database with global coverage, or CBS vocabularies, which focus on places in the Netherlands. In general, prefer EU authority URIs first, then GeoNames, and finally national vocabularies for finer-grained locations.</td>
     </tr>
     <tr>
+      <td>dcat:packageFormat</td>
+      <td>Distribution</td>
+      <td>
+        <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">
+          http://www.iana.org/assignments/media-types/media-types.xhtml
+        </a>
+      </td>
+      <td>Choose the package format of the Distribution from the IANA media type list.</td>
+    </tr>
+
+    <tr>
       <td>csvw:datatype</td>
       <td>Column</td>
       <td><a href="https://w3c.github.io/csvw/metadata/#datatypes">CSVW built-in datatypes</a></td>
       <td>Using a CSVW built-in datatype name (e.g., string, integer, boolean) is recommended when applicable.</td>
     </tr>
+    <tr>
+      <td>dcat:hadRole</td>
+      <td>Attribution</td>
+      <td>
+        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml">ISO RoleCode</a>,
+        <a href="https://jats4r.niso.org/credit-taxonomy/#table-1-credit-terms-and-urls">CRediT taxonomy</a>
+      </td>
+      <td>Choose the role of the attributed agent from either the ISO RoleCode list or the Contributor Role Taxonomy (CRediT).</td>
+    </tr>
+
+    <tr>
+      <td>dcat:hadRole</td>
+      <td>Relationship</td>
+      <td>
+        <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA Link Relations</a>,
+        <a href="https://standards.iso.org/iso/19115/resources/Codelists/gml/DS_AssociationTypeCode.xml">ISO Codelist</a>
+      </td>
+      <td>The role SHOULD be selected from either the IANA Link Relations registry or the ISO Association Type Code list.</td>
+    </tr>
+
   </tbody>
 </table>

@@ -298,33 +298,21 @@ def build_usage_note(row, sheet_name, url_map, links):
     if not isinstance(base, str) or not base.strip():
         base = "N.A."
 
+    # Format deprecation notices at generation time, not in the workbook.
+    base = base.replace(
+        "This property will be deprecated in the next major release.",
+        "<strong>This property will be deprecated in the next major release.</strong>"
+    )
+    base = base.replace(
+        "Note: This property will be deprecated in the upcoming major release.",
+        "<strong>Note: This property will be deprecated in the upcoming major release.</strong>"
+    )
+
     vocab = row["Controlled vocabulary (if applicable)"]
     prop = row["Property URI"]
 
     if not isinstance(vocab, str) or not vocab.strip():
         return base
-
-    key_exact = f"{prop}|{sheet_name}"
-    key_lower = f"{prop}|{sheet_name.lower()}"
-
-    prop_key_norm = prop.strip().lower()
-
-    # FINAL FIXED LOOKUP
-    vocab_type = (
-        links["vocabRequirements"].get(key_exact)
-        or links["vocabRequirements"].get(key_lower)
-        or next(
-            (
-                v
-                for k, v in links["vocabRequirements"].items()
-                if k.split("|")[0].strip().lower() == prop_key_norm
-            ),
-            None
-        )
-        or detect_requirement(vocab)
-    )
-
-    vocab_text = links["vocabTexts"].get(vocab_type, "")
 
     # URLs
     text_urls = extract_urls(vocab)
@@ -372,14 +360,13 @@ def build_usage_note(row, sheet_name, url_map, links):
 
     parts = []
 
-    if vocab_text:
-        parts.append(vocab_text)
 
     if clean_text:
         parts.append(clean_text)
 
     if urls:
-        parts.append("")
+        if clean_text:
+            parts.append("")
         parts.extend([
             make_clickable(u)
             for u in urls
@@ -390,8 +377,8 @@ def build_usage_note(row, sheet_name, url_map, links):
 
     return (
         base
-        + "<br><br><strong>Controlled vocabulary</strong><br>"
-        + vocab_block
+        + "<br><br><strong>Controlled vocabulary:</strong>"
+        + (" " + vocab_block if vocab_block else "")
     )
 
 

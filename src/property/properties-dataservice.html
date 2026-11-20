@@ -16,7 +16,7 @@
       <td>dct:accessRights</td>
       <td>dct:RightsStatement (IRI)</td>
       <td>1</td>
-      <td>Information that indicates whether the Dataset is publicly accessible, has access restrictions or is not public. This property must take one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office. This designation informs data users whether the dataset is considered open data or is classified as non-public. For example, for non-public data, use the value: http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br></td>
+      <td>Information that indicates whether the Data Service is publicly accessible, has access restrictions or is not public. This property must take one of the predefined values listed in the Access Rights Named Authority List provided by the Publications Office.<br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a><br></td>
     </tr>
     <tr>
       <td>applicable legislation</td>
@@ -48,7 +48,7 @@
       <td>dct:creator</td>
       <td>foaf:Agent</td>
       <td>0..n</td>
-      <td>The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation/employer bearing investment risk, instead of an individual (e.g. an individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher: the organisation (not a department or subdivision of the organisation) where the catalogue was created. If there are multiple (collaborating) organisations involved in data creation, all of them can be stated as dct:creator, as the model allows more than one creator. Note that the Health-RI model diverges from DCAT-AP NL here, which reduces the maximum number of creators to 1. The Health-RI model allows the specification of multiple creators of a catalogue.</td>
+      <td>Note: <strong>This property will be deprecated in the next major release.</strong> The creator is the entity responsible for making the resource. According to Dutch databank and copyright law, this is in most cases the organisation/employer bearing investment risk, instead of an individual (e.g. an individual researcher). Therefore, in many cases, this might be the same Agent as the dct:publisher.</td>
     </tr>
     <tr>
       <td>rights</td>
@@ -88,7 +88,7 @@
       <td>dct:format</td>
       <td>dct:MediaTypeOrExtent (IRI)</td>
       <td>0..n</td>
-      <td>N.A.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/file-type">http://publications.europa.eu/resource/authority/file-type</a><br></td>
+      <td>N.A.<br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/file-type">http://publications.europa.eu/resource/authority/file-type</a><br></td>
     </tr>
     <tr>
       <td>HVD Category</td>
@@ -128,7 +128,7 @@
       <td>dct:language</td>
       <td>dct:LinguisticSystem (IRI)</td>
       <td>0..n</td>
-      <td>Indicates the natural language used in the data service, indicated with a value from the EU controlled vocabulary.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
+      <td>Indicates the natural language used in the data service, indicated with a value from the EU controlled vocabulary.<br><br><strong>Controlled vocabulary:</strong> <a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a><br></td>
     </tr>
     <tr>
       <td>licence</td>
@@ -136,7 +136,7 @@
       <td>dct:license</td>
       <td>dct:LicenseDocument (IRI)</td>
       <td>1</td>
-      <td>For public data, use a Creative Commons (CC) licence (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' licence from Geonovum and specify data reuse agreements in the dct:rights property.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br></td>
+      <td>For public data, use a Creative Commons (CC) licence (see Geonovum options in the Controlled Vocabulary column). For most National Health Data Catalogue data services, where data is not public, use the 'not open' licence from Geonovum and specify data reuse agreements in the dct:rights property.<br><br><strong>Controlled vocabulary:</strong> <a href="https://definities.geostandaarden.nl/dcat-ap-nl/nl/">https://definities.geostandaarden.nl/dcat-ap-nl/nl/</a><br></td>
     </tr>
     <tr>
       <td>modification date</td>
@@ -144,7 +144,7 @@
       <td>dct:modified</td>
       <td>xsd:dateTime</td>
       <td>0..1</td>
-      <td>This property indicates the date of the last changes to the dataset, not the metadata record. An absent value may mean the resource hasn't changed since publication, the modification date is unknown, or the resource is continuously updated.</td>
+      <td>This property indicates the date of the last changes to the Data Service, not the metadata record. An absent value may mean the resource hasn't changed since publication, the modification date is unknown, or the resource is continuously updated.</td>
     </tr>
     <tr>
       <td>other identifier</td>
@@ -176,7 +176,7 @@
       <td>dcat:theme</td>
       <td>skos:Concept (IRI)</td>
       <td>1..n</td>
-      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, most data services will use NAL:data-theme 'HEAL', but additional values from the same vocabulary are allowed.<br><br><strong>Controlled vocabulary</strong><br>The value for the property must be selected from the specified vocabulary or list.<br><br><a href="https://publications.europa.eu/resource/authority/data-theme">https://publications.europa.eu/resource/authority/data-theme</a><br></td>
+      <td>This property should use a controlled vocabulary. In the Health Data Catalogue, most data services will use NAL:data-theme 'HEAL', but additional values from the same vocabulary are allowed.<br><br><strong>Controlled vocabulary:</strong> <a href="https://publications.europa.eu/resource/authority/data-theme">https://publications.europa.eu/resource/authority/data-theme</a><br></td>
     </tr>
     <tr>
       <td>title</td>
