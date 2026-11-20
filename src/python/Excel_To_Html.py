@@ -298,6 +298,16 @@ def build_usage_note(row, sheet_name, url_map, links):
     if not isinstance(base, str) or not base.strip():
         base = "N.A."
 
+    # Format deprecation notices at generation time, not in the workbook.
+    base = base.replace(
+        "This property will be deprecated in the next major release.",
+        "<strong>This property will be deprecated in the next major release.</strong>"
+    )
+    base = base.replace(
+        "Note: This property will be deprecated in the upcoming major release.",
+        "<strong>Note: This property will be deprecated in the upcoming major release.</strong>"
+    )
+
     vocab = row["Controlled vocabulary (if applicable)"]
     prop = row["Property URI"]
 
